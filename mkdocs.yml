@@ -1,0 +1,83 @@
+site_name: "TankScan Intelligent Textbook: Wireless Tank Monitoring Systems"
+site_description: "A comprehensive intelligent textbook on wireless tank monitoring technology, IoT systems, and the TankScan platform"
+site_author: "Daniel Yarmoluk"
+repo_url: https://github.com/Yarmoluk/tankscan-course
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home: index.md
+  - Preface: preface.md
+  - Course Description: course-description.md
+  - Chapters:
+    - "1. Introduction to Tank Monitoring": chapters/01-introduction/index.md
+    - "2. Wireless Sensor Technologies": chapters/02-wireless-sensors/index.md
+    - "3. Radar and Ultrasonic Measurement": chapters/03-measurement-tech/index.md
+    - "4. IoT Architecture and Connectivity": chapters/04-iot-architecture/index.md
+    - "5. The Asset Intelligence Platform": chapters/05-aip-platform/index.md
+    - "6. Tank Types and Applications": chapters/06-tank-types/index.md
+    - "7. Industry Solutions": chapters/07-industry-solutions/index.md
+    - "8. Installation and Deployment": chapters/08-installation/index.md
+    - "9. Data Analytics and Optimization": chapters/09-data-analytics/index.md
+    - "10. Fleet Management and Routing": chapters/10-fleet-management/index.md
+    - "11. Safety, Compliance, and Hazardous Environments": chapters/11-safety-compliance/index.md
+    - "12. Cloud Integration and APIs": chapters/12-cloud-integration/index.md
+    - "13. Predictive Maintenance and AI": chapters/13-predictive-ai/index.md
+    - "14. Case Studies and ROI": chapters/14-case-studies/index.md
+    - "15. Future of Tank Monitoring": chapters/15-future/index.md
+  - Learning Graph: learning-graph/index.md
+  - Glossary: glossary/index.md
