@@ -1,0 +1,4421 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive intelligent textbook on wireless tank monitoring technology, IoT systems, and the TankScan platform">
+      
+      
+        <meta name="author" content="Daniel Yarmoluk">
+      
+      
+      
+        <link rel="prev" href="../04-iot-architecture/">
+      
+      
+        <link rel="next" href="../06-tank-types/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>5. The Asset Intelligence Platform - TankScan Intelligent Textbook: Wireless Tank Monitoring Systems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-5-the-asset-intelligence-platform" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" class="md-header__button md-logo" aria-label="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TankScan Intelligent Textbook: Wireless Tank Monitoring Systems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              5. The Asset Intelligence Platform
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Yarmoluk/tankscan-course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../preface/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Preface
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../course-description/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Description
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-introduction/" class="md-tabs__link">
+          
+  
+  
+  Chapters
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../learning-graph/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learning Graph
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" class="md-nav__button md-logo" aria-label="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    TankScan Intelligent Textbook: Wireless Tank Monitoring Systems
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Yarmoluk/tankscan-course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../preface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction to Tank Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-wireless-sensors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Wireless Sensor Technologies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-measurement-tech/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Radar and Ultrasonic Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-iot-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. IoT Architecture and Connectivity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. The Asset Intelligence Platform
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. The Asset Intelligence Platform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-overview-of-the-asset-intelligence-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Overview of the Asset Intelligence Platform
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 Overview of the Asset Intelligence Platform">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511-the-role-of-the-aip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1.1 The Role of the AIP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#512-core-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1.2 Core Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#513-platform-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1.3 Platform Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-dashboard-design-and-real-time-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Dashboard Design and Real-Time Monitoring
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 Dashboard Design and Real-Time Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521-dashboard-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1 Dashboard Layout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522-overview-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.2 Overview Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#523-individual-tank-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.3 Individual Tank View
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-configuring-tank-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Configuring Tank Profiles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Configuring Tank Profiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531-tank-geometry-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.1 Tank Geometry Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532-configuration-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.2 Configuration Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#533-sensor-offset-and-reference-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.3 Sensor Offset and Reference Point
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#534-product-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.4 Product Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-setting-alert-thresholds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Setting Alert Thresholds
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4 Setting Alert Thresholds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#541-types-of-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4.1 Types of Alerts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#542-threshold-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4.2 Threshold Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#543-alert-hysteresis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4.3 Alert Hysteresis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55-automated-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Automated Notifications
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.5 Automated Notifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#551-notification-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5.1 Notification Channels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#552-notification-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5.2 Notification Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#553-notification-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5.3 Notification Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#56-location-mapping-and-geographic-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 Location Mapping and Geographic Views
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.6 Location Mapping and Geographic Views">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#561-geographic-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6.1 Geographic Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#562-location-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6.2 Location Hierarchy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#563-geofencing-and-proximity-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6.3 Geofencing and Proximity Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#57-user-management-and-access-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7 User Management and Access Controls
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.7 User Management and Access Controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#571-role-based-access-control-rbac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7.1 Role-Based Access Control (RBAC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#572-access-control-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7.2 Access Control Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#573-security-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7.3 Security Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#58-historical-data-and-trends" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8 Historical Data and Trends
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.8 Historical Data and Trends">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#581-data-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8.1 Data Retention
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#582-trend-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8.2 Trend Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#583-anomaly-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8.3 Anomaly Detection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#59-reporting-and-data-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9 Reporting and Data Export
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.9 Reporting and Data Export">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#591-standard-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9.1 Standard Reports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#592-custom-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9.2 Custom Reports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#593-data-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9.3 Data Export
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#594-scheduled-report-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9.4 Scheduled Report Delivery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#510-mobile-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.10 Mobile Access
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.10 Mobile Access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5101-responsive-web-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.10.1 Responsive Web Interface
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5102-mobile-app-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.10.2 Mobile App Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5103-mobile-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.10.3 Mobile Use Cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#511-api-overview-for-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.11 API Overview for Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.11 API Overview for Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5111-api-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.11.1 API Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5112-key-api-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.11.2 Key API Endpoints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5113-example-api-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.11.3 Example API Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5114-webhooks-for-real-time-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.11.4 Webhooks for Real-Time Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5115-common-integrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.11.5 Common Integrations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#512-device-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.12 Device Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.12 Device Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5121-device-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.12.1 Device Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5122-remote-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.12.2 Remote Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5123-fleet-health-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.12.3 Fleet Health Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#513-platform-reliability-and-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.13 Platform Reliability and Performance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.13 Platform Reliability and Performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5131-uptime-and-availability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.13.1 Uptime and Availability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5132-data-integrity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.13.2 Data Integrity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5133-scalability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.13.3 Scalability
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#514-putting-it-all-together-aip-workflow-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.14 Putting It All Together: AIP Workflow Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#515-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.15 Chapter Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Review Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-tank-types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Tank Types and Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-industry-solutions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Industry Solutions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Installation and Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-data-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Data Analytics and Optimization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-fleet-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Fleet Management and Routing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-safety-compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Safety, Compliance, and Hazardous Environments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-cloud-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Cloud Integration and APIs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-predictive-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Predictive Maintenance and AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-case-studies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Case Studies and ROI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-future/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Future of Tank Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-overview-of-the-asset-intelligence-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Overview of the Asset Intelligence Platform
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 Overview of the Asset Intelligence Platform">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511-the-role-of-the-aip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1.1 The Role of the AIP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#512-core-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1.2 Core Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#513-platform-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1.3 Platform Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-dashboard-design-and-real-time-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Dashboard Design and Real-Time Monitoring
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 Dashboard Design and Real-Time Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521-dashboard-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1 Dashboard Layout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522-overview-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.2 Overview Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#523-individual-tank-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.3 Individual Tank View
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-configuring-tank-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Configuring Tank Profiles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Configuring Tank Profiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531-tank-geometry-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.1 Tank Geometry Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532-configuration-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.2 Configuration Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#533-sensor-offset-and-reference-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.3 Sensor Offset and Reference Point
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#534-product-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.4 Product Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-setting-alert-thresholds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Setting Alert Thresholds
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4 Setting Alert Thresholds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#541-types-of-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4.1 Types of Alerts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#542-threshold-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4.2 Threshold Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#543-alert-hysteresis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4.3 Alert Hysteresis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55-automated-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Automated Notifications
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.5 Automated Notifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#551-notification-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5.1 Notification Channels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#552-notification-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5.2 Notification Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#553-notification-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5.3 Notification Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#56-location-mapping-and-geographic-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 Location Mapping and Geographic Views
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.6 Location Mapping and Geographic Views">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#561-geographic-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6.1 Geographic Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#562-location-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6.2 Location Hierarchy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#563-geofencing-and-proximity-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6.3 Geofencing and Proximity Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#57-user-management-and-access-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7 User Management and Access Controls
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.7 User Management and Access Controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#571-role-based-access-control-rbac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7.1 Role-Based Access Control (RBAC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#572-access-control-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7.2 Access Control Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#573-security-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7.3 Security Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#58-historical-data-and-trends" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8 Historical Data and Trends
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.8 Historical Data and Trends">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#581-data-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8.1 Data Retention
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#582-trend-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8.2 Trend Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#583-anomaly-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8.3 Anomaly Detection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#59-reporting-and-data-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9 Reporting and Data Export
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.9 Reporting and Data Export">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#591-standard-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9.1 Standard Reports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#592-custom-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9.2 Custom Reports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#593-data-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9.3 Data Export
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#594-scheduled-report-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9.4 Scheduled Report Delivery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#510-mobile-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.10 Mobile Access
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.10 Mobile Access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5101-responsive-web-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.10.1 Responsive Web Interface
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5102-mobile-app-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.10.2 Mobile App Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5103-mobile-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.10.3 Mobile Use Cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#511-api-overview-for-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.11 API Overview for Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.11 API Overview for Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5111-api-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.11.1 API Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5112-key-api-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.11.2 Key API Endpoints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5113-example-api-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.11.3 Example API Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5114-webhooks-for-real-time-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.11.4 Webhooks for Real-Time Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5115-common-integrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.11.5 Common Integrations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#512-device-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.12 Device Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.12 Device Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5121-device-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.12.1 Device Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5122-remote-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.12.2 Remote Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5123-fleet-health-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.12.3 Fleet Health Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#513-platform-reliability-and-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.13 Platform Reliability and Performance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.13 Platform Reliability and Performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5131-uptime-and-availability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.13.1 Uptime and Availability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5132-data-integrity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.13.2 Data Integrity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5133-scalability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.13.3 Scalability
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#514-putting-it-all-together-aip-workflow-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.14 Putting It All Together: AIP Workflow Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#515-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.15 Chapter Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Review Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="chapter-5-the-asset-intelligence-platform">Chapter 5: The Asset Intelligence Platform</h1>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter, you will be able to:</p>
+<ul>
+<li>Describe the purpose and capabilities of TankScan's AIP cloud platform</li>
+<li>Navigate the AIP dashboard and interpret real-time tank status displays</li>
+<li>Configure tank profiles, alert thresholds, and notification preferences</li>
+<li>Explain how location mapping and geographic views support fleet-level management</li>
+<li>Describe the user management and access control model</li>
+<li>Use historical data, trends, and reports for operational decision-making</li>
+<li>Explain how the AIP API enables integration with third-party business systems</li>
+</ul>
+<hr />
+<h2 id="51-overview-of-the-asset-intelligence-platform">5.1 Overview of the Asset Intelligence Platform</h2>
+<p>The <strong>Asset Intelligence Platform (AIP)</strong> is TankScan's cloud-based software platform that transforms raw sensor data into actionable business intelligence. While the wireless monitors (TSR, TSU, TSP, TSD) are the physical components that measure tank levels, the AIP is the digital nerve center where data is received, processed, stored, analyzed, and presented.</p>
+<h3 id="511-the-role-of-the-aip">5.1.1 The Role of the AIP</h3>
+<p>The AIP serves as the bridge between the physical world of tanks and sensors and the business world of decisions and actions:</p>
+<pre class="mermaid"><code>graph LR
+    subgraph "Physical World"
+        T1[Tank 1&lt;br&gt;TSR Monitor]
+        T2[Tank 2&lt;br&gt;TSU Monitor]
+        T3[Tank 3&lt;br&gt;TSP Monitor]
+        TN[Tank N&lt;br&gt;...]
+    end
+
+    subgraph "AIP Platform"
+        ING[Data&lt;br&gt;Ingestion]
+        PROC[Processing &amp;&lt;br&gt;Analytics]
+        STORE[(Data&lt;br&gt;Storage)]
+        ALERT[Alert&lt;br&gt;Engine]
+        VIZ[Visualization&lt;br&gt;&amp; Reporting]
+        APILAYER[API&lt;br&gt;Layer]
+    end
+
+    subgraph "Business World"
+        DASH[Dashboards]
+        NOTIF[Notifications&lt;br&gt;Email / SMS]
+        MOBILE[Mobile&lt;br&gt;Access]
+        ERP[ERP / Dispatch&lt;br&gt;Integration]
+        CUST[Customer&lt;br&gt;Portals]
+    end
+
+    T1 --&gt; ING
+    T2 --&gt; ING
+    T3 --&gt; ING
+    TN --&gt; ING
+
+    ING --&gt; PROC
+    PROC --&gt; STORE
+    STORE --&gt; ALERT
+    STORE --&gt; VIZ
+    STORE --&gt; APILAYER
+
+    ALERT --&gt; NOTIF
+    VIZ --&gt; DASH
+    VIZ --&gt; MOBILE
+    APILAYER --&gt; ERP
+    APILAYER --&gt; CUST
+
+    style ING fill:#2E7D32,color:#fff
+    style PROC fill:#2E7D32,color:#fff
+    style STORE fill:#2E7D32,color:#fff
+    style ALERT fill:#2E7D32,color:#fff
+    style VIZ fill:#2E7D32,color:#fff
+    style APILAYER fill:#2E7D32,color:#fff</code></pre>
+<h3 id="512-core-capabilities">5.1.2 Core Capabilities</h3>
+<p>The AIP provides the following core capabilities:</p>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Real-time monitoring</strong></td>
+<td>View current tank levels across all monitored tanks</td>
+</tr>
+<tr>
+<td><strong>Dashboard visualization</strong></td>
+<td>Interactive charts, gauges, and maps for at-a-glance status</td>
+</tr>
+<tr>
+<td><strong>Alert management</strong></td>
+<td>Configurable thresholds with multi-channel notifications</td>
+</tr>
+<tr>
+<td><strong>Historical data</strong></td>
+<td>Years of reading history for trend analysis and auditing</td>
+</tr>
+<tr>
+<td><strong>Tank profiling</strong></td>
+<td>Configuration of tank geometry for accurate volume calculation</td>
+</tr>
+<tr>
+<td><strong>Location management</strong></td>
+<td>Organize tanks by location, region, and customer</td>
+</tr>
+<tr>
+<td><strong>User management</strong></td>
+<td>Role-based access controls for different user types</td>
+</tr>
+<tr>
+<td><strong>Reporting</strong></td>
+<td>Scheduled and ad-hoc reports for business intelligence</td>
+</tr>
+<tr>
+<td><strong>API access</strong></td>
+<td>RESTful APIs for integration with third-party systems</td>
+</tr>
+<tr>
+<td><strong>Device management</strong></td>
+<td>Remote monitoring of monitor health, battery, and connectivity</td>
+</tr>
+<tr>
+<td><strong>Mobile access</strong></td>
+<td>Responsive web interface and mobile app for on-the-go access</td>
+</tr>
+</tbody>
+</table>
+<h3 id="513-platform-architecture">5.1.3 Platform Architecture</h3>
+<p>The AIP is built on modern cloud infrastructure following microservices architecture principles:</p>
+<pre class="mermaid"><code>graph TB
+    subgraph "Client Tier"
+        BROWSER[Web Browser&lt;br&gt;Dashboard]
+        MOB[Mobile App]
+        THIRD[Third-Party&lt;br&gt;Systems]
+    end
+
+    subgraph "API Gateway"
+        GW[API Gateway&lt;br&gt;Authentication, Rate Limiting,&lt;br&gt;Routing]
+    end
+
+    subgraph "Application Services"
+        AUTH[Authentication&lt;br&gt;Service]
+        TANK[Tank&lt;br&gt;Service]
+        READ[Readings&lt;br&gt;Service]
+        ALERTSVC[Alert&lt;br&gt;Service]
+        REPORTSVC[Reporting&lt;br&gt;Service]
+        DEVSVC[Device Management&lt;br&gt;Service]
+        USERSVC[User&lt;br&gt;Service]
+    end
+
+    subgraph "Data Layer"
+        TSDB[(Time-Series&lt;br&gt;Database)]
+        RELDB[(Relational&lt;br&gt;Database)]
+        CACHE[(Cache&lt;br&gt;Layer)]
+        QUEUE[Message&lt;br&gt;Queue]
+    end
+
+    subgraph "Infrastructure"
+        LB[Load Balancer]
+        CDN[Content Delivery&lt;br&gt;Network]
+        MONITOR[Platform&lt;br&gt;Monitoring]
+    end
+
+    BROWSER --&gt; CDN --&gt; GW
+    MOB --&gt; GW
+    THIRD --&gt; GW
+
+    GW --&gt; AUTH
+    GW --&gt; TANK
+    GW --&gt; READ
+    GW --&gt; ALERTSVC
+    GW --&gt; REPORTSVC
+    GW --&gt; DEVSVC
+    GW --&gt; USERSVC
+
+    READ --&gt; TSDB
+    TANK --&gt; RELDB
+    ALERTSVC --&gt; QUEUE
+    AUTH --&gt; CACHE
+
+    style GW fill:#E65100,color:#fff
+    style TSDB fill:#1565C0,color:#fff
+    style RELDB fill:#1565C0,color:#fff</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Time-Series Database</p>
+<p>Tank readings are inherently time-series data: each reading has a timestamp, a device identifier, and a set of values (level, volume, temperature, battery voltage). The AIP uses a specialized <strong>time-series database</strong> optimized for ingesting, storing, and querying large volumes of timestamped data. Time-series databases provide efficient compression (readings follow predictable patterns), fast range queries (e.g., "all readings for tank X between January and March"), and built-in downsampling (e.g., aggregate hourly readings into daily averages for long-term storage).</p>
+</div>
+<hr />
+<h2 id="52-dashboard-design-and-real-time-monitoring">5.2 Dashboard Design and Real-Time Monitoring</h2>
+<p>The dashboard is the primary interface through which users interact with the AIP on a daily basis. Effective dashboard design is critical for enabling quick, informed decisions.</p>
+<h3 id="521-dashboard-layout">5.2.1 Dashboard Layout</h3>
+<p>The AIP dashboard is organized into several key areas:</p>
+<p><strong>Navigation Panel (Left Sidebar)</strong>:</p>
+<ul>
+<li>Home / Overview</li>
+<li>Tank List</li>
+<li>Location Map</li>
+<li>Alerts</li>
+<li>Reports</li>
+<li>Settings</li>
+<li>User Management (admin only)</li>
+<li>API Documentation</li>
+</ul>
+<p><strong>Main Content Area</strong>:</p>
+<p>The main area displays content based on the selected navigation item. The default view is the Overview, which shows a summary of all monitored tanks.</p>
+<p><strong>Header Bar</strong>:</p>
+<ul>
+<li>Search functionality (find tanks by name, location, or ID)</li>
+<li>Notification bell (recent alerts)</li>
+<li>User profile and settings</li>
+</ul>
+<h3 id="522-overview-dashboard">5.2.2 Overview Dashboard</h3>
+<p>The Overview dashboard provides a fleet-level summary at a glance:</p>
+<p><strong>Key Metrics Panel</strong> (top of page):</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total Tanks Monitored</td>
+<td>Count of all active monitors</td>
+<td>1,247</td>
+</tr>
+<tr>
+<td>Tanks Below Low Threshold</td>
+<td>Count in alert state</td>
+<td>23</td>
+</tr>
+<tr>
+<td>Tanks Above High Threshold</td>
+<td>Count in alert state</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Monitors Offline</td>
+<td>Devices not reporting</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Average Fill Level</td>
+<td>Fleet average as percentage</td>
+<td>54%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tank Status Distribution</strong> (visual summary):</p>
+<pre class="mermaid"><code>pie title Tank Status Distribution
+    "Normal (85%)" : 85
+    "Low Alert (8%)" : 8
+    "High Alert (2%)" : 2
+    "Offline (3%)" : 3
+    "Maintenance (2%)" : 2</code></pre>
+<p><strong>Recent Alerts Panel</strong> (list of most recent alert events with tank name, alert type, time, and current level).</p>
+<p><strong>Quick Actions</strong>:</p>
+<ul>
+<li>View all tanks in alert</li>
+<li>View all offline monitors</li>
+<li>Run standard report</li>
+<li>Navigate to specific tank or location</li>
+</ul>
+<h3 id="523-individual-tank-view">5.2.3 Individual Tank View</h3>
+<p>Clicking on a specific tank opens the detailed tank view, which includes:</p>
+<p><strong>Current Status Card</strong>:</p>
+<ul>
+<li>Tank name and location</li>
+<li>Current level (inches and percentage)</li>
+<li>Current volume (gallons and percentage)</li>
+<li>Last reading timestamp</li>
+<li>Monitor type and serial number</li>
+<li>Battery voltage and signal strength</li>
+<li>Alert status (normal, low alert, high alert)</li>
+</ul>
+<p><strong>Level History Chart</strong>:</p>
+<p>A time-series line chart showing tank level over a configurable period (24 hours, 7 days, 30 days, 90 days, 1 year). The chart typically shows:</p>
+<ul>
+<li>Level readings as data points connected by lines</li>
+<li>High threshold as a red horizontal line</li>
+<li>Low threshold as a yellow/orange horizontal line</li>
+<li>Delivery events as annotations (vertical markers where a significant level increase occurred)</li>
+<li>Consumption trend as a dashed line showing the average rate of decrease</li>
+</ul>
+<p><strong>Tank Information Panel</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Example Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tank Name</td>
+<td>User-assigned name</td>
+<td>"Main Diesel - Bay 3"</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>Physical location name</td>
+<td>"Springfield Distribution Center"</td>
+</tr>
+<tr>
+<td>Product</td>
+<td>Material stored in the tank</td>
+<td>"Ultra-Low Sulfur Diesel"</td>
+</tr>
+<tr>
+<td>Tank Shape</td>
+<td>Geometry type</td>
+<td>"Horizontal Cylinder"</td>
+</tr>
+<tr>
+<td>Tank Capacity</td>
+<td>Total volume</td>
+<td>10,000 gallons</td>
+</tr>
+<tr>
+<td>Tank Dimensions</td>
+<td>Physical dimensions</td>
+<td>8 ft diameter x 24 ft length</td>
+</tr>
+<tr>
+<td>Monitor Type</td>
+<td>Sensor model</td>
+<td>TSR (Radar)</td>
+</tr>
+<tr>
+<td>Serial Number</td>
+<td>Unique device ID</td>
+<td>TSR-2024-00456</td>
+</tr>
+<tr>
+<td>Install Date</td>
+<td>When the monitor was installed</td>
+<td>2024-03-15</td>
+</tr>
+<tr>
+<td>Low Alert Threshold</td>
+<td>Level triggering low alert</td>
+<td>20% (2,000 gallons)</td>
+</tr>
+<tr>
+<td>High Alert Threshold</td>
+<td>Level triggering high alert</td>
+<td>95% (9,500 gallons)</td>
+</tr>
+<tr>
+<td>Reporting Interval</td>
+<td>How often the monitor reports</td>
+<td>Every 4 hours</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Interpreting the Level History Chart</p>
+<p>The level history chart tells a story. A healthy tank pattern shows a <strong>sawtooth</strong> shape: gradual downward slopes (consumption) interrupted by sharp vertical rises (deliveries). Anomalies to watch for:</p>
+<ul>
+<li><strong>Sudden drop</strong>: A rapid decrease not associated with known consumption could indicate a leak or theft</li>
+<li><strong>Flat line at low level</strong>: The tank has been depleted and not refilled -- potential run-out risk</li>
+<li><strong>Level above high threshold</strong>: Possible overfill event</li>
+<li><strong>No data points</strong>: Monitor may be offline (check battery and signal strength)</li>
+<li><strong>Erratic readings</strong>: Sensor may have an installation issue or interference</li>
+</ul>
+</div>
+<hr />
+<h2 id="53-configuring-tank-profiles">5.3 Configuring Tank Profiles</h2>
+<p>A <strong>tank profile</strong> is the collection of parameters that tells the AIP how to convert a raw sensor reading (distance from sensor to liquid surface) into meaningful volume information. Accurate tank profiling is essential for correct readings.</p>
+<h3 id="531-tank-geometry-configuration">5.3.1 Tank Geometry Configuration</h3>
+<p>The AIP supports several standard tank geometries:</p>
+<table>
+<thead>
+<tr>
+<th>Tank Shape</th>
+<th>Required Parameters</th>
+<th>Volume Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vertical Cylinder</strong></td>
+<td>Diameter, Height</td>
+<td><span class="arithmatex">\(V = \pi r^2 h\)</span></td>
+</tr>
+<tr>
+<td><strong>Horizontal Cylinder</strong></td>
+<td>Diameter, Length</td>
+<td>Non-linear (see Chapter 3)</td>
+</tr>
+<tr>
+<td><strong>Horizontal Cylinder with Dished Ends</strong></td>
+<td>Diameter, Straight Length, Dish Type</td>
+<td>Non-linear with end cap correction</td>
+</tr>
+<tr>
+<td><strong>Rectangular</strong></td>
+<td>Length, Width, Height</td>
+<td><span class="arithmatex">\(V = l \times w \times h\)</span></td>
+</tr>
+<tr>
+<td><strong>Vertical Cylinder with Cone Bottom</strong></td>
+<td>Diameter, Cylinder Height, Cone Height</td>
+<td>Cylinder + cone volume</td>
+</tr>
+<tr>
+<td><strong>Custom (Strapping Table)</strong></td>
+<td>Level-to-volume lookup table</td>
+<td>Interpolation from table</td>
+</tr>
+</tbody>
+</table>
+<h3 id="532-configuration-workflow">5.3.2 Configuration Workflow</h3>
+<pre class="mermaid"><code>graph TB
+    START[Create New&lt;br&gt;Tank Profile] --&gt; SHAPE[Select Tank&lt;br&gt;Shape]
+    SHAPE --&gt; DIMS[Enter Tank&lt;br&gt;Dimensions]
+    DIMS --&gt; PRODUCT[Select Product&lt;br&gt;Type]
+    PRODUCT --&gt; SENSOR[Associate&lt;br&gt;Monitor Device]
+    SENSOR --&gt; MOUNT[Enter Sensor&lt;br&gt;Mounting Height]
+    MOUNT --&gt; THRESH[Set Alert&lt;br&gt;Thresholds]
+    THRESH --&gt; TEST[Verify with&lt;br&gt;Manual Reading]
+    TEST --&gt; ACTIVE[Activate&lt;br&gt;Tank Profile]
+
+    style START fill:#FF9800,color:#fff
+    style ACTIVE fill:#4CAF50,color:#fff</code></pre>
+<h3 id="533-sensor-offset-and-reference-point">5.3.3 Sensor Offset and Reference Point</h3>
+<p>The sensor measures the <strong>distance from the sensor face to the liquid surface</strong>. To convert this to a <strong>liquid level</strong> (height of liquid above the tank bottom), the AIP needs the <strong>reference distance</strong> -- the distance from the sensor face to the tank bottom when the tank is empty:</p>
+<div class="arithmatex">\[\text{Liquid Level} = \text{Reference Distance} - \text{Measured Distance}\]</div>
+<p>For example:</p>
+<ul>
+<li>Reference distance (sensor to tank bottom): 96 inches</li>
+<li>Measured distance (sensor to liquid surface): 54 inches</li>
+<li>Liquid level: 96 - 54 = 42 inches</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Getting the Reference Distance Right</p>
+<p>An incorrect reference distance will cause a systematic offset in all readings. If the reference distance is entered as 98 inches instead of the actual 96 inches, every level reading will be 2 inches too high, and every volume calculation will be correspondingly overstated. Always verify the reference distance with a manual measurement during installation.</p>
+</div>
+<h3 id="534-product-configuration">5.3.4 Product Configuration</h3>
+<p>The tank profile includes the type of product stored, which affects:</p>
+<ul>
+<li><strong>Specific gravity / density</strong>: Used to calculate weight (tons, pounds) from volume (gallons, liters)</li>
+<li><strong>Temperature compensation</strong>: Density corrections for temperature variations</li>
+<li><strong>Dielectric constant</strong>: Affects radar reflection strength (informational, not usually configurable)</li>
+<li><strong>Viscosity category</strong>: May affect ultrasonic measurement performance</li>
+</ul>
+<p>Common product configurations:</p>
+<table>
+<thead>
+<tr>
+<th>Product</th>
+<th>Specific Gravity</th>
+<th>Temperature Coefficient</th>
+<th>Volume Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Diesel fuel (#2)</td>
+<td>0.85</td>
+<td>-0.00045/degree F</td>
+<td>Gallons</td>
+</tr>
+<tr>
+<td>Gasoline</td>
+<td>0.74</td>
+<td>-0.00060/degree F</td>
+<td>Gallons</td>
+</tr>
+<tr>
+<td>Heating oil (#2)</td>
+<td>0.86</td>
+<td>-0.00043/degree F</td>
+<td>Gallons</td>
+</tr>
+<tr>
+<td>Propane (liquid)</td>
+<td>0.50</td>
+<td>-0.00130/degree F</td>
+<td>Gallons</td>
+</tr>
+<tr>
+<td>Lubricating oil</td>
+<td>0.88</td>
+<td>-0.00040/degree F</td>
+<td>Gallons</td>
+</tr>
+<tr>
+<td>DEF</td>
+<td>1.09</td>
+<td>-0.00020/degree F</td>
+<td>Gallons</td>
+</tr>
+<tr>
+<td>Water</td>
+<td>1.00</td>
+<td>-0.00015/degree F</td>
+<td>Gallons</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="54-setting-alert-thresholds">5.4 Setting Alert Thresholds</h2>
+<p>Alerts are one of the most valuable features of the AIP. By setting appropriate thresholds, the system can automatically notify the right people when a tank needs attention.</p>
+<h3 id="541-types-of-alerts">5.4.1 Types of Alerts</h3>
+<table>
+<thead>
+<tr>
+<th>Alert Type</th>
+<th>Trigger Condition</th>
+<th>Typical Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Low Level</strong></td>
+<td>Level drops below a configured threshold</td>
+<td>Trigger delivery planning or emergency response</td>
+</tr>
+<tr>
+<td><strong>Low-Low Level (Critical)</strong></td>
+<td>Level drops below a second, lower threshold</td>
+<td>Emergency: immediate delivery needed</td>
+</tr>
+<tr>
+<td><strong>High Level</strong></td>
+<td>Level rises above a configured threshold</td>
+<td>Overfill warning during deliveries</td>
+</tr>
+<tr>
+<td><strong>High-High Level (Critical)</strong></td>
+<td>Level rises above a second, higher threshold</td>
+<td>Emergency: stop delivery immediately</td>
+</tr>
+<tr>
+<td><strong>Rapid Drop</strong></td>
+<td>Level decreases faster than expected rate</td>
+<td>Possible leak or theft</td>
+</tr>
+<tr>
+<td><strong>No Communication</strong></td>
+<td>Monitor has not reported within expected window</td>
+<td>Monitor may be offline (battery, signal, damage)</td>
+</tr>
+<tr>
+<td><strong>Low Battery</strong></td>
+<td>Battery voltage drops below threshold</td>
+<td>Schedule battery replacement</td>
+</tr>
+</tbody>
+</table>
+<h3 id="542-threshold-configuration">5.4.2 Threshold Configuration</h3>
+<p>The AIP allows thresholds to be set in multiple units:</p>
+<ul>
+<li><strong>Percentage of capacity</strong>: e.g., low alert at 20%, high alert at 95%</li>
+<li><strong>Absolute volume</strong>: e.g., low alert at 500 gallons, high alert at 4,750 gallons</li>
+<li><strong>Absolute level</strong>: e.g., low alert at 12 inches, high alert at 90 inches</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Multi-Level Alert Configuration</p>
+<p>A 5,000-gallon diesel tank at a commercial fleet fueling site is configured with:</p>
+<table>
+<thead>
+<tr>
+<th>Alert Level</th>
+<th>Threshold</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low</td>
+<td>30% (1,500 gal)</td>
+<td>Schedule routine delivery within 3 days</td>
+</tr>
+<tr>
+<td>Low-Low (Critical)</td>
+<td>15% (750 gal)</td>
+<td>Schedule priority delivery within 24 hours</td>
+</tr>
+<tr>
+<td>High</td>
+<td>90% (4,500 gal)</td>
+<td>Normal -- acknowledge during filling</td>
+</tr>
+<tr>
+<td>High-High (Critical)</td>
+<td>98% (4,900 gal)</td>
+<td>Stop delivery immediately -- overfill risk</td>
+</tr>
+<tr>
+<td>Rapid Drop</td>
+<td>&gt; 5% decrease in 4 hours</td>
+<td>Investigate for leak or theft</td>
+</tr>
+<tr>
+<td>No Communication</td>
+<td>&gt; 24 hours without reading</td>
+<td>Check monitor health</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="543-alert-hysteresis">5.4.3 Alert Hysteresis</h3>
+<p><strong>Hysteresis</strong> prevents alert oscillation (repeatedly triggering and clearing) when the level is hovering near the threshold. With hysteresis, the alert triggers when the level drops below the threshold (e.g., 20%) but does not clear until the level rises above the threshold plus a hysteresis band (e.g., 25%).</p>
+<pre class="mermaid"><code>graph LR
+    subgraph "Without Hysteresis"
+        A1[Level drops&lt;br&gt;to 19.5%] --&gt;|Alert ON| B1[Level rises&lt;br&gt;to 20.5%]
+        B1 --&gt;|Alert OFF| C1[Level drops&lt;br&gt;to 19.8%]
+        C1 --&gt;|Alert ON| D1[Level rises&lt;br&gt;to 20.2%]
+        D1 --&gt;|Alert OFF| E1[Repeated&lt;br&gt;on/off cycling]
+    end
+
+    subgraph "With 5% Hysteresis"
+        A2[Level drops&lt;br&gt;to 19.5%] --&gt;|Alert ON at 20%| B2[Level rises&lt;br&gt;to 22%]
+        B2 --&gt;|Alert stays ON| C2[Level rises&lt;br&gt;to 25%]
+        C2 --&gt;|Alert OFF at 25%| D2[Stable behavior]
+    end
+
+    style E1 fill:#F44336,color:#fff
+    style D2 fill:#4CAF50,color:#fff</code></pre>
+<hr />
+<h2 id="55-automated-notifications">5.5 Automated Notifications</h2>
+<p>When an alert is triggered, the AIP can automatically notify designated recipients through multiple channels.</p>
+<h3 id="551-notification-channels">5.5.1 Notification Channels</h3>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Description</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Email</strong></td>
+<td>Alert details sent to configured email addresses</td>
+<td>Non-urgent alerts, record-keeping, wide distribution</td>
+</tr>
+<tr>
+<td><strong>SMS (Text Message)</strong></td>
+<td>Short alert message sent to mobile phone numbers</td>
+<td>Urgent alerts requiring immediate attention</td>
+</tr>
+<tr>
+<td><strong>Push Notification</strong></td>
+<td>Alert via the AIP mobile app</td>
+<td>Users who have the mobile app installed</td>
+</tr>
+<tr>
+<td><strong>Webhook</strong></td>
+<td>HTTP POST to a configured URL</td>
+<td>Integration with third-party systems (dispatch, ticketing)</td>
+</tr>
+<tr>
+<td><strong>API Event</strong></td>
+<td>Alert available via the API for programmatic consumption</td>
+<td>Automated workflows, custom applications</td>
+</tr>
+</tbody>
+</table>
+<h3 id="552-notification-configuration">5.5.2 Notification Configuration</h3>
+<p>Each alert type can be configured with:</p>
+<ul>
+<li><strong>Recipients</strong>: Who receives the notification (individual users, groups, or external email addresses)</li>
+<li><strong>Channels</strong>: Which channels are used (email, SMS, both, etc.)</li>
+<li><strong>Schedule</strong>: When notifications are active (e.g., SMS only during business hours, email 24/7)</li>
+<li><strong>Escalation</strong>: If the alert is not acknowledged within a time period, escalate to additional recipients</li>
+<li><strong>Suppression</strong>: Do not re-notify for the same alert condition within a configurable window (to prevent notification fatigue)</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Avoiding Alert Fatigue</p>
+<p>One of the most common mistakes in alert configuration is setting thresholds too aggressively, resulting in too many alerts. When users receive dozens of alerts per day, they begin ignoring them -- which means they may miss the truly critical ones. Best practices:</p>
+<ul>
+<li>Start with conservative thresholds (e.g., low alert at 20% rather than 30%)</li>
+<li>Use two-tier alerting (advisory + critical) so most alerts are informational, not emergencies</li>
+<li>Regularly review alert frequency and adjust thresholds</li>
+<li>Use suppression windows to prevent repeated alerts for the same condition</li>
+<li>Reserve SMS for critical alerts only; use email for advisory alerts</li>
+</ul>
+</div>
+<h3 id="553-notification-workflow">5.5.3 Notification Workflow</h3>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Monitor as Tank Monitor
+    participant AIP as AIP Platform
+    participant Rules as Alert Rules Engine
+    participant Notify as Notification Service
+    participant User as Recipient
+
+    Monitor-&gt;&gt;AIP: New reading: 18% level
+    AIP-&gt;&gt;AIP: Store reading
+    AIP-&gt;&gt;Rules: Evaluate reading against thresholds
+    Rules-&gt;&gt;Rules: 18% &lt; 20% low threshold = ALERT
+    Rules-&gt;&gt;Rules: Check hysteresis (was previously above 25%)
+    Rules-&gt;&gt;Rules: Alert is new, not suppressed
+    Rules-&gt;&gt;Notify: Trigger low-level alert
+    Notify-&gt;&gt;Notify: Look up recipients and channels
+    Notify-&gt;&gt;User: Send email notification
+    Notify-&gt;&gt;User: Send SMS notification
+    Note over User: User acknowledges alert
+    User-&gt;&gt;AIP: Acknowledge via dashboard
+    AIP-&gt;&gt;AIP: Record acknowledgement
+    Note over AIP: Alert remains active until level rises above 25% (hysteresis)</code></pre>
+<hr />
+<h2 id="56-location-mapping-and-geographic-views">5.6 Location Mapping and Geographic Views</h2>
+<h3 id="561-geographic-dashboard">5.6.1 Geographic Dashboard</h3>
+<p>The AIP provides a map-based view that displays all monitored tank locations on an interactive map. Each location is represented by a marker whose color and icon indicate the status of the tanks at that location:</p>
+<table>
+<thead>
+<tr>
+<th>Marker Color</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Green</td>
+<td>All tanks at this location are within normal range</td>
+</tr>
+<tr>
+<td>Yellow/Orange</td>
+<td>One or more tanks have a low-level advisory alert</td>
+</tr>
+<tr>
+<td>Red</td>
+<td>One or more tanks have a critical alert (low-low or high-high)</td>
+</tr>
+<tr>
+<td>Gray</td>
+<td>One or more monitors at this location are offline</td>
+</tr>
+</tbody>
+</table>
+<h3 id="562-location-hierarchy">5.6.2 Location Hierarchy</h3>
+<p>The AIP organizes tanks in a hierarchical structure:</p>
+<pre class="mermaid"><code>graph TB
+    ORG[Organization&lt;br&gt;"ABC Fuel Distributors"] --&gt; REG1[Region&lt;br&gt;"Northeast"]
+    ORG --&gt; REG2[Region&lt;br&gt;"Southeast"]
+
+    REG1 --&gt; LOC1[Location&lt;br&gt;"Springfield Depot"]
+    REG1 --&gt; LOC2[Location&lt;br&gt;"Hartford Terminal"]
+    REG1 --&gt; LOC3[Location&lt;br&gt;"Boston Fleet Center"]
+
+    REG2 --&gt; LOC4[Location&lt;br&gt;"Atlanta Hub"]
+    REG2 --&gt; LOC5[Location&lt;br&gt;"Charlotte Facility"]
+
+    LOC1 --&gt; TANK1[Tank: Main Diesel&lt;br&gt;10,000 gal - 65%]
+    LOC1 --&gt; TANK2[Tank: Backup Diesel&lt;br&gt;5,000 gal - 42%]
+    LOC1 --&gt; TANK3[Tank: DEF&lt;br&gt;2,500 gal - 78%]
+
+    LOC2 --&gt; TANK4[Tank: Premium Gas&lt;br&gt;15,000 gal - 55%]
+    LOC2 --&gt; TANK5[Tank: Regular Gas&lt;br&gt;15,000 gal - 38%]
+
+    style ORG fill:#6A1B9A,color:#fff
+    style REG1 fill:#1565C0,color:#fff
+    style REG2 fill:#1565C0,color:#fff
+    style LOC1 fill:#2E7D32,color:#fff
+    style LOC2 fill:#2E7D32,color:#fff
+    style LOC3 fill:#2E7D32,color:#fff
+    style LOC4 fill:#2E7D32,color:#fff
+    style LOC5 fill:#2E7D32,color:#fff</code></pre>
+<p>This hierarchy enables:</p>
+<ul>
+<li><strong>Filtering</strong>: View only tanks in a specific region or location</li>
+<li><strong>Aggregation</strong>: See summary statistics for a region (total volume, average fill, tanks in alert)</li>
+<li><strong>Access control</strong>: Grant users access to specific regions or locations</li>
+<li><strong>Reporting</strong>: Generate reports at any level of the hierarchy</li>
+</ul>
+<h3 id="563-geofencing-and-proximity-features">5.6.3 Geofencing and Proximity Features</h3>
+<p>Advanced geographic features include:</p>
+<ul>
+<li><strong>Geofencing</strong>: Define geographic boundaries and receive alerts when tanks within a specific area meet certain criteria</li>
+<li><strong>Route optimization input</strong>: Export location data and tank status to routing software to plan delivery routes</li>
+<li><strong>Nearest tank search</strong>: Find the closest tanks of a specific product type to a given location</li>
+<li><strong>Coverage analysis</strong>: Identify areas with many monitored tanks vs. areas with gaps</li>
+</ul>
+<hr />
+<h2 id="57-user-management-and-access-controls">5.7 User Management and Access Controls</h2>
+<p>The AIP supports multiple users with different roles and permissions, enabling organizations to provide appropriate access to different stakeholders.</p>
+<h3 id="571-role-based-access-control-rbac">5.7.1 Role-Based Access Control (RBAC)</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Permissions</th>
+<th>Typical User</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>System Administrator</strong></td>
+<td>Full access: user management, system configuration, all data</td>
+<td>IT manager, system owner</td>
+</tr>
+<tr>
+<td><strong>Account Manager</strong></td>
+<td>Manage tanks, locations, alerts; view all data; run reports</td>
+<td>Operations manager</td>
+</tr>
+<tr>
+<td><strong>Dispatcher</strong></td>
+<td>View tank levels and alerts; cannot change configuration</td>
+<td>Delivery dispatcher</td>
+</tr>
+<tr>
+<td><strong>Technician</strong></td>
+<td>View tank details and device diagnostics; limited configuration</td>
+<td>Field service technician</td>
+</tr>
+<tr>
+<td><strong>Customer Viewer</strong></td>
+<td>View only their own location's tanks; read-only</td>
+<td>End customer</td>
+</tr>
+<tr>
+<td><strong>API User</strong></td>
+<td>Programmatic access via API; scoped to specific tanks/locations</td>
+<td>Integration application</td>
+</tr>
+</tbody>
+</table>
+<h3 id="572-access-control-matrix">5.7.2 Access Control Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Sys Admin</th>
+<th>Account Mgr</th>
+<th>Dispatcher</th>
+<th>Technician</th>
+<th>Customer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>View tank levels</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Own only</td>
+</tr>
+<tr>
+<td>View historical data</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Own only</td>
+</tr>
+<tr>
+<td>Configure tank profiles</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Set alert thresholds</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Manage users</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>View device diagnostics</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Run reports</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>Limited</td>
+</tr>
+<tr>
+<td>Access API</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Scoped</td>
+<td>No</td>
+<td>Scoped</td>
+</tr>
+<tr>
+<td>Manage integrations</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="573-security-features">5.7.3 Security Features</h3>
+<ul>
+<li><strong>Multi-factor authentication (MFA)</strong>: Optional or required second factor for login</li>
+<li><strong>Session management</strong>: Automatic session timeout after period of inactivity</li>
+<li><strong>Password policies</strong>: Configurable minimum complexity, expiration, and history rules</li>
+<li><strong>Audit logging</strong>: All user actions (login, configuration changes, report generation) are logged with timestamps</li>
+<li><strong>IP whitelisting</strong>: Restrict access to specific IP address ranges (optional)</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Principle of Least Privilege</p>
+<p>Always assign users the minimum permissions they need to perform their job. A dispatcher who only needs to see tank levels and alerts should not have administrator access that could allow them to change configurations, delete data, or manage other users. This principle limits the impact of compromised credentials and reduces the risk of accidental misconfiguration.</p>
+</div>
+<hr />
+<h2 id="58-historical-data-and-trends">5.8 Historical Data and Trends</h2>
+<p>One of the AIP's most powerful capabilities is its ability to store and analyze years of historical tank data. This historical perspective enables pattern recognition, trend analysis, and data-driven decision-making that is impossible with real-time data alone.</p>
+<h3 id="581-data-retention">5.8.1 Data Retention</h3>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Retention Period</th>
+<th>Storage Strategy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raw readings (full resolution)</td>
+<td>2 years</td>
+<td>Time-series database, full detail</td>
+</tr>
+<tr>
+<td>Aggregated readings (hourly averages)</td>
+<td>5 years</td>
+<td>Downsampled for efficient storage</td>
+</tr>
+<tr>
+<td>Aggregated readings (daily averages)</td>
+<td>10+ years</td>
+<td>Highly compressed, long-term archive</td>
+</tr>
+<tr>
+<td>Alert history</td>
+<td>5 years</td>
+<td>Relational database with full context</td>
+</tr>
+<tr>
+<td>Audit logs</td>
+<td>7 years</td>
+<td>Compliance-grade, immutable storage</td>
+</tr>
+<tr>
+<td>Device health history</td>
+<td>3 years</td>
+<td>Battery voltage, signal strength trends</td>
+</tr>
+</tbody>
+</table>
+<h3 id="582-trend-analysis">5.8.2 Trend Analysis</h3>
+<p>The AIP provides several trend analysis tools:</p>
+<p><strong>Consumption Rate Calculation</strong>: The AIP calculates the average rate at which product is being consumed from a tank:</p>
+<div class="arithmatex">\[\text{Consumption Rate} = \frac{\Delta V}{\Delta t} = \frac{V_1 - V_2}{t_2 - t_1}\]</div>
+<p>Where <span class="arithmatex">\(V_1\)</span> and <span class="arithmatex">\(V_2\)</span> are volume readings at times <span class="arithmatex">\(t_1\)</span> and <span class="arithmatex">\(t_2\)</span> (excluding delivery events).</p>
+<p>Consumption rates can be calculated over different periods:</p>
+<table>
+<thead>
+<tr>
+<th>Period</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Daily average</td>
+<td>Short-term delivery planning</td>
+</tr>
+<tr>
+<td>Weekly average</td>
+<td>Route scheduling</td>
+</tr>
+<tr>
+<td>Monthly average</td>
+<td>Inventory budgeting</td>
+</tr>
+<tr>
+<td>Seasonal average</td>
+<td>Understanding heating oil demand in winter vs. summer</td>
+</tr>
+<tr>
+<td>Year-over-year</td>
+<td>Long-term demand trends</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Days to Empty Prediction</strong>: Using the current level and the calculated consumption rate, the AIP predicts when the tank will reach the low threshold or empty:</p>
+<div class="arithmatex">\[\text{Days to Empty} = \frac{V_{current} - V_{threshold}}{R_{consumption}}\]</div>
+<p>Where <span class="arithmatex">\(R_{consumption}\)</span> is the consumption rate in gallons per day.</p>
+<div class="admonition example">
+<p class="admonition-title">Days-to-Empty Calculation</p>
+<p>Tank: 5,000-gallon diesel, currently at 2,800 gallons (56%)</p>
+<p>Consumption rate (based on last 30 days): 120 gallons/day</p>
+<p>Low threshold: 1,000 gallons (20%)</p>
+<div class="arithmatex">\[\text{Days to Low Threshold} = \frac{2{,}800 - 1{,}000}{120} = 15.0 \text{ days}\]</div>
+<p>The dispatcher has approximately 15 days to schedule a delivery before the low alert triggers. This proactive information enables optimal delivery scheduling.</p>
+</div>
+<p><strong>Delivery History Analysis</strong>: The AIP identifies delivery events (significant level increases) and tracks:</p>
+<ul>
+<li>Delivery volume (level change converted to gallons)</li>
+<li>Delivery frequency</li>
+<li>Average time between deliveries</li>
+<li>Delivery timing relative to alert thresholds (was delivery before or after alert?)</li>
+</ul>
+<h3 id="583-anomaly-detection">5.8.3 Anomaly Detection</h3>
+<p>By establishing baseline consumption patterns, the AIP can detect anomalies:</p>
+<table>
+<thead>
+<tr>
+<th>Anomaly Type</th>
+<th>Detection Method</th>
+<th>Possible Cause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sudden large drop</strong></td>
+<td>Level decrease &gt; X% in one reporting interval</td>
+<td>Leak, theft, unrecorded withdrawal</td>
+</tr>
+<tr>
+<td><strong>Consumption spike</strong></td>
+<td>Daily consumption &gt; 2x the rolling average</td>
+<td>Increased usage, leak, meter error</td>
+</tr>
+<tr>
+<td><strong>Consumption drop</strong></td>
+<td>Daily consumption &lt; 50% of rolling average</td>
+<td>Reduced operations, stuck gauge, sensor issue</td>
+</tr>
+<tr>
+<td><strong>Phantom increase</strong></td>
+<td>Level increases without a known delivery</td>
+<td>Sensor error, water intrusion, product swap</td>
+</tr>
+<tr>
+<td><strong>Chronic low</strong></td>
+<td>Level stays below threshold for &gt; X days</td>
+<td>Delivery not arriving, customer issue</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="59-reporting-and-data-export">5.9 Reporting and Data Export</h2>
+<h3 id="591-standard-reports">5.9.1 Standard Reports</h3>
+<p>The AIP includes a library of pre-built reports:</p>
+<table>
+<thead>
+<tr>
+<th>Report Name</th>
+<th>Content</th>
+<th>Typical Schedule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tank Status Summary</strong></td>
+<td>Current level, volume, and alert status for all tanks</td>
+<td>Daily</td>
+</tr>
+<tr>
+<td><strong>Low Level Report</strong></td>
+<td>All tanks currently below low threshold</td>
+<td>Daily or on-demand</td>
+</tr>
+<tr>
+<td><strong>Delivery Needs Report</strong></td>
+<td>Tanks predicted to reach low threshold within X days</td>
+<td>Daily</td>
+</tr>
+<tr>
+<td><strong>Delivery History Report</strong></td>
+<td>All detected deliveries with volumes and dates</td>
+<td>Weekly or monthly</td>
+</tr>
+<tr>
+<td><strong>Consumption Analysis</strong></td>
+<td>Average consumption rates by tank, location, or product</td>
+<td>Monthly</td>
+</tr>
+<tr>
+<td><strong>Device Health Report</strong></td>
+<td>Battery levels, signal strength, offline monitors</td>
+<td>Weekly</td>
+</tr>
+<tr>
+<td><strong>Alert History Report</strong></td>
+<td>All alerts triggered, acknowledged, and resolved</td>
+<td>Monthly</td>
+</tr>
+<tr>
+<td><strong>Inventory Report</strong></td>
+<td>Total inventory by product type across all tanks</td>
+<td>Daily or weekly</td>
+</tr>
+</tbody>
+</table>
+<h3 id="592-custom-reports">5.9.2 Custom Reports</h3>
+<p>Users can create custom reports by:</p>
+<ul>
+<li>Selecting data fields (level, volume, temperature, consumption rate, etc.)</li>
+<li>Defining filters (date range, location, product type, alert status)</li>
+<li>Choosing grouping and aggregation (by tank, by location, by region, by product)</li>
+<li>Selecting output format (table, chart, or combined)</li>
+</ul>
+<h3 id="593-data-export">5.9.3 Data Export</h3>
+<p>The AIP supports exporting data in multiple formats:</p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CSV</strong></td>
+<td>Import into spreadsheets, databases, or data analysis tools</td>
+</tr>
+<tr>
+<td><strong>PDF</strong></td>
+<td>Formatted reports for distribution, printing, or archiving</td>
+</tr>
+<tr>
+<td><strong>Excel (XLSX)</strong></td>
+<td>Spreadsheet analysis with formatting and multiple sheets</td>
+</tr>
+<tr>
+<td><strong>JSON</strong></td>
+<td>Programmatic consumption by applications and scripts</td>
+</tr>
+</tbody>
+</table>
+<h3 id="594-scheduled-report-delivery">5.9.4 Scheduled Report Delivery</h3>
+<p>Reports can be scheduled for automatic generation and delivery:</p>
+<ul>
+<li><strong>Frequency</strong>: Daily, weekly, monthly, or custom intervals</li>
+<li><strong>Recipients</strong>: One or more email addresses</li>
+<li><strong>Format</strong>: PDF or CSV attachment</li>
+<li><strong>Filters</strong>: Pre-configured to show relevant data (e.g., "My Region" or "Tanks in Alert")</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Report Best Practices</p>
+<ul>
+<li>Schedule a daily "Delivery Needs" report for dispatchers so they start each day knowing which tanks need attention</li>
+<li>Schedule a weekly "Device Health" report for the operations manager to catch battery and connectivity issues early</li>
+<li>Use the monthly "Consumption Analysis" report to identify trends, seasonal patterns, and potential billing discrepancies</li>
+<li>Export raw data to CSV periodically for backup and offline analysis</li>
+</ul>
+</div>
+<hr />
+<h2 id="510-mobile-access">5.10 Mobile Access</h2>
+<h3 id="5101-responsive-web-interface">5.10.1 Responsive Web Interface</h3>
+<p>The AIP web interface is built with responsive design, meaning it automatically adapts to different screen sizes. Users can access the full dashboard from a tablet or smartphone browser without a separate app.</p>
+<h3 id="5102-mobile-app-features">5.10.2 Mobile App Features</h3>
+<p>The AIP mobile app provides optimized mobile access with features tailored for on-the-go use:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tank list with status</strong></td>
+<td>Scrollable list of tanks with color-coded status indicators</td>
+</tr>
+<tr>
+<td><strong>Quick tank view</strong></td>
+<td>Tap a tank to see current level, recent history, and alerts</td>
+</tr>
+<tr>
+<td><strong>Push notifications</strong></td>
+<td>Receive alerts as phone push notifications</td>
+</tr>
+<tr>
+<td><strong>Location-based view</strong></td>
+<td>See nearby tanks based on phone GPS</td>
+</tr>
+<tr>
+<td><strong>Delivery confirmation</strong></td>
+<td>Drivers can confirm deliveries by scanning a monitor's QR code</td>
+</tr>
+<tr>
+<td><strong>Offline caching</strong></td>
+<td>Recent tank data is cached for viewing when cellular is unavailable</td>
+</tr>
+<tr>
+<td><strong>Installation assistant</strong></td>
+<td>Step-by-step guide for installing and configuring new monitors</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5103-mobile-use-cases">5.10.3 Mobile Use Cases</h3>
+<pre class="mermaid"><code>graph TB
+    subgraph "Field Technician"
+        FT1[Install new monitor] --&gt; FT2[Scan QR code&lt;br&gt;to register]
+        FT2 --&gt; FT3[Configure tank&lt;br&gt;profile on phone]
+        FT3 --&gt; FT4[Verify first&lt;br&gt;reading matches&lt;br&gt;manual measurement]
+    end
+
+    subgraph "Delivery Driver"
+        DD1[View delivery&lt;br&gt;route on phone] --&gt; DD2[Check tank&lt;br&gt;level at each stop]
+        DD2 --&gt; DD3[Confirm delivery&lt;br&gt;volume in app]
+        DD3 --&gt; DD4[Verify post-delivery&lt;br&gt;level reading]
+    end
+
+    subgraph "Manager"
+        MG1[Review fleet&lt;br&gt;status on tablet] --&gt; MG2[Drill into&lt;br&gt;alert details]
+        MG2 --&gt; MG3[Assign action&lt;br&gt;to team member]
+        MG3 --&gt; MG4[Track resolution]
+    end
+
+    style FT1 fill:#1565C0,color:#fff
+    style DD1 fill:#2E7D32,color:#fff
+    style MG1 fill:#6A1B9A,color:#fff</code></pre>
+<hr />
+<h2 id="511-api-overview-for-integration">5.11 API Overview for Integration</h2>
+<p>The AIP provides a comprehensive RESTful API that enables programmatic access to all platform data and functionality. This API is the foundation for integrating tank monitoring data with other business systems.</p>
+<h3 id="5111-api-architecture">5.11.1 API Architecture</h3>
+<p>The AIP API follows REST principles:</p>
+<ul>
+<li><strong>Base URL</strong>: <code>https://api.tankscan.com/v1/</code></li>
+<li><strong>Authentication</strong>: OAuth 2.0 bearer tokens or API keys</li>
+<li><strong>Data format</strong>: JSON request and response bodies</li>
+<li><strong>HTTP methods</strong>: GET (read), POST (create), PUT (update), DELETE (remove)</li>
+<li><strong>Pagination</strong>: Cursor-based pagination for large result sets</li>
+<li><strong>Rate limiting</strong>: Configurable per API key to prevent abuse</li>
+<li><strong>Versioning</strong>: URL-based versioning (<code>/v1/</code>, <code>/v2/</code>) for backward compatibility</li>
+</ul>
+<h3 id="5112-key-api-endpoints">5.11.2 Key API Endpoints</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/tanks</code></td>
+<td>GET</td>
+<td>List all tanks accessible to the authenticated user</td>
+</tr>
+<tr>
+<td><code>/tanks/{id}</code></td>
+<td>GET</td>
+<td>Get details for a specific tank</td>
+</tr>
+<tr>
+<td><code>/tanks/{id}/readings</code></td>
+<td>GET</td>
+<td>Get historical readings for a tank (with date range filter)</td>
+</tr>
+<tr>
+<td><code>/tanks/{id}/readings/latest</code></td>
+<td>GET</td>
+<td>Get the most recent reading for a tank</td>
+</tr>
+<tr>
+<td><code>/locations</code></td>
+<td>GET</td>
+<td>List all locations</td>
+</tr>
+<tr>
+<td><code>/locations/{id}/tanks</code></td>
+<td>GET</td>
+<td>List all tanks at a specific location</td>
+</tr>
+<tr>
+<td><code>/alerts</code></td>
+<td>GET</td>
+<td>List active and recent alerts</td>
+</tr>
+<tr>
+<td><code>/alerts/{id}/acknowledge</code></td>
+<td>POST</td>
+<td>Acknowledge an alert</td>
+</tr>
+<tr>
+<td><code>/reports/delivery-needs</code></td>
+<td>GET</td>
+<td>Get tanks needing delivery within a specified timeframe</td>
+</tr>
+<tr>
+<td><code>/devices</code></td>
+<td>GET</td>
+<td>List all monitor devices and their health status</td>
+</tr>
+<tr>
+<td><code>/devices/{id}/diagnostics</code></td>
+<td>GET</td>
+<td>Get diagnostic information for a specific device</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5113-example-api-workflow">5.11.3 Example API Workflow</h3>
+<p>A dispatch system integrating with the AIP might follow this workflow:</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant DS as Dispatch System
+    participant API as AIP API
+    participant DB as AIP Database
+
+    DS-&gt;&gt;API: POST /auth/token&lt;br&gt;(client credentials)
+    API--&gt;&gt;DS: Bearer token
+
+    DS-&gt;&gt;API: GET /reports/delivery-needs?days=3
+    API-&gt;&gt;DB: Query tanks predicted&lt;br&gt;to need delivery within 3 days
+    DB--&gt;&gt;API: Matching tanks
+    API--&gt;&gt;DS: JSON list of tanks&lt;br&gt;with predicted delivery dates
+
+    loop For each tank needing delivery
+        DS-&gt;&gt;API: GET /tanks/{id}/readings/latest
+        API--&gt;&gt;DS: Current level, volume,&lt;br&gt;consumption rate
+        DS-&gt;&gt;DS: Calculate optimal&lt;br&gt;delivery volume and timing
+    end
+
+    DS-&gt;&gt;DS: Generate optimized&lt;br&gt;delivery route
+    DS-&gt;&gt;DS: Assign route to driver
+
+    Note over DS: After delivery...
+    DS-&gt;&gt;API: GET /tanks/{id}/readings/latest
+    API--&gt;&gt;DS: Post-delivery level
+    DS-&gt;&gt;DS: Verify delivery volume&lt;br&gt;matches BOL (Bill of Lading)</code></pre>
+<h3 id="5114-webhooks-for-real-time-integration">5.11.4 Webhooks for Real-Time Integration</h3>
+<p>In addition to polling the API, the AIP supports <strong>webhooks</strong> -- HTTP POST callbacks triggered by events:</p>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Webhook Payload</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New reading received</td>
+<td>Tank ID, level, volume, timestamp</td>
+<td>Real-time sync to external system</td>
+</tr>
+<tr>
+<td>Alert triggered</td>
+<td>Alert type, tank ID, current level, threshold</td>
+<td>Trigger action in dispatch or ticketing system</td>
+</tr>
+<tr>
+<td>Alert acknowledged</td>
+<td>Alert ID, user, timestamp</td>
+<td>Update status in external system</td>
+</tr>
+<tr>
+<td>Device offline</td>
+<td>Device ID, last reading time</td>
+<td>Trigger maintenance workflow</td>
+</tr>
+<tr>
+<td>Delivery detected</td>
+<td>Tank ID, estimated delivery volume, timestamp</td>
+<td>Update delivery records in ERP</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5115-common-integrations">5.11.5 Common Integrations</h3>
+<table>
+<thead>
+<tr>
+<th>Integration Target</th>
+<th>Data Flow</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dispatch / Routing Software</strong></td>
+<td>AIP sends tank levels and delivery predictions to dispatch</td>
+<td>Optimized delivery routes based on actual tank needs</td>
+</tr>
+<tr>
+<td><strong>ERP / Back Office</strong></td>
+<td>AIP sends inventory data; ERP sends delivery schedules</td>
+<td>Automated inventory reconciliation and financial reporting</td>
+</tr>
+<tr>
+<td><strong>Customer Portal</strong></td>
+<td>AIP provides tank data via API to customer-facing app</td>
+<td>Customers can view their own tank levels and request deliveries</td>
+</tr>
+<tr>
+<td><strong>SCADA / Control System</strong></td>
+<td>AIP sends tank data to plant SCADA</td>
+<td>Unified view of all monitored assets in existing control system</td>
+</tr>
+<tr>
+<td><strong>Business Intelligence (BI)</strong></td>
+<td>AIP exports data to BI platform (Tableau, Power BI, etc.)</td>
+<td>Advanced analytics, cross-system reporting, KPI dashboards</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">API Documentation</p>
+<p>The AIP provides interactive API documentation using the OpenAPI (Swagger) specification. Developers can explore endpoints, view request/response schemas, and test API calls directly from the documentation interface at <code>https://api.tankscan.com/docs</code>. Code examples are provided in Python, JavaScript, C#, and cURL.</p>
+</div>
+<hr />
+<h2 id="512-device-management">5.12 Device Management</h2>
+<p>The AIP includes comprehensive device management capabilities for monitoring the health and status of deployed monitors.</p>
+<h3 id="5121-device-dashboard">5.12.1 Device Dashboard</h3>
+<p>The device management dashboard provides:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Description</th>
+<th>Alert Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Last Report Time</strong></td>
+<td>When the monitor last transmitted</td>
+<td>More than 2x the reporting interval</td>
+</tr>
+<tr>
+<td><strong>Battery Voltage</strong></td>
+<td>Current battery voltage</td>
+<td>Below manufacturer threshold</td>
+</tr>
+<tr>
+<td><strong>Signal Strength (RSSI)</strong></td>
+<td>Cellular signal strength in dBm</td>
+<td>Below -100 dBm</td>
+</tr>
+<tr>
+<td><strong>Signal Quality (RSRQ)</strong></td>
+<td>Cellular signal quality</td>
+<td>Below -15 dB</td>
+</tr>
+<tr>
+<td><strong>Firmware Version</strong></td>
+<td>Current firmware running on the device</td>
+<td>Outdated (update available)</td>
+</tr>
+<tr>
+<td><strong>Cellular Carrier</strong></td>
+<td>Which carrier the device is connected to</td>
+<td>N/A (informational)</td>
+</tr>
+<tr>
+<td><strong>Measurement Diagnostics</strong></td>
+<td>Sensor-specific health indicators</td>
+<td>Abnormal echo profile, noise level</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5122-remote-configuration">5.12.2 Remote Configuration</h3>
+<p>The AIP allows certain monitor settings to be changed remotely without a site visit:</p>
+<ul>
+<li><strong>Reporting interval</strong>: Increase or decrease the frequency of readings</li>
+<li><strong>Alert thresholds</strong>: Pushed to the device for edge-based alerting</li>
+<li><strong>Measurement parameters</strong>: Averaging settings, echo profile configuration</li>
+<li><strong>Firmware updates</strong>: Over-the-air (OTA) firmware updates</li>
+</ul>
+<h3 id="5123-fleet-health-monitoring">5.12.3 Fleet Health Monitoring</h3>
+<p>For organizations with hundreds or thousands of monitors, the AIP provides fleet-level health analytics:</p>
+<ul>
+<li><strong>Percentage of fleet online</strong>: Tracks overall fleet connectivity health over time</li>
+<li><strong>Battery life distribution</strong>: Histogram showing remaining battery life across all devices</li>
+<li><strong>Signal strength heatmap</strong>: Geographic map overlaid with signal strength data to identify coverage problems</li>
+<li><strong>Firmware compliance</strong>: Percentage of devices running the latest firmware version</li>
+<li><strong>Device age distribution</strong>: Helps plan proactive replacement cycles</li>
+</ul>
+<pre class="mermaid"><code>graph LR
+    subgraph "Fleet Health Metrics"
+        A[98.5% Online&lt;br&gt;1.5% Offline] --&gt; B[Average Battery&lt;br&gt;3.42V&lt;br&gt;Est. 4.2 years remaining]
+        B --&gt; C[Average Signal&lt;br&gt;-82 dBm&lt;br&gt;Good quality]
+        C --&gt; D[92% on latest&lt;br&gt;firmware&lt;br&gt;8% need update]
+    end
+
+    style A fill:#4CAF50,color:#fff
+    style B fill:#4CAF50,color:#fff
+    style C fill:#2196F3,color:#fff
+    style D fill:#FF9800,color:#fff</code></pre>
+<hr />
+<h2 id="513-platform-reliability-and-performance">5.13 Platform Reliability and Performance</h2>
+<h3 id="5131-uptime-and-availability">5.13.1 Uptime and Availability</h3>
+<p>The AIP is designed for high availability:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target</th>
+<th>How Achieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Platform uptime</strong></td>
+<td>99.9% (less than 8.8 hours downtime per year)</td>
+<td>Redundant infrastructure, auto-scaling, health monitoring</td>
+</tr>
+<tr>
+<td><strong>Data ingestion latency</strong></td>
+<td>&lt; 5 seconds from receipt to storage</td>
+<td>Optimized ingestion pipeline, message queuing</td>
+</tr>
+<tr>
+<td><strong>Dashboard load time</strong></td>
+<td>&lt; 3 seconds for standard views</td>
+<td>Content delivery network (CDN), caching, efficient queries</td>
+</tr>
+<tr>
+<td><strong>Alert notification latency</strong></td>
+<td>&lt; 60 seconds from reading to notification</td>
+<td>Dedicated alert processing pipeline</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5132-data-integrity">5.13.2 Data Integrity</h3>
+<ul>
+<li><strong>No data loss guarantee</strong>: All readings are acknowledged; monitors retry if acknowledgment is not received</li>
+<li><strong>Data validation</strong>: Readings are checked for range validity and consistency before storage</li>
+<li><strong>Backup and recovery</strong>: Data is backed up continuously with geographic redundancy</li>
+<li><strong>Audit trail</strong>: All data modifications are logged and traceable</li>
+</ul>
+<h3 id="5133-scalability">5.13.3 Scalability</h3>
+<p>The AIP platform is designed to scale from tens of tanks to tens of thousands:</p>
+<table>
+<thead>
+<tr>
+<th>Scale Tier</th>
+<th>Tank Count</th>
+<th>Infrastructure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Small</td>
+<td>10-100</td>
+<td>Shared platform</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>100-1,000</td>
+<td>Shared platform with dedicated resources</td>
+</tr>
+<tr>
+<td>Large</td>
+<td>1,000-10,000</td>
+<td>Dedicated cluster</td>
+</tr>
+<tr>
+<td>Enterprise</td>
+<td>10,000+</td>
+<td>Multi-region deployment with dedicated support</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="514-putting-it-all-together-aip-workflow-example">5.14 Putting It All Together: AIP Workflow Example</h2>
+<p>To illustrate how the AIP's various capabilities work together in practice, here is a complete workflow for a fuel distributor managing 500 tanks:</p>
+<pre class="mermaid"><code>graph TB
+    subgraph "Morning Routine (6:00 AM)"
+        M1[Dispatcher receives&lt;br&gt;Daily Delivery Needs report&lt;br&gt;via email] --&gt; M2[Report shows 15 tanks&lt;br&gt;predicted to need delivery&lt;br&gt;within 3 days]
+        M2 --&gt; M3[Dispatcher opens AIP&lt;br&gt;dashboard on desktop]
+        M3 --&gt; M4[Reviews map view&lt;br&gt;to see geographic&lt;br&gt;clustering of needy tanks]
+    end
+
+    subgraph "Route Planning (6:30 AM)"
+        M4 --&gt; R1[Dispatcher groups&lt;br&gt;tanks into delivery routes]
+        R1 --&gt; R2[Checks each tank's&lt;br&gt;current level and&lt;br&gt;consumption rate]
+        R2 --&gt; R3[Calculates optimal&lt;br&gt;delivery volume&lt;br&gt;for each tank]
+        R3 --&gt; R4[Assigns routes&lt;br&gt;to drivers via&lt;br&gt;dispatch system integration]
+    end
+
+    subgraph "Delivery Execution (8:00 AM - 5:00 PM)"
+        R4 --&gt; D1[Driver views route&lt;br&gt;on mobile app]
+        D1 --&gt; D2[At each stop, confirms&lt;br&gt;pre-delivery level on phone]
+        D2 --&gt; D3[Delivers product]
+        D3 --&gt; D4[AIP detects delivery&lt;br&gt;via level increase]
+        D4 --&gt; D5[Driver confirms&lt;br&gt;delivery in app]
+    end
+
+    subgraph "Exception Handling (Throughout Day)"
+        E1[AIP detects&lt;br&gt;critical low alert&lt;br&gt;at unscheduled tank] --&gt; E2[SMS sent to&lt;br&gt;dispatcher immediately]
+        E2 --&gt; E3[Dispatcher adds&lt;br&gt;emergency delivery&lt;br&gt;to nearest driver's route]
+    end
+
+    subgraph "End of Day (5:00 PM)"
+        D5 --&gt; EOD1[Dispatcher reviews&lt;br&gt;completed deliveries&lt;br&gt;vs. planned]
+        E3 --&gt; EOD1
+        EOD1 --&gt; EOD2[Delivery volumes&lt;br&gt;reconciled against&lt;br&gt;AIP level changes]
+        EOD2 --&gt; EOD3[Any discrepancies&lt;br&gt;flagged for investigation]
+    end
+
+    style M1 fill:#1565C0,color:#fff
+    style R4 fill:#2E7D32,color:#fff
+    style D4 fill:#4CAF50,color:#fff
+    style E1 fill:#F44336,color:#fff
+    style EOD3 fill:#6A1B9A,color:#fff</code></pre>
+<hr />
+<h2 id="515-chapter-summary">5.15 Chapter Summary</h2>
+<p>This chapter has provided a comprehensive tour of TankScan's Asset Intelligence Platform:</p>
+<ol>
+<li><strong>The AIP</strong> is the cloud-based platform that transforms raw sensor data into actionable business intelligence, serving as the bridge between physical tanks and business decisions</li>
+<li><strong>Dashboard design</strong> provides at-a-glance fleet status through overview displays, individual tank views, and geographic maps</li>
+<li><strong>Tank profiles</strong> configure tank geometry, product type, and sensor parameters for accurate volume calculations</li>
+<li><strong>Alert thresholds</strong> and <strong>automated notifications</strong> enable proactive management by notifying the right people at the right time through multiple channels</li>
+<li><strong>Location mapping</strong> and hierarchical organization support fleet-level management across geographic territories</li>
+<li><strong>User management</strong> with role-based access controls ensures appropriate access for different user types</li>
+<li><strong>Historical data</strong> and trend analysis enable consumption rate calculation, days-to-empty prediction, and anomaly detection</li>
+<li><strong>Reporting</strong> capabilities provide scheduled and ad-hoc business intelligence in multiple formats</li>
+<li><strong>Mobile access</strong> enables field technicians, drivers, and managers to interact with the platform from anywhere</li>
+<li><strong>API integration</strong> connects the AIP to dispatch systems, ERP platforms, customer portals, and other business applications</li>
+<li><strong>Device management</strong> provides remote monitoring and configuration of the deployed monitor fleet</li>
+</ol>
+<hr />
+<h2 id="review-questions">Review Questions</h2>
+<div class="admonition question">
+<p class="admonition-title">Question 1 -- Knowledge Recall</p>
+<p>List five types of alerts that can be configured in the AIP and describe the trigger condition for each.</p>
+<details class="success">
+<summary>Suggested Answer</summary>
+<ol>
+<li><strong>Low Level Alert</strong>: Triggered when the tank level drops below a configured percentage or volume threshold (e.g., below 20% capacity)</li>
+<li><strong>High Level Alert</strong>: Triggered when the tank level rises above a configured threshold (e.g., above 95% capacity), indicating potential overfill during delivery</li>
+<li><strong>Rapid Drop Alert</strong>: Triggered when the level decreases faster than an expected rate (e.g., more than 5% in one reporting interval), possibly indicating a leak or theft</li>
+<li><strong>No Communication Alert</strong>: Triggered when a monitor fails to report within the expected window (e.g., more than 24 hours without a reading), indicating the monitor may be offline</li>
+<li><strong>Low Battery Alert</strong>: Triggered when the monitor's battery voltage drops below a specified threshold, indicating that battery replacement should be scheduled</li>
+</ol>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 2 -- Comprehension</p>
+<p>Explain what alert hysteresis is and why it is important in a tank monitoring system. Provide a specific numerical example illustrating the problem that hysteresis solves.</p>
+<details class="success">
+<summary>Suggested Answer</summary>
+<p>Alert hysteresis is a mechanism that uses different thresholds for triggering and clearing an alert. An alert triggers when the measured value crosses the alert threshold in one direction but does not clear until the value crosses a second threshold (offset by a hysteresis band) in the opposite direction.</p>
+<p><strong>Why it is important</strong>: Without hysteresis, if the tank level hovers near the alert threshold, the alert would repeatedly trigger and clear with each minor fluctuation. This creates a flood of notifications ("alert on," "alert off," "alert on," "alert off") that overwhelms users and reduces trust in the alert system.</p>
+<p><strong>Example</strong>: A low-level alert is set at 20% with 5% hysteresis:</p>
+<ul>
+<li>At 20.5%: No alert (above threshold)</li>
+<li>At 19.5%: <strong>Alert triggers</strong> (crossed below 20%)</li>
+<li>At 20.5%: Alert <strong>remains active</strong> (must reach 25% to clear)</li>
+<li>At 22%: Alert <strong>remains active</strong></li>
+<li>At 25.5%: <strong>Alert clears</strong> (crossed above 25% = 20% + 5% hysteresis)</li>
+</ul>
+<p>Without hysteresis, the alert would have cycled on and off multiple times as the level fluctuated between 19.5% and 20.5%.</p>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 3 -- Application</p>
+<p>A fuel distributor has 300 tanks across 150 locations. They want a daily email report showing which tanks need delivery within the next 5 days. Describe how you would configure this report in the AIP, including the data fields, filters, schedule, and recipients.</p>
+<details class="success">
+<summary>Suggested Answer</summary>
+<p><strong>Report configuration</strong>:</p>
+<ul>
+<li><strong>Report type</strong>: Delivery Needs Report</li>
+<li><strong>Data fields</strong>: Tank name, location name, current level (%), current volume (gallons), consumption rate (gallons/day), predicted days to low threshold, product type, last delivery date</li>
+<li><strong>Filter</strong>: Only include tanks where predicted days to low threshold is less than or equal to 5 days</li>
+<li><strong>Sort order</strong>: By predicted days to low threshold (ascending -- most urgent first)</li>
+<li><strong>Grouping</strong>: Group by region or location for route planning convenience</li>
+<li><strong>Schedule</strong>: Daily at 5:00 AM (so dispatchers receive it before starting their shift at 6:00 AM)</li>
+<li><strong>Format</strong>: PDF attachment for easy reading, plus CSV attachment for import into routing software</li>
+<li><strong>Recipients</strong>: Dispatch team email distribution list (dispatch@company.com), operations manager personal email</li>
+</ul>
+<p><strong>Additional configuration considerations</strong>:
+- Exclude tanks marked as "inactive" or "seasonal shutdown"
+- Include a summary section at the top showing total tanks needing delivery and total estimated gallons needed
+- Color-code rows: red for tanks predicted to reach low-low (critical) threshold, yellow for tanks predicted to reach low (advisory) threshold</p>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 4 -- Analysis</p>
+<p>The AIP API provides both polling (periodic GET requests) and webhooks (event-driven POST callbacks) for integration. Compare these two approaches for a dispatch system that needs to know when a tank reaches its low-level threshold. Analyze latency, resource usage, complexity, and reliability for each approach.</p>
+<details class="success">
+<summary>Suggested Answer</summary>
+<p><strong>Polling Approach</strong>: The dispatch system periodically calls <code>GET /alerts?type=low_level&amp;status=active</code></p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Polling Analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Latency</strong></td>
+<td>Depends on polling frequency. If polling every 5 minutes, the alert could be delayed up to 5 minutes from when it was generated. More frequent polling reduces latency but increases load.</td>
+</tr>
+<tr>
+<td><strong>Resource usage</strong></td>
+<td>Wasteful -- most polling requests return no new alerts (no change since last poll). Each request consumes API quota, network bandwidth, and server resources.</td>
+</tr>
+<tr>
+<td><strong>Complexity</strong></td>
+<td>Simple to implement (basic HTTP GET on a timer). Dispatch system controls the timing.</td>
+</tr>
+<tr>
+<td><strong>Reliability</strong></td>
+<td>Very reliable -- if one request fails, the next will succeed. No missed events as long as polling continues. State is always retrievable.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Webhook Approach</strong>: The AIP sends <code>POST</code> to <code>https://dispatch.company.com/webhooks/tankscan</code> when a low-level alert triggers</p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Webhook Analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Latency</strong></td>
+<td>Near real-time -- the webhook fires as soon as the alert is generated (typically within seconds).</td>
+</tr>
+<tr>
+<td><strong>Resource usage</strong></td>
+<td>Efficient -- no unnecessary requests. The AIP only sends a webhook when there is actually an event to report.</td>
+</tr>
+<tr>
+<td><strong>Complexity</strong></td>
+<td>More complex -- the dispatch system must expose an HTTP endpoint, handle authentication (verify the webhook is from TankScan), process the payload, and handle potential failures (webhook delivery failure, duplicate delivery, etc.).</td>
+</tr>
+<tr>
+<td><strong>Reliability</strong></td>
+<td>Less inherently reliable -- if the dispatch system's endpoint is down when the webhook fires, the event could be missed. Mitigation: the AIP should implement retry logic (exponential backoff), and the dispatch system should use polling as a backup to catch any missed webhooks.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommendation</strong>: Use webhooks as the primary mechanism for low latency (time-sensitive alerts) and supplement with periodic polling as a safety net to catch any missed events. This "belt and suspenders" approach provides both real-time responsiveness and guaranteed completeness.</p>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 5 -- Evaluation</p>
+<p>A customer with 2,000 monitored tanks complains that their dispatchers are overwhelmed with alerts and have started ignoring them. The current configuration sends all alerts (low, high, no-communication, low battery) to all dispatchers via both email and SMS. Evaluate this configuration and propose an improved alert management strategy that reduces alert fatigue while ensuring critical events are not missed.</p>
+<details class="success">
+<summary>Suggested Answer</summary>
+<p><strong>Evaluation of current configuration</strong>:
+The current configuration has several problems:</p>
+<ol>
+<li><strong>No prioritization</strong>: All alert types are treated equally, so routine advisories compete with emergencies for attention</li>
+<li><strong>No audience targeting</strong>: Every dispatcher receives every alert, even for tanks outside their territory</li>
+<li><strong>Dual-channel for everything</strong>: SMS and email for every alert means each event generates two notifications</li>
+<li><strong>No suppression</strong>: If a tank stays below threshold for days (waiting for delivery), it may generate repeated alerts</li>
+</ol>
+<p><strong>Proposed improved strategy</strong>:</p>
+<p><strong>Tier 1 -- Critical (SMS + email)</strong>:
+- Low-Low alerts (below 15%): Immediate SMS to the dispatcher responsible for that region, plus email
+- High-High alerts (above 98%): Immediate SMS to the on-site contact and dispatcher
+- Rapid drop alerts (possible leak/theft): Immediate SMS to the operations manager and responsible dispatcher</p>
+<p><strong>Tier 2 -- Advisory (email only)</strong>:
+- Low alerts (below 30%): Daily summary email to the responsible regional dispatcher only
+- High alerts (above 90%): Email only, grouped in daily summary
+- No-communication: Daily email to the operations manager and field service manager</p>
+<p><strong>Tier 3 -- Informational (weekly report only)</strong>:
+- Low battery: Included in weekly device health report to the field service manager
+- Firmware outdated: Included in weekly device health report</p>
+<p><strong>Additional improvements</strong>:
+- Route alerts based on <strong>geographic region</strong> so each dispatcher only sees their territory
+- Set <strong>suppression windows</strong>: Once a low alert is triggered, do not re-notify for the same tank for 48 hours (unless it escalates to low-low)
+- Implement <strong>hysteresis</strong> (5% band) to prevent alert cycling
+- Create a <strong>daily delivery needs report</strong> that proactively identifies upcoming needs, reducing reliance on reactive alerts
+- Review and <strong>tune thresholds</strong> quarterly based on actual alert frequency and response patterns</p>
+<p>This tiered approach ensures that critical events get immediate, targeted attention while routine information is delivered in digested form at appropriate intervals.</p>
+</details>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

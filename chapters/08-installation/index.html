@@ -1,0 +1,3989 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive intelligent textbook on wireless tank monitoring technology, IoT systems, and the TankScan platform">
+      
+      
+        <meta name="author" content="Daniel Yarmoluk">
+      
+      
+      
+        <link rel="prev" href="../07-industry-solutions/">
+      
+      
+        <link rel="next" href="../09-data-analytics/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>8. Installation and Deployment - TankScan Intelligent Textbook: Wireless Tank Monitoring Systems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-8-installation-and-deployment" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" class="md-header__button md-logo" aria-label="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TankScan Intelligent Textbook: Wireless Tank Monitoring Systems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              8. Installation and Deployment
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Yarmoluk/tankscan-course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../preface/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Preface
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../course-description/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Description
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-introduction/" class="md-tabs__link">
+          
+  
+  
+  Chapters
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../learning-graph/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learning Graph
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" class="md-nav__button md-logo" aria-label="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    TankScan Intelligent Textbook: Wireless Tank Monitoring Systems
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Yarmoluk/tankscan-course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../preface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction to Tank Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-wireless-sensors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Wireless Sensor Technologies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-measurement-tech/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Radar and Ultrasonic Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-iot-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. IoT Architecture and Connectivity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-aip-platform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. The Asset Intelligence Platform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-tank-types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Tank Types and Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-industry-solutions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Industry Solutions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Installation and Deployment
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Installation and Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#81-introduction-from-box-to-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Introduction: From Box to Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#82-pre-installation-site-survey" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Pre-Installation Site Survey
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.2 Pre-Installation Site Survey">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#821-purpose-of-the-site-survey" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2.1 Purpose of the Site Survey
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#822-cellular-coverage-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2.2 Cellular Coverage Assessment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#823-tank-access-and-openings-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2.3 Tank Access and Openings Assessment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#824-environmental-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2.4 Environmental Assessment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#825-site-survey-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2.5 Site Survey Documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#83-selecting-the-right-monitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Selecting the Right Monitor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.3 Selecting the Right Monitor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#831-decision-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3.1 Decision Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#832-monitor-configuration-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3.2 Monitor Configuration Options
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#84-physical-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 Physical Installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.4 Physical Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#841-tsr-installation-aboveground-tanks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4.1 TSR Installation (Aboveground Tanks)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#842-tsc-installation-atg-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4.2 TSC Installation (ATG Gateway)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#843-tsu-installation-totes-and-ibcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4.3 TSU Installation (Totes and IBCs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#844-tsd-installation-pressurized-tank-gauges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4.4 TSD Installation (Pressurized Tank Gauges)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#85-cellular-activation-and-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5 Cellular Activation and Connectivity
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.5 Cellular Activation and Connectivity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#851-cellular-activation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5.1 Cellular Activation Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#852-connectivity-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5.2 Connectivity Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#853-external-antenna-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5.3 External Antenna Options
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#86-gateway-installation-for-wi-fi-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.6 Gateway Installation for Wi-Fi Systems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.6 Gateway Installation for Wi-Fi Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#861-when-to-use-a-wi-fi-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.6.1 When to Use a Wi-Fi Gateway
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#862-gateway-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.6.2 Gateway Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#863-gateway-placement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.6.3 Gateway Placement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#864-gateway-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.6.4 Gateway Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#87-aip-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.7 AIP Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.7 AIP Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#871-creating-the-site-in-aip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.7.1 Creating the Site in AIP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#872-tank-profile-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.7.2 Tank Profile Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#873-product-profile-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.7.3 Product Profile Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#874-alert-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.7.4 Alert Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#88-commissioning-and-initial-readings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.8 Commissioning and Initial Readings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.8 Commissioning and Initial Readings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#881-first-reading-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.8.1 First Reading Validation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#882-commissioning-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.8.2 Commissioning Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#883-burn-in-period" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.8.3 Burn-In Period
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#89-calibration-and-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.9 Calibration and Validation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.9 Calibration and Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#891-when-calibration-is-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.9.1 When Calibration Is Needed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#892-multi-point-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.9.2 Multi-Point Validation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#810-multi-site-deployment-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.10 Multi-Site Deployment Planning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.10 Multi-Site Deployment Planning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#8101-scaling-from-pilot-to-enterprise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.10.1 Scaling from Pilot to Enterprise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8102-pilot-program-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.10.2 Pilot Program Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8103-deployment-logistics-at-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.10.3 Deployment Logistics at Scale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8104-deployment-planning-spreadsheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.10.4 Deployment Planning Spreadsheet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#811-troubleshooting-common-installation-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.11 Troubleshooting Common Installation Issues
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.11 Troubleshooting Common Installation Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#8111-no-communication-after-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.11.1 No Communication After Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8112-inaccurate-level-readings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.11.2 Inaccurate Level Readings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8113-atg-communication-issues-tsc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.11.3 ATG Communication Issues (TSC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8114-environmental-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.11.4 Environmental Issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#812-safety-during-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.12 Safety During Installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.12 Safety During Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#8121-general-safety-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.12.1 General Safety Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8122-hazardous-area-installation-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.12.2 Hazardous Area Installation Procedures
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#813-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.13 Chapter Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Review Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-data-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Data Analytics and Optimization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-fleet-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Fleet Management and Routing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-safety-compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Safety, Compliance, and Hazardous Environments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-cloud-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Cloud Integration and APIs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-predictive-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Predictive Maintenance and AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-case-studies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Case Studies and ROI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-future/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Future of Tank Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#81-introduction-from-box-to-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Introduction: From Box to Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#82-pre-installation-site-survey" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Pre-Installation Site Survey
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.2 Pre-Installation Site Survey">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#821-purpose-of-the-site-survey" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2.1 Purpose of the Site Survey
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#822-cellular-coverage-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2.2 Cellular Coverage Assessment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#823-tank-access-and-openings-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2.3 Tank Access and Openings Assessment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#824-environmental-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2.4 Environmental Assessment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#825-site-survey-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2.5 Site Survey Documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#83-selecting-the-right-monitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Selecting the Right Monitor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.3 Selecting the Right Monitor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#831-decision-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3.1 Decision Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#832-monitor-configuration-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3.2 Monitor Configuration Options
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#84-physical-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 Physical Installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.4 Physical Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#841-tsr-installation-aboveground-tanks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4.1 TSR Installation (Aboveground Tanks)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#842-tsc-installation-atg-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4.2 TSC Installation (ATG Gateway)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#843-tsu-installation-totes-and-ibcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4.3 TSU Installation (Totes and IBCs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#844-tsd-installation-pressurized-tank-gauges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4.4 TSD Installation (Pressurized Tank Gauges)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#85-cellular-activation-and-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5 Cellular Activation and Connectivity
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.5 Cellular Activation and Connectivity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#851-cellular-activation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5.1 Cellular Activation Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#852-connectivity-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5.2 Connectivity Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#853-external-antenna-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5.3 External Antenna Options
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#86-gateway-installation-for-wi-fi-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.6 Gateway Installation for Wi-Fi Systems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.6 Gateway Installation for Wi-Fi Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#861-when-to-use-a-wi-fi-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.6.1 When to Use a Wi-Fi Gateway
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#862-gateway-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.6.2 Gateway Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#863-gateway-placement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.6.3 Gateway Placement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#864-gateway-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.6.4 Gateway Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#87-aip-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.7 AIP Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.7 AIP Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#871-creating-the-site-in-aip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.7.1 Creating the Site in AIP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#872-tank-profile-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.7.2 Tank Profile Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#873-product-profile-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.7.3 Product Profile Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#874-alert-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.7.4 Alert Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#88-commissioning-and-initial-readings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.8 Commissioning and Initial Readings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.8 Commissioning and Initial Readings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#881-first-reading-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.8.1 First Reading Validation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#882-commissioning-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.8.2 Commissioning Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#883-burn-in-period" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.8.3 Burn-In Period
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#89-calibration-and-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.9 Calibration and Validation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.9 Calibration and Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#891-when-calibration-is-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.9.1 When Calibration Is Needed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#892-multi-point-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.9.2 Multi-Point Validation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#810-multi-site-deployment-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.10 Multi-Site Deployment Planning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.10 Multi-Site Deployment Planning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#8101-scaling-from-pilot-to-enterprise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.10.1 Scaling from Pilot to Enterprise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8102-pilot-program-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.10.2 Pilot Program Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8103-deployment-logistics-at-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.10.3 Deployment Logistics at Scale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8104-deployment-planning-spreadsheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.10.4 Deployment Planning Spreadsheet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#811-troubleshooting-common-installation-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.11 Troubleshooting Common Installation Issues
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.11 Troubleshooting Common Installation Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#8111-no-communication-after-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.11.1 No Communication After Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8112-inaccurate-level-readings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.11.2 Inaccurate Level Readings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8113-atg-communication-issues-tsc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.11.3 ATG Communication Issues (TSC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8114-environmental-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.11.4 Environmental Issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#812-safety-during-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.12 Safety During Installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.12 Safety During Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#8121-general-safety-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.12.1 General Safety Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8122-hazardous-area-installation-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.12.2 Hazardous Area Installation Procedures
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#813-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.13 Chapter Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Review Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="chapter-8-installation-and-deployment">Chapter 8: Installation and Deployment</h1>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter, you will be able to:</p>
+<ul>
+<li>Conduct a pre-installation site survey and assess cellular coverage</li>
+<li>Select and configure the correct monitor for a given tank</li>
+<li>Perform physical installation of TSR, TSC, TSU, and TSD monitors</li>
+<li>Configure tank profiles, dimensions, and product types in AIP</li>
+<li>Commission new installations and validate initial readings</li>
+<li>Plan and execute multi-site deployments at scale</li>
+<li>Diagnose and resolve common installation issues</li>
+</ul>
+<hr />
+<h2 id="81-introduction-from-box-to-dashboard">8.1 Introduction: From Box to Dashboard</h2>
+<p>A wireless tank monitor is only valuable when it is correctly installed, properly configured, and reliably reporting data. This chapter walks through the complete installation lifecycle, from the initial site survey through commissioning and validation. Whether deploying a single monitor on a farm tank or rolling out thousands of units across a nationwide fleet, the fundamental process remains the same -- only the scale and logistics change.</p>
+<div class="admonition note">
+<p class="admonition-title">The Installation Quality Imperative</p>
+<p>A poorly installed monitor wastes everyone's time and money. It generates inaccurate readings, triggers false alarms, and erodes user confidence in the system. Investing time in proper installation pays dividends throughout the life of the deployment. Industry data shows that 80% of post-installation support tickets trace back to installation errors that could have been avoided with proper site assessment and technique.</p>
+</div>
+<pre class="mermaid"><code>graph LR
+    A[Site Survey] --&gt; B[Monitor Selection]
+    B --&gt; C[Physical Installation]
+    C --&gt; D[Connectivity Setup]
+    D --&gt; E[AIP Configuration]
+    E --&gt; F[Commissioning]
+    F --&gt; G[Validation]
+    G --&gt; H[Operational Monitoring]
+
+    style A fill:#2196F3,color:#fff
+    style B fill:#2196F3,color:#fff
+    style C fill:#4CAF50,color:#fff
+    style D fill:#4CAF50,color:#fff
+    style E fill:#FF9800,color:#fff
+    style F fill:#FF9800,color:#fff
+    style G fill:#9C27B0,color:#fff
+    style H fill:#9C27B0,color:#fff</code></pre>
+<hr />
+<h2 id="82-pre-installation-site-survey">8.2 Pre-Installation Site Survey</h2>
+<h3 id="821-purpose-of-the-site-survey">8.2.1 Purpose of the Site Survey</h3>
+<p>The site survey is the most important step in ensuring a successful installation. It answers three fundamental questions:</p>
+<ol>
+<li><strong>Will the monitor work here?</strong> (Coverage, environment, compatibility)</li>
+<li><strong>Which monitor is right for this tank?</strong> (Type, size, product, access)</li>
+<li><strong>What will the installation require?</strong> (Tools, adapters, time, safety precautions)</li>
+</ol>
+<h3 id="822-cellular-coverage-assessment">8.2.2 Cellular Coverage Assessment</h3>
+<p>For cellular-connected monitors (TSR, TSU, TSD), cellular coverage at the tank location is the first and most critical assessment.</p>
+<p><strong>Coverage testing methods:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Tool</th>
+<th>Accuracy</th>
+<th>When to Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Carrier coverage map</td>
+<td>Online (carrier website)</td>
+<td>Low (general area)</td>
+<td>Initial screening</td>
+</tr>
+<tr>
+<td>Smartphone signal test</td>
+<td>Cell phone at tank location</td>
+<td>Medium (phone vs. device antenna differ)</td>
+<td>Quick field check</td>
+</tr>
+<tr>
+<td>Dedicated signal tester</td>
+<td>RF signal meter or test modem</td>
+<td>High (actual device-level signal)</td>
+<td>Final verification</td>
+</tr>
+<tr>
+<td>Test unit deployment</td>
+<td>Install a test monitor for 24-48 hours</td>
+<td>Highest (real-world performance)</td>
+<td>Questionable coverage areas</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Smartphone Signal Is Not a Guarantee</p>
+<p>A smartphone showing 2-3 bars at a tank location does not guarantee that a TankScan monitor will connect. Smartphones have more powerful radios and larger antennas than IoT devices. Additionally, LTE-M and NB-IoT coverage (used by TankScan) differs from standard LTE coverage. Always use carrier IoT coverage maps or a test deployment for definitive assessment.</p>
+</div>
+<p><strong>Signal strength requirements:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Signal Metric</th>
+<th>Minimum</th>
+<th>Good</th>
+<th>Excellent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RSSI (dBm)</td>
+<td>-100</td>
+<td>-85</td>
+<td>-70</td>
+</tr>
+<tr>
+<td>RSRP (dBm)</td>
+<td>-120</td>
+<td>-100</td>
+<td>-80</td>
+</tr>
+<tr>
+<td>RSRQ (dB)</td>
+<td>-15</td>
+<td>-10</td>
+<td>-5</td>
+</tr>
+<tr>
+<td>SNR (dB)</td>
+<td>0</td>
+<td>10</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<h3 id="823-tank-access-and-openings-assessment">8.2.3 Tank Access and Openings Assessment</h3>
+<p>Every tank must be physically inspected to identify suitable mounting locations:</p>
+<p><strong>For TSR (radar) installations:</strong></p>
+<ul>
+<li>[ ] Identify available openings on tank top (2" NPT bung is standard)</li>
+<li>[ ] Measure the opening thread type and size</li>
+<li>[ ] Verify the opening is not directly above a fill pipe, mixer, or baffle</li>
+<li>[ ] Check that the opening provides a clear path to the liquid surface</li>
+<li>[ ] Measure the distance from the opening to the tank bottom (sensor range check)</li>
+<li>[ ] Note any internal obstructions (heating coils, ladders, stiffening rings)</li>
+</ul>
+<p><strong>For TSC (ATG gateway) installations:</strong></p>
+<ul>
+<li>[ ] Identify the ATG console model and firmware version</li>
+<li>[ ] Locate available communication ports (RS-232, RS-485, Ethernet)</li>
+<li>[ ] Verify power availability near the console (120V AC for TSC)</li>
+<li>[ ] Check for existing network connections (some TSC models use Ethernet backhaul)</li>
+<li>[ ] Note the number of tank probes connected to the ATG</li>
+</ul>
+<p><strong>For TSU (tote/IBC) installations:</strong></p>
+<ul>
+<li>[ ] Verify IBC lid opening size (standard 6" or 150mm)</li>
+<li>[ ] Check that the IBC is accessible (not stacked, not against a wall)</li>
+<li>[ ] Note the product and whether it produces foam or vapor</li>
+<li>[ ] Assess whether Wi-Fi or cellular connectivity is appropriate</li>
+</ul>
+<p><strong>For TSD (dial gauge reader) installations:</strong></p>
+<ul>
+<li>[ ] Identify the gauge manufacturer and model (Rochester, ME, etc.)</li>
+<li>[ ] Verify gauge face diameter and needle style</li>
+<li>[ ] Check that the gauge is readable and functioning correctly</li>
+<li>[ ] Ensure adequate clearance around the gauge for TSD mounting</li>
+</ul>
+<h3 id="824-environmental-assessment">8.2.4 Environmental Assessment</h3>
+<pre class="mermaid"><code>graph TD
+    A[Environmental&lt;br&gt;Assessment] --&gt; B[Temperature Range]
+    A --&gt; C[Weather Exposure]
+    A --&gt; D[Hazardous Area&lt;br&gt;Classification]
+    A --&gt; E[Physical Security]
+    A --&gt; F[Access for&lt;br&gt;Maintenance]
+
+    B --&gt; B1["What are the seasonal&lt;br&gt;high and low temperatures?"]
+    C --&gt; C1["Is the tank exposed to&lt;br&gt;direct sun, rain, snow, wind?"]
+    D --&gt; D1["Is the area classified&lt;br&gt;C1D1, C1D2, or unclassified?"]
+    E --&gt; E1["Is the site fenced?&lt;br&gt;Locked? Vandalism risk?"]
+    F --&gt; F1["Can a technician reach&lt;br&gt;the monitor for battery&lt;br&gt;replacement?"]</code></pre>
+<h3 id="825-site-survey-documentation">8.2.5 Site Survey Documentation</h3>
+<p>A complete site survey should document:</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Details to Record</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Site information</td>
+<td>Customer name, address, GPS coordinates, site contact</td>
+</tr>
+<tr>
+<td>Tank inventory</td>
+<td>Number of tanks, types, sizes, products, ages</td>
+</tr>
+<tr>
+<td>Tank measurements</td>
+<td>Diameter, length, height, opening sizes, material</td>
+</tr>
+<tr>
+<td>Cellular signal</td>
+<td>Carrier, signal strength (dBm), test results</td>
+</tr>
+<tr>
+<td>Hazardous areas</td>
+<td>NEC classification, extent of classified zone</td>
+</tr>
+<tr>
+<td>Access requirements</td>
+<td>Keys, gate codes, scheduling restrictions</td>
+</tr>
+<tr>
+<td>Power availability</td>
+<td>Nearest outlet for TSC or gateway installations</td>
+</tr>
+<tr>
+<td>Photos</td>
+<td>Tank top openings, gauge faces, ATG consoles, site overview</td>
+</tr>
+<tr>
+<td>Safety notes</td>
+<td>PPE requirements, confined space, hot work restrictions</td>
+</tr>
+<tr>
+<td>Special considerations</td>
+<td>Foam, vapor, extreme temperatures, obstructions</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Photo Documentation</p>
+<p>Take photos of everything during the site survey. A clear photo of a tank opening, gauge face, or ATG console often saves hours of troubleshooting later. Many field technicians use a standardized photo checklist: (1) overall site, (2) each tank exterior, (3) tank top/openings, (4) any existing gauges, (5) ATG console, (6) proposed mounting location.</p>
+</div>
+<hr />
+<h2 id="83-selecting-the-right-monitor">8.3 Selecting the Right Monitor</h2>
+<h3 id="831-decision-framework">8.3.1 Decision Framework</h3>
+<p>Based on the site survey, select the appropriate monitor using this systematic approach:</p>
+<pre class="mermaid"><code>graph TD
+    A[Start] --&gt; B{Tank pressurized?}
+    B --&gt;|Yes| C{Has mechanical&lt;br&gt;gauge?}
+    C --&gt;|Yes| D[TSD Dial Reader]
+    C --&gt;|No| E[Install gauge first,&lt;br&gt;then TSD]
+
+    B --&gt;|No| F{Tank underground?}
+    F --&gt;|Yes| G{Has ATG?}
+    G --&gt;|Yes| H[TSC Gateway]
+    G --&gt;|No| I[Recommend ATG&lt;br&gt;installation + TSC]
+
+    F --&gt;|No| J{Tank is tote/IBC&lt;br&gt;&lt; 600 gallons?}
+    J --&gt;|Yes| K[TSU Universal]
+    J --&gt;|No| L{Metal tank?}
+
+    L --&gt;|Yes| M[TSR Radar&lt;br&gt;Standard Mount]
+    L --&gt;|No| N{Can install&lt;br&gt;still pipe?}
+    N --&gt;|Yes| O[TSR Radar&lt;br&gt;with Still Pipe]
+    N --&gt;|No| P[TSR with&lt;br&gt;guided wave option]
+
+    M --&gt; Q{Cellular&lt;br&gt;coverage?}
+    O --&gt; Q
+    P --&gt; Q
+    Q --&gt;|Yes| R[Cellular version]
+    Q --&gt;|No| S[Satellite version]
+
+    style D fill:#FF9800,color:#fff
+    style H fill:#2196F3,color:#fff
+    style K fill:#4CAF50,color:#fff
+    style R fill:#9C27B0,color:#fff
+    style S fill:#F44336,color:#fff</code></pre>
+<h3 id="832-monitor-configuration-options">8.3.2 Monitor Configuration Options</h3>
+<p>Each monitor comes with configuration options that must be specified at the time of order:</p>
+<p><strong>TSR Configuration Options:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Choices</th>
+<th>Selection Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mounting thread</td>
+<td>2" NPT, 1.5" NPT, flange</td>
+<td>Match to tank opening</td>
+</tr>
+<tr>
+<td>Antenna length</td>
+<td>Standard, extended</td>
+<td>Extended for deep tanks (&gt; 40 ft)</td>
+</tr>
+<tr>
+<td>Housing material</td>
+<td>Standard, PVDF, stainless</td>
+<td>Chemical compatibility</td>
+</tr>
+<tr>
+<td>Communication</td>
+<td>LTE-M cellular, satellite</td>
+<td>Coverage at site</td>
+</tr>
+<tr>
+<td>Hazardous area</td>
+<td>Standard, C1D1, C1D2</td>
+<td>Site classification</td>
+</tr>
+<tr>
+<td>Battery</td>
+<td>Standard (5 yr), extended (10 yr)</td>
+<td>Reporting frequency, accessibility</td>
+</tr>
+</tbody>
+</table>
+<p><strong>TSC Configuration Options:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Choices</th>
+<th>Selection Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ATG protocol</td>
+<td>Veeder-Root, Gilbarco, Franklin, Modbus</td>
+<td>Match to ATG model</td>
+</tr>
+<tr>
+<td>Connection type</td>
+<td>RS-232, RS-485, Ethernet</td>
+<td>Match to ATG port</td>
+</tr>
+<tr>
+<td>Communication</td>
+<td>Cellular, Ethernet backhaul</td>
+<td>Site infrastructure</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>AC adapter, PoE</td>
+<td>Available power source</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="84-physical-installation">8.4 Physical Installation</h2>
+<h3 id="841-tsr-installation-aboveground-tanks">8.4.1 TSR Installation (Aboveground Tanks)</h3>
+<p>The TSR installation process for a typical aboveground tank:</p>
+<pre class="mermaid"><code>graph TD
+    subgraph "Step 1: Preparation"
+        A1[Review site survey&lt;br&gt;and tank measurements]
+        A2[Gather tools:&lt;br&gt;wrench, thread tape,&lt;br&gt;safety equipment]
+        A3[Verify correct TSR&lt;br&gt;model and thread size]
+    end
+
+    subgraph "Step 2: Tank Access"
+        B1[Ensure safe access&lt;br&gt;to tank top]
+        B2[Use ladder or&lt;br&gt;scaffolding as needed]
+        B3[Wear fall protection&lt;br&gt;if height &gt; 4 ft]
+    end
+
+    subgraph "Step 3: Opening Prep"
+        C1[Remove existing plug&lt;br&gt;or cap from bung]
+        C2[Clean threads with&lt;br&gt;wire brush]
+        C3[Apply PTFE tape or&lt;br&gt;pipe dope to threads]
+    end
+
+    subgraph "Step 4: Install Monitor"
+        D1[Thread TSR into&lt;br&gt;opening by hand]
+        D2[Tighten with wrench&lt;br&gt;to specified torque]
+        D3[Verify monitor is&lt;br&gt;level and plumb]
+    end
+
+    subgraph "Step 5: Activate"
+        E1[Power on monitor&lt;br&gt;via activation magnet]
+        E2[Wait for cellular&lt;br&gt;connection (LED indicator)]
+        E3[Verify first reading&lt;br&gt;appears in AIP]
+    end
+
+    A1 --&gt; A2 --&gt; A3 --&gt; B1 --&gt; B2 --&gt; B3 --&gt; C1 --&gt; C2 --&gt; C3 --&gt; D1 --&gt; D2 --&gt; D3 --&gt; E1 --&gt; E2 --&gt; E3</code></pre>
+<p><strong>Critical installation guidelines:</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">Mounting Position</p>
+<p>The TSR must be mounted so the radar beam has a clear, unobstructed path to the liquid surface. The sensor should be:</p>
+<ul>
+<li>At least 6 inches away from any tank wall</li>
+<li>Not directly above the fill pipe (turbulence causes false readings)</li>
+<li>Not above heating coils, mixers, or baffles</li>
+<li>Perpendicular to the liquid surface (within 2 degrees of vertical)</li>
+</ul>
+</div>
+<p><strong>Torque specifications:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Thread Size</th>
+<th>Material</th>
+<th>Recommended Torque</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2" NPT</td>
+<td>Steel to steel</td>
+<td>40-50 ft-lbs</td>
+</tr>
+<tr>
+<td>2" NPT</td>
+<td>Steel to aluminum</td>
+<td>25-35 ft-lbs</td>
+</tr>
+<tr>
+<td>1.5" NPT</td>
+<td>Steel to steel</td>
+<td>30-40 ft-lbs</td>
+</tr>
+<tr>
+<td>Flange (4-bolt)</td>
+<td>With gasket</td>
+<td>15-20 ft-lbs per bolt, star pattern</td>
+</tr>
+</tbody>
+</table>
+<h3 id="842-tsc-installation-atg-gateway">8.4.2 TSC Installation (ATG Gateway)</h3>
+<p>The TSC installation connects to an existing ATG console:</p>
+<p><strong>Step-by-step process:</strong></p>
+<ol>
+<li><strong>Power down the ATG communication port</strong> (if possible; some ports are hot-swappable)</li>
+<li><strong>Connect the TSC to the ATG</strong>:<ul>
+<li>For RS-232: Use a straight-through DB-9 serial cable</li>
+<li>For RS-485: Connect A/B wires to the appropriate terminals</li>
+<li>For Ethernet: Use a standard Cat5/Cat6 patch cable</li>
+</ul>
+</li>
+<li><strong>Mount the TSC</strong> in a dry, accessible location near the ATG console</li>
+<li><strong>Connect power</strong> (120V AC adapter or PoE, depending on model)</li>
+<li><strong>Power on and configure</strong> the ATG protocol on the TSC (via setup software or DIP switches)</li>
+<li><strong>Verify communication</strong> by checking the TSC status LEDs:<ul>
+<li>ATG LED: Solid green = communication established</li>
+<li>Cell LED: Blinking green = cellular connected</li>
+<li>Data LED: Flash = data transmitted to AIP</li>
+</ul>
+</li>
+</ol>
+<pre class="mermaid"><code>sequenceDiagram
+    participant TSC as TSC Gateway
+    participant ATG as ATG Console
+    participant Cell as Cellular Network
+    participant AIP as AIP Platform
+
+    TSC-&gt;&gt;ATG: Poll request (serial/Ethernet)
+    ATG-&gt;&gt;TSC: Inventory data response&lt;br&gt;(level, volume, temp, water)
+    TSC-&gt;&gt;TSC: Parse and format data
+    TSC-&gt;&gt;Cell: Transmit to AIP
+    Cell-&gt;&gt;AIP: Data received
+    AIP-&gt;&gt;AIP: Store and process
+
+    Note over TSC,ATG: Repeats every 5-15 minutes</code></pre>
+<div class="admonition tip">
+<p class="admonition-title">TSC and ATG Coexistence</p>
+<p>The TSC is designed to share the ATG communication port with other systems (POS, BOS). It uses passive listening when possible and active polling during idle periods. However, some ATG configurations may require adjusting polling intervals to avoid communication conflicts. If the store's POS system uses the same ATG port, coordinate with the POS provider.</p>
+</div>
+<h3 id="843-tsu-installation-totes-and-ibcs">8.4.3 TSU Installation (Totes and IBCs)</h3>
+<p>TSU installation on totes and IBCs is the simplest of all TankScan products:</p>
+<ol>
+<li><strong>Open the IBC lid</strong> (typically a 6" threaded cap on top)</li>
+<li><strong>Place the TSU adapter ring</strong> on the opening</li>
+<li><strong>Snap the TSU monitor</strong> onto the adapter ring</li>
+<li><strong>Close and secure</strong> the assembly</li>
+<li><strong>Scan the QR code</strong> on the IBC (if available) to link the monitor to the container in AIP</li>
+<li><strong>Activate</strong> via the AIP mobile app or web interface</li>
+</ol>
+<p><strong>Installation time</strong>: 2-5 minutes per tote (including AIP configuration)</p>
+<div class="admonition example">
+<p class="admonition-title">Batch TSU Deployment</p>
+<p>A lubricant distributor deploying TSU monitors on 200 totes developed the following batch process:</p>
+<ol>
+<li>Pre-configure all 200 monitors in AIP with customer and product data (office, 1 day)</li>
+<li>Label each monitor with its assigned customer and tote number</li>
+<li>Train 3 field technicians on the snap-on installation (1 hour)</li>
+<li>Deploy teams to customer sites (average 8 totes per site, 25 sites)</li>
+<li>Each technician installs 15-20 monitors per day</li>
+<li>Full deployment completed in 4 working days</li>
+</ol>
+<p><strong>Total deployment time</strong>: 5 days (1 day prep + 4 days field) for 200 monitors</p>
+</div>
+<h3 id="844-tsd-installation-pressurized-tank-gauges">8.4.4 TSD Installation (Pressurized Tank Gauges)</h3>
+<p>The TSD installs over the existing mechanical gauge on a pressurized tank:</p>
+<pre class="mermaid"><code>graph TD
+    subgraph "TSD Installation Steps"
+        A["1. Inspect existing gauge&lt;br&gt;Verify it reads correctly"] --&gt; B["2. Clean gauge face&lt;br&gt;Remove dirt and moisture"]
+        B --&gt; C["3. Align TSD housing&lt;br&gt;over gauge face"]
+        C --&gt; D["4. Secure with clamp&lt;br&gt;or magnetic mount"]
+        D --&gt; E["5. Calibrate TSD to&lt;br&gt;match gauge readings"]
+        E --&gt; F["6. Activate cellular&lt;br&gt;connection"]
+        F --&gt; G["7. Verify reading&lt;br&gt;matches gauge in AIP"]
+    end</code></pre>
+<p><strong>TSD calibration process:</strong></p>
+<p>The TSD must be calibrated to correctly read the specific gauge it is installed on:</p>
+<ol>
+<li>Read the current gauge value (e.g., the gauge shows 65%)</li>
+<li>Enter this value into the TSD setup interface</li>
+<li>The TSD maps the sensor reading to the gauge value</li>
+<li>Repeat at a different level if possible (e.g., after a delivery when gauge shows 85%)</li>
+<li>The TSD creates a two-point calibration that maps sensor output to gauge percentage</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Calibration Points</th>
+<th>Accuracy</th>
+<th>Recommended For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Single point</td>
+<td>+/- 5%</td>
+<td>Quick installation, non-critical</td>
+</tr>
+<tr>
+<td>Two-point</td>
+<td>+/- 3%</td>
+<td>Standard installation</td>
+</tr>
+<tr>
+<td>Three-point</td>
+<td>+/- 2%</td>
+<td>High-accuracy requirements</td>
+</tr>
+<tr>
+<td>Factory calibrated</td>
+<td>+/- 1.5%</td>
+<td>Pre-matched to specific gauge model</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="85-cellular-activation-and-connectivity">8.5 Cellular Activation and Connectivity</h2>
+<h3 id="851-cellular-activation-process">8.5.1 Cellular Activation Process</h3>
+<p>TankScan monitors use embedded SIM cards (eSIM) or pre-installed SIM cards that are activated through the AIP platform.</p>
+<p><strong>Activation workflow:</strong></p>
+<ol>
+<li>Log into AIP and navigate to Device Management</li>
+<li>Enter the monitor's serial number (printed on the device label and included in the packaging)</li>
+<li>Select the cellular carrier (may be pre-assigned based on region)</li>
+<li>Assign the monitor to a customer account and site location</li>
+<li>The AIP platform sends an activation command to the carrier</li>
+<li>The monitor's SIM is activated (typically within minutes)</li>
+<li>On the next reporting cycle, the monitor transmits its first reading</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Activation Timing</p>
+<p>Cellular activation can take up to 24 hours in some cases, though most activations complete within minutes. For planned installations, activate the SIM in AIP before arriving at the site so the monitor is ready to connect immediately after physical installation.</p>
+</div>
+<h3 id="852-connectivity-troubleshooting">8.5.2 Connectivity Troubleshooting</h3>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Possible Cause</th>
+<th>Resolution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No first reading after 24 hours</td>
+<td>SIM not activated</td>
+<td>Verify activation status in AIP</td>
+</tr>
+<tr>
+<td>Intermittent reporting</td>
+<td>Marginal signal strength</td>
+<td>Check RSSI; consider external antenna</td>
+</tr>
+<tr>
+<td>Delayed transmissions</td>
+<td>Network congestion</td>
+<td>Normal for NB-IoT; wait for off-peak</td>
+</tr>
+<tr>
+<td>Monitor shows offline</td>
+<td>Battery depleted</td>
+<td>Replace or recharge battery</td>
+</tr>
+<tr>
+<td>Readings but no data in AIP</td>
+<td>Monitor not assigned to site</td>
+<td>Check device-to-site mapping in AIP</td>
+</tr>
+<tr>
+<td>Cellular connected but no ATG data (TSC)</td>
+<td>Serial cable issue</td>
+<td>Verify cable, port, and protocol settings</td>
+</tr>
+</tbody>
+</table>
+<h3 id="853-external-antenna-options">8.5.3 External Antenna Options</h3>
+<p>When cellular signal is weak, an external antenna can improve connectivity:</p>
+<table>
+<thead>
+<tr>
+<th>Antenna Type</th>
+<th>Gain</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard (internal)</td>
+<td>0 dBi</td>
+<td>Good coverage areas</td>
+</tr>
+<tr>
+<td>Stub antenna (external)</td>
+<td>2-3 dBi</td>
+<td>Moderate improvement</td>
+</tr>
+<tr>
+<td>Panel antenna (directional)</td>
+<td>6-8 dBi</td>
+<td>Aimed at distant cell tower</td>
+</tr>
+<tr>
+<td>Yagi antenna (high-gain)</td>
+<td>10-14 dBi</td>
+<td>Very weak signal areas</td>
+</tr>
+<tr>
+<td>Cable extension</td>
+<td>Loss: 1-3 dB per 10 ft</td>
+<td>Move antenna to better location</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Antenna Cable Length</p>
+<p>Every foot of coaxial cable between the monitor and an external antenna introduces signal loss. Keep cable runs as short as possible. A 50-foot cable run with standard RG-58 coax loses approximately 5 dB of signal -- enough to turn a marginal connection into no connection. Use low-loss cable (LMR-400) for runs longer than 20 feet.</p>
+</div>
+<hr />
+<h2 id="86-gateway-installation-for-wi-fi-systems">8.6 Gateway Installation for Wi-Fi Systems</h2>
+<h3 id="861-when-to-use-a-wi-fi-gateway">8.6.1 When to Use a Wi-Fi Gateway</h3>
+<p>Wi-Fi gateways are used when multiple monitors are concentrated at a single site and a local network is available or can be installed. Common scenarios:</p>
+<ul>
+<li>Tank farms with 10+ tanks in close proximity</li>
+<li>Warehouses with many totes/IBCs</li>
+<li>Manufacturing facilities with multiple fluid tanks</li>
+<li>Sites where cellular coverage is poor but internet is available</li>
+</ul>
+<h3 id="862-gateway-architecture">8.6.2 Gateway Architecture</h3>
+<pre class="mermaid"><code>graph TD
+    subgraph "Wi-Fi Gateway System"
+        A[TSR Monitor 1] --&gt; |Wi-Fi| G[Gateway]
+        B[TSR Monitor 2] --&gt; |Wi-Fi| G
+        C[TSR Monitor 3] --&gt; |Wi-Fi| G
+        D[TSU Monitor 1] --&gt; |Wi-Fi| G
+        E[TSU Monitor 2] --&gt; |Wi-Fi| G
+        F[TSU Monitor 3] --&gt; |Wi-Fi| G
+
+        G --&gt; |Ethernet or Cellular| H[Internet]
+        H --&gt; I[AIP Platform]
+    end
+
+    subgraph "Gateway Components"
+        J[Wi-Fi Access Point&lt;br&gt;2.4 GHz]
+        K[Edge Processor&lt;br&gt;Data Aggregation]
+        L[Cellular Modem&lt;br&gt;or Ethernet Port]
+        M[Power Supply&lt;br&gt;120V AC or PoE]
+    end</code></pre>
+<h3 id="863-gateway-placement">8.6.3 Gateway Placement</h3>
+<p>The gateway must be positioned to provide Wi-Fi coverage to all monitors at the site:</p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Guideline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Range (open air)</td>
+<td>Up to 300 feet (100 meters) from each monitor</td>
+</tr>
+<tr>
+<td>Range (obstructed)</td>
+<td>50-150 feet depending on obstructions (walls, tanks)</td>
+</tr>
+<tr>
+<td>Height</td>
+<td>Mount as high as practical; above tank tops is ideal</td>
+</tr>
+<tr>
+<td>Orientation</td>
+<td>Antenna should be vertical for horizontal coverage pattern</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>Within cable reach of 120V outlet or PoE switch</td>
+</tr>
+<tr>
+<td>Internet</td>
+<td>Within Ethernet cable reach (or use cellular backhaul)</td>
+</tr>
+<tr>
+<td>Weather</td>
+<td>Outdoor-rated enclosure (NEMA 4X) for outdoor installations</td>
+</tr>
+</tbody>
+</table>
+<h3 id="864-gateway-configuration">8.6.4 Gateway Configuration</h3>
+<ol>
+<li>Mount the gateway in the selected location</li>
+<li>Connect power (AC adapter or PoE)</li>
+<li>Connect to the internet (Ethernet or configure cellular)</li>
+<li>Access the gateway's configuration interface (web browser or mobile app)</li>
+<li>Configure the Wi-Fi network name and security settings</li>
+<li>Register the gateway in AIP and assign it to the site</li>
+<li>Configure each monitor to connect to the gateway's Wi-Fi network</li>
+<li>Verify all monitors report through the gateway to AIP</li>
+</ol>
+<hr />
+<h2 id="87-aip-configuration">8.7 AIP Configuration</h2>
+<h3 id="871-creating-the-site-in-aip">8.7.1 Creating the Site in AIP</h3>
+<p>Before monitors can report data, the organizational structure must be configured in AIP:</p>
+<pre class="mermaid"><code>graph TD
+    A[Organization&lt;br&gt;Top Level] --&gt; B[Region / Division]
+    B --&gt; C[Customer Account]
+    C --&gt; D[Site / Location]
+    D --&gt; E[Tank 1]
+    D --&gt; F[Tank 2]
+    D --&gt; G[Tank 3]
+
+    E --&gt; E1[Monitor Assignment]
+    E --&gt; E2[Tank Profile&lt;br&gt;Dimensions, Type]
+    E --&gt; E3[Product Profile&lt;br&gt;Type, Density]
+    E --&gt; E4[Alert Configuration&lt;br&gt;Thresholds, Recipients]
+
+    style E1 fill:#2196F3,color:#fff
+    style E2 fill:#4CAF50,color:#fff
+    style E3 fill:#FF9800,color:#fff
+    style E4 fill:#9C27B0,color:#fff</code></pre>
+<h3 id="872-tank-profile-configuration">8.7.2 Tank Profile Configuration</h3>
+<p>The tank profile tells AIP how to convert raw level readings into meaningful volume data:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tank name</td>
+<td>Descriptive identifier</td>
+<td>"Main Diesel - North"</td>
+</tr>
+<tr>
+<td>Tank type</td>
+<td>Geometry selection</td>
+<td>Horizontal cylinder</td>
+</tr>
+<tr>
+<td>Diameter</td>
+<td>Internal diameter</td>
+<td>64 inches</td>
+</tr>
+<tr>
+<td>Length</td>
+<td>Shell length</td>
+<td>144 inches</td>
+</tr>
+<tr>
+<td>Head type</td>
+<td>End cap geometry</td>
+<td>2:1 elliptical</td>
+</tr>
+<tr>
+<td>Total capacity</td>
+<td>Nameplate capacity</td>
+<td>4,000 gallons</td>
+</tr>
+<tr>
+<td>Maximum fill</td>
+<td>Maximum safe fill level</td>
+<td>95% (3,800 gallons)</td>
+</tr>
+<tr>
+<td>Minimum level</td>
+<td>Unusable heel/deadband</td>
+<td>3 inches (50 gallons)</td>
+</tr>
+<tr>
+<td>Strapping source</td>
+<td>How volume is calculated</td>
+<td>Calculated from dimensions</td>
+</tr>
+<tr>
+<td>Units</td>
+<td>Display units</td>
+<td>US gallons</td>
+</tr>
+</tbody>
+</table>
+<h3 id="873-product-profile-configuration">8.7.3 Product Profile Configuration</h3>
+<p>Each tank must be assigned a product profile:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product name</td>
+<td>Common product name</td>
+<td>Diesel #2</td>
+</tr>
+<tr>
+<td>Product code</td>
+<td>Internal product code</td>
+<td>DSL-002</td>
+</tr>
+<tr>
+<td>Specific gravity</td>
+<td>Density relative to water</td>
+<td>0.85</td>
+</tr>
+<tr>
+<td>Dielectric constant</td>
+<td>For radar optimization</td>
+<td>2.2</td>
+</tr>
+<tr>
+<td>Temperature coefficient</td>
+<td>For volume correction</td>
+<td>0.00046 per degree F</td>
+</tr>
+<tr>
+<td>Color code</td>
+<td>Dashboard display color</td>
+<td>Yellow</td>
+</tr>
+<tr>
+<td>Reorder threshold</td>
+<td>Level triggering reorder alert</td>
+<td>25%</td>
+</tr>
+<tr>
+<td>Critical threshold</td>
+<td>Level triggering critical alert</td>
+<td>10%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="874-alert-configuration">8.7.4 Alert Configuration</h3>
+<p>Alerts are the primary way AIP communicates actionable information to users:</p>
+<table>
+<thead>
+<tr>
+<th>Alert Type</th>
+<th>Trigger Condition</th>
+<th>Typical Response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low level</td>
+<td>Tank falls below reorder threshold</td>
+<td>Schedule delivery</td>
+</tr>
+<tr>
+<td>Critical low</td>
+<td>Tank falls below critical threshold</td>
+<td>Urgent delivery dispatch</td>
+</tr>
+<tr>
+<td>High level</td>
+<td>Tank rises above maximum fill</td>
+<td>Investigate (overfill or collection needed)</td>
+</tr>
+<tr>
+<td>Sudden drop</td>
+<td>Level decreases faster than normal</td>
+<td>Investigate (leak, theft, meter error)</td>
+</tr>
+<tr>
+<td>Sudden rise</td>
+<td>Level increases unexpectedly</td>
+<td>Verify delivery (unauthorized access?)</td>
+</tr>
+<tr>
+<td>No communication</td>
+<td>Monitor fails to report</td>
+<td>Check device health</td>
+</tr>
+<tr>
+<td>Temperature out of range</td>
+<td>Product temperature abnormal</td>
+<td>Investigate heating/cooling issue</td>
+</tr>
+<tr>
+<td>Consumption anomaly</td>
+<td>Usage pattern deviates from historical</td>
+<td>Customer operational change</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Alert delivery methods:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Latency</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Email</td>
+<td>Minutes</td>
+<td>Non-urgent alerts, reports</td>
+</tr>
+<tr>
+<td>SMS text</td>
+<td>Seconds</td>
+<td>Urgent alerts, after-hours</td>
+</tr>
+<tr>
+<td>Push notification (app)</td>
+<td>Seconds</td>
+<td>Field personnel</td>
+</tr>
+<tr>
+<td>Webhook (API)</td>
+<td>Seconds</td>
+<td>System integration, automated workflows</td>
+</tr>
+<tr>
+<td>Dashboard indicator</td>
+<td>Real-time</td>
+<td>Operations center monitoring</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Alert Fatigue Prevention</p>
+<p>Configure alerts carefully to avoid "alert fatigue" -- the tendency for operators to ignore alerts when too many non-actionable alerts are generated. Start with conservative thresholds and adjust based on operational experience. Use alert suppression windows for expected events (e.g., suppress low-level alerts during scheduled deliveries).</p>
+</div>
+<hr />
+<h2 id="88-commissioning-and-initial-readings">8.8 Commissioning and Initial Readings</h2>
+<h3 id="881-first-reading-validation">8.8.1 First Reading Validation</h3>
+<p>After installation and AIP configuration, the first readings must be validated against a known reference:</p>
+<p><strong>Validation checklist:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Method</th>
+<th>Acceptable Variance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Level reading</td>
+<td>Compare TSR level to manual dip stick or sight glass</td>
+<td>+/- 0.5 inches</td>
+</tr>
+<tr>
+<td>Volume calculation</td>
+<td>Compare AIP volume to known delivery amount or manual calculation</td>
+<td>+/- 2%</td>
+</tr>
+<tr>
+<td>Product identification</td>
+<td>Verify AIP shows correct product for the tank</td>
+<td>Must match exactly</td>
+</tr>
+<tr>
+<td>Temperature (if available)</td>
+<td>Compare to independent thermometer</td>
+<td>+/- 2 degrees F</td>
+</tr>
+<tr>
+<td>Reporting interval</td>
+<td>Monitor time between successive readings</td>
+<td>Within 10% of configured interval</td>
+</tr>
+<tr>
+<td>Signal strength</td>
+<td>Check cellular signal metrics in AIP</td>
+<td>Above minimum thresholds</td>
+</tr>
+</tbody>
+</table>
+<h3 id="882-commissioning-process">8.8.2 Commissioning Process</h3>
+<pre class="mermaid"><code>graph TD
+    A[Installation Complete] --&gt; B[Wait for first&lt;br&gt;reading in AIP]
+    B --&gt; C{Reading received&lt;br&gt;within expected time?}
+    C --&gt;|No| D[Troubleshoot&lt;br&gt;connectivity]
+    C --&gt;|Yes| E[Compare reading&lt;br&gt;to manual measurement]
+    E --&gt; F{Within acceptable&lt;br&gt;variance?}
+    F --&gt;|No| G[Check tank profile&lt;br&gt;and mounting]
+    F --&gt;|Yes| H[Verify volume&lt;br&gt;calculation]
+    H --&gt; I{Volume within&lt;br&gt;2% of expected?}
+    I --&gt;|No| J[Check strapping&lt;br&gt;table configuration]
+    I --&gt;|Yes| K[Set alert&lt;br&gt;thresholds]
+    K --&gt; L[Run for 48 hours&lt;br&gt;monitoring mode]
+    L --&gt; M{All readings&lt;br&gt;consistent?}
+    M --&gt;|No| N[Investigate&lt;br&gt;anomalies]
+    M --&gt;|Yes| O[Commission&lt;br&gt;Complete]
+
+    D --&gt; B
+    G --&gt; E
+    J --&gt; H
+    N --&gt; L
+
+    style O fill:#4CAF50,color:#fff</code></pre>
+<h3 id="883-burn-in-period">8.8.3 Burn-In Period</h3>
+<p>Allow a 48-72 hour "burn-in" period after installation before considering the monitor fully operational. During this period:</p>
+<ul>
+<li>Monitor should report at every expected interval</li>
+<li>Readings should be consistent (no wild fluctuations)</li>
+<li>Level should track logically (gradual decrease for consumption, jump for delivery)</li>
+<li>No false alarms should trigger</li>
+<li>Signal strength should remain stable</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Commissioning Example</p>
+<p><strong>Tank</strong>: 8,000-gallon horizontal steel diesel tank
+<strong>Monitor</strong>: TSR Cellular, 2" NPT mount
+<strong>Manual dip stick reading</strong>: 42.5 inches
+<strong>TSR first reading</strong>: 42.3 inches (delta: 0.2 inches -- within spec)
+<strong>AIP calculated volume</strong>: 5,240 gallons
+<strong>Expected volume (from recent delivery receipt)</strong>: 5,200 gallons (delta: 40 gallons, 0.8% -- within spec)
+<strong>Signal strength</strong>: RSSI -78 dBm (Good)
+<strong>Result</strong>: Commission approved. Monitor operational.</p>
+</div>
+<hr />
+<h2 id="89-calibration-and-validation">8.9 Calibration and Validation</h2>
+<h3 id="891-when-calibration-is-needed">8.9.1 When Calibration Is Needed</h3>
+<p>Most TankScan monitors are factory-calibrated and do not require field calibration for the level measurement itself. However, the level-to-volume conversion depends on accurate tank dimensions, which requires validation.</p>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Calibration Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New installation</td>
+<td>Validate level and volume against manual measurement</td>
+</tr>
+<tr>
+<td>Tank dimensions uncertain</td>
+<td>Perform wet calibration or verify with manufacturer data</td>
+</tr>
+<tr>
+<td>Readings drift over time</td>
+<td>Check for sensor fouling, condensation, or mechanical shift</td>
+</tr>
+<tr>
+<td>After tank modification</td>
+<td>Update tank profile dimensions in AIP</td>
+</tr>
+<tr>
+<td>Accuracy concerns</td>
+<td>Perform multi-point validation at different fill levels</td>
+</tr>
+<tr>
+<td>Customer dispute</td>
+<td>Independent verification with calibrated dip tape</td>
+</tr>
+</tbody>
+</table>
+<h3 id="892-multi-point-validation">8.9.2 Multi-Point Validation</h3>
+<p>For critical tanks (custody transfer, regulatory compliance), a multi-point validation provides the highest confidence:</p>
+<ol>
+<li>Record the current tank level (TSR reading and manual measurement)</li>
+<li>Add a known quantity of product (e.g., 500 gallons from a calibrated meter)</li>
+<li>Allow the liquid to settle (5-10 minutes)</li>
+<li>Record the new level (TSR and manual)</li>
+<li>Compare the volume change reported by AIP to the known quantity added</li>
+<li>Repeat at different fill levels if possible (low, mid, high)</li>
+</ol>
+<div class="arithmatex">\[\text{Calibration Error} = \frac{V_{\text{AIP}} - V_{\text{actual}}}{V_{\text{actual}}} \times 100\%\]</div>
+<p>Acceptable calibration error:</p>
+<table>
+<thead>
+<tr>
+<th>Application</th>
+<th>Maximum Error</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>General inventory monitoring</td>
+<td>+/- 2%</td>
+</tr>
+<tr>
+<td>Delivery optimization</td>
+<td>+/- 1%</td>
+</tr>
+<tr>
+<td>Custody transfer</td>
+<td>+/- 0.5%</td>
+</tr>
+<tr>
+<td>Regulatory compliance (EPA)</td>
+<td>+/- 0.2% (may require certified equipment)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="810-multi-site-deployment-planning">8.10 Multi-Site Deployment Planning</h2>
+<h3 id="8101-scaling-from-pilot-to-enterprise">8.10.1 Scaling from Pilot to Enterprise</h3>
+<p>Large deployments should follow a phased approach:</p>
+<pre class="mermaid"><code>graph LR
+    A[Phase 1&lt;br&gt;Pilot&lt;br&gt;5-20 sites] --&gt; B[Phase 2&lt;br&gt;Regional&lt;br&gt;50-200 sites]
+    B --&gt; C[Phase 3&lt;br&gt;Enterprise&lt;br&gt;200+ sites]
+
+    A --&gt; A1["- Select representative sites&lt;br&gt;- Test all tank types&lt;br&gt;- Validate workflows&lt;br&gt;- Train initial users&lt;br&gt;- Measure baseline KPIs"]
+    B --&gt; B1["- Expand to one region&lt;br&gt;- Refine processes&lt;br&gt;- Train regional teams&lt;br&gt;- Develop deployment SOP&lt;br&gt;- Measure and report KPIs"]
+    C --&gt; C1["- Nationwide rollout&lt;br&gt;- Dedicated deployment team&lt;br&gt;- Automated provisioning&lt;br&gt;- Continuous improvement&lt;br&gt;- Full KPI tracking"]</code></pre>
+<h3 id="8102-pilot-program-design">8.10.2 Pilot Program Design</h3>
+<p>A successful pilot program should:</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Guideline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Duration</td>
+<td>60-90 days minimum</td>
+</tr>
+<tr>
+<td>Site selection</td>
+<td>Mix of easy and challenging sites</td>
+</tr>
+<tr>
+<td>Tank variety</td>
+<td>Include all tank types the enterprise uses</td>
+</tr>
+<tr>
+<td>Success metrics</td>
+<td>Define before pilot begins (run-out reduction, route efficiency, etc.)</td>
+</tr>
+<tr>
+<td>User feedback</td>
+<td>Structured surveys at 30 and 60 days</td>
+</tr>
+<tr>
+<td>Executive sponsor</td>
+<td>Ensure senior management visibility and support</td>
+</tr>
+<tr>
+<td>Comparison group</td>
+<td>Keep unmonitored sites as a control group</td>
+</tr>
+</tbody>
+</table>
+<h3 id="8103-deployment-logistics-at-scale">8.10.3 Deployment Logistics at Scale</h3>
+<p>For large deployments (100+ sites), logistics planning becomes critical:</p>
+<p><strong>Deployment team composition:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Responsibility</th>
+<th>Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Project manager</td>
+<td>Overall coordination, scheduling, reporting</td>
+<td>1 per deployment</td>
+</tr>
+<tr>
+<td>AIP administrator</td>
+<td>Platform configuration, user setup</td>
+<td>1 per 500 monitors</td>
+</tr>
+<tr>
+<td>Field technician</td>
+<td>Physical installation, commissioning</td>
+<td>1 per 8-12 installations/day</td>
+</tr>
+<tr>
+<td>Training coordinator</td>
+<td>End-user and dispatcher training</td>
+<td>1 per region</td>
+</tr>
+<tr>
+<td>Support engineer</td>
+<td>Post-installation troubleshooting</td>
+<td>1 per 200 monitors (during deployment)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Daily installation rate targets:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Monitor Type</th>
+<th>Installs per Technician per Day</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TSR (standard AST)</td>
+<td>6 - 10</td>
+<td>Depends on tank access and travel time</td>
+</tr>
+<tr>
+<td>TSC (ATG gateway)</td>
+<td>4 - 6</td>
+<td>More complex configuration</td>
+</tr>
+<tr>
+<td>TSU (tote/IBC)</td>
+<td>15 - 25</td>
+<td>Fastest installation</td>
+</tr>
+<tr>
+<td>TSD (dial gauge)</td>
+<td>8 - 12</td>
+<td>Calibration adds time</td>
+</tr>
+<tr>
+<td>Mixed types</td>
+<td>6 - 8 average</td>
+<td>Typical for multi-type sites</td>
+</tr>
+</tbody>
+</table>
+<h3 id="8104-deployment-planning-spreadsheet">8.10.4 Deployment Planning Spreadsheet</h3>
+<p>A deployment plan should track:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Site ID</td>
+<td>Unique identifier</td>
+</tr>
+<tr>
+<td>Customer name</td>
+<td>Account name</td>
+</tr>
+<tr>
+<td>Address</td>
+<td>Physical address</td>
+</tr>
+<tr>
+<td>Tank count</td>
+<td>Number of tanks at site</td>
+</tr>
+<tr>
+<td>Monitor types</td>
+<td>TSR, TSC, TSU, TSD (and quantities)</td>
+</tr>
+<tr>
+<td>Survey date</td>
+<td>When site survey was completed</td>
+</tr>
+<tr>
+<td>Survey status</td>
+<td>Pass, conditional, fail</td>
+</tr>
+<tr>
+<td>Scheduled install date</td>
+<td>Planned installation date</td>
+</tr>
+<tr>
+<td>Assigned technician</td>
+<td>Who will install</td>
+</tr>
+<tr>
+<td>Install status</td>
+<td>Scheduled, in progress, complete, issue</td>
+</tr>
+<tr>
+<td>Commission date</td>
+<td>When validated and handed off</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>Any special requirements or issues</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="811-troubleshooting-common-installation-issues">8.11 Troubleshooting Common Installation Issues</h2>
+<h3 id="8111-no-communication-after-installation">8.11.1 No Communication After Installation</h3>
+<pre class="mermaid"><code>graph TD
+    A[Monitor installed but&lt;br&gt;no data in AIP] --&gt; B{Is SIM activated?}
+    B --&gt;|No| C[Activate in AIP&lt;br&gt;Wait 24 hours]
+    B --&gt;|Yes| D{LED indicators&lt;br&gt;show cellular connection?}
+    D --&gt;|No| E{Signal strength&lt;br&gt;adequate?}
+    E --&gt;|No| F[Relocate monitor&lt;br&gt;or add external antenna]
+    E --&gt;|Yes| G[Power cycle monitor&lt;br&gt;Remove and reinsert battery]
+    D --&gt;|Yes| H{Monitor registered&lt;br&gt;to correct site in AIP?}
+    H --&gt;|No| I[Correct site&lt;br&gt;assignment in AIP]
+    H --&gt;|Yes| J[Contact support&lt;br&gt;Possible firmware issue]
+
+    C --&gt; K[Resolved?]
+    F --&gt; K
+    G --&gt; K
+    I --&gt; K
+    J --&gt; K</code></pre>
+<h3 id="8112-inaccurate-level-readings">8.11.2 Inaccurate Level Readings</h3>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Likely Cause</th>
+<th>Resolution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reading stuck at one value</td>
+<td>Sensor blocked or frozen</td>
+<td>Clean sensor face; check for ice/debris</td>
+</tr>
+<tr>
+<td>Reading shows empty on full tank</td>
+<td>Wrong measurement range configured</td>
+<td>Verify sensor-to-bottom distance in AIP</td>
+</tr>
+<tr>
+<td>Reading shows full on empty tank</td>
+<td>Sensor measuring its own reflection</td>
+<td>Increase deadband distance in configuration</td>
+</tr>
+<tr>
+<td>Readings fluctuate wildly</td>
+<td>Interference from fill pipe or internal structure</td>
+<td>Reposition sensor away from obstructions</td>
+</tr>
+<tr>
+<td>Readings consistently high</td>
+<td>Foam on liquid surface</td>
+<td>Enable foam rejection; reposition away from fill</td>
+</tr>
+<tr>
+<td>Readings consistently low</td>
+<td>Dense vapor affecting radar speed</td>
+<td>Apply vapor correction factor</td>
+</tr>
+<tr>
+<td>Random spikes or drops</td>
+<td>Electrical noise or multipath reflection</td>
+<td>Check grounding; add signal filtering in AIP</td>
+</tr>
+</tbody>
+</table>
+<h3 id="8113-atg-communication-issues-tsc">8.11.3 ATG Communication Issues (TSC)</h3>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Likely Cause</th>
+<th>Resolution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TSC connected but no tank data</td>
+<td>Wrong ATG protocol selected</td>
+<td>Change protocol to match ATG model</td>
+</tr>
+<tr>
+<td>Partial data (some tanks missing)</td>
+<td>ATG probe numbering mismatch</td>
+<td>Verify probe assignment in ATG and TSC</td>
+</tr>
+<tr>
+<td>Data lag (readings are old)</td>
+<td>ATG not updating inventory</td>
+<td>Check ATG for alarm conditions; restart if needed</td>
+</tr>
+<tr>
+<td>Intermittent data drops</td>
+<td>Serial cable issue</td>
+<td>Replace cable; check connector pins</td>
+</tr>
+<tr>
+<td>"Communication error" in ATG log</td>
+<td>TSC polling too aggressively</td>
+<td>Increase poll interval; check for port conflicts</td>
+</tr>
+</tbody>
+</table>
+<h3 id="8114-environmental-issues">8.11.4 Environmental Issues</h3>
+<table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Cause</th>
+<th>Prevention/Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Condensation on sensor lens</td>
+<td>Temperature cycling, humid environment</td>
+<td>Sensor has hydrophobic coating; replace if degraded</td>
+</tr>
+<tr>
+<td>Corrosion on mounting threads</td>
+<td>Chemical vapor exposure</td>
+<td>Use stainless hardware; apply anti-seize compound</td>
+</tr>
+<tr>
+<td>UV damage to housing</td>
+<td>Years of sun exposure</td>
+<td>UV-stabilized housing; replace if cracked</td>
+</tr>
+<tr>
+<td>Spider webs in sensor</td>
+<td>Insects nesting in the antenna area</td>
+<td>Protective screen; periodic inspection</td>
+</tr>
+<tr>
+<td>Ice formation on sensor</td>
+<td>Freezing rain, condensation</td>
+<td>Self-heating feature on some models; manual removal</td>
+</tr>
+<tr>
+<td>Bird damage</td>
+<td>Birds pecking at housing</td>
+<td>Install protective cage or deterrent</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Preventive Maintenance Schedule</p>
+<p>While TankScan monitors are designed for years of maintenance-free operation, a brief annual inspection prevents many issues:</p>
+<ul>
+<li><strong>Visual check</strong>: Look for physical damage, corrosion, or discoloration</li>
+<li><strong>Mounting check</strong>: Verify the monitor is still tight in its opening</li>
+<li><strong>Signal check</strong>: Confirm signal strength is stable (compare to installation baseline)</li>
+<li><strong>Reading validation</strong>: Compare monitor reading to a manual measurement</li>
+<li><strong>Battery check</strong>: Verify remaining battery life in AIP (most last 5+ years)</li>
+<li><strong>Cleaning</strong>: Remove any debris, spider webs, or buildup from the sensor area</li>
+</ul>
+</div>
+<hr />
+<h2 id="812-safety-during-installation">8.12 Safety During Installation</h2>
+<h3 id="8121-general-safety-requirements">8.12.1 General Safety Requirements</h3>
+<p>All TankScan installations must comply with applicable safety regulations:</p>
+<table>
+<thead>
+<tr>
+<th>Hazard</th>
+<th>Precaution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Falls (tank top access)</td>
+<td>Fall protection required above 4 feet (OSHA 1926.501)</td>
+</tr>
+<tr>
+<td>Confined space (tank entry)</td>
+<td>TankScan installation should NEVER require tank entry</td>
+</tr>
+<tr>
+<td>Hot work (welding, cutting)</td>
+<td>TankScan installation should NEVER require hot work</td>
+</tr>
+<tr>
+<td>Flammable atmospheres</td>
+<td>Use only intrinsically safe (IS) tools and equipment in classified areas</td>
+</tr>
+<tr>
+<td>Electrical hazards</td>
+<td>Follow lockout/tagout procedures when connecting to powered equipment</td>
+</tr>
+<tr>
+<td>Chemical exposure</td>
+<td>Wear appropriate PPE (gloves, eye protection) when opening tank bungs</td>
+</tr>
+<tr>
+<td>Vehicle traffic</td>
+<td>Wear high-visibility clothing; use traffic cones at roadside sites</td>
+</tr>
+<tr>
+<td>Wildlife/insects</td>
+<td>Be aware of wasps, snakes, and other hazards in tank areas</td>
+</tr>
+</tbody>
+</table>
+<h3 id="8122-hazardous-area-installation-procedures">8.12.2 Hazardous Area Installation Procedures</h3>
+<p>When installing in classified hazardous areas (Class I, Div 1 or Div 2):</p>
+<div class="admonition warning">
+<p class="admonition-title">Hazardous Area Requirements</p>
+<ul>
+<li>Only install equipment that is certified for the area classification</li>
+<li>Do not open any equipment housing in a hazardous area (risk of ignition)</li>
+<li>Do not use non-intrinsically-safe tools (e.g., standard cell phones, radios, cameras)</li>
+<li>Activate monitors BEFORE entering the hazardous area, or use IS-certified activation tools</li>
+<li>Follow the site's hot work and equipment entry permit procedures</li>
+<li>If in doubt about area classification, treat the area as Class I, Division 1</li>
+</ul>
+</div>
+<hr />
+<h2 id="813-chapter-summary">8.13 Chapter Summary</h2>
+<p>Successful installation and deployment of wireless tank monitors follows a systematic process:</p>
+<ol>
+<li><strong>Site survey</strong>: Assess coverage, access, environment, and tank characteristics before ordering equipment</li>
+<li><strong>Monitor selection</strong>: Match the right monitor to each tank based on type, product, and environment</li>
+<li><strong>Physical installation</strong>: Follow manufacturer guidelines for mounting, torque, and positioning</li>
+<li><strong>Connectivity setup</strong>: Activate cellular service, install gateways as needed, verify signal strength</li>
+<li><strong>AIP configuration</strong>: Create accurate tank profiles, product profiles, and alert configurations</li>
+<li><strong>Commissioning</strong>: Validate first readings against manual measurements</li>
+<li><strong>Burn-in period</strong>: Monitor for 48-72 hours before declaring operational</li>
+<li><strong>Scale</strong>: Use pilot-to-enterprise phasing for large deployments</li>
+</ol>
+<p>The most common installation failures trace back to inadequate site surveys and incorrect AIP configuration. Investing time upfront in these steps dramatically reduces post-installation support needs and ensures that the monitoring system delivers accurate, reliable data from day one.</p>
+<hr />
+<h2 id="review-questions">Review Questions</h2>
+<div class="admonition question">
+<p class="admonition-title">Question 1 -- Knowledge (Remember)</p>
+<p>List the five main steps of the pre-installation site survey and identify at least two items that should be documented for each step.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 2 -- Comprehension (Understand)</p>
+<p>Explain why a smartphone signal strength test at a tank location is not a reliable predictor of TankScan monitor connectivity. Describe at least three technical differences between a smartphone's cellular capability and an IoT device's cellular capability.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 3 -- Application (Apply)</p>
+<p>You are installing a TSR monitor on a 12,000-gallon horizontal steel diesel tank. The tank has a 2" NPT bung on top, but it is located directly above the fill pipe. The only other opening is a 4" flange that currently holds a pressure/vacuum vent. Describe how you would proceed with the installation, including any adapter requirements and the reason you cannot use the opening above the fill pipe.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 4 -- Analysis (Analyze)</p>
+<p>A deployment of 50 TSR monitors across a fuel distribution network shows that 8 monitors (16%) are reporting intermittently -- some readings are missing. All monitors were installed by the same technician using the same process. Analyze the possible causes of this pattern and describe a systematic troubleshooting approach. What data from AIP would you examine first?</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 5 -- Synthesis (Create)</p>
+<p>Design a deployment plan for a propane distributor who wants to install TSD monitors on 800 residential propane tanks across a 5-state territory. The distributor has 6 field technicians available and wants the deployment completed within 90 days. Address: phasing strategy, daily installation targets, AIP configuration workflow, quality assurance process, and how you would handle sites with no cellular coverage.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

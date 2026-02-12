@@ -1,0 +1,3831 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive intelligent textbook on wireless tank monitoring technology, IoT systems, and the TankScan platform">
+      
+      
+        <meta name="author" content="Daniel Yarmoluk">
+      
+      
+      
+        <link rel="prev" href="../03-measurement-tech/">
+      
+      
+        <link rel="next" href="../05-aip-platform/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>4. IoT Architecture and Connectivity - TankScan Intelligent Textbook: Wireless Tank Monitoring Systems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-4-iot-architecture-and-connectivity" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" class="md-header__button md-logo" aria-label="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TankScan Intelligent Textbook: Wireless Tank Monitoring Systems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4. IoT Architecture and Connectivity
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Yarmoluk/tankscan-course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../preface/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Preface
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../course-description/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Description
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-introduction/" class="md-tabs__link">
+          
+  
+  
+  Chapters
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../learning-graph/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learning Graph
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" class="md-nav__button md-logo" aria-label="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    TankScan Intelligent Textbook: Wireless Tank Monitoring Systems
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Yarmoluk/tankscan-course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../preface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction to Tank Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-wireless-sensors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Wireless Sensor Technologies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-measurement-tech/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Radar and Ultrasonic Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. IoT Architecture and Connectivity
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. IoT Architecture and Connectivity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-iot-reference-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 IoT Reference Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 IoT Reference Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411-the-four-layer-iot-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1 The Four-Layer IoT Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-data-flow-through-the-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.2 Data Flow Through the Layers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-industrial-iot-vs-consumer-iot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Industrial IoT vs. Consumer IoT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 Industrial IoT vs. Consumer IoT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-key-differences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.1 Key Differences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-iiot-design-priorities-for-tank-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.2 IIoT Design Priorities for Tank Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-cellular-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Cellular Connectivity
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 Cellular Connectivity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-why-cellular-for-tank-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.1 Why Cellular for Tank Monitoring?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-cellular-technology-generations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.2 Cellular Technology Generations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433-lte-cat-m1-the-iot-optimized-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.3 LTE Cat-M1: The IoT-Optimized Standard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#434-cellular-data-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.4 Cellular Data Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#435-sim-card-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.5 SIM Card Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-wi-fi-and-local-wireless-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Wi-Fi and Local Wireless Options
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4 Wi-Fi and Local Wireless Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#441-wi-fi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4.1 Wi-Fi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#442-bluetooth-low-energy-ble" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4.2 Bluetooth Low Energy (BLE)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#443-proprietary-short-range-radio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4.3 Proprietary Short-Range Radio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-satellite-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Satellite Connectivity
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5 Satellite Connectivity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#451-when-satellite-is-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5.1 When Satellite Is Needed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#452-satellite-communication-technologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5.2 Satellite Communication Technologies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#453-satellite-data-usage-for-tank-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5.3 Satellite Data Usage for Tank Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-gateway-devices-and-their-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 Gateway Devices and Their Role
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.6 Gateway Devices and Their Role">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#461-what-is-a-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6.1 What Is a Gateway?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#462-gateway-vs-direct-cellular-when-to-use-each" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6.2 Gateway vs. Direct Cellular: When to Use Each
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#463-gateway-additional-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6.3 Gateway Additional Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47-network-topology-for-tank-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7 Network Topology for Tank Monitoring
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.7 Network Topology for Tank Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#471-star-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7.1 Star Topology
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#472-mesh-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7.2 Mesh Topology
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#473-hybrid-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7.3 Hybrid Topology
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#48-edge-vs-cloud-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8 Edge vs. Cloud Processing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.8 Edge vs. Cloud Processing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#481-edge-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8.1 Edge Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#482-cloud-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8.2 Cloud Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#483-the-edge-cloud-continuum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8.3 The Edge-Cloud Continuum
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49-data-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.9 Data Protocols
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.9 Data Protocols">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#491-mqtt-message-queuing-telemetry-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.9.1 MQTT (Message Queuing Telemetry Transport)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#492-httprest-representational-state-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.9.2 HTTP/REST (Representational State Transfer)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#493-protocol-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.9.3 Protocol Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#410-bandwidth-and-power-trade-offs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10 Bandwidth and Power Trade-offs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.10 Bandwidth and Power Trade-offs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4101-reporting-interval-trade-offs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10.1 Reporting Interval Trade-offs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4102-data-compression-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10.2 Data Compression Strategies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4103-power-bandwidth-freshness-triangle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10.3 Power-Bandwidth-Freshness Triangle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#411-cellular-coverage-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.11 Cellular Coverage Considerations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.11 Cellular Coverage Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4111-coverage-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.11.1 Coverage Assessment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4112-signal-strength-and-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.11.2 Signal Strength and Quality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4113-improving-cellular-coverage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.11.3 Improving Cellular Coverage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#412-tankscan-connectivity-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.12 TankScan Connectivity Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.12 TankScan Connectivity Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4121-primary-direct-cellular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.12.1 Primary: Direct Cellular
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4122-secondary-gateway-based" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.12.2 Secondary: Gateway-Based
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4123-tertiary-satellite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.12.3 Tertiary: Satellite
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4124-connectivity-decision-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.12.4 Connectivity Decision Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#413-security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.13 Security Considerations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.13 Security Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4131-security-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.13.1 Security Layers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4132-device-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.13.2 Device Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4133-data-encryption" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.13.3 Data Encryption
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#414-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.14 Chapter Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Review Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-aip-platform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. The Asset Intelligence Platform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-tank-types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Tank Types and Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-industry-solutions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Industry Solutions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Installation and Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-data-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Data Analytics and Optimization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-fleet-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Fleet Management and Routing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-safety-compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Safety, Compliance, and Hazardous Environments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-cloud-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Cloud Integration and APIs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-predictive-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Predictive Maintenance and AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-case-studies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Case Studies and ROI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-future/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Future of Tank Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-iot-reference-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 IoT Reference Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 IoT Reference Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411-the-four-layer-iot-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1 The Four-Layer IoT Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-data-flow-through-the-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.2 Data Flow Through the Layers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-industrial-iot-vs-consumer-iot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Industrial IoT vs. Consumer IoT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 Industrial IoT vs. Consumer IoT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-key-differences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.1 Key Differences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-iiot-design-priorities-for-tank-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.2 IIoT Design Priorities for Tank Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-cellular-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Cellular Connectivity
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 Cellular Connectivity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-why-cellular-for-tank-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.1 Why Cellular for Tank Monitoring?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-cellular-technology-generations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.2 Cellular Technology Generations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433-lte-cat-m1-the-iot-optimized-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.3 LTE Cat-M1: The IoT-Optimized Standard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#434-cellular-data-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.4 Cellular Data Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#435-sim-card-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.5 SIM Card Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-wi-fi-and-local-wireless-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Wi-Fi and Local Wireless Options
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4 Wi-Fi and Local Wireless Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#441-wi-fi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4.1 Wi-Fi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#442-bluetooth-low-energy-ble" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4.2 Bluetooth Low Energy (BLE)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#443-proprietary-short-range-radio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4.3 Proprietary Short-Range Radio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-satellite-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Satellite Connectivity
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5 Satellite Connectivity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#451-when-satellite-is-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5.1 When Satellite Is Needed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#452-satellite-communication-technologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5.2 Satellite Communication Technologies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#453-satellite-data-usage-for-tank-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5.3 Satellite Data Usage for Tank Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-gateway-devices-and-their-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 Gateway Devices and Their Role
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.6 Gateway Devices and Their Role">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#461-what-is-a-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6.1 What Is a Gateway?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#462-gateway-vs-direct-cellular-when-to-use-each" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6.2 Gateway vs. Direct Cellular: When to Use Each
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#463-gateway-additional-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6.3 Gateway Additional Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47-network-topology-for-tank-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7 Network Topology for Tank Monitoring
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.7 Network Topology for Tank Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#471-star-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7.1 Star Topology
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#472-mesh-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7.2 Mesh Topology
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#473-hybrid-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7.3 Hybrid Topology
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#48-edge-vs-cloud-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8 Edge vs. Cloud Processing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.8 Edge vs. Cloud Processing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#481-edge-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8.1 Edge Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#482-cloud-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8.2 Cloud Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#483-the-edge-cloud-continuum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8.3 The Edge-Cloud Continuum
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49-data-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.9 Data Protocols
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.9 Data Protocols">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#491-mqtt-message-queuing-telemetry-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.9.1 MQTT (Message Queuing Telemetry Transport)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#492-httprest-representational-state-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.9.2 HTTP/REST (Representational State Transfer)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#493-protocol-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.9.3 Protocol Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#410-bandwidth-and-power-trade-offs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10 Bandwidth and Power Trade-offs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.10 Bandwidth and Power Trade-offs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4101-reporting-interval-trade-offs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10.1 Reporting Interval Trade-offs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4102-data-compression-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10.2 Data Compression Strategies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4103-power-bandwidth-freshness-triangle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10.3 Power-Bandwidth-Freshness Triangle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#411-cellular-coverage-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.11 Cellular Coverage Considerations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.11 Cellular Coverage Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4111-coverage-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.11.1 Coverage Assessment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4112-signal-strength-and-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.11.2 Signal Strength and Quality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4113-improving-cellular-coverage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.11.3 Improving Cellular Coverage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#412-tankscan-connectivity-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.12 TankScan Connectivity Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.12 TankScan Connectivity Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4121-primary-direct-cellular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.12.1 Primary: Direct Cellular
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4122-secondary-gateway-based" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.12.2 Secondary: Gateway-Based
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4123-tertiary-satellite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.12.3 Tertiary: Satellite
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4124-connectivity-decision-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.12.4 Connectivity Decision Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#413-security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.13 Security Considerations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.13 Security Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4131-security-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.13.1 Security Layers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4132-device-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.13.2 Device Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4133-data-encryption" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.13.3 Data Encryption
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#414-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.14 Chapter Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Review Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="chapter-4-iot-architecture-and-connectivity">Chapter 4: IoT Architecture and Connectivity</h1>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter, you will be able to:</p>
+<ul>
+<li>Describe the layered architecture of IoT systems and identify where tank monitoring fits within it</li>
+<li>Differentiate between Industrial IoT (IIoT) and consumer IoT in terms of requirements and constraints</li>
+<li>Explain how cellular, Wi-Fi, and satellite connectivity options work for tank monitoring</li>
+<li>Describe the role of gateway devices in aggregating and relaying sensor data</li>
+<li>Compare edge computing and cloud computing approaches for data processing</li>
+<li>Explain common IoT data protocols (MQTT, HTTP/REST) and their trade-offs</li>
+<li>Design a connectivity solution for a multi-site tank monitoring deployment</li>
+</ul>
+<hr />
+<h2 id="41-iot-reference-architecture">4.1 IoT Reference Architecture</h2>
+<p>The <strong>Internet of Things (IoT)</strong> refers to the network of physical devices embedded with sensors, software, and connectivity that enables them to collect and exchange data. Tank monitoring is a canonical IoT application: physical sensors on remote tanks transmit data over wireless networks to cloud platforms where it is stored, analyzed, and presented to users.</p>
+<h3 id="411-the-four-layer-iot-architecture">4.1.1 The Four-Layer IoT Architecture</h3>
+<p>While there are many IoT architecture models in the literature, a practical four-layer model captures the essential structure of most IoT systems, including tank monitoring:</p>
+<pre class="mermaid"><code>graph TB
+    subgraph "Layer 4: Application Layer"
+        APP1[Dashboards &amp;&lt;br&gt;Visualization]
+        APP2[Business Logic&lt;br&gt;&amp; Analytics]
+        APP3[Integration&lt;br&gt;APIs]
+        APP4[Mobile&lt;br&gt;Applications]
+    end
+
+    subgraph "Layer 3: Platform Layer (Cloud)"
+        PLAT1[Data Ingestion&lt;br&gt;&amp; Routing]
+        PLAT2[Data Storage&lt;br&gt;&amp; Management]
+        PLAT3[Device&lt;br&gt;Management]
+        PLAT4[Security &amp;&lt;br&gt;Identity]
+    end
+
+    subgraph "Layer 2: Network Layer"
+        NET1[Cellular&lt;br&gt;4G LTE / 5G]
+        NET2[Wi-Fi / Local&lt;br&gt;Wireless]
+        NET3[Satellite]
+        NET4[LPWAN&lt;br&gt;LoRa / NB-IoT]
+    end
+
+    subgraph "Layer 1: Device Layer (Edge)"
+        DEV1[Sensors &amp;&lt;br&gt;Actuators]
+        DEV2[Microcontrollers&lt;br&gt;&amp; Processors]
+        DEV3[Gateways &amp;&lt;br&gt;Edge Devices]
+    end
+
+    DEV1 --&gt; DEV2
+    DEV2 --&gt; DEV3
+    DEV3 --&gt; NET1
+    DEV3 --&gt; NET2
+    DEV3 --&gt; NET3
+    DEV3 --&gt; NET4
+
+    NET1 --&gt; PLAT1
+    NET2 --&gt; PLAT1
+    NET3 --&gt; PLAT1
+    NET4 --&gt; PLAT1
+
+    PLAT1 --&gt; PLAT2
+    PLAT1 --&gt; PLAT3
+    PLAT2 --&gt; PLAT4
+    PLAT4 --&gt; APP1
+    PLAT4 --&gt; APP2
+    PLAT4 --&gt; APP3
+    PLAT4 --&gt; APP4
+
+    style DEV1 fill:#1565C0,color:#fff
+    style DEV2 fill:#1565C0,color:#fff
+    style DEV3 fill:#1565C0,color:#fff
+    style NET1 fill:#E65100,color:#fff
+    style NET2 fill:#E65100,color:#fff
+    style NET3 fill:#E65100,color:#fff
+    style NET4 fill:#E65100,color:#fff
+    style PLAT1 fill:#2E7D32,color:#fff
+    style PLAT2 fill:#2E7D32,color:#fff
+    style PLAT3 fill:#2E7D32,color:#fff
+    style PLAT4 fill:#2E7D32,color:#fff
+    style APP1 fill:#6A1B9A,color:#fff
+    style APP2 fill:#6A1B9A,color:#fff
+    style APP3 fill:#6A1B9A,color:#fff
+    style APP4 fill:#6A1B9A,color:#fff</code></pre>
+<p><strong>Layer 1 -- Device Layer (Edge)</strong>: The physical sensors, microcontrollers, and gateway devices at the tank site. This is where the physical measurement happens and where raw data originates. In TankScan's system, this layer includes the TSR, TSU, TSP, and TSD monitors.</p>
+<p><strong>Layer 2 -- Network Layer</strong>: The communication infrastructure that transports data from the edge to the cloud. For tank monitoring, this is primarily cellular networks (4G LTE), with satellite as an alternative for remote sites.</p>
+<p><strong>Layer 3 -- Platform Layer (Cloud)</strong>: The cloud infrastructure that receives, stores, processes, and manages the data and devices. TankScan's AIP (Asset Intelligence Platform) operates at this layer.</p>
+<p><strong>Layer 4 -- Application Layer</strong>: The user-facing applications that present data, generate alerts, produce reports, and integrate with business systems. Dashboards, mobile apps, and API integrations operate at this layer.</p>
+<h3 id="412-data-flow-through-the-layers">4.1.2 Data Flow Through the Layers</h3>
+<p>A single tank level reading flows through all four layers:</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Sensor as Layer 1: TSR Sensor
+    participant Cell as Layer 2: Cellular Network
+    participant Cloud as Layer 3: AIP Cloud
+    participant App as Layer 4: Dashboard
+
+    Sensor-&gt;&gt;Sensor: Measure level (radar)
+    Sensor-&gt;&gt;Sensor: Calculate volume
+    Sensor-&gt;&gt;Sensor: Package data message
+    Sensor-&gt;&gt;Cell: Transmit via LTE
+    Cell-&gt;&gt;Cloud: Route to AIP endpoint
+    Cloud-&gt;&gt;Cloud: Authenticate device
+    Cloud-&gt;&gt;Cloud: Validate data
+    Cloud-&gt;&gt;Cloud: Store in time-series DB
+    Cloud-&gt;&gt;Cloud: Evaluate alert rules
+    Cloud-&gt;&gt;App: Push update to dashboard
+    App-&gt;&gt;App: Update level display
+    Note over Cloud: If alert triggered...
+    Cloud-&gt;&gt;App: Send email/SMS notification</code></pre>
+<hr />
+<h2 id="42-industrial-iot-vs-consumer-iot">4.2 Industrial IoT vs. Consumer IoT</h2>
+<p>Tank monitoring falls squarely in the <strong>Industrial IoT (IIoT)</strong> category, which has significantly different requirements from consumer IoT applications like smart home devices, wearable fitness trackers, or connected appliances.</p>
+<h3 id="421-key-differences">4.2.1 Key Differences</h3>
+<table>
+<thead>
+<tr>
+<th>Characteristic</th>
+<th>Consumer IoT</th>
+<th>Industrial IoT (Tank Monitoring)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Environment</strong></td>
+<td>Indoor, climate-controlled</td>
+<td>Outdoor, extreme temperatures, rain, dust</td>
+</tr>
+<tr>
+<td><strong>Reliability requirement</strong></td>
+<td>Nice-to-have</td>
+<td>Mission-critical (financial consequences of failure)</td>
+</tr>
+<tr>
+<td><strong>Device lifespan</strong></td>
+<td>2-5 years</td>
+<td>10-15 years</td>
+</tr>
+<tr>
+<td><strong>Power source</strong></td>
+<td>AC power or rechargeable battery</td>
+<td>Non-rechargeable battery (5-10 year life)</td>
+</tr>
+<tr>
+<td><strong>Connectivity</strong></td>
+<td>Wi-Fi (always available)</td>
+<td>Cellular, satellite (may be intermittent)</td>
+</tr>
+<tr>
+<td><strong>Data volume</strong></td>
+<td>High (streaming video, audio)</td>
+<td>Low (periodic readings, kilobytes per day)</td>
+</tr>
+<tr>
+<td><strong>Security requirements</strong></td>
+<td>Moderate (privacy)</td>
+<td>High (operational integrity, regulatory compliance)</td>
+</tr>
+<tr>
+<td><strong>Deployment scale</strong></td>
+<td>Household (5-50 devices)</td>
+<td>Enterprise (1,000-100,000+ devices)</td>
+</tr>
+<tr>
+<td><strong>Installation</strong></td>
+<td>Consumer self-install (plug-and-play)</td>
+<td>Professional or trained installer</td>
+</tr>
+<tr>
+<td><strong>Regulatory</strong></td>
+<td>FCC consumer electronics</td>
+<td>FCC, hazardous area certifications, industry standards</td>
+</tr>
+<tr>
+<td><strong>Cost sensitivity</strong></td>
+<td>High (consumer price points)</td>
+<td>Moderate (ROI-driven, business investment)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="422-iiot-design-priorities-for-tank-monitoring">4.2.2 IIoT Design Priorities for Tank Monitoring</h3>
+<p>The IIoT context drives several design priorities that are less important in consumer IoT:</p>
+<p><strong>Reliability over features</strong>: A tank monitor that reliably reports accurate level readings every 4 hours for 10 years is far more valuable than one with many features that fails after 2 years. Every design decision -- from component selection to firmware architecture -- prioritizes reliability.</p>
+<p><strong>Power efficiency over real-time responsiveness</strong>: Unlike a consumer device that responds instantly to a button press, a tank monitor can take a reading every few hours because tank levels change slowly. This allows extreme power optimization through sleep/wake cycling.</p>
+<p><strong>Ruggedization over aesthetics</strong>: A consumer device must look attractive; a tank monitor must survive -40 degrees C winters, 85 degrees C sun-baked summers, rain, snow, ice, dust, and vibration.</p>
+<p><strong>Fleet management over individual management</strong>: With thousands of devices deployed across a territory, the ability to manage, monitor, configure, and update devices remotely and at scale is essential.</p>
+<div class="admonition note">
+<p class="admonition-title">The IIoT Reliability Imperative</p>
+<p>In consumer IoT, if a smart light bulb goes offline, the user is mildly annoyed. In tank monitoring, if a sensor goes offline on a critical fuel tank, the customer may run out of fuel, an emergency delivery may be needed, or a safety hazard may go undetected. This difference in consequences drives the engineering and quality standards for IIoT devices.</p>
+</div>
+<hr />
+<h2 id="43-cellular-connectivity">4.3 Cellular Connectivity</h2>
+<p>Cellular networks are the primary connectivity method for wireless tank monitors. The ubiquity, reliability, and managed nature of cellular networks make them ideal for distributed asset monitoring.</p>
+<h3 id="431-why-cellular-for-tank-monitoring">4.3.1 Why Cellular for Tank Monitoring?</h3>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Cellular Advantage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Coverage</strong></td>
+<td>Cellular networks cover approximately 98% of the US population; most commercial and residential tank locations have coverage</td>
+</tr>
+<tr>
+<td><strong>No local infrastructure</strong></td>
+<td>Unlike Wi-Fi, cellular requires no local access point, router, or network configuration at the tank site</td>
+</tr>
+<tr>
+<td><strong>Managed connectivity</strong></td>
+<td>The cellular carrier manages the network infrastructure; the tank monitor vendor manages the SIM and data plan</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>Cellular networks provide encryption and authentication as part of the standard protocol</td>
+</tr>
+<tr>
+<td><strong>Reliability</strong></td>
+<td>Carrier networks are designed for high availability (99.9%+ uptime)</td>
+</tr>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Adding a new monitor requires only activating a new SIM card, no local network changes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="432-cellular-technology-generations">4.3.2 Cellular Technology Generations</h3>
+<table>
+<thead>
+<tr>
+<th>Generation</th>
+<th>Peak Data Rate</th>
+<th>Typical Latency</th>
+<th>Status for IoT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2G (GSM/GPRS)</td>
+<td>114 kbps</td>
+<td>300-1000 ms</td>
+<td>Sunset (being decommissioned by most carriers)</td>
+</tr>
+<tr>
+<td>3G (UMTS/HSPA)</td>
+<td>42 Mbps</td>
+<td>100-500 ms</td>
+<td>Sunset (AT&amp;T shut down 2022, others following)</td>
+</tr>
+<tr>
+<td>4G LTE</td>
+<td>300 Mbps</td>
+<td>30-50 ms</td>
+<td><strong>Current standard for IoT</strong></td>
+</tr>
+<tr>
+<td>LTE Cat-M1</td>
+<td>1 Mbps</td>
+<td>10-15 ms</td>
+<td><strong>Optimized for IoT</strong> (lower power, lower cost)</td>
+</tr>
+<tr>
+<td>NB-IoT</td>
+<td>250 kbps</td>
+<td>1.6-10 s</td>
+<td>Emerging for ultra-low-power IoT</td>
+</tr>
+<tr>
+<td>5G</td>
+<td>20 Gbps</td>
+<td>1-10 ms</td>
+<td>Future potential for IoT</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Network Sunset Risk</p>
+<p>When 2G and 3G networks were shut down, IoT devices that relied on those networks stopped working and had to be replaced. This is a critical consideration for tank monitors with 10-year lifespans. TankScan's current monitors use 4G LTE, which is expected to remain operational until at least the early 2030s. Designing for long-term network availability is an essential IIoT consideration.</p>
+</div>
+<h3 id="433-lte-cat-m1-the-iot-optimized-standard">4.3.3 LTE Cat-M1: The IoT-Optimized Standard</h3>
+<p><strong>LTE Cat-M1</strong> (also called LTE-M or eMTC) is a variant of 4G LTE specifically designed for IoT applications. It offers several advantages over standard LTE for tank monitoring:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Standard LTE</th>
+<th>LTE Cat-M1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Maximum data rate</td>
+<td>300 Mbps</td>
+<td>1 Mbps</td>
+</tr>
+<tr>
+<td>Modem complexity</td>
+<td>High</td>
+<td>Low (fewer RF components)</td>
+</tr>
+<tr>
+<td>Power consumption</td>
+<td>Higher</td>
+<td>50-70% lower</td>
+</tr>
+<tr>
+<td>Coverage enhancement</td>
+<td>Standard</td>
+<td>+15 dB (better indoor and underground penetration)</td>
+</tr>
+<tr>
+<td>Cost per modem</td>
+<td>Higher</td>
+<td>Lower</td>
+</tr>
+<tr>
+<td>Battery life impact</td>
+<td>Shorter</td>
+<td>Longer</td>
+</tr>
+</tbody>
+</table>
+<p>The 1 Mbps data rate of Cat-M1 is vastly more than a tank monitor needs (a typical reading is a few hundred bytes), so the reduced data rate poses no limitation. The significant benefits are lower power consumption (extending battery life) and better coverage penetration (reaching monitors in underground tanks, metal buildings, and rural areas).</p>
+<h3 id="434-cellular-data-usage">4.3.4 Cellular Data Usage</h3>
+<p>A wireless tank monitor uses remarkably little cellular data:</p>
+<table>
+<thead>
+<tr>
+<th>Message Type</th>
+<th>Size</th>
+<th>Frequency</th>
+<th>Monthly Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Level reading</td>
+<td>~200 bytes</td>
+<td>Every 4 hours (6x/day)</td>
+<td>~36 KB</td>
+</tr>
+<tr>
+<td>Heartbeat/health check</td>
+<td>~100 bytes</td>
+<td>Once per day</td>
+<td>~3 KB</td>
+</tr>
+<tr>
+<td>Configuration update</td>
+<td>~500 bytes</td>
+<td>Occasional</td>
+<td>~1 KB</td>
+</tr>
+<tr>
+<td>Firmware update</td>
+<td>~100 KB</td>
+<td>Once per year</td>
+<td>~8 KB/month amortized</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td></td>
+<td><strong>~48 KB/month</strong></td>
+</tr>
+</tbody>
+</table>
+<p>For comparison, a single web page typically loads 2-5 MB. A tank monitor's monthly data usage is less than 1% of a single web page load. This means tank monitoring can use the most inexpensive cellular data plans available.</p>
+<h3 id="435-sim-card-management">4.3.5 SIM Card Management</h3>
+<p>Each cellular-connected monitor contains a <strong>SIM card</strong> (Subscriber Identity Module) that identifies the device to the cellular network and authorizes its data usage. TankScan manages SIM cards on behalf of its customers, which means:</p>
+<ul>
+<li>Customers do not need to obtain separate cellular plans for each monitor</li>
+<li>SIM activation and deactivation are handled by TankScan</li>
+<li>Multi-carrier SIM cards can automatically switch to the best available carrier at each location</li>
+<li>Bulk data plans reduce per-device costs</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">eSIM and iSIM: The Future of IoT Connectivity</p>
+<p>Traditional SIM cards are removable plastic cards that must be physically inserted. <strong>eSIM</strong> (embedded SIM) is a soldered-on chip that can be remotely programmed with carrier profiles. <strong>iSIM</strong> (integrated SIM) is built directly into the cellular modem chip. These technologies eliminate the need for a physical SIM card slot, saving space and cost in the monitor while enabling remote carrier switching.</p>
+</div>
+<hr />
+<h2 id="44-wi-fi-and-local-wireless-options">4.4 Wi-Fi and Local Wireless Options</h2>
+<p>While cellular connectivity dominates the tank monitoring market, local wireless technologies play a role in specific scenarios.</p>
+<h3 id="441-wi-fi">4.4.1 Wi-Fi</h3>
+<p><strong>Wi-Fi</strong> (IEEE 802.11) is the ubiquitous local area wireless standard used in homes, offices, and many commercial facilities.</p>
+<p><strong>When Wi-Fi Might Be Used for Tank Monitoring</strong>:</p>
+<ul>
+<li>Tanks located inside a facility with existing Wi-Fi infrastructure</li>
+<li>Situations where the customer prefers to use their own network rather than cellular</li>
+<li>Backup connectivity when cellular is temporarily unavailable</li>
+</ul>
+<p><strong>Challenges of Wi-Fi for Tank Monitoring</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Challenge</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Range</strong></td>
+<td>Wi-Fi range is typically 30-100 meters, requiring the tank to be near an access point</td>
+</tr>
+<tr>
+<td><strong>Infrastructure dependency</strong></td>
+<td>Requires a Wi-Fi network to be present, maintained, and powered at the tank site</td>
+</tr>
+<tr>
+<td><strong>IT coordination</strong></td>
+<td>Connecting a monitor to a customer's Wi-Fi network may require IT department involvement for network credentials, firewall rules, and security compliance</td>
+</tr>
+<tr>
+<td><strong>Power consumption</strong></td>
+<td>Wi-Fi modules typically consume more power than LTE Cat-M1 modules during transmission</td>
+</tr>
+<tr>
+<td><strong>Reliability</strong></td>
+<td>Consumer and commercial Wi-Fi networks are less reliable than carrier cellular networks</td>
+</tr>
+</tbody>
+</table>
+<h3 id="442-bluetooth-low-energy-ble">4.4.2 Bluetooth Low Energy (BLE)</h3>
+<p><strong>Bluetooth Low Energy (BLE)</strong> is a short-range (10-100 meter) wireless protocol designed for low-power devices. In tank monitoring, BLE is primarily used for:</p>
+<ul>
+<li><strong>Local configuration</strong>: A technician can connect to the monitor via BLE using a smartphone app to configure settings, view diagnostics, and perform calibration without needing to access the cloud</li>
+<li><strong>Sensor-to-gateway communication</strong>: Multiple sensors at a single site can communicate via BLE to a gateway that aggregates data and transmits via cellular</li>
+</ul>
+<p>BLE is not suitable as a primary connectivity method for remote tank monitoring because it requires a local device (gateway or smartphone) to receive the data.</p>
+<h3 id="443-proprietary-short-range-radio">4.4.3 Proprietary Short-Range Radio</h3>
+<p>Some tank monitoring systems use proprietary radio protocols operating in the ISM (Industrial, Scientific, Medical) bands (such as 900 MHz or 2.4 GHz) for sensor-to-gateway communication. These protocols are optimized for:</p>
+<ul>
+<li>Very low power consumption</li>
+<li>Simple, reliable communication</li>
+<li>Longer range than BLE (up to 1 km in some implementations)</li>
+</ul>
+<p>The disadvantage is that proprietary protocols require proprietary gateways and lack the ecosystem support of standard protocols.</p>
+<hr />
+<h2 id="45-satellite-connectivity">4.5 Satellite Connectivity</h2>
+<p>For tank monitoring locations without cellular coverage, satellite provides a reliable alternative data path.</p>
+<h3 id="451-when-satellite-is-needed">4.5.1 When Satellite Is Needed</h3>
+<p>Cellular coverage gaps are common in:</p>
+<ul>
+<li><strong>Remote oil and gas fields</strong>: Wellheads and tank batteries in wilderness areas</li>
+<li><strong>Agricultural operations</strong>: Farms in rural areas with poor cellular coverage</li>
+<li><strong>Mining and forestry</strong>: Remote industrial sites</li>
+<li><strong>Mountain-top sites</strong>: Communication towers and utility stations</li>
+<li><strong>Offshore platforms</strong>: Marine environments beyond cellular reach</li>
+</ul>
+<h3 id="452-satellite-communication-technologies">4.5.2 Satellite Communication Technologies</h3>
+<table>
+<thead>
+<tr>
+<th>Technology</th>
+<th>Orbit</th>
+<th>Latency</th>
+<th>Coverage</th>
+<th>Cost per Message</th>
+<th>Suitable for Tank Monitoring?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Iridium</strong></td>
+<td>LEO (780 km)</td>
+<td>50-200 ms</td>
+<td>Global (including poles)</td>
+<td>$0.05-0.50</td>
+<td>Yes -- short burst data service is ideal</td>
+</tr>
+<tr>
+<td><strong>Globalstar</strong></td>
+<td>LEO (1,414 km)</td>
+<td>50-200 ms</td>
+<td>Near-global (coverage gaps at high latitudes)</td>
+<td>Similar to Iridium</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Inmarsat</strong></td>
+<td>GEO (35,786 km)</td>
+<td>500-700 ms</td>
+<td>Global (excl. poles)</td>
+<td>$0.10-1.00</td>
+<td>Yes (IsatData Pro service)</td>
+</tr>
+<tr>
+<td><strong>Starlink</strong></td>
+<td>LEO (550 km)</td>
+<td>20-40 ms</td>
+<td>Expanding</td>
+<td>N/A (broadband, not designed for IoT)</td>
+<td>Overkill for tank monitoring</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">LEO vs. GEO Satellites</p>
+<p><strong>LEO (Low Earth Orbit)</strong> satellites orbit at 200-2,000 km altitude and provide lower latency and better link budget than GEO satellites. However, they move across the sky rapidly and require a constellation of many satellites to provide continuous coverage. <strong>GEO (Geostationary Earth Orbit)</strong> satellites orbit at 35,786 km and remain fixed above one point on the equator, providing continuous coverage of a hemisphere but with higher latency and greater path loss.</p>
+</div>
+<h3 id="453-satellite-data-usage-for-tank-monitoring">4.5.3 Satellite Data Usage for Tank Monitoring</h3>
+<p>Satellite data transmission is more expensive than cellular, so the monitoring system must be designed to minimize the amount of data sent. Strategies include:</p>
+<ul>
+<li><strong>Lower reporting frequency</strong>: Reporting every 8 or 12 hours instead of every 4 hours</li>
+<li><strong>Exception-based reporting</strong>: Only transmitting when the level changes by more than a threshold amount</li>
+<li><strong>Data compression</strong>: Encoding readings in the most compact format possible</li>
+<li><strong>Batch transmission</strong>: Accumulating multiple readings and sending them in a single burst</li>
+</ul>
+<p>A typical satellite-transmitted tank reading is 20-50 bytes (compared to 200 bytes over cellular), using compact binary encoding rather than verbose text formats.</p>
+<hr />
+<h2 id="46-gateway-devices-and-their-role">4.6 Gateway Devices and Their Role</h2>
+<h3 id="461-what-is-a-gateway">4.6.1 What Is a Gateway?</h3>
+<p>A <strong>gateway</strong> is an intermediate device that bridges two different communication networks. In tank monitoring, a gateway typically sits at a multi-tank site and performs the following functions:</p>
+<ol>
+<li><strong>Receives data</strong> from multiple tank monitors via short-range wireless (BLE, proprietary radio)</li>
+<li><strong>Aggregates</strong> the data from all monitors into a single stream</li>
+<li><strong>Translates</strong> between the local wireless protocol and the wide-area protocol (cellular or satellite)</li>
+<li><strong>Transmits</strong> the aggregated data to the cloud platform</li>
+</ol>
+<pre class="mermaid"><code>graph TB
+    subgraph "Multi-Tank Site"
+        T1[Tank 1&lt;br&gt;TSR Monitor] --&gt;|BLE / Radio| GW[Gateway&lt;br&gt;Device]
+        T2[Tank 2&lt;br&gt;TSR Monitor] --&gt;|BLE / Radio| GW
+        T3[Tank 3&lt;br&gt;TSU Monitor] --&gt;|BLE / Radio| GW
+        T4[Tank 4&lt;br&gt;TSP Monitor] --&gt;|BLE / Radio| GW
+        T5[Tank 5&lt;br&gt;TSD Monitor] --&gt;|BLE / Radio| GW
+    end
+
+    GW --&gt;|Cellular LTE| CLOUD[AIP Cloud&lt;br&gt;Platform]
+
+    style T1 fill:#1565C0,color:#fff
+    style T2 fill:#1565C0,color:#fff
+    style T3 fill:#1565C0,color:#fff
+    style T4 fill:#1565C0,color:#fff
+    style T5 fill:#1565C0,color:#fff
+    style GW fill:#E65100,color:#fff
+    style CLOUD fill:#2E7D32,color:#fff</code></pre>
+<h3 id="462-gateway-vs-direct-cellular-when-to-use-each">4.6.2 Gateway vs. Direct Cellular: When to Use Each</h3>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Direct Cellular (per monitor)</th>
+<th>Gateway Architecture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Installation simplicity</strong></td>
+<td>Simplest -- each monitor is self-contained</td>
+<td>Requires gateway installation and configuration</td>
+</tr>
+<tr>
+<td><strong>Cost per site (few tanks)</strong></td>
+<td>Lower (1-2 monitors, each with own cellular)</td>
+<td>Higher (gateway adds cost)</td>
+</tr>
+<tr>
+<td><strong>Cost per site (many tanks)</strong></td>
+<td>Higher (each monitor needs a cellular plan)</td>
+<td>Lower (one cellular plan for the gateway, cheaper local wireless for monitors)</td>
+</tr>
+<tr>
+<td><strong>Single point of failure</strong></td>
+<td>Each monitor is independent</td>
+<td>Gateway failure affects all monitors at the site</td>
+</tr>
+<tr>
+<td><strong>Coverage</strong></td>
+<td>Requires cellular coverage at each tank</td>
+<td>Only gateway needs cellular coverage; tanks need only local radio coverage</td>
+</tr>
+<tr>
+<td><strong>Battery life</strong></td>
+<td>Moderate (cellular modem on each monitor)</td>
+<td>Longer (local radio uses less power than cellular)</td>
+</tr>
+<tr>
+<td><strong>Flexibility</strong></td>
+<td>Monitors can be moved independently</td>
+<td>Monitors must stay within range of the gateway</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">The Crossover Point</p>
+<p>For sites with 1-3 tanks, direct cellular monitors are typically the most cost-effective approach. For sites with 5 or more tanks, a gateway architecture often becomes more economical because the cost of one cellular connection plus cheap local radios is less than the cost of multiple cellular connections. The exact crossover point depends on cellular plan costs and hardware pricing.</p>
+</div>
+<h3 id="463-gateway-additional-capabilities">4.6.3 Gateway Additional Capabilities</h3>
+<p>Modern gateways often provide capabilities beyond simple data relay:</p>
+<ul>
+<li><strong>Local data buffering</strong>: Stores readings when cellular connectivity is temporarily unavailable, transmitting them when connectivity is restored</li>
+<li><strong>Edge processing</strong>: Performs basic calculations (e.g., rate-of-change detection) locally</li>
+<li><strong>Protocol translation</strong>: Converts between different sensor protocols and the cloud platform's API format</li>
+<li><strong>Local diagnostics</strong>: Monitors signal strength, battery levels, and communication health of connected sensors</li>
+<li><strong>Configuration relay</strong>: Distributes configuration updates from the cloud to individual sensors</li>
+</ul>
+<hr />
+<h2 id="47-network-topology-for-tank-monitoring">4.7 Network Topology for Tank Monitoring</h2>
+<h3 id="471-star-topology">4.7.1 Star Topology</h3>
+<p>In a <strong>star topology</strong>, each sensor communicates directly with a central hub (either the cloud via cellular or a local gateway).</p>
+<pre class="mermaid"><code>graph TB
+    S1[Sensor 1] --&gt; HUB[Central Hub&lt;br&gt;Cloud or Gateway]
+    S2[Sensor 2] --&gt; HUB
+    S3[Sensor 3] --&gt; HUB
+    S4[Sensor 4] --&gt; HUB
+    S5[Sensor 5] --&gt; HUB
+
+    style HUB fill:#E65100,color:#fff</code></pre>
+<p><strong>Characteristics</strong>:</p>
+<ul>
+<li>Simple to implement and manage</li>
+<li>Each sensor operates independently</li>
+<li>Failure of one sensor does not affect others</li>
+<li>Central hub is a single point of failure</li>
+<li>This is the most common topology for tank monitoring</li>
+</ul>
+<h3 id="472-mesh-topology">4.7.2 Mesh Topology</h3>
+<p>In a <strong>mesh topology</strong>, sensors can relay data through other sensors to reach the gateway. This extends range and provides redundant communication paths.</p>
+<pre class="mermaid"><code>graph TB
+    S1[Sensor 1] --&gt; S2[Sensor 2]
+    S1 --&gt; S3[Sensor 3]
+    S2 --&gt; GW[Gateway]
+    S3 --&gt; S2
+    S3 --&gt; GW
+    S4[Sensor 4] --&gt; S3
+    S5[Sensor 5] --&gt; S4
+    S5 --&gt; S3
+
+    style GW fill:#E65100,color:#fff</code></pre>
+<p><strong>Characteristics</strong>:</p>
+<ul>
+<li>Extended range (sensors relay through each other)</li>
+<li>Redundant paths (if one path fails, data can route through another)</li>
+<li>More complex to implement and manage</li>
+<li>Higher power consumption (sensors must listen for and relay other sensors' data)</li>
+<li>Less common in tank monitoring (typically not needed because tanks usually have direct connectivity)</li>
+</ul>
+<h3 id="473-hybrid-topology">4.7.3 Hybrid Topology</h3>
+<p>Most real-world tank monitoring deployments use a <strong>hybrid</strong> approach:</p>
+<ul>
+<li><strong>Single-tank sites</strong>: Direct cellular (star, where each sensor connects directly to the cloud)</li>
+<li><strong>Multi-tank sites</strong>: Gateway with local star (sensors connect to a gateway, gateway connects to the cloud)</li>
+<li><strong>Remote sites</strong>: Satellite connection (either direct or via gateway)</li>
+</ul>
+<hr />
+<h2 id="48-edge-vs-cloud-processing">4.8 Edge vs. Cloud Processing</h2>
+<p>A fundamental architectural decision in any IoT system is where to process data: at the <strong>edge</strong> (on or near the sensor) or in the <strong>cloud</strong> (on remote servers). Tank monitoring systems use a blend of both approaches.</p>
+<h3 id="481-edge-processing">4.8.1 Edge Processing</h3>
+<p><strong>Edge processing</strong> means performing computation at or near the sensor, before data is transmitted to the cloud. In a tank monitor, edge processing includes:</p>
+<ul>
+<li><strong>Level calculation</strong>: Converting raw time-of-flight or pressure data into a distance or level reading</li>
+<li><strong>Volume conversion</strong>: Applying the tank profile to convert level to volume</li>
+<li><strong>Temperature compensation</strong>: Adjusting the measurement for temperature effects</li>
+<li><strong>Noise filtering</strong>: Applying digital filters to smooth noisy readings</li>
+<li><strong>Change detection</strong>: Comparing the current reading to the previous reading and flagging significant changes</li>
+<li><strong>Basic alerting</strong>: Triggering a local alarm (e.g., LED indicator) if the level exceeds a threshold</li>
+</ul>
+<p><strong>Advantages of Edge Processing</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Advantage</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reduced data transmission</td>
+<td>Only processed results are sent, not raw data, saving bandwidth and power</td>
+</tr>
+<tr>
+<td>Faster local response</td>
+<td>Edge alerts can be generated immediately without waiting for cloud round-trip</td>
+</tr>
+<tr>
+<td>Reduced cloud cost</td>
+<td>Less data to store and process in the cloud</td>
+</tr>
+<tr>
+<td>Privacy and security</td>
+<td>Raw sensor data stays on the device</td>
+</tr>
+<tr>
+<td>Works offline</td>
+<td>Basic functionality continues even if connectivity is lost</td>
+</tr>
+</tbody>
+</table>
+<h3 id="482-cloud-processing">4.8.2 Cloud Processing</h3>
+<p><strong>Cloud processing</strong> means sending data to remote servers for computation, analysis, storage, and presentation. In the TankScan system, cloud processing includes:</p>
+<ul>
+<li><strong>Data aggregation</strong>: Combining readings from thousands of monitors into a unified view</li>
+<li><strong>Historical analysis</strong>: Storing years of readings and computing trends, consumption rates, and patterns</li>
+<li><strong>Predictive analytics</strong>: Using machine learning to predict future levels and optimal delivery times</li>
+<li><strong>Alert management</strong>: Evaluating complex alert rules across multiple tanks and conditions</li>
+<li><strong>Reporting</strong>: Generating scheduled and ad-hoc reports for business intelligence</li>
+<li><strong>Integration</strong>: Providing APIs for third-party system integration</li>
+</ul>
+<p><strong>Advantages of Cloud Processing</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Advantage</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unlimited compute and storage</td>
+<td>Cloud resources scale without hardware changes at the edge</td>
+</tr>
+<tr>
+<td>Cross-device analytics</td>
+<td>Can analyze patterns across thousands of tanks simultaneously</td>
+</tr>
+<tr>
+<td>Centralized management</td>
+<td>Update algorithms and rules for all devices from one place</td>
+</tr>
+<tr>
+<td>Advanced AI/ML</td>
+<td>Complex models require more compute than an edge device can provide</td>
+</tr>
+<tr>
+<td>Multi-user access</td>
+<td>Many users can access the same data simultaneously</td>
+</tr>
+</tbody>
+</table>
+<h3 id="483-the-edge-cloud-continuum">4.8.3 The Edge-Cloud Continuum</h3>
+<p>In practice, modern tank monitoring systems process data at multiple points along the edge-cloud continuum:</p>
+<pre class="mermaid"><code>graph LR
+    subgraph "Edge Processing"
+        S[Sensor] --&gt; M[Measurement&lt;br&gt;Calculation]
+        M --&gt; F[Filtering &amp;&lt;br&gt;Compensation]
+        F --&gt; V[Volume&lt;br&gt;Conversion]
+    end
+
+    subgraph "Gateway Processing (optional)"
+        V --&gt; AGG[Data&lt;br&gt;Aggregation]
+        AGG --&gt; BUFF[Buffering &amp;&lt;br&gt;Retry Logic]
+    end
+
+    subgraph "Cloud Processing"
+        BUFF --&gt; ING[Ingestion &amp;&lt;br&gt;Validation]
+        ING --&gt; STORE[Time-Series&lt;br&gt;Storage]
+        STORE --&gt; ANAL[Analytics &amp;&lt;br&gt;Prediction]
+        ANAL --&gt; ALERT[Alert&lt;br&gt;Evaluation]
+        ALERT --&gt; DASH[Dashboard&lt;br&gt;&amp; Reporting]
+    end
+
+    style S fill:#1565C0,color:#fff
+    style STORE fill:#2E7D32,color:#fff
+    style DASH fill:#6A1B9A,color:#fff</code></pre>
+<div class="admonition example">
+<p class="admonition-title">Edge vs. Cloud Decision Example</p>
+<p>Consider the question: should a tank monitor detect a rapid leak (sudden level drop) at the edge or in the cloud?</p>
+<p><strong>Edge approach</strong>: The monitor compares the current reading to the previous reading. If the level dropped by more than 10% in 4 hours, it flags an anomaly and sends an immediate alert transmission. <strong>Advantage</strong>: Fastest possible alert (no cloud processing delay). <strong>Disadvantage</strong>: Limited context (the monitor does not know the delivery schedule, so a delivery withdrawal might look like a leak).</p>
+<p><strong>Cloud approach</strong>: The AIP receives the reading, compares it to historical patterns, checks the delivery schedule, and determines whether the level drop is expected (delivery) or anomalous (leak). <strong>Advantage</strong>: Smarter, fewer false alerts. <strong>Disadvantage</strong>: Depends on connectivity and cloud availability.</p>
+<p>The best approach is often <strong>both</strong>: the edge performs a simple rapid-drop check for immediate alerting (catching obvious leaks), while the cloud performs sophisticated analysis for nuanced detection (catching slow leaks, distinguishing leaks from deliveries).</p>
+</div>
+<hr />
+<h2 id="49-data-protocols">4.9 Data Protocols</h2>
+<p>Data protocols define how information is formatted, transmitted, and acknowledged between devices, gateways, and cloud platforms. Two protocols dominate the IoT landscape.</p>
+<h3 id="491-mqtt-message-queuing-telemetry-transport">4.9.1 MQTT (Message Queuing Telemetry Transport)</h3>
+<p><strong>MQTT</strong> is a lightweight publish-subscribe messaging protocol designed for constrained devices and unreliable networks. It has become the de facto standard for IoT data transmission.</p>
+<p><strong>How MQTT Works</strong>:</p>
+<pre class="mermaid"><code>graph LR
+    subgraph "Publishers (Sensors)"
+        PUB1[Tank Monitor 1]
+        PUB2[Tank Monitor 2]
+        PUB3[Tank Monitor 3]
+    end
+
+    subgraph "Broker"
+        BROKER[MQTT Broker&lt;br&gt;Message Router]
+    end
+
+    subgraph "Subscribers (Applications)"
+        SUB1[Dashboard]
+        SUB2[Alert Engine]
+        SUB3[Analytics]
+    end
+
+    PUB1 --&gt;|"Publish to&lt;br&gt;tanks/site-A/tank-1"| BROKER
+    PUB2 --&gt;|"Publish to&lt;br&gt;tanks/site-A/tank-2"| BROKER
+    PUB3 --&gt;|"Publish to&lt;br&gt;tanks/site-B/tank-1"| BROKER
+
+    BROKER --&gt;|"Subscribe to&lt;br&gt;tanks/#"| SUB1
+    BROKER --&gt;|"Subscribe to&lt;br&gt;tanks/+/tank-+"| SUB2
+    BROKER --&gt;|"Subscribe to&lt;br&gt;tanks/#"| SUB3
+
+    style BROKER fill:#E65100,color:#fff</code></pre>
+<p><strong>Key MQTT Concepts</strong>:</p>
+<ul>
+<li><strong>Topics</strong>: Hierarchical strings that categorize messages (e.g., <code>tanks/site-123/tank-456/level</code>)</li>
+<li><strong>Publish</strong>: A device sends a message to a topic</li>
+<li><strong>Subscribe</strong>: An application registers interest in one or more topics (using wildcards if desired)</li>
+<li><strong>Broker</strong>: A server that receives published messages and forwards them to subscribers</li>
+<li><strong>QoS (Quality of Service)</strong>: Three levels controlling delivery guarantees:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>QoS Level</th>
+<th>Name</th>
+<th>Guarantee</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>At most once</td>
+<td>Message may be lost (fire and forget)</td>
+<td>Non-critical telemetry</td>
+</tr>
+<tr>
+<td>1</td>
+<td>At least once</td>
+<td>Message delivered at least once (may duplicate)</td>
+<td>Standard tank readings</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Exactly once</td>
+<td>Message delivered exactly once (highest overhead)</td>
+<td>Critical commands, billing data</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why MQTT Is Good for Tank Monitoring</strong>:</p>
+<ul>
+<li><strong>Low overhead</strong>: The MQTT header is only 2-5 bytes, minimizing data usage</li>
+<li><strong>Persistent sessions</strong>: If a monitor disconnects and reconnects, the broker can deliver missed messages</li>
+<li><strong>Last Will and Testament (LWT)</strong>: If a monitor goes offline unexpectedly, the broker publishes a "last will" message notifying subscribers</li>
+<li><strong>Retained messages</strong>: The broker stores the last message on each topic, so new subscribers immediately receive the current state</li>
+</ul>
+<h3 id="492-httprest-representational-state-transfer">4.9.2 HTTP/REST (Representational State Transfer)</h3>
+<p><strong>HTTP/REST</strong> uses standard web protocols (HTTP/HTTPS) for device-to-cloud communication. Devices send data using HTTP POST requests, and applications retrieve data using HTTP GET requests.</p>
+<p><strong>Example REST API interaction</strong>:</p>
+<p>A tank monitor sends a reading:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>POST /api/v1/readings HTTP/1.1
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Host: aip.tankscan.com
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Content-Type: application/json
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Authorization: Bearer &lt;device_token&gt;
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>{
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  &quot;device_id&quot;: &quot;TSR-2024-00456&quot;,
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  &quot;timestamp&quot;: &quot;2025-03-15T14:30:00Z&quot;,
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  &quot;level_inches&quot;: 42.3,
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  &quot;volume_gallons&quot;: 1875,
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  &quot;volume_percent&quot;: 62.5,
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>  &quot;battery_voltage&quot;: 3.52,
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>  &quot;signal_strength&quot;: -85,
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  &quot;temperature_f&quot;: 68.2
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>}
+</code></pre></div>
+<p>An application retrieves the latest reading:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>GET /api/v1/tanks/TANK-789/readings/latest HTTP/1.1
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Host: aip.tankscan.com
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Authorization: Bearer &lt;api_key&gt;
+</code></pre></div>
+<p><strong>When REST Is Used in Tank Monitoring</strong>:</p>
+<ul>
+<li><strong>Cloud-to-application communication</strong>: The AIP exposes REST APIs for dashboards, mobile apps, and third-party integrations</li>
+<li><strong>Device management</strong>: Configuration commands sent from the cloud to devices</li>
+<li><strong>Initial data submission</strong>: Some monitor firmware uses HTTPS POST for simplicity</li>
+</ul>
+<h3 id="493-protocol-comparison">4.9.3 Protocol Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>MQTT</th>
+<th>HTTP/REST</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Transport</strong></td>
+<td>TCP (persistent connection)</td>
+<td>TCP (per-request connection)</td>
+</tr>
+<tr>
+<td><strong>Message overhead</strong></td>
+<td>Very low (2-5 byte header)</td>
+<td>Higher (HTTP headers, JSON encoding)</td>
+</tr>
+<tr>
+<td><strong>Communication pattern</strong></td>
+<td>Publish-subscribe (bidirectional)</td>
+<td>Request-response (client-initiated)</td>
+</tr>
+<tr>
+<td><strong>Real-time capability</strong></td>
+<td>Excellent (push-based)</td>
+<td>Moderate (requires polling or webhooks)</td>
+</tr>
+<tr>
+<td><strong>Power efficiency</strong></td>
+<td>Good (persistent connection, small messages)</td>
+<td>Moderate (connection setup overhead per request)</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>TLS encryption, username/password, certificates</td>
+<td>HTTPS (TLS), API keys, OAuth</td>
+</tr>
+<tr>
+<td><strong>Tooling and familiarity</strong></td>
+<td>Specialized MQTT tools and libraries</td>
+<td>Universal (every programming language and framework)</td>
+</tr>
+<tr>
+<td><strong>Best for</strong></td>
+<td>Device-to-cloud telemetry</td>
+<td>Application-to-cloud integration</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">MQTT for Devices, REST for Applications</p>
+<p>A common and effective pattern in tank monitoring is: sensors publish readings to the cloud via MQTT (efficient, low-overhead, push-based), and applications consume data from the cloud via REST APIs (familiar, well-tooled, easy to integrate). The cloud platform acts as the bridge between the two protocols.</p>
+</div>
+<hr />
+<h2 id="410-bandwidth-and-power-trade-offs">4.10 Bandwidth and Power Trade-offs</h2>
+<p>Designing a wireless tank monitoring system requires balancing several competing constraints. Every design decision involves trade-offs among data freshness, battery life, bandwidth cost, and reliability.</p>
+<h3 id="4101-reporting-interval-trade-offs">4.10.1 Reporting Interval Trade-offs</h3>
+<table>
+<thead>
+<tr>
+<th>Reporting Interval</th>
+<th>Data Freshness</th>
+<th>Battery Life Impact</th>
+<th>Monthly Data Usage</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Every 15 minutes</td>
+<td>Very high</td>
+<td>Significant (2-3 year battery)</td>
+<td>~576 KB</td>
+<td>Critical process tanks</td>
+</tr>
+<tr>
+<td>Every 1 hour</td>
+<td>High</td>
+<td>Moderate (4-5 year battery)</td>
+<td>~144 KB</td>
+<td>Active fueling sites</td>
+</tr>
+<tr>
+<td>Every 4 hours</td>
+<td>Good</td>
+<td>Low (7-10 year battery)</td>
+<td>~36 KB</td>
+<td>Standard monitoring (most common)</td>
+</tr>
+<tr>
+<td>Every 8 hours</td>
+<td>Moderate</td>
+<td>Very low (10+ year battery)</td>
+<td>~18 KB</td>
+<td>Low-priority tanks</td>
+</tr>
+<tr>
+<td>Every 24 hours</td>
+<td>Low</td>
+<td>Minimal (12+ year battery)</td>
+<td>~6 KB</td>
+<td>Rarely used, storage tanks</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>4-hour reporting interval</strong> has emerged as the industry standard for most tank monitoring applications because it provides a good balance: tank levels change slowly enough that 4-hour data captures all meaningful trends, while the low power consumption enables 7-10 year battery life.</p>
+<h3 id="4102-data-compression-strategies">4.10.2 Data Compression Strategies</h3>
+<p>To minimize bandwidth (and by extension, power consumption for transmission), tank monitoring systems employ various data compression strategies:</p>
+<ul>
+<li><strong>Delta encoding</strong>: Send only the change from the previous reading rather than the absolute value</li>
+<li><strong>Binary encoding</strong>: Use compact binary formats instead of verbose JSON or XML</li>
+<li><strong>Batch transmission</strong>: Accumulate multiple readings and send them in a single message</li>
+<li><strong>Threshold-based reporting</strong>: Skip transmission if the reading has not changed by a significant amount</li>
+</ul>
+<h3 id="4103-power-bandwidth-freshness-triangle">4.10.3 Power-Bandwidth-Freshness Triangle</h3>
+<pre class="mermaid"><code>graph TB
+    FRESH[Data Freshness&lt;br&gt;More frequent readings] --- POWER[Battery Life&lt;br&gt;Less power consumption]
+    POWER --- BW[Low Bandwidth&lt;br&gt;Less data transmitted]
+    BW --- FRESH
+
+    CENTER[Design&lt;br&gt;Trade-off&lt;br&gt;Zone]
+
+    style FRESH fill:#1565C0,color:#fff
+    style POWER fill:#2E7D32,color:#fff
+    style BW fill:#E65100,color:#fff
+    style CENTER fill:#9C27B0,color:#fff</code></pre>
+<p>You can optimize for any two of the three, but not all three simultaneously. TankScan's default configuration (readings every 4 hours, compact binary messages, 7-10 year battery) represents a practical optimum for the majority of tank monitoring applications.</p>
+<hr />
+<h2 id="411-cellular-coverage-considerations">4.11 Cellular Coverage Considerations</h2>
+<h3 id="4111-coverage-assessment">4.11.1 Coverage Assessment</h3>
+<p>Before deploying a wireless tank monitor, cellular coverage at the site must be verified. Methods include:</p>
+<ol>
+<li><strong>Carrier coverage maps</strong>: Online maps from AT&amp;T, Verizon, T-Mobile, etc. Useful for initial screening but not always accurate for specific locations</li>
+<li><strong>Site survey with test device</strong>: Bringing a cellular test device to the site and measuring signal strength. Most reliable method.</li>
+<li><strong>Multi-carrier SIM testing</strong>: Testing with SIMs from multiple carriers to determine the best option at each site</li>
+</ol>
+<h3 id="4112-signal-strength-and-quality">4.11.2 Signal Strength and Quality</h3>
+<p>Cellular signal strength is measured in <strong>dBm</strong> (decibels relative to one milliwatt):</p>
+<table>
+<thead>
+<tr>
+<th>Signal Strength (dBm)</th>
+<th>Quality</th>
+<th>Impact on Tank Monitoring</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-50 to -70</td>
+<td>Excellent</td>
+<td>Reliable transmission, low power consumption</td>
+</tr>
+<tr>
+<td>-70 to -85</td>
+<td>Good</td>
+<td>Reliable transmission</td>
+</tr>
+<tr>
+<td>-85 to -100</td>
+<td>Fair</td>
+<td>Usually works but may require retransmissions (higher power)</td>
+</tr>
+<tr>
+<td>-100 to -110</td>
+<td>Poor</td>
+<td>Intermittent connectivity, delayed readings</td>
+</tr>
+<tr>
+<td>Below -110</td>
+<td>Very poor</td>
+<td>May not connect; consider external antenna or satellite</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4113-improving-cellular-coverage">4.11.3 Improving Cellular Coverage</h3>
+<p>For sites with marginal cellular coverage, several techniques can improve connectivity:</p>
+<ul>
+<li><strong>External antenna</strong>: A high-gain external antenna mounted on a pole or building can dramatically improve signal strength (typically 6-12 dB gain)</li>
+<li><strong>Antenna cable</strong>: Running a low-loss cable from an external antenna to the monitor</li>
+<li><strong>Monitor placement</strong>: Mounting the monitor as high as possible to maximize line-of-sight to cell towers</li>
+<li><strong>Multi-carrier SIM</strong>: SIM cards that can connect to multiple carriers, automatically selecting the strongest signal</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Metal Tank Shielding</p>
+<p>Metal tanks can significantly attenuate cellular signals. A monitor mounted on top of a large metal tank may have its antenna partially shielded by the tank body itself. Consider antenna placement carefully, ensuring the antenna has a clear view toward the nearest cell tower and is not blocked by the tank wall.</p>
+</div>
+<hr />
+<h2 id="412-tankscan-connectivity-architecture">4.12 TankScan Connectivity Architecture</h2>
+<p>TankScan's connectivity architecture has been designed to support the broadest possible range of deployment scenarios while keeping installation and management simple.</p>
+<h3 id="4121-primary-direct-cellular">4.12.1 Primary: Direct Cellular</h3>
+<p>The majority of TankScan monitors use integrated 4G LTE Cat-M1 cellular modems with embedded multi-carrier SIM cards. This provides:</p>
+<ul>
+<li><strong>Plug-and-play deployment</strong>: Install the monitor, power it on, and it connects automatically</li>
+<li><strong>No local infrastructure</strong>: No gateway, router, or Wi-Fi access point needed</li>
+<li><strong>Automatic carrier selection</strong>: The SIM connects to the strongest available carrier</li>
+<li><strong>Encrypted communication</strong>: All data is encrypted in transit using TLS</li>
+</ul>
+<h3 id="4122-secondary-gateway-based">4.12.2 Secondary: Gateway-Based</h3>
+<p>For multi-tank sites where cost optimization is important or where individual monitors have difficulty reaching the cellular network:</p>
+<ul>
+<li>Monitors communicate to a gateway via low-power local wireless</li>
+<li>The gateway aggregates data and transmits via a single cellular connection</li>
+<li>The gateway can be placed in the location with the best cellular coverage (e.g., on a building roof)</li>
+</ul>
+<h3 id="4123-tertiary-satellite">4.12.3 Tertiary: Satellite</h3>
+<p>For remote sites without cellular coverage:</p>
+<ul>
+<li>Monitors equipped with satellite modems transmit via Iridium or similar LEO satellite networks</li>
+<li>Data rates are lower and costs are higher, but global coverage is assured</li>
+<li>Exception-based reporting minimizes satellite transmission costs</li>
+</ul>
+<h3 id="4124-connectivity-decision-process">4.12.4 Connectivity Decision Process</h3>
+<pre class="mermaid"><code>graph TB
+    START{New tank&lt;br&gt;monitoring site} --&gt; Q1{Cellular coverage&lt;br&gt;at the site?}
+
+    Q1 --&gt;|Strong signal| DIRECT[Direct Cellular&lt;br&gt;per monitor]
+    Q1 --&gt;|Weak signal| Q2{Can external antenna&lt;br&gt;improve signal?}
+    Q1 --&gt;|No signal| Q3{Number of tanks&lt;br&gt;at the site?}
+
+    Q2 --&gt;|Yes| DIRECT_ANT[Direct Cellular&lt;br&gt;with external antenna]
+    Q2 --&gt;|No| Q3
+
+    Q3 --&gt;|1-3 tanks| SAT_DIRECT[Satellite&lt;br&gt;per monitor]
+    Q3 --&gt;|4+ tanks| SAT_GW[Satellite Gateway&lt;br&gt;with local wireless]
+
+    DIRECT --&gt; DEPLOY[Deploy and&lt;br&gt;Activate]
+    DIRECT_ANT --&gt; DEPLOY
+    SAT_DIRECT --&gt; DEPLOY
+    SAT_GW --&gt; DEPLOY
+
+    style START fill:#FF9800,color:#fff
+    style DIRECT fill:#4CAF50,color:#fff
+    style DIRECT_ANT fill:#4CAF50,color:#fff
+    style SAT_DIRECT fill:#1565C0,color:#fff
+    style SAT_GW fill:#1565C0,color:#fff
+    style DEPLOY fill:#2E7D32,color:#fff</code></pre>
+<hr />
+<h2 id="413-security-considerations">4.13 Security Considerations</h2>
+<p>Security is a critical concern for any IoT system, and tank monitoring is no exception. Compromised tank data could lead to product theft, safety hazards, or business disruption.</p>
+<h3 id="4131-security-layers">4.13.1 Security Layers</h3>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Threats</th>
+<th>Protections</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Device</strong></td>
+<td>Physical tampering, firmware manipulation</td>
+<td>Tamper-evident enclosures, secure boot, code signing</td>
+</tr>
+<tr>
+<td><strong>Communication</strong></td>
+<td>Eavesdropping, data injection, man-in-the-middle</td>
+<td>TLS encryption, mutual authentication, certificate pinning</td>
+</tr>
+<tr>
+<td><strong>Cloud</strong></td>
+<td>Unauthorized access, data breach, denial of service</td>
+<td>Authentication, authorization, encryption at rest, DDoS protection</td>
+</tr>
+<tr>
+<td><strong>Application</strong></td>
+<td>Credential theft, API abuse, cross-site scripting</td>
+<td>Multi-factor authentication, API rate limiting, input validation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4132-device-authentication">4.13.2 Device Authentication</h3>
+<p>Each TankScan monitor has a unique identity (device certificate or token) that is verified by the cloud platform before any data is accepted. This prevents unauthorized devices from injecting false readings into the system.</p>
+<h3 id="4133-data-encryption">4.13.3 Data Encryption</h3>
+<p>All data transmitted between monitors and the cloud is encrypted using <strong>TLS 1.2 or higher</strong> (Transport Layer Security). This ensures that even if the cellular transmission is intercepted, the data cannot be read or modified.</p>
+<div class="admonition warning">
+<p class="admonition-title">IoT Security Is Not Optional</p>
+<p>Historical examples of IoT security breaches -- from hacked baby monitors to compromised industrial control systems -- demonstrate that security must be designed in from the beginning, not added as an afterthought. Tank monitoring systems manage business-critical data and, in some cases, safety-critical operations. A security breach could enable product theft, create false alarms, suppress real alarms, or expose confidential business data.</p>
+</div>
+<hr />
+<h2 id="414-chapter-summary">4.14 Chapter Summary</h2>
+<p>This chapter has explored the architecture and connectivity technologies that underpin wireless tank monitoring systems:</p>
+<ol>
+<li><strong>The four-layer IoT architecture</strong> (device, network, platform, application) provides a structured framework for understanding how tank monitoring systems are built</li>
+<li><strong>Industrial IoT</strong> requirements -- reliability, longevity, ruggedization, and fleet management -- drive design decisions that differ significantly from consumer IoT</li>
+<li><strong>Cellular connectivity</strong> (primarily 4G LTE Cat-M1) is the dominant communication method for tank monitoring, offering ubiquitous coverage without local infrastructure</li>
+<li><strong>Satellite connectivity</strong> serves remote locations without cellular coverage, with higher cost but global reach</li>
+<li><strong>Gateway devices</strong> aggregate data from multiple sensors at a site, reducing connectivity costs for multi-tank locations</li>
+<li><strong>Edge processing</strong> handles measurement, filtering, and basic alerting at the sensor, while <strong>cloud processing</strong> provides advanced analytics, cross-device analysis, and user applications</li>
+<li><strong>MQTT and HTTP/REST</strong> are the dominant data protocols, with MQTT optimized for device-to-cloud telemetry and REST for application integration</li>
+<li><strong>Power, bandwidth, and data freshness</strong> form a trade-off triangle that must be balanced for each application</li>
+<li><strong>Security</strong> must be implemented at every layer, from device authentication to encrypted communication to cloud access controls</li>
+</ol>
+<hr />
+<h2 id="review-questions">Review Questions</h2>
+<div class="admonition question">
+<p class="admonition-title">Question 1 -- Knowledge Recall</p>
+<p>Name the four layers of the IoT reference architecture and give one example of a component at each layer in a tank monitoring system.</p>
+<details class="success">
+<summary>Suggested Answer</summary>
+<ol>
+<li><strong>Device Layer (Edge)</strong>: The TankScan TSR radar monitor -- the physical sensor that measures the tank level</li>
+<li><strong>Network Layer</strong>: 4G LTE cellular network -- the communication infrastructure that transports data from the sensor to the cloud</li>
+<li><strong>Platform Layer (Cloud)</strong>: AIP (Asset Intelligence Platform) -- the cloud platform that receives, stores, and processes tank data</li>
+<li><strong>Application Layer</strong>: The real-time dashboard -- the user interface that displays tank levels and alerts to operators</li>
+</ol>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 2 -- Comprehension</p>
+<p>Explain why LTE Cat-M1 is preferred over standard LTE for tank monitoring applications. Describe at least three advantages of Cat-M1 for this use case.</p>
+<details class="success">
+<summary>Suggested Answer</summary>
+<p>LTE Cat-M1 is preferred for three main reasons:</p>
+<ol>
+<li>
+<p><strong>Lower power consumption</strong>: Cat-M1 modules consume 50-70% less power than standard LTE modules. Since tank monitors run on batteries for 5-10 years, this power savings directly extends battery life.</p>
+</li>
+<li>
+<p><strong>Enhanced coverage penetration</strong>: Cat-M1 provides approximately 15 dB of additional coverage gain compared to standard LTE. This means monitors in underground tanks, metal buildings, and rural areas with weak signals are more likely to maintain connectivity.</p>
+</li>
+<li>
+<p><strong>Lower modem cost</strong>: Cat-M1 modems are simpler and less expensive than standard LTE modems because they support fewer features (lower data rates, single antenna). Since the data requirements of a tank monitor (a few hundred bytes per message) are tiny, the reduced data rate of 1 Mbps is more than sufficient.</p>
+</li>
+</ol>
+<p>The reduced data rate of Cat-M1 (1 Mbps vs. 300 Mbps for standard LTE) is irrelevant for tank monitoring because a typical reading is only a few hundred bytes. The trade-off of lower speed for lower power, better coverage, and lower cost is overwhelmingly favorable.</p>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 3 -- Application</p>
+<p>Design a connectivity solution for a fuel distributor with three types of sites: (A) urban gas stations with good cellular coverage and 2 tanks each, (B) a rural farm cooperative with weak cellular coverage and 8 tanks, and (C) an off-grid mountain-top generator with no cellular coverage and 1 tank. Specify the connectivity method for each site type and justify your choices.</p>
+<details class="success">
+<summary>Suggested Answer</summary>
+<p><strong>Site A -- Urban gas stations (good cellular, 2 tanks each)</strong>: Use <strong>direct cellular</strong> monitors (one per tank). With only 2 tanks per site and strong cellular coverage, each monitor connects directly via its integrated LTE Cat-M1 modem. A gateway is unnecessary for just 2 tanks. This is the simplest, most cost-effective approach.</p>
+<p><strong>Site B -- Rural farm cooperative (weak cellular, 8 tanks)</strong>: Use a <strong>gateway architecture</strong>. Deploy 8 monitors with local wireless (BLE or proprietary radio) communicating to a single gateway. Mount the gateway on the tallest building at the site with an external high-gain antenna aimed toward the nearest cell tower. The gateway's external antenna compensates for the weak cellular coverage, and the gateway approach is cost-effective for 8 tanks (one cellular plan instead of eight). If the external antenna still cannot achieve reliable connectivity, consider satellite for the gateway.</p>
+<p><strong>Site C -- Mountain-top generator (no cellular, 1 tank)</strong>: Use a <strong>satellite-connected</strong> monitor. With no cellular coverage and only 1 tank, a satellite modem integrated into (or attached to) the monitor is the only option. Configure the monitor for lower-frequency reporting (every 8 or 12 hours) to minimize satellite transmission costs. Ensure the satellite antenna has a clear view of the sky.</p>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 4 -- Analysis</p>
+<p>Compare MQTT and HTTP/REST for transmitting tank level readings from a monitor to the cloud. Analyze at least four factors (overhead, power, reliability, complexity) and recommend which protocol is better for the device-to-cloud link. Under what circumstances might you choose differently?</p>
+<details class="success">
+<summary>Suggested Answer</summary>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>MQTT</th>
+<th>HTTP/REST</th>
+<th>Better for Device-to-Cloud</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Message overhead</strong></td>
+<td>Very low (2-5 byte header)</td>
+<td>High (HTTP headers add 200-500+ bytes)</td>
+<td>MQTT</td>
+</tr>
+<tr>
+<td><strong>Power consumption</strong></td>
+<td>Lower (persistent connection, smaller messages)</td>
+<td>Higher (connection setup per request, larger messages)</td>
+<td>MQTT</td>
+</tr>
+<tr>
+<td><strong>Delivery guarantee</strong></td>
+<td>Built-in QoS levels (0, 1, 2)</td>
+<td>Requires application-level retry logic</td>
+<td>MQTT</td>
+</tr>
+<tr>
+<td><strong>Implementation complexity</strong></td>
+<td>Requires MQTT client library and broker</td>
+<td>Simpler (HTTP is universally supported)</td>
+<td>HTTP</td>
+</tr>
+<tr>
+<td><strong>Bidirectional communication</strong></td>
+<td>Native (broker can push to device)</td>
+<td>Requires polling or webhooks</td>
+<td>MQTT</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommendation</strong>: MQTT is the better choice for the device-to-cloud link in tank monitoring. Its low overhead, low power consumption, and built-in delivery guarantees align perfectly with the constraints of battery-powered sensors transmitting small messages over cellular networks.</p>
+<p><strong>Exceptions</strong>: HTTP/REST might be chosen when: (1) the development team has extensive HTTP experience but no MQTT expertise and time-to-market is critical, (2) the device firmware platform does not have a mature MQTT library, (3) the cloud infrastructure does not include an MQTT broker and adding one is not feasible, or (4) the communication is purely request-response (e.g., the device pulls configuration from the cloud on a schedule rather than pushing telemetry).</p>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 5 -- Evaluation</p>
+<p>A customer proposes using Wi-Fi instead of cellular for their tank monitoring deployment at a manufacturing plant where Wi-Fi is available throughout the facility. Evaluate this proposal. What are the potential benefits and risks? Would you recommend Wi-Fi or cellular, and under what conditions might your recommendation change?</p>
+<details class="success">
+<summary>Suggested Answer</summary>
+<p><strong>Potential benefits of Wi-Fi</strong>:
+- No ongoing cellular data costs (uses existing infrastructure)
+- Potentially lower hardware cost per monitor (Wi-Fi modules may be less expensive)
+- Higher data throughput if ever needed for future capabilities
+- No dependency on cellular carrier coverage or network changes</p>
+<p><strong>Risks and challenges of Wi-Fi</strong>:
+- <strong>IT dependency</strong>: Connecting monitors to the plant's Wi-Fi requires IT approval, network credentials, firewall configuration, and ongoing IT support. Changes to the network (new passwords, new SSID, network upgrades) could disconnect all monitors.
+- <strong>Coverage gaps</strong>: Wi-Fi coverage may not extend to all tank locations, especially outdoor tanks, underground tanks, or tanks at the far edges of the facility.
+- <strong>Reliability</strong>: Consumer/commercial Wi-Fi networks may experience periodic outages, router reboots, or interference that would not affect cellular connectivity.
+- <strong>Security</strong>: Adding IoT devices to a corporate Wi-Fi network may create security concerns for the IT department.
+- <strong>Scalability</strong>: Adding tanks at new locations (e.g., a satellite facility) would require Wi-Fi at those locations too.
+- <strong>Power consumption</strong>: Many Wi-Fi modules consume more power than LTE Cat-M1 during transmission.</p>
+<p><strong>Recommendation</strong>: Cellular is generally recommended even when Wi-Fi is available, because it eliminates IT dependency, provides consistent performance, and is managed entirely by TankScan. However, Wi-Fi might be appropriate if: (1) the customer has a strong IT team that commits to maintaining connectivity, (2) all tanks are within reliable Wi-Fi range, (3) the cost savings of eliminating cellular plans is significant (for many monitors), and (4) the customer accepts responsibility for Wi-Fi-related connectivity issues.</p>
+</details>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

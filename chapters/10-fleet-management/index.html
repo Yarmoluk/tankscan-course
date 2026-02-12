@@ -1,0 +1,3799 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive intelligent textbook on wireless tank monitoring technology, IoT systems, and the TankScan platform">
+      
+      
+        <meta name="author" content="Daniel Yarmoluk">
+      
+      
+      
+        <link rel="prev" href="../09-data-analytics/">
+      
+      
+        <link rel="next" href="../11-safety-compliance/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>10. Fleet Management and Routing - TankScan Intelligent Textbook: Wireless Tank Monitoring Systems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-10-fleet-management-and-routing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" class="md-header__button md-logo" aria-label="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TankScan Intelligent Textbook: Wireless Tank Monitoring Systems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              10. Fleet Management and Routing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Yarmoluk/tankscan-course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../preface/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Preface
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../course-description/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Description
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-introduction/" class="md-tabs__link">
+          
+  
+  
+  Chapters
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../learning-graph/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learning Graph
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" class="md-nav__button md-logo" aria-label="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    TankScan Intelligent Textbook: Wireless Tank Monitoring Systems
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Yarmoluk/tankscan-course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../preface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction to Tank Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-wireless-sensors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Wireless Sensor Technologies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-measurement-tech/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Radar and Ultrasonic Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-iot-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. IoT Architecture and Connectivity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-aip-platform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. The Asset Intelligence Platform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-tank-types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Tank Types and Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-industry-solutions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Industry Solutions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Installation and Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-data-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Data Analytics and Optimization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Fleet Management and Routing
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Fleet Management and Routing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#101-introduction-the-last-mile-of-liquid-logistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Introduction: The Last Mile of Liquid Logistics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#102-the-delivery-challenge-before-wireless-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 The Delivery Challenge (Before Wireless Monitoring)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.2 The Delivery Challenge (Before Wireless Monitoring)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1021-traditional-delivery-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2.1 Traditional Delivery Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1022-the-cost-of-uncertainty" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2.2 The Cost of Uncertainty
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1023-quantifying-pre-monitoring-inefficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2.3 Quantifying Pre-Monitoring Inefficiency
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#103-how-tank-data-transforms-fleet-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 How Tank Data Transforms Fleet Operations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.3 How Tank Data Transforms Fleet Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1031-the-information-advantage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3.1 The Information Advantage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1032-the-decision-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3.2 The Decision Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#104-route-optimization-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4 Route Optimization Algorithms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.4 Route Optimization Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1041-the-vehicle-routing-problem-vrp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4.1 The Vehicle Routing Problem (VRP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1042-practical-optimization-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4.2 Practical Optimization Approaches
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1043-tank-monitoring-specific-vrp-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4.3 Tank Monitoring-Specific VRP Extensions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1044-optimization-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4.4 Optimization Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#105-geographic-clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.5 Geographic Clustering
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.5 Geographic Clustering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1051-cluster-based-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.5.1 Cluster-Based Routing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1052-clustering-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.5.2 Clustering Algorithms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1053-dynamic-clustering-with-tank-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.5.3 Dynamic Clustering with Tank Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#106-delivery-scheduling-based-on-tank-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.6 Delivery Scheduling Based on Tank Levels
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.6 Delivery Scheduling Based on Tank Levels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1061-the-scheduling-decision-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.6.1 The Scheduling Decision Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1062-priority-scoring-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.6.2 Priority Scoring Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1063-look-ahead-scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.6.3 Look-Ahead Scheduling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#107-the-30-efficiency-improvement-how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.7 The 30% Efficiency Improvement: How It Works
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.7 The 30% Efficiency Improvement: How It Works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1071-decomposing-the-efficiency-gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.7.1 Decomposing the Efficiency Gain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1072-detailed-efficiency-calculations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.7.2 Detailed Efficiency Calculations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1073-efficiency-metrics-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.7.3 Efficiency Metrics Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#108-dispatch-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.8 Dispatch Optimization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.8 Dispatch Optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1081-the-dispatchers-new-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.8.1 The Dispatcher's New Role
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1082-dispatch-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.8.2 Dispatch Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1083-real-time-route-adjustment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.8.3 Real-Time Route Adjustment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#109-driver-assignment-and-load-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.9 Driver Assignment and Load Optimization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.9 Driver Assignment and Load Optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1091-driver-assignment-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.9.1 Driver Assignment Factors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1092-load-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.9.2 Load Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1010-integration-with-fleet-management-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.10 Integration with Fleet Management Systems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.10 Integration with Fleet Management Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10101-system-integration-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.10.1 System Integration Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10102-integration-data-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.10.2 Integration Data Flows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10103-common-integration-partners" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.10.3 Common Integration Partners
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1011-gps-and-mapping-integration-in-aip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.11 GPS and Mapping Integration in AIP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.11 GPS and Mapping Integration in AIP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10111-mapping-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.11.1 Mapping Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10112-geographic-analysis-for-fleet-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.11.2 Geographic Analysis for Fleet Planning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1012-real-world-efficiency-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.12 Real-World Efficiency Metrics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.12 Real-World Efficiency Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10121-industry-benchmarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.12.1 Industry Benchmarks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10122-continuous-improvement-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.12.2 Continuous Improvement Tracking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10123-factors-that-limit-efficiency-gains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.12.3 Factors That Limit Efficiency Gains
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1013-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.13 Chapter Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Review Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-safety-compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Safety, Compliance, and Hazardous Environments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-cloud-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Cloud Integration and APIs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-predictive-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Predictive Maintenance and AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-case-studies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Case Studies and ROI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-future/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Future of Tank Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#101-introduction-the-last-mile-of-liquid-logistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Introduction: The Last Mile of Liquid Logistics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#102-the-delivery-challenge-before-wireless-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 The Delivery Challenge (Before Wireless Monitoring)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.2 The Delivery Challenge (Before Wireless Monitoring)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1021-traditional-delivery-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2.1 Traditional Delivery Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1022-the-cost-of-uncertainty" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2.2 The Cost of Uncertainty
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1023-quantifying-pre-monitoring-inefficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2.3 Quantifying Pre-Monitoring Inefficiency
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#103-how-tank-data-transforms-fleet-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 How Tank Data Transforms Fleet Operations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.3 How Tank Data Transforms Fleet Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1031-the-information-advantage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3.1 The Information Advantage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1032-the-decision-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3.2 The Decision Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#104-route-optimization-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4 Route Optimization Algorithms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.4 Route Optimization Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1041-the-vehicle-routing-problem-vrp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4.1 The Vehicle Routing Problem (VRP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1042-practical-optimization-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4.2 Practical Optimization Approaches
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1043-tank-monitoring-specific-vrp-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4.3 Tank Monitoring-Specific VRP Extensions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1044-optimization-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4.4 Optimization Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#105-geographic-clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.5 Geographic Clustering
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.5 Geographic Clustering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1051-cluster-based-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.5.1 Cluster-Based Routing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1052-clustering-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.5.2 Clustering Algorithms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1053-dynamic-clustering-with-tank-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.5.3 Dynamic Clustering with Tank Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#106-delivery-scheduling-based-on-tank-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.6 Delivery Scheduling Based on Tank Levels
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.6 Delivery Scheduling Based on Tank Levels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1061-the-scheduling-decision-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.6.1 The Scheduling Decision Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1062-priority-scoring-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.6.2 Priority Scoring Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1063-look-ahead-scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.6.3 Look-Ahead Scheduling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#107-the-30-efficiency-improvement-how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.7 The 30% Efficiency Improvement: How It Works
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.7 The 30% Efficiency Improvement: How It Works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1071-decomposing-the-efficiency-gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.7.1 Decomposing the Efficiency Gain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1072-detailed-efficiency-calculations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.7.2 Detailed Efficiency Calculations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1073-efficiency-metrics-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.7.3 Efficiency Metrics Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#108-dispatch-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.8 Dispatch Optimization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.8 Dispatch Optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1081-the-dispatchers-new-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.8.1 The Dispatcher's New Role
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1082-dispatch-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.8.2 Dispatch Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1083-real-time-route-adjustment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.8.3 Real-Time Route Adjustment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#109-driver-assignment-and-load-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.9 Driver Assignment and Load Optimization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.9 Driver Assignment and Load Optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1091-driver-assignment-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.9.1 Driver Assignment Factors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1092-load-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.9.2 Load Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1010-integration-with-fleet-management-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.10 Integration with Fleet Management Systems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.10 Integration with Fleet Management Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10101-system-integration-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.10.1 System Integration Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10102-integration-data-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.10.2 Integration Data Flows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10103-common-integration-partners" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.10.3 Common Integration Partners
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1011-gps-and-mapping-integration-in-aip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.11 GPS and Mapping Integration in AIP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.11 GPS and Mapping Integration in AIP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10111-mapping-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.11.1 Mapping Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10112-geographic-analysis-for-fleet-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.11.2 Geographic Analysis for Fleet Planning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1012-real-world-efficiency-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.12 Real-World Efficiency Metrics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.12 Real-World Efficiency Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10121-industry-benchmarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.12.1 Industry Benchmarks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10122-continuous-improvement-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.12.2 Continuous Improvement Tracking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10123-factors-that-limit-efficiency-gains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.12.3 Factors That Limit Efficiency Gains
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1013-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.13 Chapter Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Review Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="chapter-10-fleet-management-and-routing">Chapter 10: Fleet Management and Routing</h1>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter, you will be able to:</p>
+<ul>
+<li>Describe the delivery challenges that existed before wireless tank monitoring</li>
+<li>Explain how real-time tank data transforms fleet operations and routing decisions</li>
+<li>Apply route optimization algorithms to delivery scheduling problems</li>
+<li>Calculate the efficiency gains from data-driven delivery optimization</li>
+<li>Design dispatch workflows that integrate tank monitoring with fleet management</li>
+<li>Evaluate the TankScan claim of 30% delivery efficiency improvement</li>
+</ul>
+<hr />
+<h2 id="101-introduction-the-last-mile-of-liquid-logistics">10.1 Introduction: The Last Mile of Liquid Logistics</h2>
+<p>Delivering liquid products to tanks is a "last mile" logistics problem. Regardless of how efficiently product is manufactured, refined, or transported in bulk, the final delivery to individual customer tanks determines the overall cost and customer experience. A fuel distributor with 2,000 customer tanks faces a daily puzzle: which tanks need product, how much should be delivered, and in what sequence should the driver visit them to minimize cost and maximize efficiency?</p>
+<p>Before wireless monitoring, this puzzle was largely unsolvable because the distributor lacked the most critical piece of information: <strong>the current level in each customer's tank</strong>. Dispatchers worked from estimates, schedules, and customer phone calls. The result was inefficiency -- trucks running half-full, unnecessary trips to tanks that did not need product, and emergency deliveries to tanks that ran dry unexpectedly.</p>
+<p>Wireless tank monitoring provides the missing data. When every tank reports its level multiple times per day, the dispatch puzzle transforms from guesswork into a solvable optimization problem.</p>
+<div class="admonition note">
+<p class="admonition-title">The 30% Efficiency Claim</p>
+<p>TankScan and other wireless monitoring providers frequently cite a 25-35% improvement in delivery fleet efficiency. This chapter examines the mathematical and operational basis for this claim, breaking it down into its component improvements and showing how each contributes to the total.</p>
+</div>
+<hr />
+<h2 id="102-the-delivery-challenge-before-wireless-monitoring">10.2 The Delivery Challenge (Before Wireless Monitoring)</h2>
+<h3 id="1021-traditional-delivery-methods">10.2.1 Traditional Delivery Methods</h3>
+<p>Without real-time tank data, fuel and liquid product distributors relied on a combination of imperfect methods:</p>
+<pre class="mermaid"><code>graph TD
+    subgraph "Traditional Delivery Methods"
+        A[Will-Call&lt;br&gt;Customer calls when&lt;br&gt;they need product] --&gt; E[Dispatcher]
+        B[Fixed Schedule&lt;br&gt;Deliver every N days&lt;br&gt;regardless of level] --&gt; E
+        C[Degree-Day Forecast&lt;br&gt;Estimate consumption&lt;br&gt;from weather data] --&gt; E
+        D[Driver Observation&lt;br&gt;Driver notes low&lt;br&gt;tanks during route] --&gt; E
+
+        E --&gt; F[Build Route&lt;br&gt;Based on incomplete&lt;br&gt;information]
+        F --&gt; G[Execute Deliveries&lt;br&gt;Hope for the best]
+    end</code></pre>
+<p>Each method had significant drawbacks:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>How It Works</th>
+<th>Key Weakness</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Will-call</td>
+<td>Customer phones when tank is low</td>
+<td>Late notice; often at crisis point</td>
+<td>40-60% of deliveries are emergencies</td>
+</tr>
+<tr>
+<td>Fixed schedule</td>
+<td>Deliver every 14, 21, or 28 days</td>
+<td>Ignores actual consumption</td>
+<td>Over-delivery (tank still 60% full) or under-delivery (tank empty before schedule)</td>
+</tr>
+<tr>
+<td>Degree-day</td>
+<td>Estimate usage from temperature history</td>
+<td>Assumes uniform housing/insulation</td>
+<td>15-25% forecast error for individual tanks</td>
+</tr>
+<tr>
+<td>Driver observation</td>
+<td>Driver checks nearby tanks visually</td>
+<td>Depends on route proximity; inconsistent</td>
+<td>Misses tanks not on current route</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1022-the-cost-of-uncertainty">10.2.2 The Cost of Uncertainty</h3>
+<p>Without knowing actual tank levels, distributors suffered predictable inefficiencies:</p>
+<p><strong>1. Partial loads (under-utilization)</strong></p>
+<p>When a dispatcher cannot predict exactly how much product each customer needs, they cannot fill the truck to capacity. Arriving at a tank that is 70% full means delivering only 30% of its capacity -- far less than the truck can carry. The truck returns to the terminal with unused capacity.</p>
+<div class="arithmatex">\[\text{Truck Utilization} = \frac{\text{Gallons Actually Delivered}}{\text{Truck Capacity}} \times 100\%\]</div>
+<p>Typical pre-monitoring truck utilization: <strong>55-65%</strong></p>
+<p><strong>2. Unnecessary stops (wasted trips)</strong></p>
+<p>A fixed-schedule approach sends the truck to every customer on the schedule, regardless of whether they need product. If a customer's tank is still 75% full, the stop delivers minimal gallons but consumes the same travel time as a full delivery.</p>
+<p><strong>3. Emergency deliveries (crisis response)</strong></p>
+<p>When a tank runs out unexpectedly, the distributor must dispatch a truck immediately, regardless of the current route plan. Emergency deliveries are the most expensive type:</p>
+<table>
+<thead>
+<tr>
+<th>Delivery Type</th>
+<th>Cost Multiple</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Planned (on-route)</td>
+<td>1.0x (baseline)</td>
+<td>Included in optimized route</td>
+</tr>
+<tr>
+<td>Unplanned (added to route)</td>
+<td>1.5-2.0x</td>
+<td>Route detour, partial load</td>
+</tr>
+<tr>
+<td>Emergency (dedicated trip)</td>
+<td>3.0-5.0x</td>
+<td>Single destination, possibly overtime</td>
+</tr>
+<tr>
+<td>After-hours emergency</td>
+<td>5.0-8.0x</td>
+<td>Overtime labor, on-call driver</td>
+</tr>
+</tbody>
+</table>
+<p><strong>4. Customer dissatisfaction</strong></p>
+<p>Run-outs cause immediate customer dissatisfaction. A home without heating fuel in winter, a gas station with empty pumps, or a construction site with idle equipment all result in lost revenue and damaged relationships.</p>
+<h3 id="1023-quantifying-pre-monitoring-inefficiency">10.2.3 Quantifying Pre-Monitoring Inefficiency</h3>
+<p>A representative mid-size fuel distributor before wireless monitoring:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Typical Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Customer tanks served</td>
+<td>1,500</td>
+</tr>
+<tr>
+<td>Delivery trucks</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Deliveries per day (fleet)</td>
+<td>35-45</td>
+</tr>
+<tr>
+<td>Average drop size</td>
+<td>600-900 gallons</td>
+</tr>
+<tr>
+<td>Truck utilization</td>
+<td>55-65%</td>
+</tr>
+<tr>
+<td>Gallons per mile</td>
+<td>30-40</td>
+</tr>
+<tr>
+<td>Emergency deliveries per month</td>
+<td>25-40</td>
+</tr>
+<tr>
+<td>Run-outs per month</td>
+<td>5-15</td>
+</tr>
+<tr>
+<td>Annual delivery cost per tank</td>
+<td>$180-280</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="103-how-tank-data-transforms-fleet-operations">10.3 How Tank Data Transforms Fleet Operations</h2>
+<h3 id="1031-the-information-advantage">10.3.1 The Information Advantage</h3>
+<p>With wireless monitoring, the dispatcher has real-time access to the level, consumption rate, and days-to-empty for every tank in the fleet. This fundamentally changes the optimization problem:</p>
+<pre class="mermaid"><code>graph LR
+    subgraph "Before: Limited Information"
+        A1[Schedule says&lt;br&gt;deliver to Customer A] --&gt; B1[Drive to Customer A]
+        B1 --&gt; C1[Tank is 70% full&lt;br&gt;Deliver only 300 gal]
+        C1 --&gt; D1[Wasted trip capacity]
+    end
+
+    subgraph "After: Full Information"
+        A2[AIP shows Customer A&lt;br&gt;at 70% - skip today] --&gt; B2[AIP shows Customer B&lt;br&gt;at 15% - needs 2,800 gal]
+        B2 --&gt; C2[Deliver 2,800 gal&lt;br&gt;to Customer B]
+        C2 --&gt; D2[Efficient, full delivery]
+    end</code></pre>
+<p><strong>Key data points that enable optimization:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Data Point</th>
+<th>How It Enables Optimization</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Current level (%)</td>
+<td>Know exactly which tanks need product</td>
+</tr>
+<tr>
+<td>Days-to-empty (DTE)</td>
+<td>Prioritize by urgency</td>
+</tr>
+<tr>
+<td>Available capacity (ullage)</td>
+<td>Know exactly how much to deliver</td>
+</tr>
+<tr>
+<td>Consumption rate (gal/day)</td>
+<td>Predict when non-urgent tanks will become urgent</td>
+</tr>
+<tr>
+<td>Product type</td>
+<td>Group same-product deliveries on the same truck</td>
+</tr>
+<tr>
+<td>GPS location</td>
+<td>Calculate optimal drive routes</td>
+</tr>
+<tr>
+<td>Historical pattern</td>
+<td>Predict future needs beyond current DTE</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1032-the-decision-framework">10.3.2 The Decision Framework</h3>
+<p>With complete tank data, the dispatcher's daily decision becomes a structured optimization:</p>
+<pre class="mermaid"><code>graph TD
+    A[Morning: AIP generates&lt;br&gt;delivery recommendations] --&gt; B[Filter: Tanks below&lt;br&gt;reorder threshold]
+    B --&gt; C[Rank by urgency&lt;br&gt;DTE ascending]
+    C --&gt; D[Group by geography&lt;br&gt;Cluster nearby tanks]
+    D --&gt; E[Group by product&lt;br&gt;Same-product runs]
+    E --&gt; F[Assign to trucks&lt;br&gt;Match capacity to demand]
+    F --&gt; G[Optimize route sequence&lt;br&gt;Minimize total distance]
+    G --&gt; H[Generate driver manifests&lt;br&gt;with turn-by-turn directions]
+    H --&gt; I[Execute deliveries]
+    I --&gt; J[AIP confirms deliveries&lt;br&gt;via level increases]
+    J --&gt; K[Update forecasts&lt;br&gt;for tomorrow]</code></pre>
+<hr />
+<h2 id="104-route-optimization-algorithms">10.4 Route Optimization Algorithms</h2>
+<h3 id="1041-the-vehicle-routing-problem-vrp">10.4.1 The Vehicle Routing Problem (VRP)</h3>
+<p>Delivery routing is a variant of the <strong>Vehicle Routing Problem (VRP)</strong>, one of the most studied problems in operations research. The VRP asks: given a fleet of vehicles at a depot, a set of customers to serve, and constraints on vehicle capacity and driver hours, what is the optimal set of routes?</p>
+<div class="admonition note">
+<p class="admonition-title">NP-Hard Complexity</p>
+<p>The VRP is NP-hard, meaning there is no known algorithm that can find the absolute optimal solution in polynomial time for large problem instances. For a distributor with 200 tanks needing delivery, the number of possible route permutations exceeds the number of atoms in the universe. Practical solutions use heuristic and metaheuristic algorithms that find near-optimal solutions in reasonable computing time.</p>
+</div>
+<p><strong>VRP formulation:</strong></p>
+<p>Minimize total route cost:</p>
+<div class="arithmatex">\[\text{Minimize } \sum_{k=1}^{K} \sum_{i=0}^{N} \sum_{j=0}^{N} c_{ij} \cdot x_{ijk}\]</div>
+<p>Subject to constraints:</p>
+<ul>
+<li>Each customer is visited exactly once: <span class="arithmatex">\(\sum_{k=1}^{K} \sum_{i=0}^{N} x_{ijk} = 1 \quad \forall j\)</span></li>
+<li>Vehicle capacity: <span class="arithmatex">\(\sum_{j=1}^{N} d_j \cdot \sum_{i=0}^{N} x_{ijk} \leq Q_k \quad \forall k\)</span></li>
+<li>Route continuity: Each vehicle leaves every visited customer</li>
+<li>Driver hours: Total route time does not exceed shift length</li>
+</ul>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(K\)</span> = number of vehicles</li>
+<li><span class="arithmatex">\(N\)</span> = number of customers</li>
+<li><span class="arithmatex">\(c_{ij}\)</span> = cost of traveling from customer <span class="arithmatex">\(i\)</span> to customer <span class="arithmatex">\(j\)</span></li>
+<li><span class="arithmatex">\(x_{ijk}\)</span> = 1 if vehicle <span class="arithmatex">\(k\)</span> travels from <span class="arithmatex">\(i\)</span> to <span class="arithmatex">\(j\)</span>, 0 otherwise</li>
+<li><span class="arithmatex">\(d_j\)</span> = demand at customer <span class="arithmatex">\(j\)</span> (gallons needed)</li>
+<li><span class="arithmatex">\(Q_k\)</span> = capacity of vehicle <span class="arithmatex">\(k\)</span></li>
+</ul>
+<h3 id="1042-practical-optimization-approaches">10.4.2 Practical Optimization Approaches</h3>
+<p>Since exact VRP solutions are computationally infeasible for real-world problem sizes, practical systems use heuristic methods:</p>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th>Approach</th>
+<th>Quality</th>
+<th>Speed</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nearest neighbor</td>
+<td>Visit the closest unvisited customer next</td>
+<td>Low-moderate</td>
+<td>Very fast</td>
+<td>Quick estimates, small fleets</td>
+</tr>
+<tr>
+<td>Clarke-Wright savings</td>
+<td>Merge routes that share nearby customers</td>
+<td>Moderate-good</td>
+<td>Fast</td>
+<td>Medium-size problems</td>
+</tr>
+<tr>
+<td>Sweep algorithm</td>
+<td>Sweep a line from depot, group by angle</td>
+<td>Moderate</td>
+<td>Fast</td>
+<td>Geographically distributed customers</td>
+</tr>
+<tr>
+<td>Genetic algorithm</td>
+<td>Evolve a population of candidate routes</td>
+<td>Good-excellent</td>
+<td>Moderate</td>
+<td>Large, complex problems</td>
+</tr>
+<tr>
+<td>Simulated annealing</td>
+<td>Accept worse solutions to escape local optima</td>
+<td>Good-excellent</td>
+<td>Moderate</td>
+<td>Complex constraints</td>
+</tr>
+<tr>
+<td>Ant colony optimization</td>
+<td>Simulate ant pheromone trails to find routes</td>
+<td>Good</td>
+<td>Moderate</td>
+<td>Dynamic environments</td>
+</tr>
+<tr>
+<td>Google OR-Tools</td>
+<td>Open-source constraint solver</td>
+<td>Excellent</td>
+<td>Fast-moderate</td>
+<td>Industry standard</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1043-tank-monitoring-specific-vrp-extensions">10.4.3 Tank Monitoring-Specific VRP Extensions</h3>
+<p>Standard VRP assumes fixed customer demand. Tank monitoring adds several dimensions:</p>
+<p><strong>1. Variable demand (known through monitoring)</strong></p>
+<p>Unlike a package delivery where every customer gets one package, tank deliveries vary in size. Tank monitoring tells the dispatcher exactly how many gallons each tank needs:</p>
+<div class="arithmatex">\[d_j = V_{\text{capacity},j} \times \text{Fill Target \%} - V_{\text{current},j}\]</div>
+<p><strong>2. Time flexibility (DTE-based scheduling)</strong></p>
+<p>Not all deliveries are equally urgent. A tank with 2 days-to-empty must be served today; a tank with 10 days-to-empty can be deferred to a better route day.</p>
+<div class="arithmatex">\[\text{Urgency Score}_j = \frac{1}{\text{DTE}_j}\]</div>
+<p><strong>3. Product constraints (same-product routing)</strong></p>
+<p>A truck carrying diesel cannot simultaneously carry gasoline (unless it has compartments). Deliveries must be grouped by product type.</p>
+<p><strong>4. Delivery window constraints</strong></p>
+<p>Some customers have restricted delivery windows (e.g., gas stations may only accept fuel deliveries at night; residential customers may restrict delivery to business hours).</p>
+<h3 id="1044-optimization-example">10.4.4 Optimization Example</h3>
+<pre class="mermaid"><code>graph TD
+    subgraph "Before Optimization"
+        A1[Terminal] --&gt; B1[Customer A&lt;br&gt;3 miles, 200 gal]
+        B1 --&gt; C1[Customer B&lt;br&gt;8 miles, 400 gal]
+        C1 --&gt; D1[Customer C&lt;br&gt;12 miles, 300 gal]
+        D1 --&gt; E1[Customer D&lt;br&gt;6 miles, 500 gal]
+        E1 --&gt; F1[Terminal&lt;br&gt;Return]
+
+        G1["Total: 29 miles&lt;br&gt;1,400 gal delivered&lt;br&gt;Truck: 3,000 gal capacity&lt;br&gt;Utilization: 47%"]
+    end
+
+    subgraph "After Optimization"
+        A2[Terminal] --&gt; B2[Customer D&lt;br&gt;4 miles, 500 gal]
+        B2 --&gt; C2[Customer E&lt;br&gt;2 miles, 800 gal]
+        C2 --&gt; D2[Customer A&lt;br&gt;5 miles, 600 gal]
+        D2 --&gt; E2[Customer F&lt;br&gt;3 miles, 700 gal]
+        E2 --&gt; F2[Customer B&lt;br&gt;4 miles, 400 gal]
+        F2 --&gt; G2[Terminal&lt;br&gt;5 miles]
+
+        H2["Total: 23 miles&lt;br&gt;3,000 gal delivered&lt;br&gt;Truck: 3,000 gal capacity&lt;br&gt;Utilization: 100%"]
+    end</code></pre>
+<p>The optimized route includes different customers (D, E, F instead of C, D) because the optimizer selected tanks that are emptier (needing more gallons) and closer together, resulting in more gallons delivered per mile.</p>
+<hr />
+<h2 id="105-geographic-clustering">10.5 Geographic Clustering</h2>
+<h3 id="1051-cluster-based-routing">10.5.1 Cluster-Based Routing</h3>
+<p>Geographic clustering groups nearby customers into delivery zones, reducing the total distance traveled by keeping trucks within concentrated areas.</p>
+<pre class="mermaid"><code>graph TD
+    subgraph "Geographic Clustering"
+        subgraph "Cluster 1: North Zone"
+            A1[Tank A: 15%]
+            A2[Tank B: 22%]
+            A3[Tank C: 18%]
+        end
+
+        subgraph "Cluster 2: East Zone"
+            B1[Tank D: 12%]
+            B2[Tank E: 8%]
+            B3[Tank F: 25%]
+        end
+
+        subgraph "Cluster 3: South Zone"
+            C1[Tank G: 20%]
+            C2[Tank H: 30%]
+            C3[Tank I: 14%]
+        end
+    end
+
+    D[Truck 1] --&gt; A1 &amp; A2 &amp; A3
+    E[Truck 2] --&gt; B1 &amp; B2 &amp; B3
+    F[Truck 3] --&gt; C1 &amp; C2 &amp; C3</code></pre>
+<h3 id="1052-clustering-algorithms">10.5.2 Clustering Algorithms</h3>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th>How It Works</th>
+<th>Strengths</th>
+<th>Weaknesses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>K-means</td>
+<td>Partition customers into K groups by proximity</td>
+<td>Simple, fast</td>
+<td>Assumes equal-size clusters</td>
+</tr>
+<tr>
+<td>DBSCAN</td>
+<td>Group by density, identify outliers</td>
+<td>Handles irregular shapes</td>
+<td>Sensitive to parameters</td>
+</tr>
+<tr>
+<td>Hierarchical</td>
+<td>Build tree of nested clusters</td>
+<td>Flexible, visual</td>
+<td>Computationally expensive</td>
+</tr>
+<tr>
+<td>Grid-based</td>
+<td>Divide service area into grid cells</td>
+<td>Simple, predictable</td>
+<td>Ignores road network</td>
+</tr>
+<tr>
+<td>Road-network-based</td>
+<td>Cluster by actual driving distance</td>
+<td>Most realistic</td>
+<td>Requires road network data</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1053-dynamic-clustering-with-tank-data">10.5.3 Dynamic Clustering with Tank Data</h3>
+<p>Static geographic clusters work well for fixed-schedule operations, but tank monitoring enables <strong>dynamic clustering</strong> -- regrouping based on which tanks actually need service each day.</p>
+<p><strong>Daily dynamic clustering workflow:</strong></p>
+<ol>
+<li>AIP identifies all tanks below reorder threshold (need delivery within N days)</li>
+<li>Tanks are plotted on a map by GPS coordinates</li>
+<li>Clustering algorithm groups nearby "needs-delivery" tanks</li>
+<li>Each cluster is assigned to a truck</li>
+<li>Within each cluster, route optimization determines the visit sequence</li>
+</ol>
+<p>This dynamic approach means that clusters change daily based on actual tank levels. A customer who consumed more than expected joins today's cluster; one who consumed less drops out.</p>
+<hr />
+<h2 id="106-delivery-scheduling-based-on-tank-levels">10.6 Delivery Scheduling Based on Tank Levels</h2>
+<h3 id="1061-the-scheduling-decision-matrix">10.6.1 The Scheduling Decision Matrix</h3>
+<p>Not every tank below the reorder point needs delivery today. The scheduling decision considers urgency, efficiency, and constraints:</p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Question</th>
+<th>Impact on Scheduling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Days-to-empty</td>
+<td>How urgent is this delivery?</td>
+<td>Lower DTE = higher priority</td>
+</tr>
+<tr>
+<td>Geographic proximity</td>
+<td>Are there other nearby deliveries?</td>
+<td>Cluster with others for efficiency</td>
+</tr>
+<tr>
+<td>Drop size</td>
+<td>How many gallons will be delivered?</td>
+<td>Larger drops = more efficient</td>
+</tr>
+<tr>
+<td>Product type</td>
+<td>Can this tank share a truck load?</td>
+<td>Same-product tanks grouped together</td>
+</tr>
+<tr>
+<td>Delivery window</td>
+<td>When can this site accept delivery?</td>
+<td>Must fit within allowed times</td>
+</tr>
+<tr>
+<td>Truck availability</td>
+<td>Is a truck with the right product available?</td>
+<td>Constrained by fleet composition</td>
+</tr>
+<tr>
+<td>Weather</td>
+<td>Will road/weather conditions allow access?</td>
+<td>May delay rural/remote deliveries</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1062-priority-scoring-algorithm">10.6.2 Priority Scoring Algorithm</h3>
+<p>AIP uses a priority score to rank delivery candidates:</p>
+<div class="arithmatex">\[\text{Priority Score} = w_1 \cdot \frac{1}{\text{DTE}} + w_2 \cdot \frac{d_j}{Q_{\max}} + w_3 \cdot C_j + w_4 \cdot H_j\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(\frac{1}{\text{DTE}}\)</span> = urgency factor (higher when tank is closer to empty)</li>
+<li><span class="arithmatex">\(\frac{d_j}{Q_{\max}}\)</span> = efficiency factor (larger drops score higher)</li>
+<li><span class="arithmatex">\(C_j\)</span> = cluster bonus (tanks near other pending deliveries score higher)</li>
+<li><span class="arithmatex">\(H_j\)</span> = historical importance (tanks with history of run-outs score higher)</li>
+<li><span class="arithmatex">\(w_1, w_2, w_3, w_4\)</span> = configurable weights</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tuning Priority Weights</p>
+<p>The default priority weights emphasize urgency (preventing run-outs). Distributors focused on efficiency can increase the efficiency weight (<span class="arithmatex">\(w_2\)</span>) to favor larger drops. Those managing customer relationships can increase the cluster bonus (<span class="arithmatex">\(w_3\)</span>) to favor routes with more stops in the same area.</p>
+</div>
+<h3 id="1063-look-ahead-scheduling">10.6.3 Look-Ahead Scheduling</h3>
+<p>Instead of scheduling only for today, advanced systems use <strong>look-ahead scheduling</strong> to optimize over a multi-day horizon:</p>
+<pre class="mermaid"><code>graph LR
+    subgraph "3-Day Look-Ahead"
+        A[Today&lt;br&gt;15 tanks need delivery] --&gt; B[Tomorrow&lt;br&gt;8 more tanks will&lt;br&gt;cross threshold]
+        B --&gt; C[Day After&lt;br&gt;12 more tanks will&lt;br&gt;cross threshold]
+    end
+
+    A --&gt; D{Can some of today's&lt;br&gt;deliveries wait 1-2 days&lt;br&gt;for a better route?}
+    D --&gt;|Yes| E[Defer to build&lt;br&gt;more efficient&lt;br&gt;future route]
+    D --&gt;|No| F[Deliver today&lt;br&gt;urgency too high]</code></pre>
+<p>Look-ahead scheduling can improve efficiency by 5-10% beyond single-day optimization. For example, if Customer A needs delivery today (DTE = 3) but Customer A's neighbor, Customer B, will need delivery tomorrow (DTE = 4), it may be more efficient to deliver both tomorrow rather than making two separate trips.</p>
+<hr />
+<h2 id="107-the-30-efficiency-improvement-how-it-works">10.7 The 30% Efficiency Improvement: How It Works</h2>
+<h3 id="1071-decomposing-the-efficiency-gain">10.7.1 Decomposing the Efficiency Gain</h3>
+<p>The commonly cited 25-35% improvement in delivery efficiency comes from multiple compounding factors:</p>
+<table>
+<thead>
+<tr>
+<th>Efficiency Lever</th>
+<th>Individual Improvement</th>
+<th>How It Works</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eliminate unnecessary stops</td>
+<td>10-15%</td>
+<td>Only visit tanks that actually need product</td>
+</tr>
+<tr>
+<td>Increase average drop size</td>
+<td>8-12%</td>
+<td>Deliver when tanks are emptier (higher ullage)</td>
+</tr>
+<tr>
+<td>Optimize route sequence</td>
+<td>5-8%</td>
+<td>Shorter total route distance</td>
+</tr>
+<tr>
+<td>Reduce emergency deliveries</td>
+<td>3-5%</td>
+<td>Planned deliveries replace expensive emergencies</td>
+</tr>
+<tr>
+<td>Better truck loading</td>
+<td>3-5%</td>
+<td>Know exact gallons needed; load truck optimally</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Compounding effect:</strong></p>
+<p>These improvements compound. If you eliminate 12% of unnecessary stops AND increase drop size by 10% AND optimize routes by 6%, the combined effect is:</p>
+<div class="arithmatex">\[\text{Combined Improvement} = 1 - (1 - 0.12)(1 - 0.10)(1 - 0.06) = 1 - 0.744 = 25.6\%\]</div>
+<h3 id="1072-detailed-efficiency-calculations">10.7.2 Detailed Efficiency Calculations</h3>
+<p><strong>Before monitoring:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total tanks served</td>
+<td>1,500</td>
+</tr>
+<tr>
+<td>Deliveries per year</td>
+<td>12,000</td>
+</tr>
+<tr>
+<td>Average drop size</td>
+<td>750 gallons</td>
+</tr>
+<tr>
+<td>Total gallons delivered/year</td>
+<td>9,000,000</td>
+</tr>
+<tr>
+<td>Total route miles/year</td>
+<td>225,000</td>
+</tr>
+<tr>
+<td>Gallons per mile</td>
+<td>40</td>
+</tr>
+<tr>
+<td>Delivery trucks</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Cost per delivery</td>
+<td>$85</td>
+</tr>
+<tr>
+<td>Total delivery cost/year</td>
+<td>$1,020,000</td>
+</tr>
+</tbody>
+</table>
+<p><strong>After monitoring (with optimization):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total tanks served</td>
+<td>1,500</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>Deliveries per year</td>
+<td>8,500</td>
+<td>-29% (fewer, more productive stops)</td>
+</tr>
+<tr>
+<td>Average drop size</td>
+<td>1,060 gallons</td>
+<td>+41% (tank is emptier when served)</td>
+</tr>
+<tr>
+<td>Total gallons delivered/year</td>
+<td>9,010,000</td>
+<td>Same (demand unchanged)</td>
+</tr>
+<tr>
+<td>Total route miles/year</td>
+<td>157,000</td>
+<td>-30%</td>
+</tr>
+<tr>
+<td>Gallons per mile</td>
+<td>57</td>
+<td>+43%</td>
+</tr>
+<tr>
+<td>Delivery trucks</td>
+<td>6</td>
+<td>-2 trucks (-25%)</td>
+</tr>
+<tr>
+<td>Cost per delivery</td>
+<td>$82</td>
+<td>-4% (less time per stop)</td>
+</tr>
+<tr>
+<td>Total delivery cost/year</td>
+<td>$697,000</td>
+<td>-32%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Annual savings: $323,000 (32% reduction)</strong></p>
+<div class="admonition example">
+<p class="admonition-title">Breaking Down the Savings</p>
+<table>
+<thead>
+<tr>
+<th>Savings Category</th>
+<th>Annual Amount</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fuel cost reduction</td>
+<td>$68,000</td>
+<td>68,000 fewer miles at $1.00/mile fuel cost</td>
+</tr>
+<tr>
+<td>Vehicle maintenance</td>
+<td>$34,000</td>
+<td>Fewer miles = less wear, tires, oil changes</td>
+</tr>
+<tr>
+<td>Driver labor</td>
+<td>$120,000</td>
+<td>Eliminated need for 2 drivers (including benefits)</td>
+</tr>
+<tr>
+<td>Emergency delivery elimination</td>
+<td>$48,000</td>
+<td>30 fewer emergencies/month at $133 premium each</td>
+</tr>
+<tr>
+<td>Vehicle lease/depreciation</td>
+<td>$53,000</td>
+<td>2 fewer trucks in fleet</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>$323,000</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="1073-efficiency-metrics-comparison">10.7.3 Efficiency Metrics Comparison</h3>
+<pre class="mermaid"><code>graph TD
+    subgraph "Key Efficiency Metrics"
+        A[Gallons per Mile]
+        B[Stops per Route]
+        C[Gallons per Stop]
+        D[Truck Utilization %]
+        E[Emergency Rate]
+    end
+
+    A --&gt; A1["Before: 40 gal/mi"]
+    A --&gt; A2["After: 57 gal/mi (+43%)"]
+
+    B --&gt; B1["Before: 5.2 stops"]
+    B --&gt; B2["After: 7.8 stops (+50%)"]
+
+    C --&gt; C1["Before: 750 gal"]
+    C --&gt; C2["After: 1,060 gal (+41%)"]
+
+    D --&gt; D1["Before: 58%"]
+    D --&gt; D2["After: 89% (+53%)"]
+
+    E --&gt; E1["Before: 8% of deliveries"]
+    E --&gt; E2["After: 1% of deliveries (-88%)"]</code></pre>
+<hr />
+<h2 id="108-dispatch-optimization">10.8 Dispatch Optimization</h2>
+<h3 id="1081-the-dispatchers-new-role">10.8.1 The Dispatcher's New Role</h3>
+<p>With wireless monitoring, the dispatcher's role shifts from firefighting to optimization:</p>
+<table>
+<thead>
+<tr>
+<th>Before Monitoring</th>
+<th>After Monitoring</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Answer customer calls requesting delivery</td>
+<td>Review AIP's automated delivery recommendations</td>
+</tr>
+<tr>
+<td>Guess which tanks need product</td>
+<td>See exact tank levels and days-to-empty</td>
+</tr>
+<tr>
+<td>Build routes from memory and experience</td>
+<td>Optimize routes using algorithms and data</td>
+</tr>
+<tr>
+<td>React to emergencies throughout the day</td>
+<td>Plan proactively with minimal emergencies</td>
+</tr>
+<tr>
+<td>Manually track deliveries via phone/radio</td>
+<td>Track deliveries in real-time via GPS and auto-confirmation</td>
+</tr>
+<tr>
+<td>Reconcile delivery tickets manually</td>
+<td>Automated reconciliation via AIP delivery detection</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1082-dispatch-workflow">10.8.2 Dispatch Workflow</h3>
+<pre class="mermaid"><code>sequenceDiagram
+    participant AIP as AIP Platform
+    participant Disp as Dispatcher
+    participant Driver as Driver (Mobile App)
+    participant Tank as Customer Tank
+
+    Note over AIP: 5:00 AM - Daily planning run
+    AIP-&gt;&gt;AIP: Analyze all tank levels&lt;br&gt;Calculate DTE, priority scores
+    AIP-&gt;&gt;Disp: Delivery recommendations&lt;br&gt;35 tanks across 5 routes
+
+    Note over Disp: 6:00 AM - Review and adjust
+    Disp-&gt;&gt;AIP: Accept Route 1-3, modify Route 4,&lt;br&gt;defer Route 5 to tomorrow
+    AIP-&gt;&gt;AIP: Re-optimize modified routes
+
+    Note over Driver: 7:00 AM - Shift start
+    AIP-&gt;&gt;Driver: Route manifest:&lt;br&gt;8 stops, 6,800 gal, est. 7.5 hrs
+    Driver-&gt;&gt;Driver: Load truck at terminal
+
+    Note over Driver: 7:30 AM - Route execution
+    Driver-&gt;&gt;Tank: Deliver to Stop 1 (1,200 gal)
+    Tank-&gt;&gt;AIP: Level increase detected
+    AIP-&gt;&gt;Disp: Delivery confirmed: Stop 1
+
+    Driver-&gt;&gt;Tank: Deliver to Stop 2 (850 gal)
+    Tank-&gt;&gt;AIP: Level increase detected
+    AIP-&gt;&gt;Disp: Delivery confirmed: Stop 2
+
+    Note over Driver: Continue through all stops...
+
+    Note over Driver: 3:30 PM - Route complete
+    Driver-&gt;&gt;AIP: Route complete: 8 stops, 6,650 gal
+    AIP-&gt;&gt;Disp: Route summary and variance report</code></pre>
+<h3 id="1083-real-time-route-adjustment">10.8.3 Real-Time Route Adjustment</h3>
+<p>During route execution, conditions may change. The dispatch system should support real-time adjustments:</p>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Road closure or traffic</td>
+<td>Reroute to alternate path</td>
+</tr>
+<tr>
+<td>Customer unavailable</td>
+<td>Skip stop, reschedule</td>
+</tr>
+<tr>
+<td>Tank level changed (e.g., customer drew down more)</td>
+<td>Adjust delivery quantity</td>
+</tr>
+<tr>
+<td>New urgent delivery identified</td>
+<td>Insert stop into current route if feasible</td>
+</tr>
+<tr>
+<td>Driver running ahead of schedule</td>
+<td>Add an opportunistic stop</td>
+</tr>
+<tr>
+<td>Driver running behind schedule</td>
+<td>Drop lowest-priority stop, reschedule</td>
+</tr>
+<tr>
+<td>Truck mechanical issue</td>
+<td>Transfer remaining stops to another truck</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="109-driver-assignment-and-load-optimization">10.9 Driver Assignment and Load Optimization</h2>
+<h3 id="1091-driver-assignment-factors">10.9.1 Driver Assignment Factors</h3>
+<p>Assigning the right driver to each route considers multiple factors:</p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Consideration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CDL class</td>
+<td>Truck type requires appropriate license class</td>
+</tr>
+<tr>
+<td>Hazmat endorsement</td>
+<td>Required for certain products</td>
+</tr>
+<tr>
+<td>Hours of service (HOS)</td>
+<td>DOT regulations limit driving and on-duty hours</td>
+</tr>
+<tr>
+<td>Route familiarity</td>
+<td>Experienced drivers on complex routes</td>
+</tr>
+<tr>
+<td>Customer relationship</td>
+<td>Some customers prefer specific drivers</td>
+</tr>
+<tr>
+<td>Shift schedule</td>
+<td>Match route duration to driver's shift</td>
+</tr>
+<tr>
+<td>Equipment qualification</td>
+<td>Driver must be trained on specific truck type</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1092-load-optimization">10.9.2 Load Optimization</h3>
+<p><strong>Full truck vs. partial load:</strong></p>
+<p>The goal is to load each truck as close to capacity as possible for each route:</p>
+<div class="arithmatex">\[\text{Load Factor} = \frac{\sum_{j \in \text{Route}} d_j}{Q_k} \times 100\%\]</div>
+<p>Where <span class="arithmatex">\(d_j\)</span> is the demand at each stop on the route and <span class="arithmatex">\(Q_k\)</span> is the truck capacity.</p>
+<table>
+<thead>
+<tr>
+<th>Load Factor</th>
+<th>Assessment</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>95-100%</td>
+<td>Optimal</td>
+<td>Execute route as planned</td>
+</tr>
+<tr>
+<td>85-95%</td>
+<td>Good</td>
+<td>Acceptable; check for nearby add-on stops</td>
+</tr>
+<tr>
+<td>70-85%</td>
+<td>Moderate</td>
+<td>Look for additional stops to improve utilization</td>
+</tr>
+<tr>
+<td>&lt; 70%</td>
+<td>Poor</td>
+<td>Combine with another partial route or defer stops</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Multi-compartment trucks:</strong></p>
+<p>Many delivery trucks have multiple compartments for different products (e.g., a fuel truck with compartments for diesel and gasoline). Load optimization must consider:</p>
+<div class="arithmatex">\[\sum_{j \in \text{Route, Product P}} d_j \leq Q_{k,P}\]</div>
+<p>Each product's total demand on the route must fit within the corresponding compartment.</p>
+<div class="admonition example">
+<p class="admonition-title">Multi-Compartment Loading</p>
+<p>A delivery truck has two compartments:</p>
+<ul>
+<li>Compartment 1: 3,500 gallons (diesel)</li>
+<li>Compartment 2: 2,500 gallons (gasoline)</li>
+<li>Total capacity: 6,000 gallons</li>
+</ul>
+<p>Route has 10 stops:</p>
+<table>
+<thead>
+<tr>
+<th>Stop</th>
+<th>Product</th>
+<th>Gallons Needed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Diesel</td>
+<td>800</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Diesel</td>
+<td>600</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Gasoline</td>
+<td>500</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Diesel</td>
+<td>450</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Gasoline</td>
+<td>700</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Diesel</td>
+<td>900</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Gasoline</td>
+<td>400</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Diesel</td>
+<td>500</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Gasoline</td>
+<td>600</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Diesel</td>
+<td>350</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Diesel total</strong>: 3,600 gallons (exceeds 3,500 compartment capacity)
+<strong>Gasoline total</strong>: 2,200 gallons (under 2,500 compartment capacity)</p>
+<p><strong>Resolution</strong>: Defer Stop 10 (350 gal diesel, lowest priority) to tomorrow's route.
+<strong>Final load</strong>: Diesel: 3,250 gal (93%), Gasoline: 2,200 gal (88%), Total: 5,450 gal (91%)</p>
+</div>
+<hr />
+<h2 id="1010-integration-with-fleet-management-systems">10.10 Integration with Fleet Management Systems</h2>
+<h3 id="10101-system-integration-architecture">10.10.1 System Integration Architecture</h3>
+<p>TankScan's AIP platform integrates with fleet management and dispatch systems to create a unified operational workflow:</p>
+<pre class="mermaid"><code>graph TD
+    subgraph "Tank Data Layer"
+        A[TankScan AIP&lt;br&gt;Tank levels, DTE,&lt;br&gt;delivery recommendations]
+    end
+
+    subgraph "Fleet Management Layer"
+        B[Fleet Management System&lt;br&gt;Omnitracs, Samsara, Geotab]
+        C[GPS Tracking&lt;br&gt;Real-time vehicle location]
+        D[ELD/HOS&lt;br&gt;Driver hours compliance]
+        E[Vehicle Diagnostics&lt;br&gt;Maintenance alerts]
+    end
+
+    subgraph "Dispatch Layer"
+        F[Dispatch Software&lt;br&gt;Route optimization,&lt;br&gt;driver assignment]
+    end
+
+    subgraph "Execution Layer"
+        G[Driver Mobile App&lt;br&gt;Turn-by-turn, delivery confirmation]
+    end
+
+    subgraph "Business Layer"
+        H[ERP / Accounting&lt;br&gt;Invoicing, inventory reconciliation]
+    end
+
+    A --&gt; |API: Tank data| F
+    B --&gt; |API: Vehicle status| F
+    C --&gt; |API: Location data| F
+    D --&gt; |API: Available hours| F
+    F --&gt; |API: Route plan| G
+    G --&gt; |API: Delivery data| H
+    A --&gt; |API: Delivery confirmation| H</code></pre>
+<h3 id="10102-integration-data-flows">10.10.2 Integration Data Flows</h3>
+<table>
+<thead>
+<tr>
+<th>Data Flow</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Frequency</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tank levels and DTE</td>
+<td>AIP</td>
+<td>Dispatch software</td>
+<td>Real-time</td>
+<td>Delivery scheduling</td>
+</tr>
+<tr>
+<td>Delivery recommendations</td>
+<td>AIP</td>
+<td>Dispatch software</td>
+<td>Daily batch</td>
+<td>Route planning</td>
+</tr>
+<tr>
+<td>Vehicle location</td>
+<td>GPS system</td>
+<td>Dispatch software</td>
+<td>Real-time</td>
+<td>Route tracking</td>
+</tr>
+<tr>
+<td>Driver hours available</td>
+<td>ELD system</td>
+<td>Dispatch software</td>
+<td>Daily</td>
+<td>Compliance</td>
+</tr>
+<tr>
+<td>Route plan</td>
+<td>Dispatch software</td>
+<td>Driver mobile app</td>
+<td>Per route</td>
+<td>Execution</td>
+</tr>
+<tr>
+<td>Delivery confirmation</td>
+<td>AIP (level change detection)</td>
+<td>ERP/accounting</td>
+<td>Per delivery</td>
+<td>Invoicing</td>
+</tr>
+<tr>
+<td>Fuel consumption</td>
+<td>Vehicle diagnostics</td>
+<td>Fleet management</td>
+<td>Continuous</td>
+<td>Cost tracking</td>
+</tr>
+</tbody>
+</table>
+<h3 id="10103-common-integration-partners">10.10.3 Common Integration Partners</h3>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Category</th>
+<th>Integration Method</th>
+<th>Key Data Exchanged</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADD Systems</td>
+<td>Fuel distribution ERP</td>
+<td>API, flat file</td>
+<td>Orders, deliveries, invoices</td>
+</tr>
+<tr>
+<td>Cargas Energy</td>
+<td>Fuel distribution ERP</td>
+<td>API</td>
+<td>Delivery scheduling, invoicing</td>
+</tr>
+<tr>
+<td>Omnitracs</td>
+<td>Fleet management</td>
+<td>API</td>
+<td>Vehicle location, HOS</td>
+</tr>
+<tr>
+<td>Samsara</td>
+<td>Fleet management / telematics</td>
+<td>API</td>
+<td>GPS, vehicle health, HOS</td>
+</tr>
+<tr>
+<td>Geotab</td>
+<td>Fleet management / telematics</td>
+<td>API</td>
+<td>GPS, driver behavior</td>
+</tr>
+<tr>
+<td>FuelCloud</td>
+<td>Fuel management</td>
+<td>API</td>
+<td>Fuel dispensing data</td>
+</tr>
+<tr>
+<td>P3 Software</td>
+<td>Propane distribution</td>
+<td>API, flat file</td>
+<td>Delivery scheduling</td>
+</tr>
+<tr>
+<td>Google Maps Platform</td>
+<td>Mapping / routing</td>
+<td>API</td>
+<td>Geocoding, directions, traffic</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1011-gps-and-mapping-integration-in-aip">10.11 GPS and Mapping Integration in AIP</h2>
+<h3 id="10111-mapping-features">10.11.1 Mapping Features</h3>
+<p>The AIP platform includes integrated mapping capabilities:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tank location map</td>
+<td>All monitored tanks plotted on a map</td>
+<td>Visual fleet overview</td>
+</tr>
+<tr>
+<td>Color-coded markers</td>
+<td>Fill level indicated by marker color</td>
+<td>Instantly identify low tanks</td>
+</tr>
+<tr>
+<td>Cluster view</td>
+<td>Zoom out to see geographic clusters</td>
+<td>Identify delivery zones</td>
+</tr>
+<tr>
+<td>Route visualization</td>
+<td>Planned route drawn on map</td>
+<td>Driver orientation</td>
+</tr>
+<tr>
+<td>Geocoding</td>
+<td>Automatic lat/lon from address</td>
+<td>Accurate location data</td>
+</tr>
+<tr>
+<td>Geofencing</td>
+<td>Define geographic zones for alerts</td>
+<td>Zone-based management</td>
+</tr>
+<tr>
+<td>Traffic overlay</td>
+<td>Real-time traffic data on routes</td>
+<td>Realistic time estimates</td>
+</tr>
+</tbody>
+</table>
+<h3 id="10112-geographic-analysis-for-fleet-planning">10.11.2 Geographic Analysis for Fleet Planning</h3>
+<p>Tank location data enables strategic fleet planning:</p>
+<p><strong>Service area analysis:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Analysis</th>
+<th>Question Answered</th>
+<th>Planning Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Customer density map</td>
+<td>Where are customers concentrated?</td>
+<td>Terminal and depot placement</td>
+</tr>
+<tr>
+<td>Drive time isochrones</td>
+<td>How far can a truck travel in 4 hours?</td>
+<td>Service area boundaries</td>
+</tr>
+<tr>
+<td>Delivery frequency heat map</td>
+<td>Where do trucks go most often?</td>
+<td>Pre-positioning of product</td>
+</tr>
+<tr>
+<td>Distance distribution</td>
+<td>How far are customers from the terminal?</td>
+<td>Fleet sizing and type selection</td>
+</tr>
+<tr>
+<td>Growth analysis</td>
+<td>Where are new customers being added?</td>
+<td>Expansion planning</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>graph TD
+    subgraph "Service Area Analysis"
+        A[Terminal Location] --&gt; B[1-hour drive radius&lt;br&gt;50-70 mile radius]
+        B --&gt; C[2-hour drive radius&lt;br&gt;100-140 mile radius]
+        C --&gt; D[3-hour drive radius&lt;br&gt;150-200 mile radius]
+
+        B --&gt; E["Core service area&lt;br&gt;80% of customers&lt;br&gt;Highest efficiency"]
+        C --&gt; F["Extended service area&lt;br&gt;15% of customers&lt;br&gt;Moderate efficiency"]
+        D --&gt; G["Remote service area&lt;br&gt;5% of customers&lt;br&gt;Consider satellite depot"]
+    end</code></pre>
+<hr />
+<h2 id="1012-real-world-efficiency-metrics">10.12 Real-World Efficiency Metrics</h2>
+<h3 id="10121-industry-benchmarks">10.12.1 Industry Benchmarks</h3>
+<p>Based on published case studies and industry data, the following benchmarks represent typical performance with and without wireless monitoring:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Without Monitoring</th>
+<th>With Monitoring</th>
+<th>Industry Best</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gallons per mile</td>
+<td>30-45</td>
+<td>50-70</td>
+<td>80+</td>
+</tr>
+<tr>
+<td>Stops per route</td>
+<td>4-7</td>
+<td>7-12</td>
+<td>14+</td>
+</tr>
+<tr>
+<td>Average drop size (gal)</td>
+<td>500-900</td>
+<td>900-1,500</td>
+<td>1,800+</td>
+</tr>
+<tr>
+<td>Truck utilization</td>
+<td>50-65%</td>
+<td>80-95%</td>
+<td>95%+</td>
+</tr>
+<tr>
+<td>Emergency delivery rate</td>
+<td>5-15%</td>
+<td>0.5-2%</td>
+<td>&lt; 0.5%</td>
+</tr>
+<tr>
+<td>Run-out rate (annual)</td>
+<td>2-8%</td>
+<td>0.1-0.5%</td>
+<td>&lt; 0.1%</td>
+</tr>
+<tr>
+<td>Gallons per driver-hour</td>
+<td>200-400</td>
+<td>400-700</td>
+<td>800+</td>
+</tr>
+<tr>
+<td>Cost per gallon delivered</td>
+<td>$0.06-0.12</td>
+<td>$0.03-0.06</td>
+<td>&lt; $0.03</td>
+</tr>
+<tr>
+<td>Annual deliveries per tank</td>
+<td>8-15</td>
+<td>5-8</td>
+<td>4-6</td>
+</tr>
+</tbody>
+</table>
+<h3 id="10122-continuous-improvement-tracking">10.12.2 Continuous Improvement Tracking</h3>
+<p>AIP provides dashboards for tracking efficiency metrics over time:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Efficiency Trend: Gallons per Mile
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>80 |
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>   |                                    *  *
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>70 |                              *  *
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>   |                        *  *
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>60 |                  *  *
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>   |            *  *
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>50 |      *  *
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>   |  *
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>40 |*
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>   |___________________________________
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>   Q1    Q2    Q3    Q4    Q1    Q2
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>   |&lt;-- Year 1 --&gt;|  |&lt;-- Year 2 --&gt;|
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>Note: Efficiency improves rapidly in first 6 months
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>as optimization algorithms learn consumption patterns,
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>then continues to improve gradually.
+</code></pre></div>
+<h3 id="10123-factors-that-limit-efficiency-gains">10.12.3 Factors That Limit Efficiency Gains</h3>
+<p>Not every deployment achieves the full 30% efficiency improvement. Factors that limit gains:</p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Impact</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Customer density</td>
+<td>Sparse, rural customers limit route optimization</td>
+<td>Focus on cluster efficiency; consider depot placement</td>
+</tr>
+<tr>
+<td>Product diversity</td>
+<td>Many different products limit truck sharing</td>
+<td>Multi-compartment trucks; product-specific routes</td>
+</tr>
+<tr>
+<td>Delivery windows</td>
+<td>Restricted delivery times reduce scheduling flexibility</td>
+<td>Negotiate wider windows; prioritize restricted sites</td>
+</tr>
+<tr>
+<td>Road network</td>
+<td>Poor roads, seasonal access limit routing</td>
+<td>Seasonal route planning; weather-based scheduling</td>
+</tr>
+<tr>
+<td>Driver resistance</td>
+<td>Drivers prefer familiar routes</td>
+<td>Training; incentive programs tied to efficiency KPIs</td>
+</tr>
+<tr>
+<td>Small fleet size</td>
+<td>Fewer vehicles = less optimization flexibility</td>
+<td>Focus on route sequencing and load optimization</td>
+</tr>
+<tr>
+<td>Legacy systems</td>
+<td>Inability to integrate dispatch and tank data</td>
+<td>API integration; middleware solutions</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1013-chapter-summary">10.13 Chapter Summary</h2>
+<p>Wireless tank monitoring transforms fleet management and delivery routing from a guessing game into a data-driven optimization problem. The key concepts covered in this chapter:</p>
+<ol>
+<li><strong>Traditional delivery methods</strong> (will-call, fixed schedule, degree-day) are fundamentally limited by the absence of real-time tank data</li>
+<li><strong>Tank monitoring provides the missing data</strong> -- current levels, consumption rates, and days-to-empty for every tank</li>
+<li><strong>Route optimization algorithms</strong> (VRP variants, geographic clustering) use this data to minimize delivery cost</li>
+<li><strong>The 30% efficiency improvement</strong> comes from compounding multiple factors: eliminating unnecessary stops, increasing drop sizes, optimizing route sequences, and reducing emergencies</li>
+<li><strong>Dispatch workflows</strong> shift from reactive firefighting to proactive optimization</li>
+<li><strong>Integration with fleet management systems</strong> creates an end-to-end operational platform</li>
+<li><strong>Real-world metrics</strong> consistently show significant improvements in gallons per mile, truck utilization, and delivery cost</li>
+</ol>
+<p>The transformation is not merely incremental. It is a fundamental change in how liquid product distribution operates -- from a schedule-based, estimate-driven model to a demand-driven, data-optimized model. Organizations that fully embrace this transformation achieve sustainable competitive advantages in cost, service quality, and customer retention.</p>
+<hr />
+<h2 id="review-questions">Review Questions</h2>
+<div class="admonition question">
+<p class="admonition-title">Question 1 -- Knowledge (Remember)</p>
+<p>List the five main efficiency levers that contribute to the 30% delivery efficiency improvement claim, and state the approximate individual contribution of each.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 2 -- Comprehension (Understand)</p>
+<p>Explain the difference between static geographic clustering and dynamic clustering based on tank monitoring data. Describe a scenario where dynamic clustering would produce significantly better results than static clustering.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 3 -- Application (Apply)</p>
+<p>A fuel distributor has a truck with 5,000-gallon capacity and the following tanks needing delivery today:</p>
+<table>
+<thead>
+<tr>
+<th>Tank</th>
+<th>Location</th>
+<th>Product</th>
+<th>Gallons Needed</th>
+<th>DTE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>North zone</td>
+<td>Diesel</td>
+<td>1,200</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B</td>
+<td>North zone</td>
+<td>Diesel</td>
+<td>800</td>
+<td>5</td>
+</tr>
+<tr>
+<td>C</td>
+<td>East zone</td>
+<td>Diesel</td>
+<td>1,500</td>
+<td>3</td>
+</tr>
+<tr>
+<td>D</td>
+<td>East zone</td>
+<td>Gasoline</td>
+<td>900</td>
+<td>1</td>
+</tr>
+<tr>
+<td>E</td>
+<td>South zone</td>
+<td>Diesel</td>
+<td>600</td>
+<td>7</td>
+</tr>
+<tr>
+<td>F</td>
+<td>North zone</td>
+<td>Diesel</td>
+<td>1,100</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>The truck can only carry one product type per trip. Build the optimal diesel delivery route, specifying which tanks to include, the load quantity, the estimated truck utilization, and which tank(s) to defer. Justify your choices.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 4 -- Analysis (Analyze)</p>
+<p>A distributor deployed wireless monitoring on 1,000 tanks six months ago. They expected a 30% efficiency improvement but have achieved only 12%. Analyze the possible reasons for this gap. Consider factors related to: (a) data quality and system configuration, (b) dispatch process adoption, (c) driver behavior, (d) customer and geographic characteristics, and (e) integration with existing systems. For each factor, suggest a diagnostic test and a corrective action.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 5 -- Evaluation (Evaluate)</p>
+<p>Compare the following two delivery strategies for a propane distributor serving 3,000 residential customers:</p>
+<p><strong>Strategy A</strong>: Monitor all 3,000 tanks with TSD gauges, use AI-driven dispatch optimization, deliver only when tanks reach 20%.</p>
+<p><strong>Strategy B</strong>: Monitor only the top 500 highest-volume customers with TSD gauges, use degree-day forecasting for the remaining 2,500, deliver when estimated at 30%.</p>
+<p>Evaluate both strategies on: (a) investment cost, (b) expected efficiency improvement, (c) run-out risk, (d) customer equity concerns, and (e) long-term competitiveness. Which would you recommend and why?</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

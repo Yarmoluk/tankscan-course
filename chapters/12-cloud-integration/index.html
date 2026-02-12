@@ -1,0 +1,4607 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive intelligent textbook on wireless tank monitoring technology, IoT systems, and the TankScan platform">
+      
+      
+        <meta name="author" content="Daniel Yarmoluk">
+      
+      
+      
+        <link rel="prev" href="../11-safety-compliance/">
+      
+      
+        <link rel="next" href="../13-predictive-ai/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>12. Cloud Integration and APIs - TankScan Intelligent Textbook: Wireless Tank Monitoring Systems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-12-cloud-integration-and-apis" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" class="md-header__button md-logo" aria-label="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TankScan Intelligent Textbook: Wireless Tank Monitoring Systems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              12. Cloud Integration and APIs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Yarmoluk/tankscan-course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../preface/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Preface
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../course-description/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Description
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-introduction/" class="md-tabs__link">
+          
+  
+  
+  Chapters
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../learning-graph/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learning Graph
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" class="md-nav__button md-logo" aria-label="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    TankScan Intelligent Textbook: Wireless Tank Monitoring Systems
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Yarmoluk/tankscan-course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../preface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction to Tank Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-wireless-sensors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Wireless Sensor Technologies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-measurement-tech/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Radar and Ultrasonic Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-iot-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. IoT Architecture and Connectivity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-aip-platform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. The Asset Intelligence Platform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-tank-types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Tank Types and Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-industry-solutions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Industry Solutions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Installation and Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-data-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Data Analytics and Optimization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-fleet-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Fleet Management and Routing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-safety-compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Safety, Compliance, and Hazardous Environments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Cloud Integration and APIs
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Cloud Integration and APIs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#121-why-integration-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 Why Integration Matters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.1 Why Integration Matters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-silos-vs-connected-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Silos vs. Connected Systems
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-cost-of-manual-data-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Cost of Manual Data Transfer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration Use Cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#122-tankscans-open-api-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 TankScan's Open API Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.2 TankScan&#39;s Open API Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#architectural-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architectural Philosophy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-architecture-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Architecture Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partnership-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partnership Approach
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#123-rest-api-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3 REST API Fundamentals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.3 REST API Fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-rest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Is REST?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anatomy-of-an-api-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anatomy of an API Request
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-status-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP Status Codes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#124-retrieving-tank-data-via-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.4 Retrieving Tank Data via API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.4 Retrieving Tank Data via API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Endpoints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-get-current-tank-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Get Current Tank Level
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-get-historical-readings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Get Historical Readings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-sdk-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python SDK Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#125-cloud-to-cloud-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.5 Cloud-to-Cloud Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.5 Cloud-to-Cloud Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integration-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-built-connectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-Built Connectors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#126-erp-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.6 ERP Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.6 ERP Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-erp-integration-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common ERP Integration Points
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sap-integration-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SAP Integration Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oracle-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oracle Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#netsuite-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NetSuite Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#127-scada-system-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.7 SCADA System Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.7 SCADA System Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-scada-integration-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why SCADA Integration Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-protocols-for-scada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration Protocols for SCADA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opc-ua-integration-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OPC UA Integration Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mqtt-integration-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MQTT Integration Pattern
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#128-fleet-management-system-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.8 Fleet Management System Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.8 Fleet Management System Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integration-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-fleet-management-integrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Fleet Management Integrations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-fields-for-fleet-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Fields for Fleet Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#129-data-export-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.9 Data Export Formats
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.9 Data Export Formats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supported Formats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-export-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JSON Export Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv-export-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSV Export Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml-export-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XML Export Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1210-webhooks-and-real-time-data-streaming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.10 Webhooks and Real-Time Data Streaming
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.10 Webhooks and Real-Time Data Streaming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-webhooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Are Webhooks?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-webhooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring Webhooks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook-event-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook Event Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-time-streaming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-Time Streaming
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1211-building-custom-applications-on-tankscan-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.11 Building Custom Applications on TankScan Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.11 Building Custom Applications on TankScan Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-custom-application-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Custom Application Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture-for-a-custom-web-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture for a Custom Web Application
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-simple-python-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Simple Python Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1212-api-rate-limits-and-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.12 API Rate Limits and Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.12 API Rate Limits and Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rate-limit-tiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rate Limit Tiers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rate-limit-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rate Limit Headers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing-exponential-backoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementing Exponential Backoff
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices Summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1213-security-and-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.13 Security and Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.13 Security and Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-key-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Key Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oauth-20-authorization-code-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OAuth 2.0 Authorization Code Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oauth-20-implementation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OAuth 2.0 Implementation Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1214-integration-case-studies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.14 Integration Case Studies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.14 Integration Case Studies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-study-1-fuel-distributor-erp-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Study 1: Fuel Distributor -- ERP Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-study-2-chemical-company-scada-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Study 2: Chemical Company -- SCADA Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-study-3-convenience-store-chain-custom-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Study 3: Convenience Store Chain -- Custom Application
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-12-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter 12 Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Review Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-predictive-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Predictive Maintenance and AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-case-studies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Case Studies and ROI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-future/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Future of Tank Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#121-why-integration-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 Why Integration Matters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.1 Why Integration Matters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-silos-vs-connected-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Silos vs. Connected Systems
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-cost-of-manual-data-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Cost of Manual Data Transfer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration Use Cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#122-tankscans-open-api-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 TankScan's Open API Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.2 TankScan&#39;s Open API Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#architectural-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architectural Philosophy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-architecture-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Architecture Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partnership-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partnership Approach
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#123-rest-api-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3 REST API Fundamentals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.3 REST API Fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-rest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Is REST?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anatomy-of-an-api-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anatomy of an API Request
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-status-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP Status Codes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#124-retrieving-tank-data-via-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.4 Retrieving Tank Data via API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.4 Retrieving Tank Data via API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Endpoints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-get-current-tank-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Get Current Tank Level
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-get-historical-readings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Get Historical Readings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-sdk-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python SDK Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#125-cloud-to-cloud-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.5 Cloud-to-Cloud Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.5 Cloud-to-Cloud Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integration-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-built-connectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-Built Connectors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#126-erp-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.6 ERP Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.6 ERP Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-erp-integration-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common ERP Integration Points
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sap-integration-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SAP Integration Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oracle-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oracle Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#netsuite-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NetSuite Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#127-scada-system-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.7 SCADA System Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.7 SCADA System Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-scada-integration-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why SCADA Integration Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-protocols-for-scada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration Protocols for SCADA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opc-ua-integration-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OPC UA Integration Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mqtt-integration-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MQTT Integration Pattern
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#128-fleet-management-system-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.8 Fleet Management System Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.8 Fleet Management System Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integration-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-fleet-management-integrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Fleet Management Integrations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-fields-for-fleet-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Fields for Fleet Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#129-data-export-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.9 Data Export Formats
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.9 Data Export Formats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supported Formats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-export-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JSON Export Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv-export-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSV Export Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml-export-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XML Export Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1210-webhooks-and-real-time-data-streaming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.10 Webhooks and Real-Time Data Streaming
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.10 Webhooks and Real-Time Data Streaming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-webhooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Are Webhooks?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-webhooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring Webhooks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook-event-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook Event Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-time-streaming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-Time Streaming
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1211-building-custom-applications-on-tankscan-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.11 Building Custom Applications on TankScan Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.11 Building Custom Applications on TankScan Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-custom-application-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Custom Application Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture-for-a-custom-web-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture for a Custom Web Application
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-simple-python-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Simple Python Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1212-api-rate-limits-and-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.12 API Rate Limits and Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.12 API Rate Limits and Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rate-limit-tiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rate Limit Tiers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rate-limit-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rate Limit Headers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing-exponential-backoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementing Exponential Backoff
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices Summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1213-security-and-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.13 Security and Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.13 Security and Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-key-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Key Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oauth-20-authorization-code-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OAuth 2.0 Authorization Code Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oauth-20-implementation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OAuth 2.0 Implementation Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1214-integration-case-studies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.14 Integration Case Studies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.14 Integration Case Studies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-study-1-fuel-distributor-erp-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Study 1: Fuel Distributor -- ERP Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-study-2-chemical-company-scada-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Study 2: Chemical Company -- SCADA Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-study-3-convenience-store-chain-custom-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Study 3: Convenience Store Chain -- Custom Application
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-12-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter 12 Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Review Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="chapter-12-cloud-integration-and-apis">Chapter 12: Cloud Integration and APIs</h1>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter, you will be able to:</p>
+<ul>
+<li>Explain why integration eliminates data silos and creates connected systems</li>
+<li>Describe TankScan's open API architecture and partnership approach</li>
+<li>Apply REST API fundamentals to retrieve tank data programmatically</li>
+<li>Design cloud-to-cloud integrations between TankScan and enterprise systems</li>
+<li>Implement ERP, SCADA, and fleet management integrations</li>
+<li>Configure webhooks for real-time event-driven data streaming</li>
+<li>Apply security best practices including OAuth and API key management</li>
+<li>Build custom applications and dashboards on TankScan data</li>
+</ul>
+<hr />
+<h2 id="121-why-integration-matters">12.1 Why Integration Matters</h2>
+<p>Tank level data is valuable on its own, but its true power emerges when it flows seamlessly into the systems that drive business decisions. Without integration, tank data becomes a <strong>data silo</strong> -- isolated information that requires manual effort to extract and apply.</p>
+<h3 id="data-silos-vs-connected-systems">Data Silos vs. Connected Systems</h3>
+<pre class="mermaid"><code>graph TD
+    subgraph Siloed["Siloed Architecture"]
+        A[TankScan Portal] --- X1[Manual Export]
+        B[ERP System] --- X2[Manual Entry]
+        C[Dispatch System] --- X3[Phone Calls]
+        D[Billing System] --- X4[Spreadsheets]
+        X1 -.- X2
+        X2 -.- X3
+        X3 -.- X4
+    end
+
+    subgraph Connected["Connected Architecture"]
+        E[TankScan API] --&gt; F[ERP System]
+        E --&gt; G[Dispatch System]
+        E --&gt; H[Billing System]
+        E --&gt; I[Analytics Platform]
+        E --&gt; J[Customer Portal]
+    end
+
+    style Siloed fill:#ffeeee,stroke:#cc0000
+    style Connected fill:#eeffee,stroke:#00cc00</code></pre>
+<h3 id="the-cost-of-manual-data-transfer">The Cost of Manual Data Transfer</h3>
+<table>
+<thead>
+<tr>
+<th>Manual Process</th>
+<th>Time per Occurrence</th>
+<th>Frequency</th>
+<th>Annual Cost (at $35/hr)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Export tank data, import to ERP</td>
+<td>30 minutes</td>
+<td>Daily</td>
+<td>$6,388</td>
+</tr>
+<tr>
+<td>Call dispatch with tank levels</td>
+<td>10 minutes</td>
+<td>50 tanks/day</td>
+<td>$30,333</td>
+</tr>
+<tr>
+<td>Reconcile deliveries manually</td>
+<td>45 minutes</td>
+<td>Per delivery</td>
+<td>Varies widely</td>
+</tr>
+<tr>
+<td>Create customer reports</td>
+<td>2 hours</td>
+<td>Monthly per customer</td>
+<td>$840/customer/year</td>
+</tr>
+<tr>
+<td><strong>Total potential savings</strong></td>
+<td></td>
+<td></td>
+<td><strong>$50,000 - $200,000/year</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Integration ROI</p>
+<p>For most TankScan customers, the ROI on API integration exceeds the ROI on the monitoring hardware itself. A distributor with 500 monitored tanks typically recovers their integration development cost within 3-6 months through labor savings alone.</p>
+</div>
+<h3 id="integration-use-cases">Integration Use Cases</h3>
+<ol>
+<li><strong>Automatic reorder triggering</strong> -- When a tank drops below a threshold, an order is created in the ERP</li>
+<li><strong>Route optimization</strong> -- Dispatch system receives real-time levels to plan efficient delivery routes</li>
+<li><strong>Automated billing</strong> -- Consumption data flows directly into invoicing systems</li>
+<li><strong>Customer self-service</strong> -- Customers view their own tank levels on a branded portal</li>
+<li><strong>Regulatory reporting</strong> -- Tank data feeds compliance reports automatically</li>
+<li><strong>Predictive analytics</strong> -- Historical data streams into ML models for demand forecasting</li>
+</ol>
+<hr />
+<h2 id="122-tankscans-open-api-architecture">12.2 TankScan's Open API Architecture</h2>
+<p>TankScan is built on an <strong>open API architecture</strong>, meaning that third-party systems can programmatically access tank data without proprietary middleware or vendor lock-in.</p>
+<h3 id="architectural-philosophy">Architectural Philosophy</h3>
+<p>TankScan follows three core principles in its API design:</p>
+<ol>
+<li><strong>Open standards</strong> -- RESTful APIs using JSON over HTTPS</li>
+<li><strong>Partner-friendly</strong> -- Documentation, sandbox environments, and support for integration partners</li>
+<li><strong>Secure by default</strong> -- Authentication required for all endpoints, data encrypted in transit</li>
+</ol>
+<h3 id="system-architecture-overview">System Architecture Overview</h3>
+<pre class="mermaid"><code>flowchart TD
+    subgraph Field["Field Layer"]
+        S1[Sensor 1] --&gt; GW[TankScan Gateway]
+        S2[Sensor 2] --&gt; GW
+        S3[Sensor N] --&gt; GW
+    end
+
+    subgraph Cloud["TankScan Cloud"]
+        GW --&gt;|Cellular/WiFi| ING[Ingestion Service]
+        ING --&gt; DB[(Time-Series Database)]
+        DB --&gt; API[REST API Layer]
+        DB --&gt; WH[Webhook Engine]
+        DB --&gt; STREAM[Streaming Service]
+        API --&gt; AUTH[Auth Service]
+    end
+
+    subgraph Consumers["API Consumers"]
+        API --&gt; ERP[ERP Systems]
+        API --&gt; SCADA[SCADA Systems]
+        API --&gt; CUSTOM[Custom Apps]
+        WH --&gt; DISPATCH[Dispatch Systems]
+        STREAM --&gt; ANALYTICS[Analytics Platforms]
+    end
+
+    style Field fill:#e8f4fd,stroke:#2196F3
+    style Cloud fill:#fff3e0,stroke:#FF9800
+    style Consumers fill:#e8f5e9,stroke:#4CAF50</code></pre>
+<h3 id="partnership-approach">Partnership Approach</h3>
+<p>TankScan maintains a <strong>partner ecosystem</strong> for integrations:</p>
+<table>
+<thead>
+<tr>
+<th>Partner Tier</th>
+<th>Access Level</th>
+<th>Support</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Technology Partner</strong></td>
+<td>Full API access, sandbox, early feature access</td>
+<td>Dedicated integration engineer</td>
+<td>ERP vendors, fleet management platforms</td>
+</tr>
+<tr>
+<td><strong>Solution Partner</strong></td>
+<td>Full API access, sandbox</td>
+<td>Technical documentation, email support</td>
+<td>System integrators, VARs</td>
+</tr>
+<tr>
+<td><strong>Customer Developer</strong></td>
+<td>API access for own account data</td>
+<td>Documentation, community forums</td>
+<td>In-house IT teams building custom dashboards</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="123-rest-api-fundamentals">12.3 REST API Fundamentals</h2>
+<p>To work effectively with TankScan's API, you need to understand the fundamentals of RESTful web services.</p>
+<h3 id="what-is-rest">What Is REST?</h3>
+<p><strong>REST</strong> (Representational State Transfer) is an architectural style for designing networked applications. A RESTful API uses standard HTTP methods to perform operations on resources identified by URLs.</p>
+<h3 id="http-methods">HTTP Methods</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Operation</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td>Read</td>
+<td>Retrieve a resource or collection</td>
+<td>Get current tank level</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td>Create</td>
+<td>Create a new resource</td>
+<td>Create a new alert rule</td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td>Update (full)</td>
+<td>Replace a resource entirely</td>
+<td>Update tank configuration</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td>Update (partial)</td>
+<td>Modify specific fields of a resource</td>
+<td>Change alert threshold</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td>Remove</td>
+<td>Delete a resource</td>
+<td>Remove an alert rule</td>
+</tr>
+</tbody>
+</table>
+<h3 id="anatomy-of-an-api-request">Anatomy of an API Request</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>GET /api/v2/tanks/12345/readings?start=2025-01-01&amp;end=2025-01-31 HTTP/1.1
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Host: api.tankscan.com
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Accept: application/json
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Content-Type: application/json
+</code></pre></div>
+<p>Breaking this down:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Value</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Method</strong></td>
+<td><code>GET</code></td>
+<td>We want to retrieve data</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>/api/v2/tanks/12345/readings</code></td>
+<td>The specific resource (readings for tank 12345)</td>
+</tr>
+<tr>
+<td><strong>Query Parameters</strong></td>
+<td><code>start=2025-01-01&amp;end=2025-01-31</code></td>
+<td>Filter criteria</td>
+</tr>
+<tr>
+<td><strong>Host</strong></td>
+<td><code>api.tankscan.com</code></td>
+<td>The API server</td>
+</tr>
+<tr>
+<td><strong>Authorization</strong></td>
+<td><code>Bearer eyJ...</code></td>
+<td>Authentication token</td>
+</tr>
+<tr>
+<td><strong>Accept</strong></td>
+<td><code>application/json</code></td>
+<td>We want JSON response format</td>
+</tr>
+</tbody>
+</table>
+<h3 id="http-status-codes">HTTP Status Codes</h3>
+<p>Understanding response codes is essential for robust integration development:</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Category</th>
+<th>Meaning</th>
+<th>Action Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>200</code></td>
+<td>Success</td>
+<td>Request succeeded</td>
+<td>Process the response data</td>
+</tr>
+<tr>
+<td><code>201</code></td>
+<td>Success</td>
+<td>Resource created</td>
+<td>Store the new resource ID</td>
+</tr>
+<tr>
+<td><code>204</code></td>
+<td>Success</td>
+<td>No content (successful delete)</td>
+<td>Confirm deletion</td>
+</tr>
+<tr>
+<td><code>400</code></td>
+<td>Client Error</td>
+<td>Bad request (malformed syntax)</td>
+<td>Fix the request format</td>
+</tr>
+<tr>
+<td><code>401</code></td>
+<td>Client Error</td>
+<td>Unauthorized (invalid/missing auth)</td>
+<td>Refresh authentication token</td>
+</tr>
+<tr>
+<td><code>403</code></td>
+<td>Client Error</td>
+<td>Forbidden (insufficient permissions)</td>
+<td>Check API key permissions</td>
+</tr>
+<tr>
+<td><code>404</code></td>
+<td>Client Error</td>
+<td>Resource not found</td>
+<td>Verify the resource ID/path</td>
+</tr>
+<tr>
+<td><code>429</code></td>
+<td>Client Error</td>
+<td>Too many requests (rate limited)</td>
+<td>Implement backoff and retry</td>
+</tr>
+<tr>
+<td><code>500</code></td>
+<td>Server Error</td>
+<td>Internal server error</td>
+<td>Retry after delay; contact support if persistent</td>
+</tr>
+<tr>
+<td><code>503</code></td>
+<td>Server Error</td>
+<td>Service unavailable</td>
+<td>Retry with exponential backoff</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Error Handling Is Not Optional</p>
+<p>Every API integration must handle error responses gracefully. A common mistake is only coding for the "happy path" (200 responses). Production integrations must handle authentication failures, rate limiting, network timeouts, and server errors with appropriate retry logic.</p>
+</div>
+<hr />
+<h2 id="124-retrieving-tank-data-via-api">12.4 Retrieving Tank Data via API</h2>
+<p>The most common API operation is retrieving tank level data. Here are the key endpoints and usage patterns.</p>
+<h3 id="core-endpoints">Core Endpoints</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/api/v2/tanks</code></td>
+<td>GET</td>
+<td>List all tanks in your account</td>
+</tr>
+<tr>
+<td><code>/api/v2/tanks/{id}</code></td>
+<td>GET</td>
+<td>Get details for a specific tank</td>
+</tr>
+<tr>
+<td><code>/api/v2/tanks/{id}/readings</code></td>
+<td>GET</td>
+<td>Get level readings for a tank</td>
+</tr>
+<tr>
+<td><code>/api/v2/tanks/{id}/readings/latest</code></td>
+<td>GET</td>
+<td>Get the most recent reading</td>
+</tr>
+<tr>
+<td><code>/api/v2/tanks/{id}/alerts</code></td>
+<td>GET</td>
+<td>Get alert history for a tank</td>
+</tr>
+<tr>
+<td><code>/api/v2/groups</code></td>
+<td>GET</td>
+<td>List tank groups</td>
+</tr>
+<tr>
+<td><code>/api/v2/groups/{id}/tanks</code></td>
+<td>GET</td>
+<td>List tanks in a group</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-get-current-tank-level">Example: Get Current Tank Level</h3>
+<p><strong>Request:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s2">&quot;https://api.tankscan.com/api/v2/tanks/12345/readings/latest&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer YOUR_API_KEY&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Accept: application/json&quot;</span>
+</code></pre></div>
+<p><strong>Response:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;tank_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">&quot;tank_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Diesel Tank - Building A&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">&quot;reading&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-03-15T14:30:00Z&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nt">&quot;level_percent&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">67.4</span><span class="p">,</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="nt">&quot;level_inches&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">48.5</span><span class="p">,</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="nt">&quot;volume_gallons&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3370</span><span class="p">,</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="nt">&quot;temperature_f&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">62.3</span><span class="p">,</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="nt">&quot;signal_strength_dbm&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">-72</span><span class="p">,</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="nt">&quot;battery_percent&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">94</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">  </span><span class="nt">&quot;tank&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="nt">&quot;capacity_gallons&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5000</span><span class="p">,</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="nt">&quot;product&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Diesel #2&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">    </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">      </span><span class="nt">&quot;latitude&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">41.8781</span><span class="p">,</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">      </span><span class="nt">&quot;longitude&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-87.6298</span><span class="p">,</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">      </span><span class="nt">&quot;address&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123 Industrial Blvd, Chicago, IL&quot;</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="example-get-historical-readings">Example: Get Historical Readings</h3>
+<p><strong>Request:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s2">&quot;https://api.tankscan.com/api/v2/tanks/12345/readings\</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="s2">?start=2025-03-01T00:00:00Z\</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="s2">&amp;end=2025-03-15T23:59:59Z\</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="s2">&amp;interval=hourly&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer YOUR_API_KEY&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Accept: application/json&quot;</span>
+</code></pre></div>
+<p><strong>Response (abbreviated):</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">&quot;tank_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">&quot;period&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-03-01T00:00:00Z&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-03-15T23:59:59Z&quot;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span><span class="nt">&quot;interval&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hourly&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="nt">&quot;readings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">      </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-03-01T00:00:00Z&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">      </span><span class="nt">&quot;level_percent&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">82.1</span><span class="p">,</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">      </span><span class="nt">&quot;volume_gallons&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4105</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">      </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-03-01T01:00:00Z&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">      </span><span class="nt">&quot;level_percent&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">82.0</span><span class="p">,</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">      </span><span class="nt">&quot;volume_gallons&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4100</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">  </span><span class="p">],</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">  </span><span class="nt">&quot;total_readings&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">360</span><span class="p">,</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">  </span><span class="nt">&quot;pagination&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">    </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">    </span><span class="nt">&quot;per_page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">    </span><span class="nt">&quot;total_pages&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="python-sdk-example">Python SDK Example</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">tankscan</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1"># Initialize client</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">client</span> <span class="o">=</span> <span class="n">tankscan</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;YOUR_API_KEY&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1"># Get all tanks</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">tanks</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">tanks</span><span class="o">.</span><span class="n">list</span><span class="p">()</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="c1"># Get latest reading for a specific tank</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="n">reading</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">tanks</span><span class="o">.</span><span class="n">get_latest_reading</span><span class="p">(</span><span class="n">tank_id</span><span class="o">=</span><span class="s2">&quot;12345&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tank level: </span><span class="si">{</span><span class="n">reading</span><span class="o">.</span><span class="n">level_percent</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Volume: </span><span class="si">{</span><span class="n">reading</span><span class="o">.</span><span class="n">volume_gallons</span><span class="si">}</span><span class="s2"> gallons&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="c1"># Get historical readings</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="n">readings</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">tanks</span><span class="o">.</span><span class="n">get_readings</span><span class="p">(</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>    <span class="n">tank_id</span><span class="o">=</span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>    <span class="n">start</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">30</span><span class="p">),</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>    <span class="n">end</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(),</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>    <span class="n">interval</span><span class="o">=</span><span class="s2">&quot;daily&quot;</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="p">)</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="c1"># Convert to pandas DataFrame for analysis</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">r</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">readings</span><span class="p">])</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">SDK Availability</p>
+<p>TankScan provides official SDKs for Python, JavaScript/Node.js, and C#/.NET. Community-maintained libraries are available for Java, Go, and Ruby. Check the developer portal for the latest versions.</p>
+</div>
+<hr />
+<h2 id="125-cloud-to-cloud-integration">12.5 Cloud-to-Cloud Integration</h2>
+<p>Cloud-to-cloud (C2C) integration connects TankScan's cloud platform directly to other cloud-based business systems without any on-premises middleware.</p>
+<h3 id="integration-patterns">Integration Patterns</h3>
+<pre class="mermaid"><code>flowchart LR
+    subgraph Pattern1["Pattern 1: API Polling"]
+        A1[External System] --&gt;|Periodic GET requests| B1[TankScan API]
+    end
+
+    subgraph Pattern2["Pattern 2: Webhooks"]
+        A2[TankScan Webhook] --&gt;|Event-driven POST| B2[External Endpoint]
+    end
+
+    subgraph Pattern3["Pattern 3: Middleware"]
+        A3[TankScan API] &lt;--&gt;|Bidirectional| C3[Integration Platform&lt;br/&gt;Zapier, MuleSoft, etc.]
+        C3 &lt;--&gt;|Bidirectional| B3[External System]
+    end
+
+    subgraph Pattern4["Pattern 4: Data Lake"]
+        A4[TankScan Export] --&gt;|Batch or streaming| D4[(Data Lake&lt;br/&gt;S3, Azure Blob, GCS)]
+        D4 --&gt; B4[Analytics Platform]
+    end</code></pre>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Best For</th>
+<th>Latency</th>
+<th>Complexity</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>API Polling</strong></td>
+<td>Periodic data sync, batch updates</td>
+<td>Minutes to hours</td>
+<td>Low</td>
+<td>Low (API calls)</td>
+</tr>
+<tr>
+<td><strong>Webhooks</strong></td>
+<td>Real-time alerts, event-driven workflows</td>
+<td>Seconds</td>
+<td>Medium</td>
+<td>Low (event-based)</td>
+</tr>
+<tr>
+<td><strong>Middleware/iPaaS</strong></td>
+<td>Complex transformations, multi-system orchestration</td>
+<td>Seconds to minutes</td>
+<td>Medium-High</td>
+<td>Medium (platform fees)</td>
+</tr>
+<tr>
+<td><strong>Data Lake</strong></td>
+<td>Historical analytics, ML training, regulatory archives</td>
+<td>Minutes to hours</td>
+<td>High</td>
+<td>Medium-High (storage + compute)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pre-built-connectors">Pre-Built Connectors</h3>
+<p>TankScan maintains pre-built connectors for popular integration platforms:</p>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Type</th>
+<th>Supported Operations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Zapier</strong></td>
+<td>No-code iPaaS</td>
+<td>Triggers: new reading, alert fired. Actions: get tank data</td>
+</tr>
+<tr>
+<td><strong>Microsoft Power Automate</strong></td>
+<td>Low-code iPaaS</td>
+<td>Triggers: level threshold, alert. Actions: read tank data</td>
+</tr>
+<tr>
+<td><strong>MuleSoft</strong></td>
+<td>Enterprise iPaaS</td>
+<td>Full bidirectional API connector</td>
+</tr>
+<tr>
+<td><strong>Dell Boomi</strong></td>
+<td>Enterprise iPaaS</td>
+<td>Full bidirectional API connector</td>
+</tr>
+<tr>
+<td><strong>Workato</strong></td>
+<td>Enterprise iPaaS</td>
+<td>Full bidirectional API connector</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Example: Zapier Integration</p>
+<p>A common no-code integration using Zapier:</p>
+<p><strong>Trigger:</strong> TankScan alert fires (tank below 20%)</p>
+<p><strong>Actions:</strong>
+1. Create a new order in QuickBooks for product replenishment
+2. Send a Slack notification to the dispatch channel
+3. Add a row to a Google Sheet for tracking
+4. Send an email to the customer</p>
+<p>This entire workflow can be configured in 30 minutes without writing any code.</p>
+</div>
+<hr />
+<h2 id="126-erp-integration">12.6 ERP Integration</h2>
+<p>Enterprise Resource Planning (ERP) integration is the highest-value integration for most TankScan customers because it connects physical tank data to financial and operational processes.</p>
+<h3 id="common-erp-integration-points">Common ERP Integration Points</h3>
+<table>
+<thead>
+<tr>
+<th>ERP Process</th>
+<th>TankScan Data Input</th>
+<th>Resulting Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Inventory Management</strong></td>
+<td>Current tank levels, volumes</td>
+<td>Real-time inventory quantities</td>
+</tr>
+<tr>
+<td><strong>Purchase Orders</strong></td>
+<td>Low-level alerts</td>
+<td>Automatic PO generation</td>
+</tr>
+<tr>
+<td><strong>Sales Orders</strong></td>
+<td>Consumption rate data</td>
+<td>Proactive customer replenishment</td>
+</tr>
+<tr>
+<td><strong>Billing/Invoicing</strong></td>
+<td>Delivery volumes (before/after)</td>
+<td>Accurate usage-based billing</td>
+</tr>
+<tr>
+<td><strong>Financial Reporting</strong></td>
+<td>Inventory valuation</td>
+<td>Mark-to-market commodity accounting</td>
+</tr>
+<tr>
+<td><strong>Demand Planning</strong></td>
+<td>Historical consumption patterns</td>
+<td>Forecast accuracy improvement</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sap-integration-architecture">SAP Integration Architecture</h3>
+<pre class="mermaid"><code>flowchart LR
+    A[TankScan Cloud API] --&gt;|REST/JSON| B[SAP Integration Suite&lt;br/&gt;or SAP CPI]
+    B --&gt;|IDoc/BAPI/RFC| C[SAP S/4HANA]
+
+    C --&gt; D[MM Module&lt;br/&gt;Materials Management]
+    C --&gt; E[SD Module&lt;br/&gt;Sales &amp; Distribution]
+    C --&gt; F[PP Module&lt;br/&gt;Production Planning]
+    C --&gt; G[FI Module&lt;br/&gt;Financial Accounting]
+
+    D --&gt;|Stock levels| H[Inventory Dashboard]
+    E --&gt;|Delivery orders| I[Route Planning]
+    F --&gt;|Supply signals| J[Production Schedule]
+    G --&gt;|Valuation| K[Financial Reports]</code></pre>
+<p><strong>Key SAP integration scenarios:</strong></p>
+<ol>
+<li><strong>Material Document Creation</strong> -- Each tank reading updates the material stock quantity in SAP MM</li>
+<li><strong>Purchase Requisition Trigger</strong> -- When tank level drops below reorder point, SAP creates a PR automatically</li>
+<li><strong>Delivery Confirmation</strong> -- Post-delivery tank reading confirms the quantity received, creating a Goods Receipt</li>
+<li><strong>Consumption Posting</strong> -- Period-over-period level decreases generate consumption postings in SAP</li>
+</ol>
+<h3 id="oracle-integration">Oracle Integration</h3>
+<p>For Oracle ERP Cloud or Oracle E-Business Suite:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Example: Oracle ERP Cloud integration using REST</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Step 1: Get tank data from TankScan</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">ts_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="s2">&quot;https://api.tankscan.com/api/v2/tanks/12345/readings/latest&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="s2">&quot;Bearer TS_API_KEY&quot;</span><span class="p">}</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="p">)</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="n">tank_data</span> <span class="o">=</span> <span class="n">ts_response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="c1"># Step 2: Create inventory transaction in Oracle</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="n">oracle_payload</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>    <span class="s2">&quot;OrganizationCode&quot;</span><span class="p">:</span> <span class="s2">&quot;M1&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>    <span class="s2">&quot;ItemNumber&quot;</span><span class="p">:</span> <span class="s2">&quot;DIESEL-2&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>    <span class="s2">&quot;TransactionTypeName&quot;</span><span class="p">:</span> <span class="s2">&quot;Miscellaneous receipt&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>    <span class="s2">&quot;TransactionQuantity&quot;</span><span class="p">:</span> <span class="n">tank_data</span><span class="p">[</span><span class="s2">&quot;reading&quot;</span><span class="p">][</span><span class="s2">&quot;volume_gallons&quot;</span><span class="p">],</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>    <span class="s2">&quot;TransactionUnitOfMeasure&quot;</span><span class="p">:</span> <span class="s2">&quot;GAL&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>    <span class="s2">&quot;TransactionDate&quot;</span><span class="p">:</span> <span class="n">tank_data</span><span class="p">[</span><span class="s2">&quot;reading&quot;</span><span class="p">][</span><span class="s2">&quot;timestamp&quot;</span><span class="p">]</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="p">}</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="n">oracle_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>    <span class="s2">&quot;https://your-oracle.oraclecloud.com/fscmRestApi/resources/v1/inventoryTransactions&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>    <span class="n">json</span><span class="o">=</span><span class="n">oracle_payload</span><span class="p">,</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>    <span class="n">headers</span><span class="o">=</span><span class="p">{</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>        <span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="s2">&quot;Bearer ORACLE_TOKEN&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>        <span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>    <span class="p">}</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="p">)</span>
+</code></pre></div>
+<h3 id="netsuite-integration">NetSuite Integration</h3>
+<p>NetSuite integrations commonly use SuiteTalk (SOAP) or RESTlet (REST) interfaces:</p>
+<table>
+<thead>
+<tr>
+<th>Integration Method</th>
+<th>Best For</th>
+<th>Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SuiteTalk SOAP API</strong></td>
+<td>Complex, high-volume transactions</td>
+<td>High</td>
+</tr>
+<tr>
+<td><strong>RESTlet</strong></td>
+<td>Custom endpoints for specific use cases</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><strong>SuiteScript Scheduled</strong></td>
+<td>Periodic data sync (polling TankScan API)</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><strong>Celigo/Dell Boomi</strong></td>
+<td>Middleware-based, pre-built connectors</td>
+<td>Low-Medium</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="127-scada-system-integration">12.7 SCADA System Integration</h2>
+<p>Supervisory Control and Data Acquisition (SCADA) systems are the backbone of industrial process control. Integrating TankScan with SCADA provides a unified operational view.</p>
+<h3 id="why-scada-integration-matters">Why SCADA Integration Matters</h3>
+<p>Traditional SCADA systems monitor <strong>wired</strong> sensors in local facilities. TankScan adds <strong>wireless</strong> monitoring of remote tanks. Integration creates a single pane of glass:</p>
+<pre class="mermaid"><code>flowchart TD
+    subgraph Local["Local Plant (SCADA)"]
+        A[Wired Level Sensors] --&gt; B[PLC/RTU]
+        C[Flow Meters] --&gt; B
+        D[Pressure Sensors] --&gt; B
+        B --&gt; E[SCADA Server]
+    end
+
+    subgraph Remote["Remote Tanks (TankScan)"]
+        F[Wireless Sensors] --&gt; G[TankScan Gateway]
+        G --&gt; H[TankScan Cloud]
+    end
+
+    H --&gt;|OPC UA / API / MQTT| E
+
+    E --&gt; I[Unified HMI Dashboard]
+
+    style Local fill:#e8f4fd,stroke:#2196F3
+    style Remote fill:#fff3e0,stroke:#FF9800</code></pre>
+<h3 id="integration-protocols-for-scada">Integration Protocols for SCADA</h3>
+<table>
+<thead>
+<tr>
+<th>Protocol</th>
+<th>Description</th>
+<th>Use Case</th>
+<th>Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OPC UA</strong></td>
+<td>Open Platform Communications Unified Architecture</td>
+<td>Modern SCADA systems</td>
+<td>TankScan to SCADA</td>
+</tr>
+<tr>
+<td><strong>Modbus TCP</strong></td>
+<td>Simple, widely supported industrial protocol</td>
+<td>Legacy SCADA systems</td>
+<td>TankScan to SCADA</td>
+</tr>
+<tr>
+<td><strong>MQTT</strong></td>
+<td>Lightweight pub/sub messaging</td>
+<td>IoT-native SCADA, edge systems</td>
+<td>Bidirectional</td>
+</tr>
+<tr>
+<td><strong>REST API</strong></td>
+<td>HTTP-based data retrieval</td>
+<td>IT/OT convergence platforms</td>
+<td>TankScan to SCADA</td>
+</tr>
+<tr>
+<td><strong>DNP3</strong></td>
+<td>Distributed Network Protocol</td>
+<td>Utility SCADA systems</td>
+<td>TankScan to SCADA</td>
+</tr>
+</tbody>
+</table>
+<h3 id="opc-ua-integration-example">OPC UA Integration Example</h3>
+<p>OPC UA (Open Platform Communications Unified Architecture) is the modern standard for industrial interoperability:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>OPC UA Address Space Mapping:
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Root
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>└── Objects
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    └── TankScan
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>        ├── Tank_12345
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>        │   ├── LevelPercent    (Float, ReadOnly)  = 67.4
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>        │   ├── VolumeGallons   (Float, ReadOnly)  = 3370
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>        │   ├── TemperatureF    (Float, ReadOnly)  = 62.3
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>        │   ├── LastUpdate      (DateTime, ReadOnly) = 2025-03-15T14:30:00Z
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>        │   ├── BatteryPercent  (Int, ReadOnly)    = 94
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>        │   └── Alarms
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>        │       ├── HighLevel   (Boolean, ReadOnly) = false
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>        │       └── LowLevel    (Boolean, ReadOnly) = false
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>        ├── Tank_12346
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>        │   └── ...
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>        └── Gateway_001
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>            ├── Status          (String, ReadOnly)  = &quot;Online&quot;
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>            └── LastHeartbeat   (DateTime, ReadOnly) = 2025-03-15T14:29:00Z
+</code></pre></div>
+<h3 id="mqtt-integration-pattern">MQTT Integration Pattern</h3>
+<p>MQTT is increasingly popular for IoT-SCADA convergence:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># MQTT subscriber for TankScan data</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">paho.mqtt.client</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mqtt</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="k">def</span><span class="w"> </span><span class="nf">on_message</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="n">userdata</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">payload</span><span class="p">)</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="n">tank_id</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;tank_id&quot;</span><span class="p">]</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    <span class="n">level</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;level_percent&quot;</span><span class="p">]</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    <span class="c1"># Forward to local SCADA/PLC</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    <span class="n">update_scada_point</span><span class="p">(</span><span class="n">tank_id</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>    <span class="c1"># Check for alarm conditions</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>    <span class="k">if</span> <span class="n">level</span> <span class="o">&gt;</span> <span class="mi">95</span><span class="p">:</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>        <span class="n">trigger_high_level_alarm</span><span class="p">(</span><span class="n">tank_id</span><span class="p">)</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>    <span class="k">elif</span> <span class="n">level</span> <span class="o">&lt;</span> <span class="mi">15</span><span class="p">:</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>        <span class="n">trigger_low_level_alarm</span><span class="p">(</span><span class="n">tank_id</span><span class="p">)</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="n">client</span> <span class="o">=</span> <span class="n">mqtt</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="n">client</span><span class="o">.</span><span class="n">username_pw_set</span><span class="p">(</span><span class="s2">&quot;tankscan_user&quot;</span><span class="p">,</span> <span class="s2">&quot;password&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="n">client</span><span class="o">.</span><span class="n">tls_set</span><span class="p">()</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="n">client</span><span class="o">.</span><span class="n">on_message</span> <span class="o">=</span> <span class="n">on_message</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="n">client</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;mqtt.tankscan.com&quot;</span><span class="p">,</span> <span class="mi">8883</span><span class="p">)</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="c1"># Subscribe to all tank readings</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="n">client</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s2">&quot;tankscan/readings/#&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="n">client</span><span class="o">.</span><span class="n">loop_forever</span><span class="p">()</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">IT/OT Convergence</p>
+<p>The integration of TankScan (an IT/cloud system) with SCADA (an OT/operational system) is an example of <strong>IT/OT convergence</strong>. This convergence is a major trend in industrial operations, and security must be carefully managed at the boundary between IT and OT networks.</p>
+</div>
+<hr />
+<h2 id="128-fleet-management-system-integration">12.8 Fleet Management System Integration</h2>
+<p>For distributors who deliver bulk products to monitored tanks, fleet management integration closes the loop between tank data and delivery operations.</p>
+<h3 id="integration-flow">Integration Flow</h3>
+<pre class="mermaid"><code>sequenceDiagram
+    participant TS as TankScan Cloud
+    participant FM as Fleet Management
+    participant DR as Driver Mobile App
+    participant TR as Delivery Truck
+
+    TS-&gt;&gt;FM: Tank 456 at 18% (low-level alert)
+    FM-&gt;&gt;FM: Generate delivery order
+    FM-&gt;&gt;FM: Optimize route with other deliveries
+    FM-&gt;&gt;DR: Assign delivery to route
+    DR-&gt;&gt;TR: Navigate to customer site
+    TR-&gt;&gt;TR: Deliver product
+    DR-&gt;&gt;FM: Confirm delivery (gallons pumped)
+    FM-&gt;&gt;TS: Delivery confirmed
+    TS-&gt;&gt;TS: Verify level increase matches delivery
+    TS-&gt;&gt;FM: Delivery reconciliation complete</code></pre>
+<h3 id="common-fleet-management-integrations">Common Fleet Management Integrations</h3>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Integration Method</th>
+<th>Key Data Exchanged</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lytx/Omnitracs</strong></td>
+<td>REST API</td>
+<td>Tank locations, delivery requirements, route suggestions</td>
+</tr>
+<tr>
+<td><strong>Trimble TMT</strong></td>
+<td>API + File exchange</td>
+<td>Work orders, delivery confirmations</td>
+</tr>
+<tr>
+<td><strong>Descartes</strong></td>
+<td>API</td>
+<td>Route optimization inputs, delivery windows</td>
+</tr>
+<tr>
+<td><strong>Samsara</strong></td>
+<td>REST API</td>
+<td>Vehicle location, tank locations, delivery status</td>
+</tr>
+<tr>
+<td><strong>Custom Dispatch</strong></td>
+<td>TankScan API</td>
+<td>Tank levels, alerts, delivery history</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-fields-for-fleet-integration">Data Fields for Fleet Integration</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>Used For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tank ID</td>
+<td>TankScan</td>
+<td>Unique identifier for delivery location</td>
+</tr>
+<tr>
+<td>Current level (%)</td>
+<td>TankScan</td>
+<td>Delivery urgency prioritization</td>
+</tr>
+<tr>
+<td>Estimated days until empty</td>
+<td>TankScan (calculated)</td>
+<td>Delivery scheduling window</td>
+</tr>
+<tr>
+<td>Tank capacity</td>
+<td>TankScan</td>
+<td>Maximum delivery volume calculation</td>
+</tr>
+<tr>
+<td>Delivery volume needed</td>
+<td>TankScan (calculated)</td>
+<td><span class="arithmatex">\(V_{needed} = V_{capacity} \times (Target\% - Current\%) / 100\)</span></td>
+</tr>
+<tr>
+<td>GPS coordinates</td>
+<td>TankScan</td>
+<td>Route optimization</td>
+</tr>
+<tr>
+<td>Access hours</td>
+<td>Customer data</td>
+<td>Delivery time window constraints</td>
+</tr>
+<tr>
+<td>Product type</td>
+<td>TankScan</td>
+<td>Truck/compartment assignment</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="129-data-export-formats">12.9 Data Export Formats</h2>
+<p>Not all integrations require real-time API calls. TankScan supports multiple export formats for batch processing, reporting, and archival.</p>
+<h3 id="supported-formats">Supported Formats</h3>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Best For</th>
+<th>Structure</th>
+<th>Human Readable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>JSON</strong></td>
+<td>API responses, web apps, modern systems</td>
+<td>Hierarchical</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td><strong>CSV</strong></td>
+<td>Spreadsheets, simple imports, legacy systems</td>
+<td>Tabular</td>
+<td>High</td>
+</tr>
+<tr>
+<td><strong>XML</strong></td>
+<td>Enterprise systems, SOAP services, EDI</td>
+<td>Hierarchical</td>
+<td>Low-Moderate</td>
+</tr>
+<tr>
+<td><strong>Excel (XLSX)</strong></td>
+<td>Business reporting, ad-hoc analysis</td>
+<td>Tabular with formatting</td>
+<td>High</td>
+</tr>
+<tr>
+<td><strong>PDF</strong></td>
+<td>Compliance reports, customer deliverables</td>
+<td>Formatted document</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<h3 id="json-export-example">JSON Export Example</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nt">&quot;export_metadata&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="nt">&quot;generated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-03-15T15:00:00Z&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="nt">&quot;format_version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.1&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="nt">&quot;tank_count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="nt">&quot;reading_count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2160</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">  </span><span class="nt">&quot;tanks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Diesel Tank A&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">      </span><span class="nt">&quot;readings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">        </span><span class="p">{</span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-03-01T00:00:00Z&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;level_pct&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">82.1</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;vol_gal&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4105</span><span class="p">},</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">        </span><span class="p">{</span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-03-01T01:00:00Z&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;level_pct&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">82.0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;vol_gal&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4100</span><span class="p">}</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">      </span><span class="p">]</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="csv-export-example">CSV Export Example</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>tank_id,tank_name,timestamp,level_percent,volume_gallons,temperature_f
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>12345,Diesel Tank A,2025-03-01T00:00:00Z,82.1,4105,58.2
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>12345,Diesel Tank A,2025-03-01T01:00:00Z,82.0,4100,57.9
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>12346,Gasoline Tank B,2025-03-01T00:00:00Z,45.3,2265,59.1
+</code></pre></div>
+<h3 id="xml-export-example">XML Export Example</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nt">&lt;TankScanExport</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;2.1&quot;</span><span class="w"> </span><span class="na">generated=</span><span class="s">&quot;2025-03-15T15:00:00Z&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span><span class="nt">&lt;Tanks&gt;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="nt">&lt;Tank</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;12345&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Diesel Tank A&quot;</span><span class="w"> </span><span class="na">capacity=</span><span class="s">&quot;5000&quot;</span><span class="w"> </span><span class="na">unit=</span><span class="s">&quot;gallons&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">      </span><span class="nt">&lt;Reading</span><span class="w"> </span><span class="na">timestamp=</span><span class="s">&quot;2025-03-01T00:00:00Z&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">        </span><span class="nt">&lt;LevelPercent&gt;</span>82.1<span class="nt">&lt;/LevelPercent&gt;</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">        </span><span class="nt">&lt;VolumeGallons&gt;</span>4105<span class="nt">&lt;/VolumeGallons&gt;</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">        </span><span class="nt">&lt;TemperatureF&gt;</span>58.2<span class="nt">&lt;/TemperatureF&gt;</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">      </span><span class="nt">&lt;/Reading&gt;</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span><span class="nt">&lt;/Tank&gt;</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">  </span><span class="nt">&lt;/Tanks&gt;</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="nt">&lt;/TankScanExport&gt;</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Choosing the Right Format</p>
+<ul>
+<li>Use <strong>JSON</strong> for modern software integrations and web applications</li>
+<li>Use <strong>CSV</strong> when the consumer is a spreadsheet, database import, or legacy system</li>
+<li>Use <strong>XML</strong> when required by enterprise systems (SAP IDocs, EDI, etc.)</li>
+<li>Use <strong>Excel</strong> for business stakeholders who need formatted, ready-to-use reports</li>
+<li>Use <strong>PDF</strong> for formal compliance submissions and customer deliverables</li>
+</ul>
+</div>
+<hr />
+<h2 id="1210-webhooks-and-real-time-data-streaming">12.10 Webhooks and Real-Time Data Streaming</h2>
+<p>While polling the API on a schedule works for many use cases, some scenarios demand immediate notification when events occur. Webhooks and streaming address this need.</p>
+<h3 id="what-are-webhooks">What Are Webhooks?</h3>
+<p>A <strong>webhook</strong> is a user-defined HTTP callback. Instead of your system asking TankScan "has anything changed?" repeatedly (polling), TankScan tells your system "something just happened" the moment it occurs (push).</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant TS as TankScan Cloud
+    participant YS as Your System
+
+    Note over TS,YS: Polling Pattern (Inefficient)
+    loop Every 5 minutes
+        YS-&gt;&gt;TS: GET /tanks/12345/readings/latest
+        TS-&gt;&gt;YS: 200 OK (same data, no change)
+    end
+
+    Note over TS,YS: Webhook Pattern (Efficient)
+    TS-&gt;&gt;YS: POST /your-webhook-endpoint&lt;br/&gt;{"event": "level_alert", "tank_id": "12345", "level": 18.5}
+    YS-&gt;&gt;TS: 200 OK (acknowledged)</code></pre>
+<h3 id="configuring-webhooks">Configuring Webhooks</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Register a webhook endpoint</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;https://api.tankscan.com/api/v2/webhooks&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer YOUR_API_KEY&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="s1">    &quot;url&quot;: &quot;https://your-system.com/tankscan/events&quot;,</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="s1">    &quot;events&quot;: [&quot;level.alert&quot;, &quot;level.reading&quot;, &quot;sensor.offline&quot;, &quot;delivery.detected&quot;],</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="s1">    &quot;secret&quot;: &quot;your_webhook_signing_secret&quot;,</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="s1">    &quot;active&quot;: true</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="s1">  }&#39;</span>
+</code></pre></div>
+<h3 id="webhook-event-types">Webhook Event Types</h3>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Trigger</th>
+<th>Typical Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>level.alert</code></td>
+<td>Tank level crosses a configured threshold</td>
+<td>Trigger reorders, dispatch alerts</td>
+</tr>
+<tr>
+<td><code>level.reading</code></td>
+<td>New reading received from sensor</td>
+<td>Real-time dashboard updates</td>
+</tr>
+<tr>
+<td><code>sensor.offline</code></td>
+<td>Sensor stops reporting</td>
+<td>Maintenance dispatch</td>
+</tr>
+<tr>
+<td><code>sensor.battery_low</code></td>
+<td>Battery below threshold</td>
+<td>Preventive maintenance</td>
+</tr>
+<tr>
+<td><code>delivery.detected</code></td>
+<td>Significant level increase detected</td>
+<td>Delivery reconciliation</td>
+</tr>
+<tr>
+<td><code>consumption.anomaly</code></td>
+<td>Unusual consumption pattern detected</td>
+<td>Theft/leak investigation</td>
+</tr>
+<tr>
+<td><code>gateway.offline</code></td>
+<td>Gateway stops communicating</td>
+<td>Network troubleshooting</td>
+</tr>
+</tbody>
+</table>
+<h3 id="webhook-security">Webhook Security</h3>
+<div class="admonition warning">
+<p class="admonition-title">Verify Webhook Signatures</p>
+<p>Always verify that incoming webhook requests genuinely originate from TankScan. Every webhook request includes a signature header that you must validate:</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">hmac</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">verify_webhook</span><span class="p">(</span><span class="n">payload_body</span><span class="p">,</span> <span class="n">signature_header</span><span class="p">,</span> <span class="n">secret</span><span class="p">):</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Verify TankScan webhook signature.&quot;&quot;&quot;</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>    <span class="n">expected_signature</span> <span class="o">=</span> <span class="n">hmac</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>        <span class="n">key</span><span class="o">=</span><span class="n">secret</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">),</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>        <span class="n">msg</span><span class="o">=</span><span class="n">payload_body</span><span class="p">,</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>        <span class="n">digestmod</span><span class="o">=</span><span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>    <span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>    <span class="k">return</span> <span class="n">hmac</span><span class="o">.</span><span class="n">compare_digest</span><span class="p">(</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>        <span class="sa">f</span><span class="s2">&quot;sha256=</span><span class="si">{</span><span class="n">expected_signature</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>        <span class="n">signature_header</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>    <span class="p">)</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="c1"># In your webhook handler</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="kn">from</span><span class="w"> </span><span class="nn">flask</span><span class="w"> </span><span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">abort</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>
+<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/tankscan/events&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a><span class="k">def</span><span class="w"> </span><span class="nf">handle_webhook</span><span class="p">():</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>    <span class="n">signature</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;X-TankScan-Signature&#39;</span><span class="p">)</span>
+<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a>
+<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">verify_webhook</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">signature</span><span class="p">,</span> <span class="n">WEBHOOK_SECRET</span><span class="p">):</span>
+<a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a>        <span class="n">abort</span><span class="p">(</span><span class="mi">401</span><span class="p">)</span>  <span class="c1"># Reject unsigned/invalid requests</span>
+<a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a>
+<a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a>    <span class="n">event</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span>
+<a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a>    <span class="n">process_event</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+<a id="__codelineno-13-31" name="__codelineno-13-31" href="#__codelineno-13-31"></a>    <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">200</span>
+</code></pre></div>
+<h3 id="real-time-streaming">Real-Time Streaming</h3>
+<p>For applications that need continuous data streams (dashboards, analytics), TankScan supports Server-Sent Events (SSE):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1">// Browser-side JavaScript for real-time dashboard</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">eventSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">EventSource</span><span class="p">(</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="s1">&#39;https://api.tankscan.com/api/v2/stream/readings?token=YOUR_TOKEN&#39;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="p">);</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="nx">eventSource</span><span class="p">.</span><span class="nx">onmessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">    </span><span class="nx">updateDashboard</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">tank_id</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">level_percent</span><span class="p">);</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="p">};</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="nx">eventSource</span><span class="p">.</span><span class="nx">onerror</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Stream error:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">);</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w">    </span><span class="c1">// Implement reconnection logic</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="p">};</span>
+</code></pre></div>
+<hr />
+<h2 id="1211-building-custom-applications-on-tankscan-data">12.11 Building Custom Applications on TankScan Data</h2>
+<p>The TankScan API enables building entirely custom applications tailored to specific business needs.</p>
+<h3 id="common-custom-application-types">Common Custom Application Types</h3>
+<table>
+<thead>
+<tr>
+<th>Application</th>
+<th>Description</th>
+<th>Primary Users</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Customer Portal</strong></td>
+<td>White-labeled dashboard showing customers their own tank levels</td>
+<td>End customers</td>
+</tr>
+<tr>
+<td><strong>Dispatch Dashboard</strong></td>
+<td>Real-time map of all tanks with delivery urgency indicators</td>
+<td>Dispatch operators</td>
+</tr>
+<tr>
+<td><strong>Executive KPI Board</strong></td>
+<td>Aggregate metrics: fill rates, service levels, consumption trends</td>
+<td>Management</td>
+</tr>
+<tr>
+<td><strong>Field Technician App</strong></td>
+<td>Mobile app for sensor installation, diagnostics, maintenance</td>
+<td>Field technicians</td>
+</tr>
+<tr>
+<td><strong>Consumption Analytics</strong></td>
+<td>Deep analysis of usage patterns, forecasting</td>
+<td>Analysts</td>
+</tr>
+</tbody>
+</table>
+<h3 id="architecture-for-a-custom-web-application">Architecture for a Custom Web Application</h3>
+<pre class="mermaid"><code>flowchart TD
+    A[TankScan API] --&gt; B[Backend Server&lt;br/&gt;Node.js / Python / .NET]
+    B --&gt; C[Application Database&lt;br/&gt;PostgreSQL / MongoDB]
+    B --&gt; D[Frontend Application&lt;br/&gt;React / Vue / Angular]
+
+    B --&gt; E[Authentication&lt;br/&gt;Your user accounts]
+    B --&gt; F[Business Logic&lt;br/&gt;Custom rules, calculations]
+    B --&gt; G[Notification Service&lt;br/&gt;Email, SMS, Push]
+
+    D --&gt; H[Map View&lt;br/&gt;Tank locations]
+    D --&gt; I[Charts&lt;br/&gt;Level trends]
+    D --&gt; J[Tables&lt;br/&gt;Tank inventory]
+    D --&gt; K[Alerts Panel&lt;br/&gt;Active alarms]
+
+    style A fill:#FF9800,color:#fff
+    style B fill:#2196F3,color:#fff
+    style D fill:#4CAF50,color:#fff</code></pre>
+<h3 id="example-simple-python-dashboard">Example: Simple Python Dashboard</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="sd">Simple TankScan Dashboard using Streamlit</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">streamlit</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">st</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="c1"># Configuration</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="n">API_BASE</span> <span class="o">=</span> <span class="s2">&quot;https://api.tankscan.com/api/v2&quot;</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="n">API_KEY</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">secrets</span><span class="p">[</span><span class="s2">&quot;tankscan_api_key&quot;</span><span class="p">]</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Bearer </span><span class="si">{</span><span class="n">API_KEY</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">}</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="c1"># Page setup</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Tank Monitoring Dashboard&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a><span class="c1"># Fetch all tanks</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a><span class="n">tanks</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">API_BASE</span><span class="si">}</span><span class="s2">/tanks&quot;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>
+<a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a><span class="c1"># Display summary metrics</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a><span class="n">col1</span><span class="p">,</span> <span class="n">col2</span><span class="p">,</span> <span class="n">col3</span><span class="p">,</span> <span class="n">col4</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">columns</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a><span class="n">col1</span><span class="o">.</span><span class="n">metric</span><span class="p">(</span><span class="s2">&quot;Total Tanks&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tanks</span><span class="p">))</span>
+<a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a><span class="n">col2</span><span class="o">.</span><span class="n">metric</span><span class="p">(</span><span class="s2">&quot;Low Level&quot;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tanks</span> <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="s2">&quot;latest_level&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">))</span>
+<a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a><span class="n">col3</span><span class="o">.</span><span class="n">metric</span><span class="p">(</span><span class="s2">&quot;High Level&quot;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tanks</span> <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="s2">&quot;latest_level&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">90</span><span class="p">))</span>
+<a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a><span class="n">col4</span><span class="o">.</span><span class="n">metric</span><span class="p">(</span><span class="s2">&quot;Offline&quot;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tanks</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">t</span><span class="p">[</span><span class="s2">&quot;online&quot;</span><span class="p">]))</span>
+<a id="__codelineno-15-26" name="__codelineno-15-26" href="#__codelineno-15-26"></a>
+<a id="__codelineno-15-27" name="__codelineno-15-27" href="#__codelineno-15-27"></a><span class="c1"># Tank level chart for selected tank</span>
+<a id="__codelineno-15-28" name="__codelineno-15-28" href="#__codelineno-15-28"></a><span class="n">selected_tank</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">selectbox</span><span class="p">(</span>
+<a id="__codelineno-15-29" name="__codelineno-15-29" href="#__codelineno-15-29"></a>    <span class="s2">&quot;Select Tank&quot;</span><span class="p">,</span>
+<a id="__codelineno-15-30" name="__codelineno-15-30" href="#__codelineno-15-30"></a>    <span class="p">[(</span><span class="n">t</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tanks</span><span class="p">],</span>
+<a id="__codelineno-15-31" name="__codelineno-15-31" href="#__codelineno-15-31"></a>    <span class="n">format_func</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-15-32" name="__codelineno-15-32" href="#__codelineno-15-32"></a><span class="p">)</span>
+<a id="__codelineno-15-33" name="__codelineno-15-33" href="#__codelineno-15-33"></a>
+<a id="__codelineno-15-34" name="__codelineno-15-34" href="#__codelineno-15-34"></a><span class="k">if</span> <span class="n">selected_tank</span><span class="p">:</span>
+<a id="__codelineno-15-35" name="__codelineno-15-35" href="#__codelineno-15-35"></a>    <span class="n">readings</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+<a id="__codelineno-15-36" name="__codelineno-15-36" href="#__codelineno-15-36"></a>        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">API_BASE</span><span class="si">}</span><span class="s2">/tanks/</span><span class="si">{</span><span class="n">selected_tank</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">/readings&quot;</span><span class="p">,</span>
+<a id="__codelineno-15-37" name="__codelineno-15-37" href="#__codelineno-15-37"></a>        <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+<a id="__codelineno-15-38" name="__codelineno-15-38" href="#__codelineno-15-38"></a>        <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+<a id="__codelineno-15-39" name="__codelineno-15-39" href="#__codelineno-15-39"></a>            <span class="s2">&quot;start&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">30</span><span class="p">))</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(),</span>
+<a id="__codelineno-15-40" name="__codelineno-15-40" href="#__codelineno-15-40"></a>            <span class="s2">&quot;end&quot;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
+<a id="__codelineno-15-41" name="__codelineno-15-41" href="#__codelineno-15-41"></a>        <span class="p">}</span>
+<a id="__codelineno-15-42" name="__codelineno-15-42" href="#__codelineno-15-42"></a>    <span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<a id="__codelineno-15-43" name="__codelineno-15-43" href="#__codelineno-15-43"></a>
+<a id="__codelineno-15-44" name="__codelineno-15-44" href="#__codelineno-15-44"></a>    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">readings</span><span class="p">[</span><span class="s2">&quot;readings&quot;</span><span class="p">])</span>
+<a id="__codelineno-15-45" name="__codelineno-15-45" href="#__codelineno-15-45"></a>    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;timestamp&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;timestamp&quot;</span><span class="p">])</span>
+<a id="__codelineno-15-46" name="__codelineno-15-46" href="#__codelineno-15-46"></a>
+<a id="__codelineno-15-47" name="__codelineno-15-47" href="#__codelineno-15-47"></a>    <span class="n">st</span><span class="o">.</span><span class="n">line_chart</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;timestamp&quot;</span><span class="p">)[</span><span class="s2">&quot;level_percent&quot;</span><span class="p">])</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Development Best Practice</p>
+<p>Cache TankScan API responses in your application database to reduce API calls and improve response times. Tank levels typically update every 15-60 minutes, so caching for 5-10 minutes is perfectly acceptable for dashboard applications.</p>
+</div>
+<hr />
+<h2 id="1212-api-rate-limits-and-best-practices">12.12 API Rate Limits and Best Practices</h2>
+<p>To ensure fair usage and system stability, TankScan enforces rate limits on API access.</p>
+<h3 id="rate-limit-tiers">Rate Limit Tiers</h3>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Requests/Minute</th>
+<th>Requests/Hour</th>
+<th>Requests/Day</th>
+<th>Typical Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Standard</strong></td>
+<td>60</td>
+<td>1,000</td>
+<td>10,000</td>
+<td>Single-system integration</td>
+</tr>
+<tr>
+<td><strong>Professional</strong></td>
+<td>300</td>
+<td>5,000</td>
+<td>50,000</td>
+<td>Multi-system integration</td>
+</tr>
+<tr>
+<td><strong>Enterprise</strong></td>
+<td>1,000</td>
+<td>20,000</td>
+<td>200,000</td>
+<td>High-volume, real-time applications</td>
+</tr>
+<tr>
+<td><strong>Custom</strong></td>
+<td>Negotiable</td>
+<td>Negotiable</td>
+<td>Negotiable</td>
+<td>Special requirements</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rate-limit-headers">Rate Limit Headers</h3>
+<p>Every API response includes headers indicating your current rate limit status:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>X-RateLimit-Limit: 60
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>X-RateLimit-Remaining: 45
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>X-RateLimit-Reset: 1710512460
+</code></pre></div>
+<h3 id="implementing-exponential-backoff">Implementing Exponential Backoff</h3>
+<p>When rate limited (HTTP 429), implement exponential backoff:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">api_request_with_retry</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">max_retries</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Make API request with exponential backoff on rate limiting.&quot;&quot;&quot;</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>    <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_retries</span><span class="p">):</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>            <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>        <span class="k">elif</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">429</span><span class="p">:</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>            <span class="c1"># Rate limited - back off exponentially</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>            <span class="n">wait_time</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">attempt</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.5</span><span class="p">)</span>
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>            <span class="n">retry_after</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Retry-After&#39;</span><span class="p">)</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>            <span class="k">if</span> <span class="n">retry_after</span><span class="p">:</span>
+<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>                <span class="n">wait_time</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">wait_time</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">retry_after</span><span class="p">))</span>
+<a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>
+<a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Rate limited. Retrying in </span><span class="si">{</span><span class="n">wait_time</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">s...&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a>            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">wait_time</span><span class="p">)</span>
+<a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a>        <span class="k">elif</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">&gt;=</span> <span class="mi">500</span><span class="p">:</span>
+<a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a>            <span class="c1"># Server error - retry with backoff</span>
+<a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a>            <span class="n">wait_time</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">attempt</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.5</span><span class="p">)</span>
+<a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a>            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">wait_time</span><span class="p">)</span>
+<a id="__codelineno-17-24" name="__codelineno-17-24" href="#__codelineno-17-24"></a>        <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-17-25" name="__codelineno-17-25" href="#__codelineno-17-25"></a>            <span class="c1"># Client error - don&#39;t retry</span>
+<a id="__codelineno-17-26" name="__codelineno-17-26" href="#__codelineno-17-26"></a>            <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+<a id="__codelineno-17-27" name="__codelineno-17-27" href="#__codelineno-17-27"></a>
+<a id="__codelineno-17-28" name="__codelineno-17-28" href="#__codelineno-17-28"></a>    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Max retries (</span><span class="si">{</span><span class="n">max_retries</span><span class="si">}</span><span class="s2">) exceeded&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="best-practices-summary">Best Practices Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Practice</th>
+<th>Description</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cache responses</strong></td>
+<td>Store data locally; re-fetch only when stale</td>
+<td>Reduces API calls by 80-90%</td>
+</tr>
+<tr>
+<td><strong>Use webhooks</strong></td>
+<td>Subscribe to events instead of polling</td>
+<td>Eliminates unnecessary polling</td>
+</tr>
+<tr>
+<td><strong>Batch requests</strong></td>
+<td>Fetch multiple tanks in one call where possible</td>
+<td>Fewer total requests</td>
+</tr>
+<tr>
+<td><strong>Request only needed fields</strong></td>
+<td>Use field selection parameters</td>
+<td>Smaller payloads, faster responses</td>
+</tr>
+<tr>
+<td><strong>Implement backoff</strong></td>
+<td>Exponential backoff on 429/5xx responses</td>
+<td>Prevents cascading failures</td>
+</tr>
+<tr>
+<td><strong>Monitor usage</strong></td>
+<td>Track your API consumption against limits</td>
+<td>Avoid unexpected rate limiting</td>
+</tr>
+<tr>
+<td><strong>Use compression</strong></td>
+<td>Set <code>Accept-Encoding: gzip</code></td>
+<td>Reduces bandwidth by 60-80%</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1213-security-and-authentication">12.13 Security and Authentication</h2>
+<p>API security is non-negotiable. Tank level data can reveal sensitive business information including inventory levels, consumption patterns, and customer locations.</p>
+<h3 id="authentication-methods">Authentication Methods</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Security Level</th>
+<th>Use Case</th>
+<th>Token Lifetime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>API Key</strong></td>
+<td>Good</td>
+<td>Server-to-server integrations</td>
+<td>Long-lived (rotate quarterly)</td>
+</tr>
+<tr>
+<td><strong>OAuth 2.0</strong></td>
+<td>Better</td>
+<td>User-authorized applications</td>
+<td>Short-lived (1 hour typical)</td>
+</tr>
+<tr>
+<td><strong>OAuth 2.0 + PKCE</strong></td>
+<td>Best</td>
+<td>Single-page and mobile applications</td>
+<td>Short-lived with refresh</td>
+</tr>
+</tbody>
+</table>
+<h3 id="api-key-authentication">API Key Authentication</h3>
+<p>The simplest method -- suitable for server-to-server integrations where the key can be securely stored:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># API Key in Authorization header</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer ts_live_abc123def456&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">     </span>https://api.tankscan.com/api/v2/tanks
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">API Key Security Rules</p>
+<ul>
+<li><strong>Never</strong> embed API keys in client-side code (JavaScript, mobile apps)</li>
+<li><strong>Never</strong> commit API keys to version control (Git)</li>
+<li><strong>Always</strong> use environment variables or secure key management services</li>
+<li><strong>Always</strong> use different keys for development and production</li>
+<li><strong>Rotate</strong> keys quarterly and immediately if compromised</li>
+<li><strong>Scope</strong> keys to minimum required permissions (read-only if write not needed)</li>
+</ul>
+</div>
+<h3 id="oauth-20-authorization-code-flow">OAuth 2.0 Authorization Code Flow</h3>
+<p>For applications where users authorize access to their TankScan data:</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant U as User
+    participant App as Your Application
+    participant TS as TankScan Auth Server
+    participant API as TankScan API
+
+    U-&gt;&gt;App: Click "Connect TankScan"
+    App-&gt;&gt;TS: Redirect to authorization URL
+    TS-&gt;&gt;U: Show login &amp; consent screen
+    U-&gt;&gt;TS: Approve access
+    TS-&gt;&gt;App: Redirect with authorization code
+    App-&gt;&gt;TS: Exchange code for access token
+    TS-&gt;&gt;App: Return access_token + refresh_token
+    App-&gt;&gt;API: GET /tanks (with access_token)
+    API-&gt;&gt;App: Return tank data
+
+    Note over App,TS: When access_token expires:
+    App-&gt;&gt;TS: POST /token (refresh_token)
+    TS-&gt;&gt;App: New access_token</code></pre>
+<h3 id="oauth-20-implementation-example">OAuth 2.0 Implementation Example</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">authlib.integrations.requests_client</span><span class="w"> </span><span class="kn">import</span> <span class="n">OAuth2Session</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="c1"># OAuth2 configuration</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="n">client_id</span> <span class="o">=</span> <span class="s2">&quot;your_client_id&quot;</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="n">client_secret</span> <span class="o">=</span> <span class="s2">&quot;your_client_secret&quot;</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="n">authorization_url</span> <span class="o">=</span> <span class="s2">&quot;https://auth.tankscan.com/authorize&quot;</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="n">token_url</span> <span class="o">=</span> <span class="s2">&quot;https://auth.tankscan.com/token&quot;</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="n">redirect_uri</span> <span class="o">=</span> <span class="s2">&quot;https://your-app.com/callback&quot;</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="c1"># Step 1: Redirect user to authorization</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="n">session</span> <span class="o">=</span> <span class="n">OAuth2Session</span><span class="p">(</span><span class="n">client_id</span><span class="p">,</span> <span class="n">client_secret</span><span class="p">,</span> <span class="n">redirect_uri</span><span class="o">=</span><span class="n">redirect_uri</span><span class="p">)</span>
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="n">uri</span><span class="p">,</span> <span class="n">state</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">create_authorization_url</span><span class="p">(</span><span class="n">authorization_url</span><span class="p">)</span>
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="c1"># Redirect user to `uri`</span>
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>
+<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="c1"># Step 2: Handle callback and exchange code for token</span>
+<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a><span class="n">token</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">fetch_token</span><span class="p">(</span>
+<a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a>    <span class="n">token_url</span><span class="p">,</span>
+<a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a>    <span class="n">authorization_response</span><span class="o">=</span><span class="n">callback_url</span>
+<a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a><span class="p">)</span>
+<a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a>
+<a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a><span class="c1"># Step 3: Make authenticated API calls</span>
+<a id="__codelineno-19-22" name="__codelineno-19-22" href="#__codelineno-19-22"></a><span class="n">response</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://api.tankscan.com/api/v2/tanks&quot;</span><span class="p">)</span>
+<a id="__codelineno-19-23" name="__codelineno-19-23" href="#__codelineno-19-23"></a><span class="n">tanks</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="security-best-practices">Security Best Practices</h3>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Practice</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Transport</strong></td>
+<td>HTTPS only (TLS 1.2+)</td>
+<td>API rejects HTTP connections</td>
+</tr>
+<tr>
+<td><strong>Authentication</strong></td>
+<td>OAuth 2.0 or API keys</td>
+<td>Required for all endpoints</td>
+</tr>
+<tr>
+<td><strong>Authorization</strong></td>
+<td>Role-based access control</td>
+<td>Scope tokens to specific permissions</td>
+</tr>
+<tr>
+<td><strong>Input Validation</strong></td>
+<td>Validate all API inputs</td>
+<td>Prevents injection attacks</td>
+</tr>
+<tr>
+<td><strong>Rate Limiting</strong></td>
+<td>Throttle excessive requests</td>
+<td>Prevents abuse and DDoS</td>
+</tr>
+<tr>
+<td><strong>Logging</strong></td>
+<td>Audit all API access</td>
+<td>Detect unauthorized access patterns</td>
+</tr>
+<tr>
+<td><strong>Encryption at Rest</strong></td>
+<td>Encrypt stored data</td>
+<td>Protects against data breach</td>
+</tr>
+<tr>
+<td><strong>IP Allowlisting</strong></td>
+<td>Optional IP-based access control</td>
+<td>Additional layer for enterprise</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1214-integration-case-studies">12.14 Integration Case Studies</h2>
+<h3 id="case-study-1-fuel-distributor-erp-integration">Case Study 1: Fuel Distributor -- ERP Integration</h3>
+<p><strong>Company:</strong> Regional fuel distributor with 800 monitored tanks across 400 customer sites</p>
+<p><strong>Integration:</strong> TankScan API to SAP Business One</p>
+<p><strong>Architecture:</strong></p>
+<ul>
+<li>Custom middleware running on Azure Functions</li>
+<li>Polls TankScan API every 15 minutes for all tank readings</li>
+<li>Creates inventory adjustments in SAP for each customer's tank</li>
+<li>Generates purchase orders when tanks fall below 25%</li>
+<li>Reconciles deliveries by comparing pre/post delivery levels</li>
+</ul>
+<p><strong>Results:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Before Integration</th>
+<th>After Integration</th>
+<th>Improvement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Order processing time</td>
+<td>45 minutes manual</td>
+<td>2 minutes automated</td>
+<td>96% reduction</td>
+</tr>
+<tr>
+<td>Delivery accuracy</td>
+<td>82% on-time</td>
+<td>97% on-time</td>
+<td>18% improvement</td>
+</tr>
+<tr>
+<td>Billing disputes</td>
+<td>12 per month</td>
+<td>1 per month</td>
+<td>92% reduction</td>
+</tr>
+<tr>
+<td>Staff time on data entry</td>
+<td>4 FTE</td>
+<td>0.5 FTE</td>
+<td>87% reduction</td>
+</tr>
+</tbody>
+</table>
+<h3 id="case-study-2-chemical-company-scada-integration">Case Study 2: Chemical Company -- SCADA Integration</h3>
+<p><strong>Company:</strong> Specialty chemical manufacturer with 150 tanks across 3 plants</p>
+<p><strong>Integration:</strong> TankScan API to Ignition SCADA via OPC UA</p>
+<p><strong>Architecture:</strong></p>
+<ul>
+<li>Ignition OPC UA client connects to TankScan's OPC UA endpoint</li>
+<li>Remote tank levels displayed alongside local process variables</li>
+<li>Alarm integration with Ignition's alarm pipeline</li>
+<li>Historical data stored in Ignition's historian alongside process data</li>
+</ul>
+<p><strong>Results:</strong></p>
+<ul>
+<li>Unified view of all tanks (local wired + remote wireless) in one SCADA display</li>
+<li>Reduced operator training time (one system to learn instead of two)</li>
+<li>Faster response to remote tank issues (alarm latency reduced from 30 minutes to 30 seconds)</li>
+<li>Historical analysis spans both local and remote data</li>
+</ul>
+<h3 id="case-study-3-convenience-store-chain-custom-application">Case Study 3: Convenience Store Chain -- Custom Application</h3>
+<p><strong>Company:</strong> 250-location convenience store chain with underground fuel tanks</p>
+<p><strong>Integration:</strong> TankScan API to custom mobile application</p>
+<p><strong>Architecture:</strong></p>
+<ul>
+<li>React Native mobile app for store managers</li>
+<li>Node.js backend with PostgreSQL database</li>
+<li>TankScan webhooks for real-time alert forwarding</li>
+<li>Push notifications for critical alerts</li>
+</ul>
+<p><strong>Key Features Built:</strong></p>
+<ol>
+<li>Store managers see their location's tank levels on their phone</li>
+<li>Regional managers see aggregate dashboard of all locations</li>
+<li>Automatic notification when delivery truck is needed</li>
+<li>Weekly consumption reports by location and product type</li>
+<li>Exception alerts: unusual overnight consumption (potential theft)</li>
+</ol>
+<hr />
+<h2 id="chapter-12-summary">Chapter 12 Summary</h2>
+<p>This chapter covered the full spectrum of TankScan cloud integration capabilities:</p>
+<ul>
+<li><strong>Integration eliminates data silos</strong> and enables automated workflows that save significant labor costs</li>
+<li><strong>TankScan's REST API</strong> follows open standards (JSON over HTTPS) with robust authentication</li>
+<li><strong>Core API operations</strong> include retrieving tank lists, current readings, and historical data</li>
+<li><strong>Cloud-to-cloud integration</strong> patterns include polling, webhooks, middleware, and data lake approaches</li>
+<li><strong>ERP integration</strong> with SAP, Oracle, and NetSuite automates inventory, ordering, and billing</li>
+<li><strong>SCADA integration</strong> via OPC UA, MQTT, and Modbus unifies local and remote monitoring</li>
+<li><strong>Fleet management integration</strong> connects tank data to dispatch and route optimization</li>
+<li><strong>Multiple export formats</strong> (JSON, CSV, XML, Excel, PDF) serve different consumer needs</li>
+<li><strong>Webhooks</strong> provide real-time, event-driven data push instead of inefficient polling</li>
+<li><strong>Custom applications</strong> can be built on the API for tailored business needs</li>
+<li><strong>Rate limiting and best practices</strong> ensure reliable, sustainable API usage</li>
+<li><strong>Security</strong> through OAuth 2.0, API keys, HTTPS, and access controls protects sensitive data</li>
+</ul>
+<hr />
+<h2 id="review-questions">Review Questions</h2>
+<div class="admonition question">
+<p class="admonition-title">Question 1 -- Knowledge (Remember)</p>
+<p>List the five standard HTTP methods used in REST APIs and describe what operation each performs.</p>
+<details class="success">
+<summary>Answer</summary>
+<ol>
+<li><strong>GET</strong> -- Read: Retrieves a resource or collection of resources</li>
+<li><strong>POST</strong> -- Create: Creates a new resource</li>
+<li><strong>PUT</strong> -- Update (full): Replaces a resource entirely with the provided data</li>
+<li><strong>PATCH</strong> -- Update (partial): Modifies specific fields of an existing resource</li>
+<li><strong>DELETE</strong> -- Remove: Deletes a resource</li>
+</ol>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 2 -- Comprehension (Understand)</p>
+<p>Explain the difference between API polling and webhooks. Why would you choose webhooks over polling for a real-time dispatch dashboard?</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>Polling</strong> is when the client repeatedly sends requests to the API at regular intervals (e.g., every 5 minutes) asking "has anything changed?" This is simple but wasteful because most requests return the same data with no changes.</p>
+<p><strong>Webhooks</strong> are the reverse: the server sends a request to the client only when an event actually occurs. The client registers a callback URL, and TankScan pushes event data to that URL in real-time.</p>
+<p>For a real-time dispatch dashboard, webhooks are superior because: (1) they provide <strong>immediate notification</strong> -- dispatchers see alerts within seconds, not up to 5 minutes later; (2) they are <strong>more efficient</strong> -- no wasted API calls when nothing has changed; (3) they <strong>scale better</strong> -- monitoring 1,000 tanks via polling requires 1,000 requests per interval, while webhooks only fire when events actually occur.</p>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 3 -- Application (Apply)</p>
+<p>A distributor wants to automatically create a delivery order in their ERP system when any tank drops below 25% full. The delivery volume should fill the tank to 90%. Write pseudocode for this integration, including the TankScan API call and the ERP order creation.</p>
+<details class="success">
+<summary>Answer</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a># Webhook handler for low-level alerts
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>function handle_tankscan_webhook(event):
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>    if event.type != &quot;level.alert&quot;:
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>        return
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>    if event.level_percent &gt; 25:
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>        return  # Not below threshold
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>    # Get tank details from TankScan API
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>    tank = GET /api/v2/tanks/{event.tank_id}
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>    # Calculate delivery volume needed
+<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>    target_level = 0.90  # Fill to 90%
+<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a>    current_level = event.level_percent / 100
+<a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a>    capacity = tank.capacity_gallons
+<a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a>    volume_needed = capacity * (target_level - current_level)
+<a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a>
+<a id="__codelineno-20-18" name="__codelineno-20-18" href="#__codelineno-20-18"></a>    # Create order in ERP
+<a id="__codelineno-20-19" name="__codelineno-20-19" href="#__codelineno-20-19"></a>    order = ERP.create_sales_order(
+<a id="__codelineno-20-20" name="__codelineno-20-20" href="#__codelineno-20-20"></a>        customer_id = tank.customer_id,
+<a id="__codelineno-20-21" name="__codelineno-20-21" href="#__codelineno-20-21"></a>        product = tank.product_type,
+<a id="__codelineno-20-22" name="__codelineno-20-22" href="#__codelineno-20-22"></a>        quantity = round(volume_needed),
+<a id="__codelineno-20-23" name="__codelineno-20-23" href="#__codelineno-20-23"></a>        unit = &quot;gallons&quot;,
+<a id="__codelineno-20-24" name="__codelineno-20-24" href="#__codelineno-20-24"></a>        delivery_address = tank.location.address,
+<a id="__codelineno-20-25" name="__codelineno-20-25" href="#__codelineno-20-25"></a>        priority = &quot;normal&quot; if event.level_percent &gt; 15 else &quot;urgent&quot;,
+<a id="__codelineno-20-26" name="__codelineno-20-26" href="#__codelineno-20-26"></a>        notes = f&quot;Auto-generated from TankScan alert. Current level: {event.level_percent}%&quot;
+<a id="__codelineno-20-27" name="__codelineno-20-27" href="#__codelineno-20-27"></a>    )
+<a id="__codelineno-20-28" name="__codelineno-20-28" href="#__codelineno-20-28"></a>
+<a id="__codelineno-20-29" name="__codelineno-20-29" href="#__codelineno-20-29"></a>    # Log the automated order
+<a id="__codelineno-20-30" name="__codelineno-20-30" href="#__codelineno-20-30"></a>    log(f&quot;Created order {order.id} for {volume_needed} gal to tank {event.tank_id}&quot;)
+</code></pre></div>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 4 -- Analysis (Analyze)</p>
+<p>Compare the four cloud-to-cloud integration patterns (API Polling, Webhooks, Middleware/iPaaS, Data Lake) for a scenario where a chemical company needs to: (a) trigger immediate safety alerts, (b) sync daily inventory to SAP, and (c) run quarterly consumption analytics. Which pattern would you recommend for each need, and why?</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>(a) Immediate safety alerts -- Webhooks</strong>
+Safety alerts require the lowest possible latency. Webhooks deliver events within seconds of occurrence, making them ideal. Polling could introduce up to a 5-minute delay (depending on polling interval), which is unacceptable for safety. Neither middleware nor data lake patterns are optimal for urgent, real-time alerts.</p>
+<p><strong>(b) Daily inventory sync to SAP -- Middleware/iPaaS (or API Polling)</strong>
+Daily inventory synchronization involves data transformation (TankScan JSON to SAP IDoc format) and error handling. A middleware platform like MuleSoft or Dell Boomi excels here because it can: transform data formats, handle retries on failures, log transactions for audit, and manage the SAP-specific protocols (BAPI, RFC). Simple API polling on a daily schedule could also work for simpler implementations.</p>
+<p><strong>(c) Quarterly consumption analytics -- Data Lake</strong>
+Analytics on three months of data across hundreds of tanks requires a data lake approach. TankScan data should be exported (via API or batch export) into a data lake (S3, Azure Blob, BigQuery), where it can be joined with other data sources and processed using analytics tools (Spark, Tableau, Python). The data lake provides the storage capacity and query performance needed for large-scale historical analysis.</p>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 5 -- Evaluation (Evaluate)</p>
+<p>A developer proposes embedding the TankScan API key directly in a React frontend application's JavaScript code, arguing that "it's only a read-only key and the data isn't that sensitive." Evaluate this approach and recommend a secure alternative.</p>
+<details class="success">
+<summary>Answer</summary>
+<p>This approach is <strong>fundamentally insecure</strong> and should be rejected, even for a read-only key:</p>
+<ol>
+<li><strong>API key exposure</strong>: Any JavaScript code sent to a browser is visible to users via browser developer tools. The API key would be trivially extractable.</li>
+<li><strong>Data sensitivity</strong>: Tank level data reveals customer inventory levels, consumption patterns, delivery schedules, and site locations. Competitors, thieves, or bad actors could exploit this information.</li>
+<li><strong>Abuse potential</strong>: Even a read-only key, once exposed, can be used to poll the API at high rates, potentially exhausting rate limits and disrupting legitimate operations.</li>
+<li><strong>Key rotation burden</strong>: If the key is compromised, every deployed instance of the frontend must be updated simultaneously.</li>
+<li><strong>Compliance risk</strong>: Many regulatory frameworks (SOC 2, ISO 27001) explicitly prohibit embedding credentials in client-side code.</li>
+</ol>
+<p><strong>Secure alternative:</strong> Implement a <strong>Backend-for-Frontend (BFF)</strong> pattern:
+- The React app authenticates users through your own authentication system (e.g., OAuth2)
+- Authenticated requests go to your backend server (Node.js, Python, etc.)
+- Your backend server holds the TankScan API key securely (in environment variables or a secrets manager)
+- Your backend makes API calls to TankScan on behalf of the user, returning only the data that user is authorized to see
+- This also enables you to implement additional authorization logic (e.g., customer A can only see their own tanks)</p>
+</details>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

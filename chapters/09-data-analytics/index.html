@@ -1,0 +1,3886 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive intelligent textbook on wireless tank monitoring technology, IoT systems, and the TankScan platform">
+      
+      
+        <meta name="author" content="Daniel Yarmoluk">
+      
+      
+      
+        <link rel="prev" href="../08-installation/">
+      
+      
+        <link rel="next" href="../10-fleet-management/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>9. Data Analytics and Optimization - TankScan Intelligent Textbook: Wireless Tank Monitoring Systems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-9-data-analytics-and-optimization" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" class="md-header__button md-logo" aria-label="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TankScan Intelligent Textbook: Wireless Tank Monitoring Systems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              9. Data Analytics and Optimization
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Yarmoluk/tankscan-course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../preface/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Preface
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../course-description/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Description
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-introduction/" class="md-tabs__link">
+          
+  
+  
+  Chapters
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../learning-graph/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learning Graph
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" class="md-nav__button md-logo" aria-label="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    TankScan Intelligent Textbook: Wireless Tank Monitoring Systems
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Yarmoluk/tankscan-course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../preface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction to Tank Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-wireless-sensors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Wireless Sensor Technologies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-measurement-tech/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Radar and Ultrasonic Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-iot-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. IoT Architecture and Connectivity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-aip-platform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. The Asset Intelligence Platform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-tank-types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Tank Types and Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-industry-solutions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Industry Solutions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Installation and Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Data Analytics and Optimization
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Data Analytics and Optimization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#91-introduction-from-data-to-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Introduction: From Data to Decisions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#92-data-collection-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 Data Collection Fundamentals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.2 Data Collection Fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#921-reporting-frequency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2.1 Reporting Frequency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#922-data-quality-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2.2 Data Quality Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#923-data-storage-and-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2.3 Data Storage and Retention
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#93-trend-analysis-and-consumption-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 Trend Analysis and Consumption Patterns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.3 Trend Analysis and Consumption Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#931-basic-consumption-rate-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3.1 Basic Consumption Rate Calculation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#932-moving-average-smoothing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3.2 Moving Average Smoothing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#933-consumption-pattern-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3.3 Consumption Pattern Visualization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#934-day-of-week-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3.4 Day-of-Week Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#94-seasonal-variation-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4 Seasonal Variation Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.4 Seasonal Variation Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#941-seasonal-decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4.1 Seasonal Decomposition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#942-heating-fuel-seasonal-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4.2 Heating Fuel Seasonal Pattern
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#943-using-seasonal-data-for-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4.3 Using Seasonal Data for Planning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#95-inventory-level-forecasting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5 Inventory Level Forecasting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.5 Inventory Level Forecasting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#951-days-to-empty-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5.1 Days-to-Empty Calculation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#952-reorder-point-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5.2 Reorder Point Calculation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#953-advanced-forecasting-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5.3 Advanced Forecasting Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#96-demand-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.6 Demand Prediction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.6 Demand Prediction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#961-from-individual-tanks-to-fleet-demand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.6.1 From Individual Tanks to Fleet Demand
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#962-external-factors-affecting-demand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.6.2 External Factors Affecting Demand
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#963-demand-prediction-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.6.3 Demand Prediction Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#97-anomaly-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.7 Anomaly Detection
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.7 Anomaly Detection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#971-types-of-anomalies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.7.1 Types of Anomalies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#972-statistical-anomaly-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.7.2 Statistical Anomaly Detection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#973-leak-detection-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.7.3 Leak Detection Algorithms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#974-theft-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.7.4 Theft Detection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#98-data-visualization-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.8 Data Visualization Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.8 Data Visualization Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#981-dashboard-design-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.8.1 Dashboard Design Principles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#982-key-visualizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.8.2 Key Visualizations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#983-report-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.8.3 Report Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#99-key-performance-indicators-kpis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.9 Key Performance Indicators (KPIs)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.9 Key Performance Indicators (KPIs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#991-operational-kpis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.9.1 Operational KPIs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#992-financial-kpis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.9.2 Financial KPIs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#993-data-quality-kpis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.9.3 Data Quality KPIs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#910-using-analytics-for-customer-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.10 Using Analytics for Customer Service
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.10 Using Analytics for Customer Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#9101-proactive-customer-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.10.1 Proactive Customer Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9102-customer-usage-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.10.2 Customer Usage Reports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9103-service-level-agreements-slas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.10.3 Service Level Agreements (SLAs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#911-python-analytics-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.11 Python Analytics Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.11 Python Analytics Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#9111-aip-data-export-and-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.11.1 AIP Data Export and API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9112-python-analytics-example-consumption-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.11.2 Python Analytics Example: Consumption Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9113-python-analytics-example-anomaly-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.11.3 Python Analytics Example: Anomaly Detection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9114-python-analytics-example-seasonal-decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.11.4 Python Analytics Example: Seasonal Decomposition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9115-python-analytics-example-demand-forecasting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.11.5 Python Analytics Example: Demand Forecasting
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#912-analytics-workflow-putting-it-all-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.12 Analytics Workflow: Putting It All Together
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.12 Analytics Workflow: Putting It All Together">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#9121-end-to-end-analytics-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.12.1 End-to-End Analytics Pipeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9122-analytics-maturity-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.12.2 Analytics Maturity Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#913-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.13 Chapter Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Review Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-fleet-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Fleet Management and Routing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-safety-compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Safety, Compliance, and Hazardous Environments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-cloud-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Cloud Integration and APIs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-predictive-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Predictive Maintenance and AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-case-studies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Case Studies and ROI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-future/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Future of Tank Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#91-introduction-from-data-to-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Introduction: From Data to Decisions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#92-data-collection-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 Data Collection Fundamentals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.2 Data Collection Fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#921-reporting-frequency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2.1 Reporting Frequency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#922-data-quality-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2.2 Data Quality Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#923-data-storage-and-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2.3 Data Storage and Retention
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#93-trend-analysis-and-consumption-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 Trend Analysis and Consumption Patterns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.3 Trend Analysis and Consumption Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#931-basic-consumption-rate-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3.1 Basic Consumption Rate Calculation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#932-moving-average-smoothing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3.2 Moving Average Smoothing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#933-consumption-pattern-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3.3 Consumption Pattern Visualization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#934-day-of-week-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3.4 Day-of-Week Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#94-seasonal-variation-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4 Seasonal Variation Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.4 Seasonal Variation Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#941-seasonal-decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4.1 Seasonal Decomposition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#942-heating-fuel-seasonal-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4.2 Heating Fuel Seasonal Pattern
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#943-using-seasonal-data-for-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4.3 Using Seasonal Data for Planning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#95-inventory-level-forecasting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5 Inventory Level Forecasting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.5 Inventory Level Forecasting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#951-days-to-empty-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5.1 Days-to-Empty Calculation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#952-reorder-point-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5.2 Reorder Point Calculation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#953-advanced-forecasting-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5.3 Advanced Forecasting Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#96-demand-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.6 Demand Prediction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.6 Demand Prediction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#961-from-individual-tanks-to-fleet-demand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.6.1 From Individual Tanks to Fleet Demand
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#962-external-factors-affecting-demand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.6.2 External Factors Affecting Demand
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#963-demand-prediction-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.6.3 Demand Prediction Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#97-anomaly-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.7 Anomaly Detection
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.7 Anomaly Detection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#971-types-of-anomalies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.7.1 Types of Anomalies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#972-statistical-anomaly-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.7.2 Statistical Anomaly Detection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#973-leak-detection-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.7.3 Leak Detection Algorithms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#974-theft-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.7.4 Theft Detection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#98-data-visualization-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.8 Data Visualization Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.8 Data Visualization Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#981-dashboard-design-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.8.1 Dashboard Design Principles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#982-key-visualizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.8.2 Key Visualizations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#983-report-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.8.3 Report Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#99-key-performance-indicators-kpis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.9 Key Performance Indicators (KPIs)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.9 Key Performance Indicators (KPIs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#991-operational-kpis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.9.1 Operational KPIs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#992-financial-kpis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.9.2 Financial KPIs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#993-data-quality-kpis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.9.3 Data Quality KPIs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#910-using-analytics-for-customer-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.10 Using Analytics for Customer Service
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.10 Using Analytics for Customer Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#9101-proactive-customer-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.10.1 Proactive Customer Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9102-customer-usage-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.10.2 Customer Usage Reports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9103-service-level-agreements-slas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.10.3 Service Level Agreements (SLAs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#911-python-analytics-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.11 Python Analytics Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.11 Python Analytics Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#9111-aip-data-export-and-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.11.1 AIP Data Export and API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9112-python-analytics-example-consumption-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.11.2 Python Analytics Example: Consumption Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9113-python-analytics-example-anomaly-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.11.3 Python Analytics Example: Anomaly Detection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9114-python-analytics-example-seasonal-decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.11.4 Python Analytics Example: Seasonal Decomposition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9115-python-analytics-example-demand-forecasting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.11.5 Python Analytics Example: Demand Forecasting
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#912-analytics-workflow-putting-it-all-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.12 Analytics Workflow: Putting It All Together
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.12 Analytics Workflow: Putting It All Together">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#9121-end-to-end-analytics-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.12.1 End-to-End Analytics Pipeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9122-analytics-maturity-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.12.2 Analytics Maturity Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#913-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.13 Chapter Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Review Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="chapter-9-data-analytics-and-optimization">Chapter 9: Data Analytics and Optimization</h1>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter, you will be able to:</p>
+<ul>
+<li>Describe the fundamentals of tank monitoring data collection and quality management</li>
+<li>Apply trend analysis techniques to identify consumption patterns and seasonal variations</li>
+<li>Calculate reorder points and forecast inventory levels using statistical methods</li>
+<li>Design anomaly detection algorithms for leak, theft, and meter error identification</li>
+<li>Interpret key performance indicators (KPIs) for tank monitoring operations</li>
+<li>Explain how Python analytics integration extends TankScan capabilities</li>
+</ul>
+<hr />
+<h2 id="91-introduction-from-data-to-decisions">9.1 Introduction: From Data to Decisions</h2>
+<p>A wireless tank monitor that reports a level reading every four hours generates approximately 2,190 data points per year. A fleet of 1,000 monitors generates 2.19 million data points per year. This data, in its raw form, is just numbers -- a stream of level measurements, timestamps, and device identifiers. The value of wireless monitoring lies not in the data itself, but in the <strong>insights extracted from that data</strong> and the <strong>actions those insights enable</strong>.</p>
+<p>Data analytics transforms raw level readings into:</p>
+<ul>
+<li><strong>Trend lines</strong> that reveal consumption patterns</li>
+<li><strong>Forecasts</strong> that predict when tanks will need service</li>
+<li><strong>Anomaly alerts</strong> that detect problems (leaks, theft, equipment failure)</li>
+<li><strong>Optimization recommendations</strong> that improve operational efficiency</li>
+<li><strong>KPIs</strong> that measure and improve business performance</li>
+</ul>
+<pre class="mermaid"><code>graph LR
+    A[Raw Data&lt;br&gt;Level Readings] --&gt; B[Data Processing&lt;br&gt;Cleaning, Validation]
+    B --&gt; C[Analysis&lt;br&gt;Trends, Patterns]
+    C --&gt; D[Insights&lt;br&gt;Forecasts, Anomalies]
+    D --&gt; E[Actions&lt;br&gt;Delivery, Investigation]
+    E --&gt; F[Outcomes&lt;br&gt;Efficiency, Savings]
+    F --&gt; |Feedback Loop| A
+
+    style A fill:#E0E0E0,color:#000
+    style B fill:#90CAF9,color:#000
+    style C fill:#4CAF50,color:#fff
+    style D fill:#FF9800,color:#fff
+    style E fill:#F44336,color:#fff
+    style F fill:#9C27B0,color:#fff</code></pre>
+<p>This chapter explores the analytics capabilities built into the AIP platform and the advanced analytics techniques that can be applied to tank monitoring data.</p>
+<hr />
+<h2 id="92-data-collection-fundamentals">9.2 Data Collection Fundamentals</h2>
+<h3 id="921-reporting-frequency">9.2.1 Reporting Frequency</h3>
+<p>The reporting frequency determines how many data points are collected and how granular the analysis can be.</p>
+<table>
+<thead>
+<tr>
+<th>Frequency</th>
+<th>Data Points/Day</th>
+<th>Data Points/Year</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1x per day</td>
+<td>1</td>
+<td>365</td>
+<td>Slow-consumption tanks, satellite (cost savings)</td>
+</tr>
+<tr>
+<td>4x per day (every 6 hrs)</td>
+<td>4</td>
+<td>1,460</td>
+<td>Standard monitoring, most applications</td>
+</tr>
+<tr>
+<td>6x per day (every 4 hrs)</td>
+<td>6</td>
+<td>2,190</td>
+<td>Active consumption, delivery-critical</td>
+</tr>
+<tr>
+<td>12x per day (every 2 hrs)</td>
+<td>12</td>
+<td>4,380</td>
+<td>High-throughput, leak detection</td>
+</tr>
+<tr>
+<td>24x per day (every 1 hr)</td>
+<td>24</td>
+<td>8,760</td>
+<td>Critical applications, real-time operations</td>
+</tr>
+<tr>
+<td>Event-driven</td>
+<td>Variable</td>
+<td>Variable</td>
+<td>Level change triggers additional reports</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Battery Life vs. Reporting Frequency</p>
+<p>Higher reporting frequencies consume more battery power. A TSR monitor configured to report once per day may last 10+ years on a single battery, while one reporting every hour may last only 2-3 years. The AIP platform allows per-device frequency configuration to balance data granularity with battery life.</p>
+</div>
+<h3 id="922-data-quality-management">9.2.2 Data Quality Management</h3>
+<p>Raw data from field sensors contains noise, gaps, and occasional errors. Data quality management is essential before analytics can be trusted.</p>
+<p><strong>Common data quality issues:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Cause</th>
+<th>Detection Method</th>
+<th>Correction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Missing readings</td>
+<td>Communication failure, battery depletion</td>
+<td>Gap in timestamp sequence</td>
+<td>Interpolation between valid readings</td>
+</tr>
+<tr>
+<td>Spike readings</td>
+<td>Electrical noise, multipath reflection</td>
+<td>Value exceeds physical limits or rate-of-change limits</td>
+<td>Median filter or outlier rejection</td>
+</tr>
+<tr>
+<td>Stuck readings</td>
+<td>Sensor failure, frozen sensor</td>
+<td>Identical values for extended period</td>
+<td>Flag as suspect; alert for inspection</td>
+</tr>
+<tr>
+<td>Gradual drift</td>
+<td>Sensor aging, calibration shift</td>
+<td>Comparison to manual measurement</td>
+<td>Recalibration; offset correction</td>
+</tr>
+<tr>
+<td>Offset error</td>
+<td>Installation change, product change</td>
+<td>Sudden shift in baseline level</td>
+<td>Recalibrate after verifying tank condition</td>
+</tr>
+<tr>
+<td>Temperature artifacts</td>
+<td>Thermal expansion of product</td>
+<td>Correlated with ambient temperature</td>
+<td>Apply temperature compensation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Data quality pipeline:</strong></p>
+<pre class="mermaid"><code>graph TD
+    A[Raw Sensor&lt;br&gt;Reading] --&gt; B{Within physical&lt;br&gt;limits?}
+    B --&gt;|No| C[Flag as invalid&lt;br&gt;Discard or hold]
+    B --&gt;|Yes| D{Rate of change&lt;br&gt;within limits?}
+    D --&gt;|No| E[Flag as suspicious&lt;br&gt;Require confirmation]
+    D --&gt;|Yes| F{Consistent with&lt;br&gt;recent trend?}
+    F --&gt;|No| G[Flag as anomaly&lt;br&gt;Possible event]
+    F --&gt;|Yes| H[Accept as valid&lt;br&gt;Store in database]
+
+    E --&gt; |Confirmed by next reading| H
+    E --&gt; |Not confirmed| C
+    G --&gt; |Delivery or withdrawal event| H
+    G --&gt; |No known event| I[Alert: Investigate]</code></pre>
+<h3 id="923-data-storage-and-retention">9.2.3 Data Storage and Retention</h3>
+<p>The AIP platform stores historical data for long-term analysis:</p>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Resolution</th>
+<th>Retention Period</th>
+<th>Storage Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raw readings</td>
+<td>As received (1-24 per day)</td>
+<td>2 years</td>
+<td>Time-series database</td>
+</tr>
+<tr>
+<td>Hourly summaries</td>
+<td>1 per hour (interpolated)</td>
+<td>5 years</td>
+<td>Aggregated database</td>
+</tr>
+<tr>
+<td>Daily summaries</td>
+<td>1 per day (min, max, avg, delta)</td>
+<td>10 years</td>
+<td>Aggregated database</td>
+</tr>
+<tr>
+<td>Events (deliveries, alerts)</td>
+<td>As they occur</td>
+<td>10 years</td>
+<td>Event database</td>
+</tr>
+<tr>
+<td>Monthly reports</td>
+<td>1 per month</td>
+<td>Indefinite</td>
+<td>Report archive</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="93-trend-analysis-and-consumption-patterns">9.3 Trend Analysis and Consumption Patterns</h2>
+<h3 id="931-basic-consumption-rate-calculation">9.3.1 Basic Consumption Rate Calculation</h3>
+<p>The simplest analytical metric is the consumption rate: how fast is the tank emptying?</p>
+<div class="arithmatex">\[\text{Consumption Rate} = \frac{\Delta V}{\Delta t} = \frac{V_1 - V_2}{t_2 - t_1}\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(V_1\)</span> = volume at time <span class="arithmatex">\(t_1\)</span> (earlier measurement)</li>
+<li><span class="arithmatex">\(V_2\)</span> = volume at time <span class="arithmatex">\(t_2\)</span> (later measurement)</li>
+<li><span class="arithmatex">\(\Delta t\)</span> = time interval (hours, days)</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Consumption Rate Calculation</p>
+<p>A diesel tank reported the following readings:</p>
+<ul>
+<li>Monday 6:00 AM: 4,200 gallons</li>
+<li>Monday 6:00 PM: 4,050 gallons</li>
+<li>Tuesday 6:00 AM: 3,920 gallons</li>
+<li>Tuesday 6:00 PM: 3,780 gallons</li>
+</ul>
+<p><strong>12-hour consumption rates:</strong></p>
+<ul>
+<li>Monday day: <span class="arithmatex">\((4200 - 4050) / 12 = 12.5\)</span> gallons/hour</li>
+<li>Monday night: <span class="arithmatex">\((4050 - 3920) / 12 = 10.8\)</span> gallons/hour</li>
+<li>Tuesday day: <span class="arithmatex">\((3920 - 3780) / 12 = 11.7\)</span> gallons/hour</li>
+</ul>
+<p><strong>Average consumption rate</strong>: <span class="arithmatex">\(11.7\)</span> gallons/hour or <span class="arithmatex">\(280\)</span> gallons/day</p>
+</div>
+<h3 id="932-moving-average-smoothing">9.3.2 Moving Average Smoothing</h3>
+<p>Raw consumption rates fluctuate. A <strong>moving average</strong> smooths these fluctuations to reveal the underlying trend.</p>
+<p><strong>Simple Moving Average (SMA):</strong></p>
+<div class="arithmatex">\[\text{SMA}_n = \frac{1}{n} \sum_{i=0}^{n-1} R_{t-i}\]</div>
+<p>Where <span class="arithmatex">\(R_{t-i}\)</span> is the consumption rate at time period <span class="arithmatex">\(t-i\)</span>, and <span class="arithmatex">\(n\)</span> is the number of periods in the window.</p>
+<p><strong>Exponential Moving Average (EMA):</strong></p>
+<div class="arithmatex">\[\text{EMA}_t = \alpha \cdot R_t + (1 - \alpha) \cdot \text{EMA}_{t-1}\]</div>
+<p>Where <span class="arithmatex">\(\alpha\)</span> is the smoothing factor (typically 0.1 to 0.3). The EMA gives more weight to recent data, making it more responsive to trend changes than the SMA.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Window</th>
+<th>Responsiveness</th>
+<th>Noise Rejection</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SMA (7-day)</td>
+<td>7 days</td>
+<td>Moderate</td>
+<td>Good</td>
+<td>Weekly pattern detection</td>
+</tr>
+<tr>
+<td>SMA (30-day)</td>
+<td>30 days</td>
+<td>Low</td>
+<td>Excellent</td>
+<td>Monthly trend analysis</td>
+</tr>
+<tr>
+<td>EMA (alpha = 0.2)</td>
+<td>Effective ~10 periods</td>
+<td>High</td>
+<td>Moderate</td>
+<td>Delivery forecasting</td>
+</tr>
+<tr>
+<td>EMA (alpha = 0.1)</td>
+<td>Effective ~20 periods</td>
+<td>Moderate</td>
+<td>Good</td>
+<td>Seasonal analysis</td>
+</tr>
+</tbody>
+</table>
+<h3 id="933-consumption-pattern-visualization">9.3.3 Consumption Pattern Visualization</h3>
+<p>The AIP platform provides several standard visualizations:</p>
+<p><strong>Level Over Time (Primary Chart):</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Volume (gal)
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>5000 |---._                     .---.
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>     |     ---._           .--&#39;     ---._
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>4000 |          ---._   .--&#39;             ---._
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>     |               --&#39;                      ---
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>3000 |   Delivery    Consumption    Delivery
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>     |   Event       Period         Event
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2000 |
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>     |________________________________________________
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>     Jan 1     Jan 8     Jan 15    Jan 22    Jan 29
+</code></pre></div>
+<p><strong>Consumption Rate Over Time:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Gal/Day
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>400 |
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    |  *
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>300 |     *  *              *  *
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    |  *     *  *        *     *
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>200 |           *  *  *           *  *
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    |                                *  *
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>100 |                                     *
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    |________________________________________________
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    Jan 1     Jan 8     Jan 15    Jan 22    Jan 29
+</code></pre></div>
+<h3 id="934-day-of-week-patterns">9.3.4 Day-of-Week Patterns</h3>
+<p>Many tanks show consistent day-of-week consumption patterns:</p>
+<table>
+<thead>
+<tr>
+<th>Customer Type</th>
+<th>Highest Days</th>
+<th>Lowest Days</th>
+<th>Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gas station</td>
+<td>Friday, Saturday</td>
+<td>Monday, Tuesday</td>
+<td>Weekend traffic</td>
+</tr>
+<tr>
+<td>Construction site</td>
+<td>Monday - Friday</td>
+<td>Saturday, Sunday</td>
+<td>Workweek only</td>
+</tr>
+<tr>
+<td>Restaurant (cooking oil)</td>
+<td>Friday, Saturday</td>
+<td>Monday</td>
+<td>Weekend dining</td>
+</tr>
+<tr>
+<td>Office building (HVAC fuel)</td>
+<td>Monday - Friday</td>
+<td>Saturday, Sunday</td>
+<td>Workweek HVAC</td>
+</tr>
+<tr>
+<td>Residential (heating)</td>
+<td>All days similar</td>
+<td>None</td>
+<td>Weather-driven, not schedule-driven</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="94-seasonal-variation-analysis">9.4 Seasonal Variation Analysis</h2>
+<h3 id="941-seasonal-decomposition">9.4.1 Seasonal Decomposition</h3>
+<p>Many tank monitoring applications exhibit strong seasonal patterns. <strong>Seasonal decomposition</strong> separates the data into three components:</p>
+<div class="arithmatex">\[Y_t = T_t + S_t + R_t\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(Y_t\)</span> = observed value at time <span class="arithmatex">\(t\)</span></li>
+<li><span class="arithmatex">\(T_t\)</span> = trend component (long-term direction)</li>
+<li><span class="arithmatex">\(S_t\)</span> = seasonal component (repeating pattern)</li>
+<li><span class="arithmatex">\(R_t\)</span> = residual component (random variation)</li>
+</ul>
+<pre class="mermaid"><code>graph TD
+    A[Raw Data&lt;br&gt;Monthly Consumption] --&gt; B[Decomposition&lt;br&gt;Algorithm]
+    B --&gt; C[Trend Component&lt;br&gt;Long-term growth/decline]
+    B --&gt; D[Seasonal Component&lt;br&gt;Monthly repeating pattern]
+    B --&gt; E[Residual Component&lt;br&gt;Unexplained variation]
+
+    C --&gt; F[Is the customer&lt;br&gt;growing or declining?]
+    D --&gt; G[What months have&lt;br&gt;highest/lowest usage?]
+    E --&gt; H[Are there anomalies&lt;br&gt;that need investigation?]</code></pre>
+<h3 id="942-heating-fuel-seasonal-pattern">9.4.2 Heating Fuel Seasonal Pattern</h3>
+<p>Heating fuel (heating oil, propane for residential heating) shows the most dramatic seasonality:</p>
+<table>
+<thead>
+<tr>
+<th>Month</th>
+<th>Typical Consumption Index</th>
+<th>Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>January</td>
+<td>1.8x average</td>
+<td>Peak</td>
+</tr>
+<tr>
+<td>February</td>
+<td>1.7x average</td>
+<td>Peak</td>
+</tr>
+<tr>
+<td>March</td>
+<td>1.3x average</td>
+<td>Shoulder</td>
+</tr>
+<tr>
+<td>April</td>
+<td>0.7x average</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>May</td>
+<td>0.3x average</td>
+<td>Minimum</td>
+</tr>
+<tr>
+<td>June</td>
+<td>0.2x average</td>
+<td>Minimum</td>
+</tr>
+<tr>
+<td>July</td>
+<td>0.2x average</td>
+<td>Minimum</td>
+</tr>
+<tr>
+<td>August</td>
+<td>0.2x average</td>
+<td>Minimum</td>
+</tr>
+<tr>
+<td>September</td>
+<td>0.4x average</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>October</td>
+<td>0.8x average</td>
+<td>Shoulder</td>
+</tr>
+<tr>
+<td>November</td>
+<td>1.3x average</td>
+<td>Shoulder</td>
+</tr>
+<tr>
+<td>December</td>
+<td>1.6x average</td>
+<td>Peak</td>
+</tr>
+</tbody>
+</table>
+<h3 id="943-using-seasonal-data-for-planning">9.4.3 Using Seasonal Data for Planning</h3>
+<p>Seasonal patterns inform critical business decisions:</p>
+<div class="admonition tip">
+<p class="admonition-title">Pre-Season Fill Strategy</p>
+<p>Fuel distributors often implement a "pre-season fill" strategy for heating fuel customers. Using historical seasonal data from TankScan, they identify all customers whose tanks will need delivery in the first month of heating season and pre-deliver during the off-peak shoulder months (September-October). This flattens the demand curve, reduces fleet stress during peak season, and ensures customers start winter with full tanks.</p>
+</div>
+<hr />
+<h2 id="95-inventory-level-forecasting">9.5 Inventory Level Forecasting</h2>
+<h3 id="951-days-to-empty-calculation">9.5.1 Days-to-Empty Calculation</h3>
+<p>The most fundamental forecast is <strong>days-to-empty</strong> (DTE) -- how many days until the tank reaches a critical level.</p>
+<p><strong>Simple DTE (linear projection):</strong></p>
+<div class="arithmatex">\[\text{DTE} = \frac{V_{\text{current}} - V_{\text{minimum}}}{\text{Average Daily Consumption}}\]</div>
+<div class="admonition example">
+<p class="admonition-title">Days-to-Empty Calculation</p>
+<ul>
+<li>Current volume: 3,200 gallons</li>
+<li>Minimum safe level: 500 gallons (pump suction limit)</li>
+<li>Average daily consumption (last 7 days): 180 gallons/day</li>
+</ul>
+<div class="arithmatex">\[\text{DTE} = \frac{3200 - 500}{180} = 15.0 \text{ days}\]</div>
+<p>The tank will reach the minimum safe level in approximately 15 days.</p>
+</div>
+<p><strong>Weighted DTE (accounting for trends):</strong></p>
+<p>If consumption is increasing (e.g., approaching winter), a simple average underestimates consumption. A weighted approach gives more influence to recent data:</p>
+<div class="arithmatex">\[\text{DTE}_{\text{weighted}} = \frac{V_{\text{current}} - V_{\text{minimum}}}{\text{Weighted Average Consumption}}\]</div>
+<p>Where the weighted average applies higher weights to more recent periods.</p>
+<h3 id="952-reorder-point-calculation">9.5.2 Reorder Point Calculation</h3>
+<p>The <strong>reorder point</strong> is the inventory level at which a delivery should be scheduled to prevent a run-out, accounting for delivery lead time.</p>
+<div class="arithmatex">\[\text{Reorder Point} = (D \times L) + SS\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(D\)</span> = average daily consumption (gallons/day)</li>
+<li><span class="arithmatex">\(L\)</span> = delivery lead time (days)</li>
+<li><span class="arithmatex">\(SS\)</span> = safety stock (buffer for variability)</li>
+</ul>
+<p><strong>Safety stock calculation:</strong></p>
+<div class="arithmatex">\[SS = z \times \sigma_D \times \sqrt{L}\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(z\)</span> = service level factor (1.65 for 95%, 2.33 for 99%)</li>
+<li><span class="arithmatex">\(\sigma_D\)</span> = standard deviation of daily consumption</li>
+<li><span class="arithmatex">\(L\)</span> = lead time in days</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Reorder Point Calculation</p>
+<p>A diesel tank at a construction site:</p>
+<ul>
+<li>Average daily consumption: 200 gallons/day</li>
+<li>Standard deviation of daily consumption: 50 gallons/day</li>
+<li>Delivery lead time: 3 days</li>
+<li>Desired service level: 99% (z = 2.33)</li>
+</ul>
+<p>Safety stock:
+$<span class="arithmatex">\(SS = 2.33 \times 50 \times \sqrt{3} = 2.33 \times 50 \times 1.732 = 202 \text{ gallons}\)</span>$</p>
+<p>Reorder point:
+$<span class="arithmatex">\(RP = (200 \times 3) + 202 = 802 \text{ gallons}\)</span>$</p>
+<p>When the tank reaches 802 gallons, a delivery should be scheduled.</p>
+</div>
+<h3 id="953-advanced-forecasting-methods">9.5.3 Advanced Forecasting Methods</h3>
+<p>The AIP platform supports increasingly sophisticated forecasting:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Complexity</th>
+<th>Accuracy</th>
+<th>Data Required</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linear projection</td>
+<td>Low</td>
+<td>Low-moderate</td>
+<td>7+ days history</td>
+<td>Simple, steady consumption</td>
+</tr>
+<tr>
+<td>Moving average</td>
+<td>Low</td>
+<td>Moderate</td>
+<td>30+ days history</td>
+<td>Smoothed trends</td>
+</tr>
+<tr>
+<td>Exponential smoothing</td>
+<td>Medium</td>
+<td>Moderate-high</td>
+<td>30+ days history</td>
+<td>Responsive to recent changes</td>
+</tr>
+<tr>
+<td>Seasonal decomposition</td>
+<td>Medium</td>
+<td>High</td>
+<td>1+ year history</td>
+<td>Seasonal products (heating fuel)</td>
+</tr>
+<tr>
+<td>ARIMA models</td>
+<td>High</td>
+<td>High</td>
+<td>1+ year history</td>
+<td>Complex patterns</td>
+</tr>
+<tr>
+<td>Machine learning (ML)</td>
+<td>Very high</td>
+<td>Very high</td>
+<td>2+ years, external data</td>
+<td>Enterprise optimization</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>graph TD
+    subgraph "Forecasting Hierarchy"
+        A[Simple Linear&lt;br&gt;Projection] --&gt; B[Moving Average&lt;br&gt;Smoothing]
+        B --&gt; C[Exponential&lt;br&gt;Smoothing]
+        C --&gt; D[Seasonal&lt;br&gt;Decomposition]
+        D --&gt; E[ARIMA / SARIMA&lt;br&gt;Models]
+        E --&gt; F[Machine Learning&lt;br&gt;Ensemble Models]
+    end
+
+    A --&gt; |"Low data,&lt;br&gt;low accuracy"| G[Increasing&lt;br&gt;Sophistication]
+    F --&gt; |"High data,&lt;br&gt;high accuracy"| G</code></pre>
+<hr />
+<h2 id="96-demand-prediction">9.6 Demand Prediction</h2>
+<h3 id="961-from-individual-tanks-to-fleet-demand">9.6.1 From Individual Tanks to Fleet Demand</h3>
+<p>While forecasting individual tank consumption is valuable, the real power comes from aggregating forecasts across an entire customer fleet to predict total demand.</p>
+<p><strong>Fleet demand aggregation:</strong></p>
+<div class="arithmatex">\[D_{\text{fleet}}(t) = \sum_{i=1}^{N} D_i(t)\]</div>
+<p>Where <span class="arithmatex">\(D_i(t)\)</span> is the predicted demand for tank <span class="arithmatex">\(i\)</span> at time <span class="arithmatex">\(t\)</span>, and <span class="arithmatex">\(N\)</span> is the total number of monitored tanks.</p>
+<p>This aggregated demand forecast enables:</p>
+<table>
+<thead>
+<tr>
+<th>Application</th>
+<th>How It Works</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Supply planning</td>
+<td>Total predicted demand informs bulk purchasing and terminal resupply</td>
+</tr>
+<tr>
+<td>Fleet sizing</td>
+<td>Peak demand periods determine how many trucks are needed</td>
+</tr>
+<tr>
+<td>Staff scheduling</td>
+<td>Predicted delivery volumes determine driver shifts</td>
+</tr>
+<tr>
+<td>Cash flow forecasting</td>
+<td>Revenue prediction based on delivery volumes</td>
+</tr>
+<tr>
+<td>Seasonal preparation</td>
+<td>Identify demand ramps early to build inventory</td>
+</tr>
+</tbody>
+</table>
+<h3 id="962-external-factors-affecting-demand">9.6.2 External Factors Affecting Demand</h3>
+<p>Tank consumption is influenced by external factors that can improve forecast accuracy when incorporated:</p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Applicable Products</th>
+<th>Correlation</th>
+<th>Data Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ambient temperature</td>
+<td>Heating fuels, propane</td>
+<td>Strong negative (cold = more consumption)</td>
+<td>Weather API</td>
+</tr>
+<tr>
+<td>Heating degree days</td>
+<td>Heating oil, propane</td>
+<td>Strong positive</td>
+<td>NOAA data</td>
+</tr>
+<tr>
+<td>Cooling degree days</td>
+<td>Diesel (generators for AC)</td>
+<td>Moderate positive</td>
+<td>NOAA data</td>
+</tr>
+<tr>
+<td>Day of week</td>
+<td>Commercial fuels</td>
+<td>Moderate (workday vs. weekend)</td>
+<td>Calendar</td>
+</tr>
+<tr>
+<td>Holidays</td>
+<td>All products</td>
+<td>Moderate (closed = less consumption)</td>
+<td>Calendar</td>
+</tr>
+<tr>
+<td>Crop cycle stage</td>
+<td>Agricultural fuels, fertilizer</td>
+<td>Strong seasonal</td>
+<td>Agricultural calendars</td>
+</tr>
+<tr>
+<td>Oil/gas production rate</td>
+<td>Production chemicals, fuel</td>
+<td>Strong</td>
+<td>Production data</td>
+</tr>
+<tr>
+<td>Economic indicators</td>
+<td>All products</td>
+<td>Weak-moderate</td>
+<td>Economic data</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Weather-Enhanced Forecasting</p>
+<p>For heating fuel customers, incorporating weather forecast data can dramatically improve delivery predictions. If a cold front is approaching, the system can proactively schedule deliveries to customers who will run low during the cold snap, rather than waiting for tanks to hit their normal reorder points.</p>
+</div>
+<h3 id="963-demand-prediction-workflow">9.6.3 Demand Prediction Workflow</h3>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Data as Historical Data
+    participant Weather as Weather Forecast
+    participant Model as Prediction Model
+    participant AIP as AIP Platform
+    participant Disp as Dispatcher
+
+    Data-&gt;&gt;Model: Historical consumption patterns
+    Weather-&gt;&gt;Model: 7-day temperature forecast
+    Model-&gt;&gt;Model: Generate demand forecast
+    Model-&gt;&gt;AIP: Predicted delivery needs&lt;br&gt;(next 7 days)
+    AIP-&gt;&gt;Disp: Delivery recommendations&lt;br&gt;Day 1: 12 deliveries, 8,400 gal&lt;br&gt;Day 2: 15 deliveries, 10,200 gal&lt;br&gt;Day 3: 18 deliveries, 12,600 gal
+
+    Note over Disp: Cold front arriving Day 3
+    Disp-&gt;&gt;Disp: Pre-position trucks&lt;br&gt;and schedule drivers</code></pre>
+<hr />
+<h2 id="97-anomaly-detection">9.7 Anomaly Detection</h2>
+<h3 id="971-types-of-anomalies">9.7.1 Types of Anomalies</h3>
+<p>Anomaly detection identifies tank behavior that deviates from expected patterns. Anomalies fall into several categories:</p>
+<table>
+<thead>
+<tr>
+<th>Anomaly Type</th>
+<th>Description</th>
+<th>Severity</th>
+<th>Possible Causes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sudden level drop</td>
+<td>Level decreases much faster than normal</td>
+<td>High</td>
+<td>Leak, theft, large withdrawal, meter error</td>
+</tr>
+<tr>
+<td>Gradual leak</td>
+<td>Consumption rate consistently higher than expected</td>
+<td>Medium</td>
+<td>Slow leak, unmetered withdrawal</td>
+</tr>
+<tr>
+<td>Unexpected delivery</td>
+<td>Level increases when no delivery was scheduled</td>
+<td>Medium</td>
+<td>Unauthorized delivery, rain in open tank</td>
+</tr>
+<tr>
+<td>Consumption stop</td>
+<td>Level stops decreasing when consumption is expected</td>
+<td>Low</td>
+<td>Customer closed, equipment shutdown</td>
+</tr>
+<tr>
+<td>Consumption spike</td>
+<td>Consumption rate dramatically increases</td>
+<td>Medium</td>
+<td>Increased production, equipment malfunction</td>
+</tr>
+<tr>
+<td>Oscillating readings</td>
+<td>Level goes up and down without deliveries</td>
+<td>Low</td>
+<td>Sensor issue, sloshing, thermal effects</td>
+</tr>
+</tbody>
+</table>
+<h3 id="972-statistical-anomaly-detection">9.7.2 Statistical Anomaly Detection</h3>
+<p>The simplest anomaly detection uses statistical thresholds:</p>
+<p><strong>Z-score method:</strong></p>
+<div class="arithmatex">\[z = \frac{x - \mu}{\sigma}\]</div>
+<p>Where <span class="arithmatex">\(x\)</span> is the current consumption rate, <span class="arithmatex">\(\mu\)</span> is the historical mean, and <span class="arithmatex">\(\sigma\)</span> is the historical standard deviation.</p>
+<table>
+<thead>
+<tr>
+<th>Z-score</th>
+<th>Probability</th>
+<th>Interpretation</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>z</td>
+<td>&lt; 1</td>
+<td>68% of data</td>
+</tr>
+<tr>
+<td>1 &lt;</td>
+<td>z</td>
+<td>&lt; 2</td>
+<td>27% of data</td>
+</tr>
+<tr>
+<td>2 &lt;</td>
+<td>z</td>
+<td>&lt; 3</td>
+<td>4.3% of data</td>
+</tr>
+<tr>
+<td></td>
+<td>z</td>
+<td>&gt; 3</td>
+<td>0.3% of data</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Anomaly Detection Example</p>
+<p>A diesel tank has a historical consumption rate of 150 gallons/day with a standard deviation of 30 gallons/day.</p>
+<ul>
+<li><strong>Day 1</strong>: Consumption = 160 gal/day. Z-score = (160-150)/30 = 0.33. <strong>Normal.</strong></li>
+<li><strong>Day 2</strong>: Consumption = 220 gal/day. Z-score = (220-150)/30 = 2.33. <strong>Unusual -- investigate.</strong></li>
+<li><strong>Day 3</strong>: Consumption = 350 gal/day. Z-score = (350-150)/30 = 6.67. <strong>Anomalous -- alert immediately.</strong></li>
+</ul>
+<p>Day 3's consumption is 6.67 standard deviations above the mean, which is extremely unlikely under normal conditions. Investigation reveals a cracked discharge line causing a leak.</p>
+</div>
+<h3 id="973-leak-detection-algorithms">9.7.3 Leak Detection Algorithms</h3>
+<p>Leak detection is one of the highest-value analytics capabilities. The AIP platform uses multiple methods:</p>
+<p><strong>Method 1: Rate-of-change threshold</strong></p>
+<p>If the level drops faster than a configurable threshold (e.g., more than 2x the normal consumption rate), an alert is triggered.</p>
+<p><strong>Method 2: Night/off-hours consumption</strong></p>
+<p>For tanks that should have zero consumption during certain hours (e.g., a construction site diesel tank at night), any consumption during those hours indicates a potential leak or theft.</p>
+<p><strong>Method 3: Material balance</strong></p>
+<p>Compare the total consumption measured by the tank monitor against the total consumption measured by downstream meters (flow meters, POS totals):</p>
+<div class="arithmatex">\[\text{Variance} = V_{\text{tank monitor}} - V_{\text{downstream meters}}\]</div>
+<p>A persistent positive variance (more consumption measured at the tank than at the meters) indicates a loss between the tank and the meter -- potentially a leak in the piping.</p>
+<p><strong>Method 4: Statistical process control (SPC)</strong></p>
+<p>Use control charts to monitor the consumption rate over time. Consumption rate values outside the control limits (<span class="arithmatex">\(\mu \pm 3\sigma\)</span>) or systematic patterns (e.g., a run of 7 consecutive points above the mean) indicate an out-of-control process.</p>
+<pre class="mermaid"><code>graph TD
+    A[Continuous Level&lt;br&gt;Monitoring] --&gt; B[Calculate&lt;br&gt;Consumption Rate]
+    B --&gt; C{Rate &gt; 2x&lt;br&gt;Normal?}
+    C --&gt;|Yes| D[ALERT:&lt;br&gt;Possible Major Leak]
+
+    B --&gt; E{Consumption during&lt;br&gt;off-hours?}
+    E --&gt;|Yes| F[ALERT:&lt;br&gt;Possible Theft or Leak]
+
+    B --&gt; G{Material balance&lt;br&gt;variance &gt; threshold?}
+    G --&gt;|Yes| H[ALERT:&lt;br&gt;Possible Piping Leak]
+
+    B --&gt; I{SPC control&lt;br&gt;chart violation?}
+    I --&gt;|Yes| J[ALERT:&lt;br&gt;Process Anomaly]
+
+    D &amp; F &amp; H &amp; J --&gt; K[Investigation&lt;br&gt;Required]</code></pre>
+<h3 id="974-theft-detection">9.7.4 Theft Detection</h3>
+<p>Theft detection uses the same anomaly detection techniques but with additional logic:</p>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Confidence Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Off-hours level drop</td>
+<td>Level decreases during nights/weekends when no authorized activity occurs</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Level drop without delivery ticket</td>
+<td>Volume removed but no corresponding sales or transfer record</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Repeated pattern</td>
+<td>Same amount removed at same time on multiple occasions</td>
+<td>Very High</td>
+</tr>
+<tr>
+<td>Location correlation</td>
+<td>Anomalies at remote, unattended sites</td>
+<td>Moderate (higher theft risk)</td>
+</tr>
+<tr>
+<td>Volume mismatch</td>
+<td>More removed than any authorized user would need</td>
+<td>Moderate</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="98-data-visualization-best-practices">9.8 Data Visualization Best Practices</h2>
+<h3 id="981-dashboard-design-principles">9.8.1 Dashboard Design Principles</h3>
+<p>Effective tank monitoring dashboards follow established data visualization principles:</p>
+<table>
+<thead>
+<tr>
+<th>Principle</th>
+<th>Application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Overview first, details on demand</td>
+<td>Show fleet summary; allow drill-down to individual tanks</td>
+</tr>
+<tr>
+<td>Color for meaning, not decoration</td>
+<td>Green = OK, Yellow = attention needed, Red = critical</td>
+</tr>
+<tr>
+<td>Consistent scales</td>
+<td>All tanks in a view should use the same percentage or volume scale</td>
+</tr>
+<tr>
+<td>Time context</td>
+<td>Always show time range; provide easy range selection (day, week, month, year)</td>
+</tr>
+<tr>
+<td>Minimize clutter</td>
+<td>Show only actionable information; hide noise</td>
+</tr>
+<tr>
+<td>Anomaly highlighting</td>
+<td>Visually distinguish anomalous readings from normal ones</td>
+</tr>
+</tbody>
+</table>
+<h3 id="982-key-visualizations">9.8.2 Key Visualizations</h3>
+<p><strong>1. Tank Level Gauge (Single Tank)</strong></p>
+<p>A simple gauge showing current fill level, with color coding:</p>
+<ul>
+<li>0-10%: Red (critical)</li>
+<li>10-25%: Orange (low, needs delivery)</li>
+<li>25-75%: Green (normal)</li>
+<li>75-95%: Green (full)</li>
+<li>95-100%: Blue (recently filled)</li>
+</ul>
+<p><strong>2. Fleet Heatmap (Multi-Tank)</strong></p>
+<p>A grid showing all tanks, color-coded by fill level, allowing rapid identification of tanks needing attention.</p>
+<p><strong>3. Consumption Trend Chart</strong></p>
+<p>Time-series chart showing volume over time, with delivery events marked and trend line overlay.</p>
+<p><strong>4. Days-to-Empty Bar Chart</strong></p>
+<p>Horizontal bar chart showing all tanks sorted by days-to-empty, with color coding for urgency.</p>
+<p><strong>5. Geographic Map View</strong></p>
+<p>Map showing tank locations, with color-coded markers for fill level. Enables geographic clustering for route planning.</p>
+<h3 id="983-report-types">9.8.3 Report Types</h3>
+<p>The AIP platform generates several standard report types:</p>
+<table>
+<thead>
+<tr>
+<th>Report</th>
+<th>Frequency</th>
+<th>Content</th>
+<th>Audience</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Daily summary</td>
+<td>Daily</td>
+<td>All alerts, deliveries, current levels</td>
+<td>Operations</td>
+</tr>
+<tr>
+<td>Weekly operations</td>
+<td>Weekly</td>
+<td>Consumption trends, delivery efficiency, fleet status</td>
+<td>Management</td>
+</tr>
+<tr>
+<td>Monthly inventory</td>
+<td>Monthly</td>
+<td>Beginning/ending inventory, deliveries, consumption</td>
+<td>Accounting</td>
+</tr>
+<tr>
+<td>Anomaly report</td>
+<td>As needed</td>
+<td>Details of detected anomalies, investigation status</td>
+<td>Operations</td>
+</tr>
+<tr>
+<td>Customer report</td>
+<td>Monthly</td>
+<td>Individual customer tank history, delivery summary</td>
+<td>Customer-facing</td>
+</tr>
+<tr>
+<td>Reconciliation</td>
+<td>Monthly</td>
+<td>Book vs. physical inventory comparison</td>
+<td>Accounting/Compliance</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="99-key-performance-indicators-kpis">9.9 Key Performance Indicators (KPIs)</h2>
+<h3 id="991-operational-kpis">9.9.1 Operational KPIs</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Definition</th>
+<th>Target</th>
+<th>Improvement Lever</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Run-out rate</td>
+<td>Percentage of tanks that reach empty before delivery</td>
+<td>&lt; 0.5%</td>
+<td>Better forecasting, lower reorder points</td>
+</tr>
+<tr>
+<td>Delivery efficiency</td>
+<td>Gallons delivered per truck mile</td>
+<td>&gt; 50 gal/mile</td>
+<td>Optimized routing, fuller deliveries</td>
+</tr>
+<tr>
+<td>Average drop size</td>
+<td>Average gallons delivered per stop</td>
+<td>Maximize</td>
+<td>Deliver when tanks are emptier (not too empty)</td>
+</tr>
+<tr>
+<td>Truck utilization</td>
+<td>Percentage of truck capacity delivered per route</td>
+<td>&gt; 85%</td>
+<td>Better route planning, load optimization</td>
+</tr>
+<tr>
+<td>Forecast accuracy</td>
+<td>Predicted vs. actual consumption (MAPE)</td>
+<td>&lt; 10%</td>
+<td>More data, better models</td>
+</tr>
+<tr>
+<td>Alert accuracy</td>
+<td>Percentage of alerts that require action</td>
+<td>&gt; 80%</td>
+<td>Tuned thresholds, better algorithms</td>
+</tr>
+</tbody>
+</table>
+<h3 id="992-financial-kpis">9.9.2 Financial KPIs</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Definition</th>
+<th>Target</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cost per gallon delivered</td>
+<td>Total delivery cost / gallons delivered</td>
+<td>Minimize</td>
+<td>Direct profitability</td>
+</tr>
+<tr>
+<td>Emergency delivery ratio</td>
+<td>Emergency deliveries / total deliveries</td>
+<td>&lt; 2%</td>
+<td>Cost avoidance ($100-300 per emergency)</td>
+</tr>
+<tr>
+<td>Customer retention rate</td>
+<td>Customers retained year-over-year</td>
+<td>&gt; 95%</td>
+<td>Revenue stability</td>
+</tr>
+<tr>
+<td>Revenue per truck</td>
+<td>Annual revenue generated per delivery vehicle</td>
+<td>Maximize</td>
+<td>Asset efficiency</td>
+</tr>
+<tr>
+<td>Monitor ROI</td>
+<td>Annual savings per monitor / monitor cost</td>
+<td>&gt; 200%</td>
+<td>Investment justification</td>
+</tr>
+</tbody>
+</table>
+<h3 id="993-data-quality-kpis">9.9.3 Data Quality KPIs</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Definition</th>
+<th>Target</th>
+<th>Indicates</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reporting uptime</td>
+<td>Percentage of expected readings received</td>
+<td>&gt; 98%</td>
+<td>Device and network health</td>
+</tr>
+<tr>
+<td>Data accuracy</td>
+<td>Percentage of readings within calibration tolerance</td>
+<td>&gt; 99%</td>
+<td>Sensor health, installation quality</td>
+</tr>
+<tr>
+<td>False alert rate</td>
+<td>Percentage of alerts that are false positives</td>
+<td>&lt; 10%</td>
+<td>Algorithm and threshold quality</td>
+</tr>
+<tr>
+<td>Mean time to first reading</td>
+<td>Average time from installation to first valid reading</td>
+<td>&lt; 4 hours</td>
+<td>Installation process quality</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="910-using-analytics-for-customer-service">9.10 Using Analytics for Customer Service</h2>
+<h3 id="9101-proactive-customer-service">9.10.1 Proactive Customer Service</h3>
+<p>Tank monitoring analytics enable a fundamental shift from reactive to proactive customer service:</p>
+<table>
+<thead>
+<tr>
+<th>Reactive (Without Data)</th>
+<th>Proactive (With Analytics)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Customer calls when tank is empty</td>
+<td>Alert sent before tank reaches critical level</td>
+</tr>
+<tr>
+<td>Dispatcher scrambles to schedule emergency delivery</td>
+<td>Delivery pre-scheduled based on forecast</td>
+</tr>
+<tr>
+<td>Customer blames supplier for run-out</td>
+<td>Customer receives proactive notification</td>
+</tr>
+<tr>
+<td>Loss of trust, potential customer churn</td>
+<td>Strengthened trust, increased loyalty</td>
+</tr>
+</tbody>
+</table>
+<h3 id="9102-customer-usage-reports">9.10.2 Customer Usage Reports</h3>
+<p>Providing customers with their own usage data creates value beyond the product itself:</p>
+<pre class="mermaid"><code>graph TD
+    subgraph "Customer Usage Report"
+        A[Monthly Consumption Summary] --&gt; B["Total gallons used: 4,200"]
+        A --&gt; C["Average daily usage: 140 gal"]
+        A --&gt; D["Peak day: Feb 14 (280 gal)"]
+        A --&gt; E["Lowest day: Feb 28 (45 gal)"]
+
+        F[Year-over-Year Comparison] --&gt; G["This month: 4,200 gal"]
+        F --&gt; H["Same month last year: 3,800 gal"]
+        F --&gt; I["Change: +10.5%"]
+
+        J[Forecast] --&gt; K["Expected next month: 3,600 gal"]
+        J --&gt; L["Expected delivery date: ~March 18"]
+    end</code></pre>
+<h3 id="9103-service-level-agreements-slas">9.10.3 Service Level Agreements (SLAs)</h3>
+<p>Analytics enable data-driven SLAs with customers:</p>
+<table>
+<thead>
+<tr>
+<th>SLA Metric</th>
+<th>Definition</th>
+<th>Typical Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Maximum days between deliveries</td>
+<td>Longest gap allowed before customer is at risk</td>
+<td>Product-dependent</td>
+</tr>
+<tr>
+<td>Minimum fill level guarantee</td>
+<td>Tank will never drop below this level</td>
+<td>15% for non-critical, 25% for critical</td>
+</tr>
+<tr>
+<td>Delivery response time</td>
+<td>Time from alert to delivery arrival</td>
+<td>24-48 hours standard, 4-8 hours emergency</td>
+</tr>
+<tr>
+<td>Reporting frequency</td>
+<td>How often customer receives usage reports</td>
+<td>Weekly or monthly</td>
+</tr>
+<tr>
+<td>Anomaly notification time</td>
+<td>How quickly customer is notified of anomalies</td>
+<td>Within 1 hour of detection</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="911-python-analytics-integration">9.11 Python Analytics Integration</h2>
+<h3 id="9111-aip-data-export-and-api">9.11.1 AIP Data Export and API</h3>
+<p>The AIP platform provides data export capabilities for advanced analytics:</p>
+<p><strong>API endpoints:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Description</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/api/v1/readings</code></td>
+<td>Historical level readings</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><code>/api/v1/tanks</code></td>
+<td>Tank configuration and current status</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><code>/api/v1/events</code></td>
+<td>Delivery events, alerts, anomalies</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><code>/api/v1/reports</code></td>
+<td>Pre-generated reports</td>
+<td>JSON/CSV</td>
+</tr>
+<tr>
+<td><code>/api/v1/forecast</code></td>
+<td>AIP-generated forecasts</td>
+<td>JSON</td>
+</tr>
+</tbody>
+</table>
+<h3 id="9112-python-analytics-example-consumption-analysis">9.11.2 Python Analytics Example: Consumption Analysis</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># Fetch tank reading data from AIP API</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1"># (In practice, use the requests library with API key authentication)</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">readings</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;tank_readings.csv&#39;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;timestamp&#39;</span><span class="p">])</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1"># Calculate daily consumption</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">readings</span> <span class="o">=</span> <span class="n">readings</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;timestamp&#39;</span><span class="p">)</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">readings</span><span class="p">[</span><span class="s1">&#39;daily_consumption&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">readings</span><span class="p">[</span><span class="s1">&#39;volume_gallons&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="c1"># Remove delivery events (positive volume changes)</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="n">consumption</span> <span class="o">=</span> <span class="n">readings</span><span class="p">[</span><span class="n">readings</span><span class="p">[</span><span class="s1">&#39;daily_consumption&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="c1"># Calculate rolling 7-day average</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="n">consumption</span><span class="p">[</span><span class="s1">&#39;rolling_avg&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">consumption</span><span class="p">[</span><span class="s1">&#39;daily_consumption&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    <span class="n">window</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">min_periods</span><span class="o">=</span><span class="mi">3</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="c1"># Calculate days-to-empty</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="n">current_volume</span> <span class="o">=</span> <span class="n">readings</span><span class="p">[</span><span class="s1">&#39;volume_gallons&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="n">min_volume</span> <span class="o">=</span> <span class="mi">200</span>  <span class="c1"># minimum safe level in gallons</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="n">avg_consumption</span> <span class="o">=</span> <span class="n">consumption</span><span class="p">[</span><span class="s1">&#39;daily_consumption&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="n">days_to_empty</span> <span class="o">=</span> <span class="p">(</span><span class="n">current_volume</span> <span class="o">-</span> <span class="n">min_volume</span><span class="p">)</span> <span class="o">/</span> <span class="n">avg_consumption</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Current volume: </span><span class="si">{</span><span class="n">current_volume</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> gallons&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average consumption (7-day): </span><span class="si">{</span><span class="n">avg_consumption</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> gallons/day&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Days to empty: </span><span class="si">{</span><span class="n">days_to_empty</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> days&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="9113-python-analytics-example-anomaly-detection">9.11.3 Python Analytics Example: Anomaly Detection</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">detect_anomalies</span><span class="p">(</span><span class="n">consumption_series</span><span class="p">,</span> <span class="n">window</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mf">3.0</span><span class="p">):</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="sd">    Detect consumption anomalies using rolling Z-score method.</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="sd">    Parameters:</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="sd">    -----------</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="sd">    consumption_series : pd.Series</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="sd">        Daily consumption values</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="sd">    window : int</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="sd">        Rolling window size for calculating mean and std</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="sd">    threshold : float</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="sd">        Z-score threshold for anomaly detection</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="sd">    --------</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="sd">    pd.DataFrame with anomaly flags and z-scores</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>    <span class="n">rolling_mean</span> <span class="o">=</span> <span class="n">consumption_series</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="n">window</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>    <span class="n">rolling_std</span> <span class="o">=</span> <span class="n">consumption_series</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="n">window</span><span class="p">)</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>    <span class="n">z_scores</span> <span class="o">=</span> <span class="p">(</span><span class="n">consumption_series</span> <span class="o">-</span> <span class="n">rolling_mean</span><span class="p">)</span> <span class="o">/</span> <span class="n">rolling_std</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>    <span class="n">anomalies</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>        <span class="s1">&#39;consumption&#39;</span><span class="p">:</span> <span class="n">consumption_series</span><span class="p">,</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>        <span class="s1">&#39;rolling_mean&#39;</span><span class="p">:</span> <span class="n">rolling_mean</span><span class="p">,</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>        <span class="s1">&#39;rolling_std&#39;</span><span class="p">:</span> <span class="n">rolling_std</span><span class="p">,</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>        <span class="s1">&#39;z_score&#39;</span><span class="p">:</span> <span class="n">z_scores</span><span class="p">,</span>
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>        <span class="s1">&#39;is_anomaly&#39;</span><span class="p">:</span> <span class="nb">abs</span><span class="p">(</span><span class="n">z_scores</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">threshold</span><span class="p">,</span>
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>        <span class="s1">&#39;anomaly_type&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>            <span class="n">z_scores</span> <span class="o">&gt;</span> <span class="n">threshold</span><span class="p">,</span> <span class="s1">&#39;high_consumption&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>            <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">z_scores</span> <span class="o">&lt;</span> <span class="o">-</span><span class="n">threshold</span><span class="p">,</span> <span class="s1">&#39;low_consumption&#39;</span><span class="p">,</span> <span class="s1">&#39;normal&#39;</span><span class="p">)</span>
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>        <span class="p">)</span>
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>    <span class="p">})</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>    <span class="k">return</span> <span class="n">anomalies</span>
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a><span class="c1"># Apply anomaly detection</span>
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a><span class="n">anomalies</span> <span class="o">=</span> <span class="n">detect_anomalies</span><span class="p">(</span><span class="n">consumption</span><span class="p">[</span><span class="s1">&#39;daily_consumption&#39;</span><span class="p">])</span>
+<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a><span class="n">flagged</span> <span class="o">=</span> <span class="n">anomalies</span><span class="p">[</span><span class="n">anomalies</span><span class="p">[</span><span class="s1">&#39;is_anomaly&#39;</span><span class="p">]]</span>
+<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Detected </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">flagged</span><span class="p">)</span><span class="si">}</span><span class="s2"> anomalies in </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">anomalies</span><span class="p">)</span><span class="si">}</span><span class="s2"> days&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="9114-python-analytics-example-seasonal-decomposition">9.11.4 Python Analytics Example: Seasonal Decomposition</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.tsa.seasonal</span><span class="w"> </span><span class="kn">import</span> <span class="n">seasonal_decompose</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># Resample to monthly consumption totals</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">monthly</span> <span class="o">=</span> <span class="n">consumption</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;timestamp&#39;</span><span class="p">)[</span><span class="s1">&#39;daily_consumption&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Perform seasonal decomposition</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">decomposition</span> <span class="o">=</span> <span class="n">seasonal_decompose</span><span class="p">(</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="n">monthly</span><span class="p">,</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="n">model</span><span class="o">=</span><span class="s1">&#39;additive&#39;</span><span class="p">,</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="n">period</span><span class="o">=</span><span class="mi">12</span>  <span class="c1"># 12-month seasonal cycle</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="p">)</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="c1"># Plot results</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="n">decomposition</span><span class="o">.</span><span class="n">observed</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Observed&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="n">decomposition</span><span class="o">.</span><span class="n">trend</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Trend&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="n">decomposition</span><span class="o">.</span><span class="n">seasonal</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Seasonal&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="n">decomposition</span><span class="o">.</span><span class="n">resid</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Residual&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;seasonal_decomposition.png&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="9115-python-analytics-example-demand-forecasting">9.11.5 Python Analytics Example: Demand Forecasting</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.tsa.holtwinters</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExponentialSmoothing</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1"># Prepare monthly consumption data</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">monthly_consumption</span> <span class="o">=</span> <span class="n">consumption</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;timestamp&#39;</span><span class="p">)[</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="s1">&#39;daily_consumption&#39;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="c1"># Fit Holt-Winters model with seasonal component</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="n">model</span> <span class="o">=</span> <span class="n">ExponentialSmoothing</span><span class="p">(</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    <span class="n">monthly_consumption</span><span class="p">,</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    <span class="n">seasonal_periods</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>    <span class="n">trend</span><span class="o">=</span><span class="s1">&#39;add&#39;</span><span class="p">,</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    <span class="n">seasonal</span><span class="o">=</span><span class="s1">&#39;add&#39;</span><span class="p">,</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>    <span class="n">use_boxcox</span><span class="o">=</span><span class="kc">True</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="p">)</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="n">fitted_model</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="c1"># Forecast next 6 months</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="n">forecast</span> <span class="o">=</span> <span class="n">fitted_model</span><span class="o">.</span><span class="n">forecast</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;6-Month Demand Forecast:&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="k">for</span> <span class="n">date</span><span class="p">,</span> <span class="n">volume</span> <span class="ow">in</span> <span class="n">forecast</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%B %Y&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">volume</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> gallons&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Python Analytics as a TankScan Feature</p>
+<p>TankScan's AIP platform includes a built-in Python analytics environment for enterprise customers. This allows data scientists and analysts to build custom models, visualizations, and reports using familiar Python tools (pandas, numpy, scikit-learn, statsmodels) directly on their tank monitoring data, without needing to export data to external systems.</p>
+</div>
+<hr />
+<h2 id="912-analytics-workflow-putting-it-all-together">9.12 Analytics Workflow: Putting It All Together</h2>
+<h3 id="9121-end-to-end-analytics-pipeline">9.12.1 End-to-End Analytics Pipeline</h3>
+<pre class="mermaid"><code>graph TD
+    subgraph "Data Collection"
+        A[Tank Monitors] --&gt; B[Raw Readings&lt;br&gt;Level, Temp, Signal]
+    end
+
+    subgraph "Data Processing"
+        B --&gt; C[Validation&lt;br&gt;Range checks, rate limits]
+        C --&gt; D[Enrichment&lt;br&gt;Volume calc, temp correction]
+        D --&gt; E[Storage&lt;br&gt;Time-series database]
+    end
+
+    subgraph "Analytics"
+        E --&gt; F[Trend Analysis&lt;br&gt;Moving averages, patterns]
+        E --&gt; G[Forecasting&lt;br&gt;Days-to-empty, demand]
+        E --&gt; H[Anomaly Detection&lt;br&gt;Leaks, theft, errors]
+        E --&gt; I[KPI Calculation&lt;br&gt;Efficiency metrics]
+    end
+
+    subgraph "Action"
+        F --&gt; J[Dashboards&lt;br&gt;Visual monitoring]
+        G --&gt; K[Delivery Scheduling&lt;br&gt;Route optimization]
+        H --&gt; L[Alerts&lt;br&gt;Investigation triggers]
+        I --&gt; M[Reports&lt;br&gt;Performance tracking]
+    end</code></pre>
+<h3 id="9122-analytics-maturity-model">9.12.2 Analytics Maturity Model</h3>
+<p>Organizations typically progress through stages of analytics sophistication:</p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Capability</th>
+<th>Question Answered</th>
+<th>AIP Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Visibility</td>
+<td>What is the current level?</td>
+<td>"How full is the tank right now?"</td>
+<td>Real-time dashboard</td>
+</tr>
+<tr>
+<td>2. Reporting</td>
+<td>What happened?</td>
+<td>"How much was consumed last month?"</td>
+<td>Historical reports</td>
+</tr>
+<tr>
+<td>3. Analysis</td>
+<td>Why did it happen?</td>
+<td>"Why did consumption spike in January?"</td>
+<td>Trend analysis, decomposition</td>
+</tr>
+<tr>
+<td>4. Prediction</td>
+<td>What will happen?</td>
+<td>"When will this tank need a delivery?"</td>
+<td>Forecasting, DTE calculation</td>
+</tr>
+<tr>
+<td>5. Optimization</td>
+<td>What should we do?</td>
+<td>"What's the optimal delivery schedule?"</td>
+<td>Route optimization, demand planning</td>
+</tr>
+<tr>
+<td>6. Automation</td>
+<td>Make it happen automatically.</td>
+<td>"Schedule the delivery without human intervention."</td>
+<td>API integration, automated workflows</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="913-chapter-summary">9.13 Chapter Summary</h2>
+<p>Data analytics transforms raw tank level readings into actionable business intelligence. Key concepts covered:</p>
+<ol>
+<li><strong>Data quality management</strong> ensures that analytics are built on reliable inputs through validation, filtering, and enrichment</li>
+<li><strong>Trend analysis</strong> reveals consumption patterns across hours, days, weeks, and seasons</li>
+<li><strong>Forecasting</strong> predicts when tanks will need service, using methods ranging from simple linear projection to machine learning</li>
+<li><strong>Reorder point calculation</strong> combines consumption rate, lead time, and safety stock to trigger timely deliveries</li>
+<li><strong>Anomaly detection</strong> identifies leaks, theft, and equipment problems using statistical methods</li>
+<li><strong>KPIs</strong> provide measurable targets for operational, financial, and data quality performance</li>
+<li><strong>Python integration</strong> enables custom analytics beyond the built-in AIP capabilities</li>
+</ol>
+<p>The progression from basic visibility ("what is the level?") to automated optimization ("schedule the delivery automatically") represents a maturity journey that most organizations complete over 12-24 months as they accumulate data and build confidence in analytics-driven operations.</p>
+<hr />
+<h2 id="review-questions">Review Questions</h2>
+<div class="admonition question">
+<p class="admonition-title">Question 1 -- Knowledge (Remember)</p>
+<p>List the six stages of the analytics maturity model described in this chapter, and for each stage, state the key question it answers.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 2 -- Comprehension (Understand)</p>
+<p>Explain the difference between a Simple Moving Average (SMA) and an Exponential Moving Average (EMA) for consumption rate smoothing. Under what circumstances would the EMA be preferred over the SMA, and why?</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 3 -- Application (Apply)</p>
+<p>A heating oil tank has the following characteristics:</p>
+<ul>
+<li>Current volume: 800 gallons</li>
+<li>Minimum safe level: 100 gallons</li>
+<li>Average daily consumption (last 30 days): 25 gallons/day</li>
+<li>Standard deviation of daily consumption: 8 gallons/day</li>
+<li>Delivery lead time: 4 days</li>
+<li>Desired service level: 95% (z = 1.65)</li>
+</ul>
+<p>Calculate: (a) the days-to-empty, (b) the safety stock, and (c) the reorder point. Should a delivery be scheduled now?</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 4 -- Analysis (Analyze)</p>
+<p>A fleet of 200 monitored diesel tanks shows the following anomaly during a single week: 15 tanks (7.5%) report consumption rates more than 2 standard deviations above their historical averages. All 15 tanks are located within the same geographic region. Analyze the possible explanations for this cluster of anomalies. What additional data would you examine to determine the root cause? How would your investigation differ if the anomalous tanks were spread across random locations?</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 5 -- Evaluation (Evaluate)</p>
+<p>A tank monitoring customer requests that the system detect all leaks greater than 5 gallons per day with 99% accuracy and zero false alarms. Evaluate whether this requirement is achievable given the limitations of wireless tank monitoring (measurement accuracy of +/- 3mm, reporting frequency of 4-6 times per day, environmental noise factors). What trade-offs exist between sensitivity (detecting small leaks) and specificity (avoiding false alarms)? Recommend a practical detection threshold and explain your reasoning.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

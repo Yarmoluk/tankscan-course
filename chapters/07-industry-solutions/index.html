@@ -1,0 +1,3949 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive intelligent textbook on wireless tank monitoring technology, IoT systems, and the TankScan platform">
+      
+      
+        <meta name="author" content="Daniel Yarmoluk">
+      
+      
+      
+        <link rel="prev" href="../06-tank-types/">
+      
+      
+        <link rel="next" href="../08-installation/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>7. Industry Solutions - TankScan Intelligent Textbook: Wireless Tank Monitoring Systems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-7-industry-solutions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" class="md-header__button md-logo" aria-label="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TankScan Intelligent Textbook: Wireless Tank Monitoring Systems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              7. Industry Solutions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Yarmoluk/tankscan-course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../preface/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Preface
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../course-description/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Description
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-introduction/" class="md-tabs__link">
+          
+  
+  
+  Chapters
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../learning-graph/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learning Graph
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" class="md-nav__button md-logo" aria-label="TankScan Intelligent Textbook: Wireless Tank Monitoring Systems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    TankScan Intelligent Textbook: Wireless Tank Monitoring Systems
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Yarmoluk/tankscan-course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../preface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction to Tank Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-wireless-sensors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Wireless Sensor Technologies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-measurement-tech/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Radar and Ultrasonic Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-iot-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. IoT Architecture and Connectivity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-aip-platform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. The Asset Intelligence Platform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-tank-types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Tank Types and Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Industry Solutions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Industry Solutions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#71-introduction-one-platform-many-industries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Introduction: One Platform, Many Industries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-fuel-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Fuel Distribution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2 Fuel Distribution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#721-the-fuel-distribution-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2.1 The Fuel Distribution Challenge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#722-traditional-fuel-distribution-before-wireless-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2.2 Traditional Fuel Distribution (Before Wireless Monitoring)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#723-the-wireless-monitoring-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2.3 The Wireless Monitoring Transformation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#724-bulk-delivery-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2.4 Bulk Delivery Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#725-inventory-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2.5 Inventory Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#73-convenience-store-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Convenience Store Operations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3 Convenience Store Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#731-the-c-store-fuel-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3.1 The C-Store Fuel Environment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#732-atg-integration-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3.2 ATG Integration Details
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#733-multi-product-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3.3 Multi-Product Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#734-enterprise-c-store-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3.4 Enterprise C-Store Chains
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#74-lubricant-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Lubricant Distribution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.4 Lubricant Distribution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#741-the-lubricant-distribution-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4.1 The Lubricant Distribution Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#742-the-tote-monitoring-revolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4.2 The Tote Monitoring Revolution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#743-multi-viscosity-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4.3 Multi-Viscosity Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#744-lubricant-distribution-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4.4 Lubricant Distribution Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#75-specialty-chemicals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5 Specialty Chemicals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.5 Specialty Chemicals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#751-chemical-industry-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5.1 Chemical Industry Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#752-hazardous-materials-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5.2 Hazardous Materials Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#753-pvdf-housings-for-chemical-resistance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5.3 PVDF Housings for Chemical Resistance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#754-class-i-division-1-c1d1-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5.4 Class I, Division 1 (C1D1) Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#755-chemical-inventory-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5.5 Chemical Inventory Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#76-used-oil-and-waste-liquid-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.6 Used Oil and Waste Liquid Collection
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.6 Used Oil and Waste Liquid Collection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#761-reverse-logistics-the-pickup-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.6.1 Reverse Logistics: The Pickup Problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#762-used-oil-collection-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.6.2 Used Oil Collection Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#763-collection-specific-monitoring-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.6.3 Collection-Specific Monitoring Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#764-waste-collection-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.6.4 Waste Collection Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#77-oil-field-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.7 Oil Field Support
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.7 Oil Field Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#771-upstream-oil-and-gas-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.7.1 Upstream Oil and Gas Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#772-production-tank-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.7.2 Production Tank Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#773-chemical-tank-monitoring-for-oil-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.7.3 Chemical Tank Monitoring for Oil Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#774-satellite-connectivity-for-remote-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.7.4 Satellite Connectivity for Remote Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#775-harsh-environment-adaptations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.7.5 Harsh Environment Adaptations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#78-propane-and-lpg-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.8 Propane and LPG Distribution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.8 Propane and LPG Distribution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#781-the-propane-delivery-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.8.1 The Propane Delivery Challenge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#782-seasonal-demand-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.8.2 Seasonal Demand Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#783-degree-day-enhancement-with-actual-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.8.3 Degree-Day Enhancement with Actual Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#79-agricultural-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.9 Agricultural Applications
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.9 Agricultural Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#791-farm-and-ranch-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.9.1 Farm and Ranch Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#792-seasonal-agricultural-demand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.9.2 Seasonal Agricultural Demand
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#710-manufacturing-and-industrial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.10 Manufacturing and Industrial
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.10 Manufacturing and Industrial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7101-manufacturing-tank-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.10.1 Manufacturing Tank Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7102-just-in-time-monitoring-for-manufacturing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.10.2 Just-In-Time Monitoring for Manufacturing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#711-cross-industry-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.11 Cross-Industry Benefits
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.11 Cross-Industry Benefits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7111-universal-value-propositions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.11.1 Universal Value Propositions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7112-industry-comparison-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.11.2 Industry Comparison Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7113-total-addressable-market" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.11.3 Total Addressable Market
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#712-integration-with-industry-specific-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.12 Integration with Industry-Specific Software
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.12 Integration with Industry-Specific Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7121-software-ecosystem-by-industry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.12.1 Software Ecosystem by Industry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7122-data-flow-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.12.2 Data Flow Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#713-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.13 Chapter Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Review Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Installation and Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-data-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Data Analytics and Optimization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-fleet-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Fleet Management and Routing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-safety-compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Safety, Compliance, and Hazardous Environments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-cloud-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Cloud Integration and APIs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-predictive-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Predictive Maintenance and AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-case-studies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Case Studies and ROI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-future/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Future of Tank Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#71-introduction-one-platform-many-industries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Introduction: One Platform, Many Industries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-fuel-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Fuel Distribution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2 Fuel Distribution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#721-the-fuel-distribution-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2.1 The Fuel Distribution Challenge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#722-traditional-fuel-distribution-before-wireless-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2.2 Traditional Fuel Distribution (Before Wireless Monitoring)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#723-the-wireless-monitoring-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2.3 The Wireless Monitoring Transformation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#724-bulk-delivery-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2.4 Bulk Delivery Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#725-inventory-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2.5 Inventory Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#73-convenience-store-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Convenience Store Operations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3 Convenience Store Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#731-the-c-store-fuel-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3.1 The C-Store Fuel Environment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#732-atg-integration-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3.2 ATG Integration Details
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#733-multi-product-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3.3 Multi-Product Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#734-enterprise-c-store-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3.4 Enterprise C-Store Chains
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#74-lubricant-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Lubricant Distribution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.4 Lubricant Distribution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#741-the-lubricant-distribution-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4.1 The Lubricant Distribution Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#742-the-tote-monitoring-revolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4.2 The Tote Monitoring Revolution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#743-multi-viscosity-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4.3 Multi-Viscosity Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#744-lubricant-distribution-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4.4 Lubricant Distribution Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#75-specialty-chemicals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5 Specialty Chemicals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.5 Specialty Chemicals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#751-chemical-industry-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5.1 Chemical Industry Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#752-hazardous-materials-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5.2 Hazardous Materials Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#753-pvdf-housings-for-chemical-resistance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5.3 PVDF Housings for Chemical Resistance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#754-class-i-division-1-c1d1-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5.4 Class I, Division 1 (C1D1) Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#755-chemical-inventory-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5.5 Chemical Inventory Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#76-used-oil-and-waste-liquid-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.6 Used Oil and Waste Liquid Collection
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.6 Used Oil and Waste Liquid Collection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#761-reverse-logistics-the-pickup-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.6.1 Reverse Logistics: The Pickup Problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#762-used-oil-collection-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.6.2 Used Oil Collection Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#763-collection-specific-monitoring-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.6.3 Collection-Specific Monitoring Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#764-waste-collection-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.6.4 Waste Collection Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#77-oil-field-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.7 Oil Field Support
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.7 Oil Field Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#771-upstream-oil-and-gas-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.7.1 Upstream Oil and Gas Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#772-production-tank-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.7.2 Production Tank Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#773-chemical-tank-monitoring-for-oil-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.7.3 Chemical Tank Monitoring for Oil Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#774-satellite-connectivity-for-remote-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.7.4 Satellite Connectivity for Remote Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#775-harsh-environment-adaptations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.7.5 Harsh Environment Adaptations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#78-propane-and-lpg-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.8 Propane and LPG Distribution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.8 Propane and LPG Distribution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#781-the-propane-delivery-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.8.1 The Propane Delivery Challenge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#782-seasonal-demand-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.8.2 Seasonal Demand Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#783-degree-day-enhancement-with-actual-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.8.3 Degree-Day Enhancement with Actual Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#79-agricultural-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.9 Agricultural Applications
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.9 Agricultural Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#791-farm-and-ranch-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.9.1 Farm and Ranch Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#792-seasonal-agricultural-demand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.9.2 Seasonal Agricultural Demand
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#710-manufacturing-and-industrial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.10 Manufacturing and Industrial
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.10 Manufacturing and Industrial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7101-manufacturing-tank-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.10.1 Manufacturing Tank Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7102-just-in-time-monitoring-for-manufacturing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.10.2 Just-In-Time Monitoring for Manufacturing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#711-cross-industry-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.11 Cross-Industry Benefits
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.11 Cross-Industry Benefits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7111-universal-value-propositions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.11.1 Universal Value Propositions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7112-industry-comparison-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.11.2 Industry Comparison Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7113-total-addressable-market" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.11.3 Total Addressable Market
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#712-integration-with-industry-specific-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.12 Integration with Industry-Specific Software
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.12 Integration with Industry-Specific Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7121-software-ecosystem-by-industry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.12.1 Software Ecosystem by Industry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7122-data-flow-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.12.2 Data Flow Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#713-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.13 Chapter Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Review Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="chapter-7-industry-solutions">Chapter 7: Industry Solutions</h1>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter, you will be able to:</p>
+<ul>
+<li>Identify the key industries served by wireless tank monitoring and their unique requirements</li>
+<li>Describe how TankScan technology addresses fuel distribution challenges</li>
+<li>Explain ATG integration for convenience store operations</li>
+<li>Evaluate monitoring solutions for hazardous materials and specialty chemicals</li>
+<li>Design monitoring workflows for used oil collection and reverse logistics</li>
+<li>Compare deployment strategies across different industry verticals</li>
+</ul>
+<hr />
+<h2 id="71-introduction-one-platform-many-industries">7.1 Introduction: One Platform, Many Industries</h2>
+<p>Wireless tank monitoring is not a single-industry technology. While the core capability -- measuring liquid levels remotely and transmitting data to the cloud -- remains the same, the way that capability is applied varies dramatically across industries. A propane distributor's primary concern is preventing residential customer run-outs during a winter cold snap. A lubricant distributor wants to optimize truck routes across hundreds of customer locations. A chemical plant needs to ensure regulatory compliance while managing hazardous inventory.</p>
+<p>The TankScan platform, built on the Asset Intelligence Platform (AIP), serves all of these needs through configurable workflows, industry-specific alert logic, and integration with the specialized software systems that each industry relies upon.</p>
+<pre class="mermaid"><code>graph TD
+    A[TankScan Platform&lt;br&gt;AIP Core] --&gt; B[Fuel Distribution]
+    A --&gt; C[Convenience Stores]
+    A --&gt; D[Lubricant Distribution]
+    A --&gt; E[Specialty Chemicals]
+    A --&gt; F[Used Oil &amp; Waste Liquids]
+    A --&gt; G[Oil Field Support]
+    A --&gt; H[Propane &amp; LPG]
+    A --&gt; I[Agriculture]
+    A --&gt; J[Manufacturing]
+
+    B --&gt; B1[Bulk delivery scheduling]
+    B --&gt; B2[Run-out prevention]
+    C --&gt; C1[ATG integration]
+    C --&gt; C2[Multi-product visibility]
+    D --&gt; D1[Tote monitoring]
+    D --&gt; D2[Route optimization]
+    E --&gt; E1[C1D1 compliance]
+    E --&gt; E2[PVDF housings]
+    F --&gt; F1[Reverse logistics]
+    F --&gt; F2[Pickup scheduling]
+    G --&gt; G1[Remote monitoring]
+    G --&gt; G2[Satellite connectivity]</code></pre>
+<p>This chapter examines each major industry vertical, exploring the specific challenges, workflows, and TankScan solutions that apply.</p>
+<hr />
+<h2 id="72-fuel-distribution">7.2 Fuel Distribution</h2>
+<h3 id="721-the-fuel-distribution-challenge">7.2.1 The Fuel Distribution Challenge</h3>
+<p>Fuel distribution is the largest market segment for wireless tank monitoring. The industry encompasses wholesale fuel distributors, jobbers, and marketers who deliver gasoline, diesel, heating oil, kerosene, and other petroleum products to commercial and residential customers.</p>
+<p>The fundamental challenge is deceptively simple: <strong>deliver the right product, to the right tank, at the right time, in the right quantity.</strong> In practice, this is extraordinarily difficult without real-time tank level data.</p>
+<div class="admonition note">
+<p class="admonition-title">Scale of the Problem</p>
+<p>A mid-size fuel distributor may serve 500 to 3,000 customer locations, each with 1 to 10 tanks. That is potentially 5,000 to 30,000 individual tanks that need timely delivery. Without wireless monitoring, the distributor has no real-time visibility into any of them.</p>
+</div>
+<h3 id="722-traditional-fuel-distribution-before-wireless-monitoring">7.2.2 Traditional Fuel Distribution (Before Wireless Monitoring)</h3>
+<p>Before wireless monitoring, fuel distributors relied on a combination of methods to manage deliveries:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>How It Works</th>
+<th>Limitations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Will-call</td>
+<td>Customer calls when they need fuel</td>
+<td>Late notice, emergency deliveries, run-outs</td>
+</tr>
+<tr>
+<td>Degree-day forecasting</td>
+<td>Estimated consumption based on weather</td>
+<td>Inaccurate for non-heating uses, individual variation</td>
+</tr>
+<tr>
+<td>Fixed schedule</td>
+<td>Deliver every N days regardless of level</td>
+<td>Over-delivery (partial loads) or under-delivery (run-outs)</td>
+</tr>
+<tr>
+<td>Driver observation</td>
+<td>Driver checks tank during nearby delivery</td>
+<td>Inconsistent, dependent on route proximity</td>
+</tr>
+<tr>
+<td>Manual stick reading</td>
+<td>Physical measurement with a dip stick</td>
+<td>Labor-intensive, requires site access</td>
+</tr>
+</tbody>
+</table>
+<p>Each of these methods has significant drawbacks. Will-call results in emergency deliveries (expensive) and customer run-outs (lost business). Degree-day forecasting averages out individual variation, missing the customer who hosts a large event and burns through fuel quickly, or the one who goes on vacation and uses almost nothing. Fixed schedules waste fuel on trucks making unnecessary trips.</p>
+<h3 id="723-the-wireless-monitoring-transformation">7.2.3 The Wireless Monitoring Transformation</h3>
+<pre class="mermaid"><code>sequenceDiagram
+    participant T as Customer Tank&lt;br&gt;(TSR Monitor)
+    participant AIP as AIP Platform
+    participant D as Dispatcher
+    participant DR as Driver
+    participant TR as Delivery Truck
+
+    T-&gt;&gt;AIP: Level report (every 4-6 hours)
+    AIP-&gt;&gt;AIP: Calculate days-to-empty
+    AIP-&gt;&gt;AIP: Run reorder optimization
+
+    Note over AIP: Tank at 30% - 5 days to empty
+    AIP-&gt;&gt;D: Alert: Schedule delivery&lt;br&gt;within 3 days
+
+    D-&gt;&gt;AIP: Build optimized route
+    AIP-&gt;&gt;D: Route: 8 stops, 6,200 gal total
+    D-&gt;&gt;DR: Assign route to Driver
+    DR-&gt;&gt;TR: Load truck (full load)
+    DR-&gt;&gt;T: Deliver fuel
+    T-&gt;&gt;AIP: Level jump detected (delivery confirmation)
+    AIP-&gt;&gt;D: Delivery confirmed automatically</code></pre>
+<p>With wireless monitoring, the distributor gains:</p>
+<ul>
+<li><strong>Real-time visibility</strong> into every customer tank level</li>
+<li><strong>Predictive scheduling</strong> based on actual consumption, not estimates</li>
+<li><strong>Optimized routing</strong> to minimize miles driven and maximize gallons delivered per stop</li>
+<li><strong>Automatic delivery confirmation</strong> when the monitor detects a level increase</li>
+<li><strong>Anomaly alerts</strong> for unusual consumption patterns (potential leaks, theft)</li>
+</ul>
+<h3 id="724-bulk-delivery-operations">7.2.4 Bulk Delivery Operations</h3>
+<p>Bulk fuel delivery operations involve transport trucks (typically 5,000 to 9,000 gallon capacity) or bobtail trucks (2,500 to 3,500 gallons) making scheduled deliveries to customer tanks.</p>
+<p><strong>Key metrics improved by wireless monitoring:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Without Monitoring</th>
+<th>With Monitoring</th>
+<th>Improvement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gallons per delivery stop</td>
+<td>500 - 1,200</td>
+<td>1,000 - 2,500</td>
+<td>80-100% increase</td>
+</tr>
+<tr>
+<td>Stops per route</td>
+<td>5 - 8</td>
+<td>8 - 14</td>
+<td>60-75% increase</td>
+</tr>
+<tr>
+<td>Truck utilization</td>
+<td>55 - 65%</td>
+<td>85 - 95%</td>
+<td>30-40% increase</td>
+</tr>
+<tr>
+<td>Run-out incidents</td>
+<td>2 - 5% of customers/year</td>
+<td>&lt; 0.1%</td>
+<td>95%+ reduction</td>
+</tr>
+<tr>
+<td>Emergency deliveries</td>
+<td>15 - 25 per month</td>
+<td>1 - 3 per month</td>
+<td>85-90% reduction</td>
+</tr>
+<tr>
+<td>Delivery cost per gallon</td>
+<td>$0.08 - 0.15</td>
+<td>$0.04 - 0.08</td>
+<td>40-50% reduction</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Fuel Distribution ROI</p>
+<p>A regional fuel distributor with 1,200 customer tanks (a mix of diesel and heating oil) deployed TankScan monitors across their entire customer base.</p>
+<p><strong>Investment</strong>: $600,000 (monitors, installation, first-year platform fees)</p>
+<p><strong>Annual savings</strong>:</p>
+<ul>
+<li>Reduced truck miles: $180,000 (fuel and maintenance)</li>
+<li>Eliminated 85% of emergency deliveries: $95,000</li>
+<li>Increased gallons per stop (fewer partial loads): $120,000</li>
+<li>Reduced driver overtime: $60,000</li>
+<li>Prevented 12 run-outs (customer retention): $45,000</li>
+</ul>
+<p><strong>Total annual savings</strong>: $500,000 | <strong>Payback period</strong>: 14 months</p>
+</div>
+<h3 id="725-inventory-management">7.2.5 Inventory Management</h3>
+<p>Beyond delivery scheduling, wireless monitoring transforms inventory management at the terminal:</p>
+<p><strong>Terminal-side benefits:</strong></p>
+<ul>
+<li>Track product levels across all terminal tanks in real-time</li>
+<li>Forecast when terminal tanks need resupply from pipeline or barge</li>
+<li>Balance inventory across multiple terminal locations</li>
+<li>Detect terminal-level inventory variances (reconciliation)</li>
+<li>Plan maintenance windows when tank levels are low</li>
+</ul>
+<p><strong>Customer-side benefits:</strong></p>
+<ul>
+<li>Customers can view their own tank levels via a customer portal</li>
+<li>Automated low-level notifications to customer and distributor simultaneously</li>
+<li>Historical consumption data helps customers budget for fuel expenses</li>
+<li>Variance reports flag potential issues (leaks, meter inaccuracies)</li>
+</ul>
+<hr />
+<h2 id="73-convenience-store-operations">7.3 Convenience Store Operations</h2>
+<h3 id="731-the-c-store-fuel-environment">7.3.1 The C-Store Fuel Environment</h3>
+<p>Convenience stores (c-stores) are the retail endpoint of the fuel distribution chain. In the United States, there are approximately 150,000 convenience stores, and about 80% of them sell fuel. Each c-store typically has 3 to 6 underground storage tanks (USTs) holding different fuel grades.</p>
+<pre class="mermaid"><code>graph TD
+    subgraph "C-Store Fuel System"
+        A[Fuel Delivery Truck] --&gt; B[Fill Ports]
+        B --&gt; C1[UST 1&lt;br&gt;Regular 87&lt;br&gt;12,000 gal]
+        B --&gt; C2[UST 2&lt;br&gt;Mid-Grade 89&lt;br&gt;8,000 gal]
+        B --&gt; C3[UST 3&lt;br&gt;Premium 93&lt;br&gt;8,000 gal]
+        B --&gt; C4[UST 4&lt;br&gt;Diesel&lt;br&gt;12,000 gal]
+
+        C1 &amp; C2 &amp; C3 &amp; C4 --&gt; D[Submersible Pumps]
+        D --&gt; E[Fuel Dispensers&lt;br&gt;Islands]
+        E --&gt; F[Customer Vehicles]
+
+        C1 &amp; C2 &amp; C3 &amp; C4 --&gt; G[ATG Probes]
+        G --&gt; H[ATG Console&lt;br&gt;Veeder-Root TLS-450]
+        H --&gt; I[TSC Gateway]
+        I --&gt; |Cellular| J[AIP Platform]
+    end
+
+    J --&gt; K[Corporate&lt;br&gt;Operations Center]
+    J --&gt; L[Fuel Supplier&lt;br&gt;Dispatch]
+    J --&gt; M[Environmental&lt;br&gt;Compliance]</code></pre>
+<h3 id="732-atg-integration-details">7.3.2 ATG Integration Details</h3>
+<p>Every regulated UST in the US must have an ATG system for leak detection. The most common ATG system is the Veeder-Root TLS series (TLS-350, TLS-450, TLS-4), which is installed at over 300,000 locations in the US alone.</p>
+<p>The <strong>TSC gateway</strong> connects to the ATG console and bridges its data to the AIP cloud:</p>
+<p><strong>Connection process:</strong></p>
+<ol>
+<li>Identify the ATG console model and available communication port (RS-232, RS-485, or Ethernet)</li>
+<li>Connect the TSC gateway to the communication port using the appropriate cable</li>
+<li>Configure the TSC with the ATG protocol (Veeder-Root, Gilbarco, Franklin, etc.)</li>
+<li>The TSC begins polling the ATG at configured intervals (typically every 5-15 minutes)</li>
+<li>Data is transmitted to AIP, where each tank compartment appears as a separate monitored asset</li>
+</ol>
+<p><strong>Data points captured from ATG:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Data Point</th>
+<th>Description</th>
+<th>Update Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product level (inches)</td>
+<td>Liquid height in each tank</td>
+<td>Every poll cycle</td>
+</tr>
+<tr>
+<td>Product volume (gallons)</td>
+<td>Calculated from ATG strapping table</td>
+<td>Every poll cycle</td>
+</tr>
+<tr>
+<td>Water level (inches)</td>
+<td>Water bottom height</td>
+<td>Every poll cycle</td>
+</tr>
+<tr>
+<td>Temperature (degrees F)</td>
+<td>Multi-point average from probe thermistors</td>
+<td>Every poll cycle</td>
+</tr>
+<tr>
+<td>Net volume (gallons)</td>
+<td>Temperature-corrected volume at 60F</td>
+<td>Every poll cycle</td>
+</tr>
+<tr>
+<td>Ullage (gallons)</td>
+<td>Available space for delivery</td>
+<td>Every poll cycle</td>
+</tr>
+<tr>
+<td>Delivery status</td>
+<td>Whether a delivery is in progress</td>
+<td>Real-time</td>
+</tr>
+<tr>
+<td>Alarm status</td>
+<td>ATG alarm conditions (leak, high water, etc.)</td>
+<td>Real-time</td>
+</tr>
+</tbody>
+</table>
+<h3 id="733-multi-product-monitoring">7.3.3 Multi-Product Monitoring</h3>
+<p>C-stores sell multiple fuel grades, often managed through a <strong>blending</strong> strategy:</p>
+<div class="admonition note">
+<p class="admonition-title">Fuel Blending at C-Stores</p>
+<p>Many c-stores stock only two base products -- Regular (87 octane) and Premium (93 octane) -- and create Mid-Grade (89 octane) by blending at the dispenser. This means the physical tanks hold only Regular and Premium, but the POS system sells three grades. The AIP platform can be configured to track both physical tank levels and calculated blended product availability.</p>
+</div>
+<p><strong>Multi-product challenges addressed by monitoring:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Challenge</th>
+<th>Without Monitoring</th>
+<th>With TankScan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product run-out at pump</td>
+<td>Discovered by customers (lost sales, bad reviews)</td>
+<td>Predicted days in advance; automated reorder</td>
+</tr>
+<tr>
+<td>Contamination detection</td>
+<td>Found during delivery or compliance testing</td>
+<td>Water level alerts from ATG probe</td>
+</tr>
+<tr>
+<td>Delivery overfill</td>
+<td>Relies on driver reading gauge correctly</td>
+<td>Ullage data sent to dispatch prevents overfill</td>
+</tr>
+<tr>
+<td>Inventory reconciliation</td>
+<td>Manual tank stick + POS comparison, often weekly</td>
+<td>Automated daily reconciliation</td>
+</tr>
+<tr>
+<td>Blending accuracy</td>
+<td>Assumed based on dispenser calibration</td>
+<td>Tracked via consumption ratios in AIP</td>
+</tr>
+</tbody>
+</table>
+<h3 id="734-enterprise-c-store-chains">7.3.4 Enterprise C-Store Chains</h3>
+<p>Large c-store chains (100 to 10,000+ locations) gain particular value from enterprise-wide visibility:</p>
+<pre class="mermaid"><code>graph TB
+    subgraph "Enterprise C-Store Monitoring"
+        A[Corporate Operations Center]
+        B[AIP Platform&lt;br&gt;Enterprise View]
+
+        B --&gt; C[Region 1&lt;br&gt;150 Stores]
+        B --&gt; D[Region 2&lt;br&gt;200 Stores]
+        B --&gt; E[Region 3&lt;br&gt;175 Stores]
+
+        C --&gt; C1[Store Dashboard]
+        C --&gt; C2[Fleet Dispatch]
+        C --&gt; C3[Compliance Reports]
+
+        D --&gt; D1[Store Dashboard]
+        D --&gt; D2[Fleet Dispatch]
+        D --&gt; D3[Compliance Reports]
+
+        E --&gt; E1[Store Dashboard]
+        E --&gt; E2[Fleet Dispatch]
+        E --&gt; E3[Compliance Reports]
+    end
+
+    A --&gt; B</code></pre>
+<p><strong>Enterprise benefits:</strong></p>
+<ul>
+<li><strong>Benchmarking</strong>: Compare fuel throughput, consumption patterns, and efficiency across all stores</li>
+<li><strong>Contract optimization</strong>: Aggregated demand data strengthens purchasing negotiations with suppliers</li>
+<li><strong>Compliance management</strong>: Centralized view of all ATG alarm statuses and leak detection results</li>
+<li><strong>Loss prevention</strong>: Identify stores with unusual inventory variances that may indicate theft or equipment issues</li>
+</ul>
+<hr />
+<h2 id="74-lubricant-distribution">7.4 Lubricant Distribution</h2>
+<h3 id="741-the-lubricant-distribution-model">7.4.1 The Lubricant Distribution Model</h3>
+<p>Lubricant distribution is fundamentally different from fuel distribution. Instead of delivering one or two products to large tanks, lubricant distributors deliver many different products (motor oils, hydraulic fluids, gear oils, coolants, greases) to numerous small containers (totes, IBCs, drums) across diverse customer locations.</p>
+<table>
+<thead>
+<tr>
+<th>Characteristic</th>
+<th>Fuel Distribution</th>
+<th>Lubricant Distribution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Products per customer</td>
+<td>1 - 3</td>
+<td>3 - 15</td>
+</tr>
+<tr>
+<td>Container type</td>
+<td>Large tanks (500 - 30,000 gal)</td>
+<td>Totes and IBCs (100 - 550 gal)</td>
+</tr>
+<tr>
+<td>Container quantity per site</td>
+<td>1 - 5 tanks</td>
+<td>3 - 20 totes</td>
+</tr>
+<tr>
+<td>Delivery frequency</td>
+<td>Weekly to monthly</td>
+<td>Monthly to quarterly</td>
+</tr>
+<tr>
+<td>Delivery quantity</td>
+<td>500 - 5,000 gallons</td>
+<td>50 - 300 gallons per tote</td>
+</tr>
+<tr>
+<td>Product cost</td>
+<td>$2 - 5 per gallon</td>
+<td>$5 - 30 per gallon</td>
+</tr>
+<tr>
+<td>Customer type</td>
+<td>Commercial/industrial</td>
+<td>Manufacturing, auto shops, fleets</td>
+</tr>
+</tbody>
+</table>
+<h3 id="742-the-tote-monitoring-revolution">7.4.2 The Tote Monitoring Revolution</h3>
+<p>Before wireless monitoring, lubricant distributors faced a classic information gap:</p>
+<div class="admonition warning">
+<p class="admonition-title">The Lubricant Distributor's Dilemma</p>
+<p>A lubricant distributor's sales representative visits a manufacturing plant with 12 totes of various lubricants. Without monitoring, they must physically check each tote -- often involving climbing ladders, removing caps, and visually estimating fill levels. This takes 30-45 minutes per site. With 30 sites to visit per week, the sales rep spends 15-22 hours just checking tote levels, leaving little time for actual selling and relationship building.</p>
+</div>
+<p>The <strong>TSU (TankScan Universal)</strong> transforms lubricant distribution by providing continuous level visibility for every tote:</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant T1 as Tote 1&lt;br&gt;10W-30
+    participant T2 as Tote 2&lt;br&gt;Hydraulic 46
+    participant T3 as Tote 3&lt;br&gt;Coolant
+    participant AIP as AIP Platform
+    participant Sales as Sales Rep
+    participant Disp as Dispatcher
+
+    T1-&gt;&gt;AIP: 45% full
+    T2-&gt;&gt;AIP: 12% full (LOW)
+    T3-&gt;&gt;AIP: 78% full
+
+    AIP-&gt;&gt;Sales: Alert: Tote 2 at 12%
+    AIP-&gt;&gt;Disp: Add to delivery schedule
+
+    Note over Disp: Builds route with&lt;br&gt;nearby low totes
+    Disp-&gt;&gt;Disp: Optimize route:&lt;br&gt;8 stops, 4 products
+
+    Note over T2: Delivery made
+    T2-&gt;&gt;AIP: 95% full (delivery confirmed)
+    AIP-&gt;&gt;Sales: Delivery confirmed at customer</code></pre>
+<h3 id="743-multi-viscosity-management">7.4.3 Multi-Viscosity Management</h3>
+<p>Lubricant customers typically use multiple products:</p>
+<table>
+<thead>
+<tr>
+<th>Customer Type</th>
+<th>Typical Products</th>
+<th>Totes per Site</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manufacturing plant</td>
+<td>Hydraulic oil, way oil, cutting fluid, coolant, gear oil</td>
+<td>5 - 15</td>
+</tr>
+<tr>
+<td>Auto dealership</td>
+<td>Motor oil (2-3 weights), ATF, coolant, DEF</td>
+<td>4 - 8</td>
+</tr>
+<tr>
+<td>Fleet maintenance</td>
+<td>Motor oil, hydraulic oil, gear oil, ATF, coolant, DEF</td>
+<td>6 - 12</td>
+</tr>
+<tr>
+<td>Construction company</td>
+<td>Hydraulic oil, diesel exhaust fluid, engine oil</td>
+<td>3 - 6</td>
+</tr>
+<tr>
+<td>Mining operation</td>
+<td>Hydraulic oil, gear oil, engine oil, grease</td>
+<td>4 - 10</td>
+</tr>
+</tbody>
+</table>
+<p>Each product has different consumption rates, reorder thresholds, and delivery economics. The AIP platform manages all of these as separate monitored assets with product-specific profiles.</p>
+<h3 id="744-lubricant-distribution-workflow">7.4.4 Lubricant Distribution Workflow</h3>
+<pre class="mermaid"><code>graph TD
+    A[Daily: AIP analyzes all&lt;br&gt;monitored totes] --&gt; B{Any totes below&lt;br&gt;reorder threshold?}
+
+    B --&gt;|No| C[Continue monitoring]
+    B --&gt;|Yes| D[Generate reorder&lt;br&gt;recommendations]
+
+    D --&gt; E[Group by geography&lt;br&gt;and product type]
+    E --&gt; F[Optimize delivery&lt;br&gt;routes]
+    F --&gt; G[Create delivery&lt;br&gt;tickets]
+
+    G --&gt; H[Assign to driver&lt;br&gt;with correct products]
+    H --&gt; I[Driver loads truck&lt;br&gt;with needed products]
+    I --&gt; J[Execute deliveries]
+    J --&gt; K[AIP confirms deliveries&lt;br&gt;via level increase]
+
+    K --&gt; L[Invoice automatically&lt;br&gt;generated]
+    L --&gt; C</code></pre>
+<div class="admonition example">
+<p class="admonition-title">Lubricant Distributor Case Study</p>
+<p>A regional lubricant distributor serving 180 customer locations deployed TSU monitors on 1,400 totes.</p>
+<p><strong>Before TankScan:</strong></p>
+<ul>
+<li>4 delivery trucks running 5 days/week</li>
+<li>Average 4 stops per truck per day</li>
+<li>Sales reps spending 60% of time checking tote levels</li>
+<li>8-12 customer run-outs per month (production impact)</li>
+</ul>
+<p><strong>After TankScan:</strong></p>
+<ul>
+<li>3 delivery trucks running 4.5 days/week (eliminated one truck)</li>
+<li>Average 7 stops per truck per day</li>
+<li>Sales reps spending 15% of time on tote management, 85% selling</li>
+<li>0-1 customer run-outs per month</li>
+</ul>
+<p><strong>Annual savings</strong>: $340,000 (one fewer truck, driver, fuel, insurance + increased sales from freed-up rep time)</p>
+</div>
+<hr />
+<h2 id="75-specialty-chemicals">7.5 Specialty Chemicals</h2>
+<h3 id="751-chemical-industry-requirements">7.5.1 Chemical Industry Requirements</h3>
+<p>Specialty chemical monitoring introduces complexities not found in fuel or lubricant applications:</p>
+<ul>
+<li><strong>Chemical compatibility</strong>: Sensor materials must resist the chemicals being monitored</li>
+<li><strong>Hazardous area classification</strong>: Many chemicals require Class I, Division 1 rated equipment</li>
+<li><strong>Regulatory compliance</strong>: EPA, OSHA, DOT, and state regulations govern chemical storage</li>
+<li><strong>Product diversity</strong>: Chemicals range from benign (water treatment) to highly aggressive (acids, oxidizers)</li>
+<li><strong>Accuracy requirements</strong>: Some processes require +/- 0.1% accuracy for inventory management</li>
+</ul>
+<h3 id="752-hazardous-materials-monitoring">7.5.2 Hazardous Materials Monitoring</h3>
+<p>When monitoring tanks containing hazardous materials, the primary concerns are safety and containment:</p>
+<pre class="mermaid"><code>graph TD
+    subgraph "Hazmat Tank Monitoring System"
+        A[Chemical Tank&lt;br&gt;Hazardous Material] --&gt; B[TSR with PVDF Housing&lt;br&gt;Chemical-Resistant]
+        A --&gt; C[Secondary Containment&lt;br&gt;Bund / Dike]
+        A --&gt; D[Leak Detection&lt;br&gt;Interstitial Sensor]
+
+        B --&gt; E[AIP Platform]
+        C --&gt; F[Containment Level&lt;br&gt;Sensor]
+        D --&gt; E
+        F --&gt; E
+
+        E --&gt; G[Normal Operation&lt;br&gt;Dashboard]
+        E --&gt; H[Alarm Condition&lt;br&gt;Immediate Alert]
+        E --&gt; I[Compliance&lt;br&gt;Reporting]
+    end
+
+    H --&gt; J[Site Safety&lt;br&gt;Team]
+    H --&gt; K[Environmental&lt;br&gt;Compliance]
+    I --&gt; L[Regulatory&lt;br&gt;Agencies]</code></pre>
+<h3 id="753-pvdf-housings-for-chemical-resistance">7.5.3 PVDF Housings for Chemical Resistance</h3>
+<p>Standard TSR housings use polypropylene or ABS plastic, which is adequate for petroleum products but can be attacked by aggressive chemicals. For chemical applications, TankScan offers <strong>PVDF (Polyvinylidene Fluoride)</strong> housings.</p>
+<table>
+<thead>
+<tr>
+<th>Material</th>
+<th>Chemical Resistance</th>
+<th>Temperature Range</th>
+<th>Applications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard (PP/ABS)</td>
+<td>Petroleum products, water, mild chemicals</td>
+<td>-40F to +185F</td>
+<td>Fuel, lubricants, DEF</td>
+</tr>
+<tr>
+<td>PVDF</td>
+<td>Strong acids, bases, oxidizers, solvents</td>
+<td>-40F to +275F</td>
+<td>Sulfuric acid, caustic soda, bleach</td>
+</tr>
+<tr>
+<td>Stainless steel 316L</td>
+<td>Broad chemical resistance</td>
+<td>-40F to +400F</td>
+<td>Pharmaceutical, food-grade</td>
+</tr>
+<tr>
+<td>PTFE-lined</td>
+<td>Extreme chemical resistance</td>
+<td>-40F to +400F</td>
+<td>Concentrated acids, fluorine compounds</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Chemical Compatibility Is Critical</p>
+<p>Installing a standard housing on a tank containing aggressive chemicals can lead to housing failure within weeks or months. Always verify chemical compatibility before specifying monitor materials. TankScan provides a chemical compatibility guide, and material compatibility charts are available from housing manufacturers.</p>
+</div>
+<h3 id="754-class-i-division-1-c1d1-requirements">7.5.4 Class I, Division 1 (C1D1) Requirements</h3>
+<p>Many chemical storage areas are classified as Class I, Division 1 hazardous locations under the National Electrical Code (NEC Article 500). This means:</p>
+<ul>
+<li>Ignitable concentrations of flammable gases or vapors may exist <strong>under normal operating conditions</strong></li>
+<li>All electrical equipment in the area must be approved for C1D1 use</li>
+<li>Equipment must be <strong>intrinsically safe</strong> (energy limited) or <strong>explosion-proof</strong> (contained)</li>
+</ul>
+<p>The TSR is available with C1D1 intrinsic safety certification, meeting these requirements:</p>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>TSR Compliance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NEC Article 500 Class I, Div 1</td>
+<td>Certified per UL/CSA standards</td>
+</tr>
+<tr>
+<td>Energy limitation</td>
+<td>Battery energy below ignition threshold</td>
+</tr>
+<tr>
+<td>Surface temperature</td>
+<td>T4 rating (maximum 275F / 135C)</td>
+</tr>
+<tr>
+<td>Enclosure integrity</td>
+<td>Sealed, non-sparking design</td>
+</tr>
+<tr>
+<td>Installation standard</td>
+<td>Per NEC 504 (intrinsically safe wiring)</td>
+</tr>
+<tr>
+<td>Third-party certification</td>
+<td>UL, CSA, ATEX, IECEx (varies by model)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="755-chemical-inventory-management">7.5.5 Chemical Inventory Management</h3>
+<p>Chemical distributors and users face unique inventory management challenges:</p>
+<table>
+<thead>
+<tr>
+<th>Challenge</th>
+<th>Description</th>
+<th>TankScan Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shelf life tracking</td>
+<td>Some chemicals degrade over time</td>
+<td>AIP tracks time since last delivery per tank</td>
+</tr>
+<tr>
+<td>Lot traceability</td>
+<td>Regulatory requirement for many chemicals</td>
+<td>Delivery events linked to lot/batch numbers</td>
+</tr>
+<tr>
+<td>Minimum/maximum inventory</td>
+<td>Safety stock vs. storage limits</td>
+<td>Configurable high and low alerts per tank</td>
+</tr>
+<tr>
+<td>Consumption permits</td>
+<td>Usage limited by environmental permits</td>
+<td>AIP tracks cumulative consumption vs. permit limits</td>
+</tr>
+<tr>
+<td>Incompatible storage</td>
+<td>Some chemicals cannot be stored near each other</td>
+<td>Site maps in AIP show tank proximity and contents</td>
+</tr>
+<tr>
+<td>Spill reporting</td>
+<td>Reportable quantities under CERCLA/EPCRA</td>
+<td>Sudden level drops trigger immediate alerts</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="76-used-oil-and-waste-liquid-collection">7.6 Used Oil and Waste Liquid Collection</h2>
+<h3 id="761-reverse-logistics-the-pickup-problem">7.6.1 Reverse Logistics: The Pickup Problem</h3>
+<p>Used oil and waste liquid collection is the mirror image of fuel delivery. Instead of delivering product to customer tanks, collection companies pick up waste liquids from customer tanks. The logistics challenge is equally complex but operates in reverse:</p>
+<pre class="mermaid"><code>graph LR
+    subgraph "Collection Workflow"
+        A[Auto Shop&lt;br&gt;Used Oil Tank] --&gt; B[Collection Truck]
+        C[Quick Lube&lt;br&gt;Used Oil Tank] --&gt; B
+        D[Fleet Garage&lt;br&gt;Used Oil Tank] --&gt; B
+        E[Restaurant&lt;br&gt;Used Cooking Oil] --&gt; B
+        B --&gt; F[Processing&lt;br&gt;Facility]
+    end
+
+    subgraph "Monitoring Enables"
+        G[AIP Platform] --&gt; H[Pickup Scheduling&lt;br&gt;Based on fill levels]
+        G --&gt; I[Route Optimization&lt;br&gt;Full pickups only]
+        G --&gt; J[Overflow Prevention&lt;br&gt;High-level alerts]
+    end</code></pre>
+<p>Without monitoring, waste collection companies face the same problems as fuel distributors but in reverse:</p>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Impact</th>
+<th>Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Customer calls "tank full"</td>
+<td>Emergency dispatch, inefficient route</td>
+<td>Daily</td>
+</tr>
+<tr>
+<td>Partial pickups</td>
+<td>Truck space wasted on half-full tanks</td>
+<td>40-60% of pickups</td>
+</tr>
+<tr>
+<td>Tank overflow</td>
+<td>Environmental violation, cleanup costs ($5,000-50,000+)</td>
+<td>Monthly</td>
+</tr>
+<tr>
+<td>Missed pickups</td>
+<td>Customer dissatisfaction, potential regulatory issues</td>
+<td>Weekly</td>
+</tr>
+<tr>
+<td>Scheduling conflicts</td>
+<td>Multiple customers need pickup simultaneously</td>
+<td>Daily</td>
+</tr>
+</tbody>
+</table>
+<h3 id="762-used-oil-collection-monitoring">7.6.2 Used Oil Collection Monitoring</h3>
+<p>The typical used oil collection customer:</p>
+<table>
+<thead>
+<tr>
+<th>Customer Type</th>
+<th>Tank Size</th>
+<th>Fill Rate</th>
+<th>Pickup Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Quick lube shop</td>
+<td>250 - 500 gal</td>
+<td>100 - 200 gal/week</td>
+<td>Every 2-3 weeks</td>
+</tr>
+<tr>
+<td>Auto dealership</td>
+<td>500 - 1,500 gal</td>
+<td>200 - 500 gal/week</td>
+<td>Every 2-4 weeks</td>
+</tr>
+<tr>
+<td>Fleet maintenance</td>
+<td>500 - 2,000 gal</td>
+<td>100 - 500 gal/week</td>
+<td>Every 2-6 weeks</td>
+</tr>
+<tr>
+<td>Industrial plant</td>
+<td>1,000 - 5,000 gal</td>
+<td>Variable</td>
+<td>Monthly to quarterly</td>
+</tr>
+<tr>
+<td>Restaurant (cooking oil)</td>
+<td>100 - 300 gal</td>
+<td>50 - 100 gal/week</td>
+<td>Every 2-4 weeks</td>
+</tr>
+</tbody>
+</table>
+<h3 id="763-collection-specific-monitoring-features">7.6.3 Collection-Specific Monitoring Features</h3>
+<p>Waste collection monitoring requires some features that differ from delivery monitoring:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Delivery Monitoring</th>
+<th>Collection Monitoring</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alert direction</td>
+<td>Low level (needs delivery)</td>
+<td>High level (needs pickup)</td>
+</tr>
+<tr>
+<td>Trend tracking</td>
+<td>Downward (consumption)</td>
+<td>Upward (accumulation)</td>
+</tr>
+<tr>
+<td>Urgency trigger</td>
+<td>Tank approaching empty</td>
+<td>Tank approaching full</td>
+</tr>
+<tr>
+<td>Optimization goal</td>
+<td>Maximize gallons delivered</td>
+<td>Maximize gallons collected</td>
+</tr>
+<tr>
+<td>Overflow risk</td>
+<td>Overfill during delivery</td>
+<td>Overflow between pickups</td>
+</tr>
+<tr>
+<td>Revenue model</td>
+<td>Sell product</td>
+<td>Collect fee or buy waste product</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Configuring AIP for Collection</p>
+<p>The AIP platform supports both delivery (fill-from-top) and collection (fill-from-bottom) monitoring modes. When configuring a waste collection tank, set the alert threshold as a HIGH-level alert rather than a low-level alert. The "days to action" calculation estimates when the tank will reach the pickup threshold based on the fill rate, rather than when it will reach empty.</p>
+</div>
+<h3 id="764-waste-collection-workflow">7.6.4 Waste Collection Workflow</h3>
+<pre class="mermaid"><code>sequenceDiagram
+    participant T as Waste Tanks&lt;br&gt;(Multiple Customers)
+    participant AIP as AIP Platform
+    participant D as Dispatcher
+    participant DR as Collection Driver
+    participant P as Processing Plant
+
+    T-&gt;&gt;AIP: Level reports (rising trend)
+    AIP-&gt;&gt;AIP: Calculate days-to-full&lt;br&gt;for all tanks
+
+    Note over AIP: Identify tanks at 70%+&lt;br&gt;or reaching threshold within 5 days
+    AIP-&gt;&gt;D: Pickup recommendations&lt;br&gt;clustered by geography
+
+    D-&gt;&gt;D: Build optimized collection route
+    D-&gt;&gt;DR: Assign route (12 stops, est. 2,800 gal)
+    DR-&gt;&gt;T: Collect waste at each stop
+    T-&gt;&gt;AIP: Level drops detected&lt;br&gt;(pickup confirmation)
+    DR-&gt;&gt;P: Deliver collected waste to processing
+
+    AIP-&gt;&gt;D: Route complete. Actual: 2,650 gal</code></pre>
+<hr />
+<h2 id="77-oil-field-support">7.7 Oil Field Support</h2>
+<h3 id="771-upstream-oil-and-gas-monitoring">7.7.1 Upstream Oil and Gas Monitoring</h3>
+<p>Oil field support represents one of the most demanding applications for wireless tank monitoring. The combination of remote locations, harsh environments, hazardous products, and high-value inventory creates unique challenges.</p>
+<pre class="mermaid"><code>graph TD
+    subgraph "Oil Field Tank Monitoring"
+        A[Production&lt;br&gt;Tank Battery] --&gt; A1[Oil Tanks&lt;br&gt;200-1000 bbl]
+        A --&gt; A2[Water Tanks&lt;br&gt;200-500 bbl]
+        A --&gt; A3[Condensate&lt;br&gt;100-500 bbl]
+
+        B[Chemical&lt;br&gt;Storage] --&gt; B1[Corrosion Inhibitor]
+        B --&gt; B2[Scale Inhibitor]
+        B --&gt; B3[Demulsifier]
+        B --&gt; B4[Methanol]
+
+        C[Fuel Storage] --&gt; C1[Generator Diesel]
+        C --&gt; C2[Equipment Fuel]
+
+        D[Water&lt;br&gt;Disposal] --&gt; D1[Saltwater&lt;br&gt;Disposal Tank]
+        D --&gt; D2[Flowback Water]
+    end
+
+    A1 &amp; A2 &amp; A3 &amp; B1 &amp; B2 &amp; B3 &amp; B4 &amp; C1 &amp; C2 &amp; D1 &amp; D2 --&gt; E[TSR Monitors&lt;br&gt;Satellite or Cellular]
+    E --&gt; F[AIP Platform]
+    F --&gt; G[Production&lt;br&gt;Operations]
+    F --&gt; H[Chemical&lt;br&gt;Vendor]
+    F --&gt; I[Fuel&lt;br&gt;Supplier]
+    F --&gt; J[Water&lt;br&gt;Hauler]</code></pre>
+<h3 id="772-production-tank-monitoring">7.7.2 Production Tank Monitoring</h3>
+<p>Production tanks collect crude oil and associated liquids from wells. Monitoring is critical for several reasons:</p>
+<p><strong>Revenue protection</strong>: Crude oil in production tanks represents direct revenue. Accurate level monitoring enables:</p>
+<ul>
+<li>Knowing exactly when tanks need to be hauled (sold and transported to pipeline or refinery)</li>
+<li>Detecting oil theft (a significant problem in remote oil fields)</li>
+<li>Accurate production accounting for royalty calculations</li>
+</ul>
+<p><strong>Theft detection</strong>: Oil theft from remote well sites is a multi-billion-dollar problem in the oil industry. Wireless monitoring provides:</p>
+<table>
+<thead>
+<tr>
+<th>Detection Method</th>
+<th>How It Works</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sudden level drop</td>
+<td>AIP detects level decrease inconsistent with normal production patterns</td>
+</tr>
+<tr>
+<td>Off-hours activity</td>
+<td>Level changes during nights, weekends, or holidays when no legitimate hauling is scheduled</td>
+</tr>
+<tr>
+<td>Comparison with sales tickets</td>
+<td>Volume removed should match sale/transfer tickets</td>
+</tr>
+<tr>
+<td>Pattern analysis</td>
+<td>Repeated small thefts may follow a pattern (same time, day, amount)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Theft Detection in Practice</p>
+<p>A Permian Basin producer deployed TankScan monitors on 45 production tank batteries. Within 60 days, the system detected:</p>
+<ul>
+<li>3 instances of unauthorized fluid removal (confirmed theft)</li>
+<li>Estimated recovered value: $28,000 per month</li>
+<li>After investigation and site security improvements, theft incidents dropped to zero</li>
+</ul>
+</div>
+<h3 id="773-chemical-tank-monitoring-for-oil-fields">7.7.3 Chemical Tank Monitoring for Oil Fields</h3>
+<p>Chemical injection is essential for oil production. Without corrosion inhibitors, scale inhibitors, and other treatment chemicals, production equipment can fail within months. Chemical run-outs cause:</p>
+<ul>
+<li>Corrosion damage to tubing, casing, and surface equipment ($10,000 - $500,000 per incident)</li>
+<li>Scale buildup reducing production flow (10-50% production loss)</li>
+<li>Emulsion problems preventing oil-water separation</li>
+<li>Paraffin buildup restricting flow lines</li>
+</ul>
+<p>Monitoring chemical tanks prevents these costly run-outs by alerting the chemical vendor before the tank empties.</p>
+<h3 id="774-satellite-connectivity-for-remote-fields">7.7.4 Satellite Connectivity for Remote Fields</h3>
+<p>Many oil fields have no cellular coverage. TankScan's satellite communication options address this:</p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Cellular</th>
+<th>Satellite (Iridium)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coverage</td>
+<td>Urban/suburban, some rural</td>
+<td>Global (including polar regions)</td>
+</tr>
+<tr>
+<td>Reporting frequency</td>
+<td>Up to 24x per day</td>
+<td>1-4x per day (cost limited)</td>
+</tr>
+<tr>
+<td>Latency</td>
+<td>Seconds</td>
+<td>Seconds to minutes</td>
+</tr>
+<tr>
+<td>Monthly data cost</td>
+<td>$5 - 15 per device</td>
+<td>$15 - 50 per device</td>
+</tr>
+<tr>
+<td>Reliability</td>
+<td>Depends on cell tower infrastructure</td>
+<td>99.9% availability</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>Fields near population centers</td>
+<td>Remote basins (Bakken, Permian, Marcellus)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="775-harsh-environment-adaptations">7.7.5 Harsh Environment Adaptations</h3>
+<p>Oil field installations face extreme conditions:</p>
+<table>
+<thead>
+<tr>
+<th>Challenge</th>
+<th>Adaptation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H2S (sour gas) exposure</td>
+<td>Stainless steel and fluorocarbon materials; H2S-resistant electronics</td>
+</tr>
+<tr>
+<td>Sand and dust storms</td>
+<td>IP67 sealed housings; no external moving parts</td>
+</tr>
+<tr>
+<td>Extreme cold (-40F or below)</td>
+<td>Lithium battery chemistry; heated enclosure option</td>
+</tr>
+<tr>
+<td>Lightning</td>
+<td>Transient voltage suppression; proper grounding to tank</td>
+</tr>
+<tr>
+<td>Vandalism and theft</td>
+<td>Tamper-resistant mounting; removal alerts in AIP</td>
+</tr>
+<tr>
+<td>Vibration from pumping units</td>
+<td>Signal averaging; vibration-dampened mounting</td>
+</tr>
+<tr>
+<td>Saltwater spray (offshore support)</td>
+<td>Marine-grade coatings; stainless steel hardware</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="78-propane-and-lpg-distribution">7.8 Propane and LPG Distribution</h2>
+<h3 id="781-the-propane-delivery-challenge">7.8.1 The Propane Delivery Challenge</h3>
+<p>Propane distribution shares characteristics with both fuel distribution and specialty chemical handling. The product is stored under pressure, delivery requires specialized equipment (bobtails with pumps), and demand is highly seasonal.</p>
+<pre class="mermaid"><code>graph TD
+    subgraph "Propane Customer Segments"
+        A[Propane&lt;br&gt;Distributor] --&gt; B[Residential&lt;br&gt;Home Heating]
+        A --&gt; C[Commercial&lt;br&gt;HVAC, Process]
+        A --&gt; D[Agricultural&lt;br&gt;Crop Drying, Irrigation]
+        A --&gt; E[Industrial&lt;br&gt;Forklifts, Process]
+        A --&gt; F[Autogas&lt;br&gt;Vehicle Fuel]
+    end
+
+    B --&gt; |"Seasonal demand&lt;br&gt;500-2000 gal tanks"| G[TSD Dial Reader]
+    C --&gt; |"Year-round demand&lt;br&gt;500-10,000 gal tanks"| G
+    D --&gt; |"Seasonal demand&lt;br&gt;1,000-30,000 gal tanks"| G
+    E --&gt; |"Steady demand&lt;br&gt;500-5,000 gal tanks"| G
+    F --&gt; |"Variable demand&lt;br&gt;1,000-10,000 gal tanks"| G
+
+    G --&gt; H[AIP Platform]
+    H --&gt; I[Demand Forecasting&lt;br&gt;+ Route Optimization]</code></pre>
+<h3 id="782-seasonal-demand-patterns">7.8.2 Seasonal Demand Patterns</h3>
+<p>Propane demand is among the most seasonal of any monitored product:</p>
+<table>
+<thead>
+<tr>
+<th>Season</th>
+<th>Residential Demand</th>
+<th>Agricultural Demand</th>
+<th>Commercial Demand</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Winter (Dec-Feb)</td>
+<td>Very High (heating)</td>
+<td>Low</td>
+<td>High (HVAC)</td>
+</tr>
+<tr>
+<td>Spring (Mar-May)</td>
+<td>Moderate (transitional)</td>
+<td>Moderate (planting)</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td>Summer (Jun-Aug)</td>
+<td>Low (cooking, water heating)</td>
+<td>Low</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td>Fall (Sep-Nov)</td>
+<td>Moderate to High</td>
+<td>Very High (crop drying)</td>
+<td>Moderate to High</td>
+</tr>
+</tbody>
+</table>
+<p>This seasonality creates a "wall of demand" in late fall and winter that overwhelms distribution fleets unless carefully managed. TSD monitoring enables distributors to:</p>
+<ul>
+<li>Pre-fill tanks before peak season begins</li>
+<li>Identify which customers are consuming fastest during cold snaps</li>
+<li>Prioritize deliveries to tanks closest to empty</li>
+<li>Avoid unnecessary deliveries to tanks that still have adequate supply</li>
+</ul>
+<h3 id="783-degree-day-enhancement-with-actual-data">7.8.3 Degree-Day Enhancement with Actual Data</h3>
+<p>Traditionally, propane distributors used <strong>degree-day calculations</strong> to estimate consumption:</p>
+<div class="arithmatex">\[\text{Degree Days} = T_{\text{base}} - T_{\text{avg}}\]</div>
+<p>Where <span class="arithmatex">\(T_{\text{base}}\)</span> is typically 65F and <span class="arithmatex">\(T_{\text{avg}}\)</span> is the average daily temperature. A customer's "K-factor" (gallons per degree-day) was used to estimate consumption.</p>
+<div class="admonition tip">
+<p class="admonition-title">From Estimated to Actual Consumption</p>
+<p>TSD monitoring replaces degree-day estimation with actual consumption data. Instead of calculating what a customer <em>should</em> have used based on weather, the distributor knows what they <em>actually</em> used. This eliminates the inaccuracies inherent in degree-day methods:</p>
+<ul>
+<li>Homes with poor insulation use more than predicted</li>
+<li>Customers who turn down thermostats during vacations use less</li>
+<li>Supplemental heating sources (wood stoves, electric heaters) reduce propane consumption unpredictably</li>
+<li>New insulation or windows change the K-factor without warning</li>
+</ul>
+</div>
+<hr />
+<h2 id="79-agricultural-applications">7.9 Agricultural Applications</h2>
+<h3 id="791-farm-and-ranch-monitoring">7.9.1 Farm and Ranch Monitoring</h3>
+<p>Agricultural operations use large quantities of fuel, fertilizer, and chemicals spread across expansive properties. A single farming operation may cover thousands of acres with tanks at multiple locations.</p>
+<p><strong>Common agricultural tanks:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Product</th>
+<th>Tank Type</th>
+<th>Size Range</th>
+<th>Criticality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Diesel fuel</td>
+<td>AST, horizontal</td>
+<td>500 - 10,000 gal</td>
+<td>High (equipment runs on it)</td>
+</tr>
+<tr>
+<td>Gasoline</td>
+<td>AST, horizontal</td>
+<td>250 - 2,000 gal</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Liquid fertilizer (UAN)</td>
+<td>Vertical poly tank</td>
+<td>2,000 - 15,000 gal</td>
+<td>Very High (seasonal, timing critical)</td>
+</tr>
+<tr>
+<td>Anhydrous ammonia</td>
+<td>Pressurized</td>
+<td>1,000 - 12,000 gal</td>
+<td>Very High (seasonal, regulated)</td>
+</tr>
+<tr>
+<td>Herbicide/pesticide</td>
+<td>Small tanks, totes</td>
+<td>50 - 500 gal</td>
+<td>High (application timing critical)</td>
+</tr>
+<tr>
+<td>Propane (crop drying)</td>
+<td>Pressurized</td>
+<td>1,000 - 30,000 gal</td>
+<td>Very High (harvest timing critical)</td>
+</tr>
+<tr>
+<td>Water</td>
+<td>Vertical, poly or steel</td>
+<td>1,000 - 50,000 gal</td>
+<td>Variable</td>
+</tr>
+</tbody>
+</table>
+<h3 id="792-seasonal-agricultural-demand">7.9.2 Seasonal Agricultural Demand</h3>
+<p>Agricultural monitoring is driven by the cropping cycle:</p>
+<pre class="mermaid"><code>gantt
+    title Agricultural Tank Monitoring - Annual Demand Cycle
+    dateFormat  MM-DD
+    section Diesel Fuel
+    Spring planting (high use)     :active, 03-15, 05-15
+    Summer cultivation (moderate)  :04-15, 08-15
+    Fall harvest (very high use)   :crit, 09-01, 11-15
+    Winter (low use)               :11-15, 03-15
+    section Fertilizer
+    Spring application             :crit, 03-01, 05-31
+    Side-dress application         :06-01, 07-15
+    Fall application               :09-15, 11-30
+    section Propane
+    Crop drying season             :crit, 09-15, 12-15
+    Heating (shops, livestock)     :11-01, 03-31</code></pre>
+<hr />
+<h2 id="710-manufacturing-and-industrial">7.10 Manufacturing and Industrial</h2>
+<h3 id="7101-manufacturing-tank-monitoring">7.10.1 Manufacturing Tank Monitoring</h3>
+<p>Manufacturing facilities use tanks for a wide variety of products that keep production lines running:</p>
+<table>
+<thead>
+<tr>
+<th>Application</th>
+<th>Products</th>
+<th>Monitoring Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CNC machining</td>
+<td>Cutting fluids, coolants</td>
+<td>High (line shutdown if empty)</td>
+</tr>
+<tr>
+<td>Hydraulic systems</td>
+<td>Hydraulic oil (various grades)</td>
+<td>Very High (equipment damage)</td>
+</tr>
+<tr>
+<td>Parts washing</td>
+<td>Solvents, aqueous cleaners</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Heat treating</td>
+<td>Quench oils</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Painting</td>
+<td>Paints, solvents, primers</td>
+<td>High (production scheduling)</td>
+</tr>
+<tr>
+<td>Boiler operations</td>
+<td>Fuel oil, water treatment chemicals</td>
+<td>Very High (facility heating)</td>
+</tr>
+<tr>
+<td>Emergency power</td>
+<td>Generator diesel</td>
+<td>Critical (business continuity)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="7102-just-in-time-monitoring-for-manufacturing">7.10.2 Just-In-Time Monitoring for Manufacturing</h3>
+<p>Manufacturing facilities that operate on just-in-time (JIT) principles need precise inventory visibility:</p>
+<div class="admonition warning">
+<p class="admonition-title">The Cost of a Production Line Shutdown</p>
+<p>When a manufacturing line shuts down due to a fluid run-out (cutting oil, coolant, hydraulic fluid), the cost is typically $5,000 to $50,000 per hour in lost production, idle labor, and downstream schedule disruption. A $200 wireless monitor that prevents even one shutdown per year delivers extraordinary ROI.</p>
+</div>
+<pre class="mermaid"><code>graph TD
+    A[TSU on each fluid tote] --&gt; B[AIP monitors consumption rate]
+    B --&gt; C{Level below reorder point?}
+    C --&gt;|No| D[Continue monitoring]
+    C --&gt;|Yes| E[Automatic purchase order&lt;br&gt;via ERP integration]
+    E --&gt; F[Supplier receives order]
+    F --&gt; G[Delivery scheduled and made]
+    G --&gt; H[AIP confirms delivery&lt;br&gt;via level increase]
+    H --&gt; D</code></pre>
+<hr />
+<h2 id="711-cross-industry-benefits">7.11 Cross-Industry Benefits</h2>
+<h3 id="7111-universal-value-propositions">7.11.1 Universal Value Propositions</h3>
+<p>Regardless of industry, wireless tank monitoring delivers a common set of benefits:</p>
+<table>
+<thead>
+<tr>
+<th>Benefit</th>
+<th>Description</th>
+<th>Typical Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eliminate manual checks</td>
+<td>No more sending people to read gauges</td>
+<td>80-95% reduction in site visits</td>
+</tr>
+<tr>
+<td>Prevent run-outs</td>
+<td>Alert before tank empties</td>
+<td>90-99% reduction in run-outs</td>
+</tr>
+<tr>
+<td>Optimize deliveries</td>
+<td>Route based on actual need, not schedule</td>
+<td>25-40% efficiency improvement</td>
+</tr>
+<tr>
+<td>Reduce emergency calls</td>
+<td>Planned deliveries replace emergency responses</td>
+<td>80-95% reduction in emergencies</td>
+</tr>
+<tr>
+<td>Improve customer satisfaction</td>
+<td>Proactive service instead of reactive</td>
+<td>20-40 point NPS improvement</td>
+</tr>
+<tr>
+<td>Enable data-driven decisions</td>
+<td>Historical data reveals patterns</td>
+<td>Continuous improvement foundation</td>
+</tr>
+<tr>
+<td>Support regulatory compliance</td>
+<td>Automated monitoring documentation</td>
+<td>Audit-ready records</td>
+</tr>
+<tr>
+<td>Reduce environmental risk</td>
+<td>Detect leaks and anomalies early</td>
+<td>Significant risk mitigation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="7112-industry-comparison-matrix">7.11.2 Industry Comparison Matrix</h3>
+<pre class="mermaid"><code>graph LR
+    subgraph "Primary Value by Industry"
+        A[Fuel Distribution] --&gt; A1[Route Optimization&lt;br&gt;Run-out Prevention]
+        B[C-Stores] --&gt; B1[Multi-Product Visibility&lt;br&gt;Compliance]
+        C[Lubricants] --&gt; C1[Tote Monitoring&lt;br&gt;Sales Enablement]
+        D[Chemicals] --&gt; D1[Safety Compliance&lt;br&gt;Inventory Accuracy]
+        E[Used Oil] --&gt; E1[Pickup Scheduling&lt;br&gt;Overflow Prevention]
+        F[Oil Fields] --&gt; F1[Theft Detection&lt;br&gt;Remote Visibility]
+        G[Propane] --&gt; G1[Seasonal Management&lt;br&gt;Customer Retention]
+        H[Agriculture] --&gt; H1[Seasonal Timing&lt;br&gt;Remote Locations]
+        I[Manufacturing] --&gt; I1[Production Continuity&lt;br&gt;JIT Integration]
+    end</code></pre>
+<h3 id="7113-total-addressable-market">7.11.3 Total Addressable Market</h3>
+<p>The wireless tank monitoring market spans millions of tanks across all industries:</p>
+<table>
+<thead>
+<tr>
+<th>Industry Segment</th>
+<th>Estimated Tanks (US)</th>
+<th>Current Monitoring Penetration</th>
+<th>Growth Opportunity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fuel distribution (ASTs)</td>
+<td>2,000,000+</td>
+<td>15-20%</td>
+<td>Very High</td>
+</tr>
+<tr>
+<td>Convenience stores (USTs)</td>
+<td>600,000+</td>
+<td>25-30% (ATG exists, but not cloud-connected)</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Propane (residential)</td>
+<td>8,000,000+</td>
+<td>5-10%</td>
+<td>Very High</td>
+</tr>
+<tr>
+<td>Lubricant totes</td>
+<td>5,000,000+</td>
+<td>&lt; 5%</td>
+<td>Very High</td>
+</tr>
+<tr>
+<td>Oil field production</td>
+<td>500,000+</td>
+<td>20-25%</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Chemical storage</td>
+<td>1,000,000+</td>
+<td>10-15%</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Agricultural</td>
+<td>3,000,000+</td>
+<td>&lt; 5%</td>
+<td>Very High</td>
+</tr>
+<tr>
+<td>Manufacturing</td>
+<td>2,000,000+</td>
+<td>&lt; 5%</td>
+<td>Very High</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Market Maturity</p>
+<p>Fuel distribution and convenience stores are the most mature segments for wireless tank monitoring, with established workflows and proven ROI. Lubricant tote monitoring and agricultural monitoring are earlier in their adoption curves, representing the greatest growth opportunities for TankScan.</p>
+</div>
+<hr />
+<h2 id="712-integration-with-industry-specific-software">7.12 Integration with Industry-Specific Software</h2>
+<h3 id="7121-software-ecosystem-by-industry">7.12.1 Software Ecosystem by Industry</h3>
+<p>Each industry has its own specialized software systems. TankScan's AIP platform integrates with these through APIs and data feeds:</p>
+<table>
+<thead>
+<tr>
+<th>Industry</th>
+<th>Key Software Systems</th>
+<th>Integration Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fuel distribution</td>
+<td>ADD Systems, Cargas, P3, FuelCloud</td>
+<td>API, flat file</td>
+</tr>
+<tr>
+<td>Convenience stores</td>
+<td>Veeder-Root, PDI/Cortex, Bulloch</td>
+<td>ATG serial, API</td>
+</tr>
+<tr>
+<td>Lubricants</td>
+<td>Distribution One, VAI, Prophet 21</td>
+<td>API, EDI</td>
+</tr>
+<tr>
+<td>Chemicals</td>
+<td>SAP, Oracle, Infor</td>
+<td>API, middleware</td>
+</tr>
+<tr>
+<td>Oil field</td>
+<td>Enverus, ARIES, OFS Portal</td>
+<td>API</td>
+</tr>
+<tr>
+<td>Propane</td>
+<td>ADD Systems, Blue Cow, BSOG</td>
+<td>API, flat file</td>
+</tr>
+<tr>
+<td>Fleet management</td>
+<td>Omnitracs, Samsara, Geotab</td>
+<td>API</td>
+</tr>
+<tr>
+<td>ERP (cross-industry)</td>
+<td>SAP, Oracle, NetSuite, Dynamics</td>
+<td>API, middleware</td>
+</tr>
+</tbody>
+</table>
+<h3 id="7122-data-flow-architecture">7.12.2 Data Flow Architecture</h3>
+<pre class="mermaid"><code>graph LR
+    A[Tank Monitors&lt;br&gt;TSR/TSC/TSU/TSD] --&gt; B[AIP Platform&lt;br&gt;Cloud]
+    B --&gt; C[REST API]
+    B --&gt; D[Flat File Export]
+    B --&gt; E[MQTT/Webhook]
+
+    C --&gt; F[ERP System]
+    C --&gt; G[Dispatch Software]
+    C --&gt; H[Billing System]
+    D --&gt; I[Legacy Software]
+    E --&gt; J[Real-time Dashboards]
+    E --&gt; K[Alert Systems]</code></pre>
+<hr />
+<h2 id="713-chapter-summary">7.13 Chapter Summary</h2>
+<p>Wireless tank monitoring serves a diverse range of industries, each with unique requirements, workflows, and value propositions. Key takeaways:</p>
+<ol>
+<li><strong>Fuel distribution</strong> benefits primarily from route optimization and run-out prevention</li>
+<li><strong>Convenience stores</strong> leverage ATG integration for unified multi-product visibility</li>
+<li><strong>Lubricant distributors</strong> use tote monitoring to transform sales and delivery operations</li>
+<li><strong>Specialty chemical</strong> monitoring requires careful attention to material compatibility and hazardous area classification</li>
+<li><strong>Used oil collection</strong> applies monitoring in reverse -- tracking fill-up rather than draw-down</li>
+<li><strong>Oil field support</strong> demands satellite connectivity and extreme environment durability</li>
+<li><strong>Propane distribution</strong> addresses highly seasonal demand with actual consumption data replacing degree-day estimates</li>
+<li><strong>Manufacturing</strong> uses monitoring to prevent costly production line shutdowns</li>
+</ol>
+<p>The common thread across all industries is the transformation from reactive, schedule-based operations to proactive, data-driven operations. The specific implementation varies, but the fundamental value proposition -- <strong>the right product, at the right place, at the right time</strong> -- is universal.</p>
+<hr />
+<h2 id="review-questions">Review Questions</h2>
+<div class="admonition question">
+<p class="admonition-title">Question 1 -- Knowledge (Remember)</p>
+<p>List at least five industries served by TankScan wireless monitoring and identify the primary TankScan product used in each (TSR, TSC, TSU, or TSD).</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 2 -- Comprehension (Understand)</p>
+<p>Explain why used oil collection monitoring configures alerts differently from fuel delivery monitoring. Describe the specific alert direction and threshold differences, and explain the business logic behind each approach.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 3 -- Application (Apply)</p>
+<p>A propane distributor serves 2,500 residential customers and currently uses degree-day forecasting. During a recent cold snap, they experienced 15 run-outs in a single week. Design a monitoring deployment strategy using TSD monitors. Address the following: which customers to monitor first, how to phase the deployment, and what data from the monitors would replace degree-day calculations.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 4 -- Analysis (Analyze)</p>
+<p>Compare and contrast the monitoring requirements for a convenience store chain (500 locations with underground tanks and ATGs) versus a lubricant distributor (200 customer locations with an average of 8 totes each). Analyze the differences in: (a) monitor type and quantity, (b) connectivity approach, (c) integration requirements, (d) primary value proposition, and (e) deployment complexity.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 5 -- Evaluation (Evaluate)</p>
+<p>A specialty chemical company is evaluating whether to deploy TankScan monitors on 50 tanks containing various hazardous materials (acids, caustics, and flammable solvents). The company's safety director is concerned about installing electronic devices in hazardous areas. Evaluate the safety features and certifications of TankScan products that address these concerns. What additional information would you need before recommending a specific deployment plan?</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
