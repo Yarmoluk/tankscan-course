@@ -46,7 +46,14 @@ def load_knowledge_base():
 # --- Initialize Client ---
 def get_client():
     """Get the Anthropic client with API key."""
-    api_key = os.environ.get("ANTHROPIC_API_KEY") or st.session_state.get("api_key")
+    # Check Streamlit Cloud secrets first, then env var, then session state
+    api_key = None
+    try:
+        api_key = st.secrets["ANTHROPIC_API_KEY"]
+    except (KeyError, FileNotFoundError):
+        api_key = os.environ.get("ANTHROPIC_API_KEY") or st.session_state.get(
+            "api_key"
+        )
     if not api_key:
         return None
     return anthropic.Anthropic(api_key=api_key)
@@ -107,8 +114,13 @@ with st.sidebar:
     )
     st.markdown("---")
 
-    # API Key input if not set via environment
-    if not os.environ.get("ANTHROPIC_API_KEY"):
+    # API Key input if not set via environment or secrets
+    has_secret = False
+    try:
+        has_secret = bool(st.secrets.get("ANTHROPIC_API_KEY"))
+    except FileNotFoundError:
+        pass
+    if not os.environ.get("ANTHROPIC_API_KEY") and not has_secret:
         api_key = st.text_input(
             "Anthropic API Key",
             type="password",
