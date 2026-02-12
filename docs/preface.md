@@ -8,7 +8,7 @@ Dear Craig,
 
 This intelligent textbook is both a tribute to your work at TankScan and a demonstration of what is now possible at the intersection of industrial technology and artificial intelligence.
 
-When you took ownership of TankScan through ITEK, LLC, you inherited more than a product line of wireless tank monitors. You took stewardship of an idea that began in 2003 when manual tank checks were the norm: that remote, wireless monitoring could transform how industries manage their most critical liquid assets. From fuel distributors to chemical manufacturers, from c-store operators to oil field service companies, TankScan has proven that idea right, improving fleet efficiencies by 30% and turning raw sensor data into smart business decisions.
+When you took ownership of TankScan through ATEK, LLC, you inherited more than a product line of wireless tank monitors. You took stewardship of an idea that began in 2003 when manual tank checks were the norm: that remote, wireless monitoring could transform how industries manage their most critical liquid assets. From fuel distributors to chemical manufacturers, from c-store operators to oil field service companies, TankScan has proven that idea right, improving fleet efficiencies by 30% and turning raw sensor data into smart business decisions.
 
 This textbook captures that story and that technology in a new way.
 
