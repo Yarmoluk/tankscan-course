@@ -12,3 +12,8 @@ build/
 *.swo
 node_modules/
 .cache/
+
+# Claude Code workflow IP — do not publish
+.claude/
+CLAUDE.md
+Yarmoluk/
